@@ -15,6 +15,8 @@ interface SolverState {
   panels: VlmPanel[] | null;
   error: string | null;
   validationReport: string[];
+  vizGamma: number[] | null;
+  vizAlpha: number | null;
   run: () => void;
   runValidation: () => void;
 }
@@ -27,6 +29,8 @@ export const useSolverStore = create<SolverState>((set) => ({
   panels: null,
   error: null,
   validationReport: [],
+  vizGamma: null,
+  vizAlpha: null,
 
   run: () => {
     const rec = useRecognitionStore.getState().result;
@@ -65,7 +69,15 @@ export const useSolverStore = create<SolverState>((set) => ({
       const msg = e.data;
       if (msg.type === "progress") set({ progressStage: msg.stage, progressPct: Math.round(msg.pct) });
       else if (msg.type === "result") {
-        set({ status: "done", results: msg.results, panels: msg.panels, progressPct: 100, progressStage: "Complete" });
+        set({
+          status: "done",
+          results: msg.results,
+          panels: msg.panels,
+          vizGamma: msg.vizGamma,
+          vizAlpha: msg.vizAlpha,
+          progressPct: 100,
+          progressStage: "Complete",
+        });
         log("success", `Solver complete: ${msg.results.length} cases, ${msg.panels.length} panels.`);
         worker.terminate();
       } else if (msg.type === "error") {

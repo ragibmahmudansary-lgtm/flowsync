@@ -6,6 +6,7 @@ import { useConsoleStore } from "@/state/useConsoleStore";
 import "@/commands/cadCommands";
 import "@/commands/recognitionCommands";
 import "@/commands/solverCommands";
+import "@/commands/reportCommands";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

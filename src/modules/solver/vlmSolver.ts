@@ -36,6 +36,12 @@ export interface AlphaResult {
   drag: number;
   relaxed: boolean;
   spanwise: SpanwiseResult[];
+  gammas: number[];
+}
+
+export function freestreamDirection(alphaDeg: number): Vec3 {
+  const alphaRad = (alphaDeg * Math.PI) / 180;
+  return [-Math.cos(alphaRad), 0, Math.sin(alphaRad)];
 }
 
 export interface SolverOptions {
@@ -72,6 +78,7 @@ export function solveAlpha(
       drag: 0,
       relaxed: false,
       spanwise: [],
+      gammas: [],
     };
   }
 
@@ -201,6 +208,7 @@ export function solveAlpha(
     drag: totalInducedDrag + CD0 * qInf * reference.area,
     relaxed: options.relaxWake,
     spanwise: spanwiseAgg,
+    gammas: gamma,
   };
 }
 

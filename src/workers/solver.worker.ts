@@ -38,7 +38,14 @@ self.onmessage = (e: MessageEvent<RunMessage>) => {
     });
 
     post({ type: "progress", stage: "Post-processing", pct: 98 });
-    post({ type: "result", results, panels });
+    const midIdx = Math.floor(results.length / 2);
+    post({
+      type: "result",
+      results,
+      panels,
+      vizGamma: results[midIdx].gammas,
+      vizAlpha: results[midIdx].alphaDeg,
+    });
   } catch (err) {
     post({ type: "error", message: err instanceof Error ? err.message : String(err) });
   }

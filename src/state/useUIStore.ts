@@ -14,6 +14,9 @@ interface UIState {
   setPaletteOpen: (open: boolean) => void;
   splashVisible: boolean;
   hideSplash: () => void;
+  showColorMap: boolean;
+  showPathlines: boolean;
+  setViz: (p: { showColorMap?: boolean; showPathlines?: boolean }) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
@@ -32,4 +35,7 @@ export const useUIStore = create<UIState>((set) => ({
   setPaletteOpen: (paletteOpen) => set({ paletteOpen }),
   splashVisible: true,
   hideSplash: () => set({ splashVisible: false }),
+  showColorMap: false,
+  showPathlines: false,
+  setViz: (p) => set(p),
 }));

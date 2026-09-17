@@ -12,6 +12,8 @@ export interface VlmPanel {
   leRight: Vec3;
   teLeft: Vec3;
   teRight: Vec3;
+  // Corners in order for rendering: [leLeft, leRight, teRight, teLeft]
+  corners: [Vec3, Vec3, Vec3, Vec3];
   // Bound vortex endpoints (quarter-chord)
   boundA: Vec3;
   boundB: Vec3;
@@ -150,6 +152,7 @@ export function generatePanels(
           leRight,
           teLeft,
           teRight,
+          corners: [leLeft, leRight, teRight, teLeft],
           boundA: qA,
           boundB: qB,
           controlPoint: cp,

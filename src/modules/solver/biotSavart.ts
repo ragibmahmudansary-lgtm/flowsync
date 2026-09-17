@@ -57,3 +57,25 @@ export function horseshoeInducedVelocity(
 
   return add(add(vBound, vTrailA), vTrailB);
 }
+
+/**
+ * Velocity induced by a semi-infinite vortex filament starting at point A
+ * and extending to infinity in direction d with unit circulation.
+ */
+export function semiInfiniteVelocity(P: Vec3, A: Vec3, d: Vec3): Vec3 {
+  const r = sub(P, A);
+  const rNorm = norm(r);
+
+  if (rNorm < 1e-9) return [0, 0, 0];
+
+  const rDotD = r[0] * d[0] + r[1] * d[1] + r[2] * d[2];
+  const crossProduct = cross(r, d);
+  const crossNorm = norm(crossProduct);
+
+  if (crossNorm < 1e-12) return [0, 0, 0];
+
+  // V = (1 / 4π) * (r × d) / |r × d|² * (1 + r·d/|r|)
+  const factor = (1 / (4 * Math.PI)) * (1 + rDotD / rNorm) / (crossNorm * crossNorm);
+
+  return scale(crossProduct, factor);
+}

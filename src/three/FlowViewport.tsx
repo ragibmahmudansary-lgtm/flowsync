@@ -7,6 +7,11 @@ import { useRecognitionStore } from "@/state/useRecognitionStore";
 import { runCommand } from "@/commands/registry";
 import { VlmLatticeOverlay } from "./VlmLatticeOverlay";
 import { CgMarker } from "./CgMarker";
+import { PanelColorMap } from "./PanelColorMap";
+import { FlowPathlines } from "./FlowPathlines";
+import { AxisTriad } from "./AxisTriad";
+import { AirflowIndicator } from "./AirflowIndicator";
+import { setViewportRenderer } from "./viewportCapture";
 import * as THREE from "three";
 import type { CadFace, ComponentType } from "@/core/types";
 
@@ -303,15 +308,18 @@ export function FlowViewport() {
   const selectMode = useUIStore((s) => s.selectMode);
   const clearSelection = useGeometryStore((s) => s.clearSelection);
   const setSelectMode = useUIStore((s) => s.setSelectMode);
+  const showColorMap = useUIStore((s) => s.showColorMap);
+  const showPathlines = useUIStore((s) => s.showPathlines);
 
   return (
     <div className="h-full w-full relative">
       <Canvas
         camera={{ position: [7.5, -8.5, 4.5], fov: 42 }}
-        onCreated={({ camera }) => {
+        onCreated={({ camera, gl }) => {
           camera.up.set(0, 0, 1);
           camera.lookAt(0, 0, 0);
           (window as any).__flowsync_camera = camera;
+          setViewportRenderer(gl);
         }}
         gl={{ preserveDrawingBuffer: true }}
       >
@@ -337,6 +345,10 @@ export function FlowViewport() {
         <ImportedModelMesh />
         <VlmLatticeOverlay />
         <CgMarker />
+        {showColorMap && <PanelColorMap />}
+        {showPathlines && <FlowPathlines />}
+        <AxisTriad position={[-6, -6, 0]} />
+        <AirflowIndicator />
         <CameraController />
         <CameraExporter />
       </Canvas>
@@ -382,6 +394,36 @@ export function FlowViewport() {
               ⇪ Component
             </button>
           </>
+        )}
+      </div>
+
+      {/* Visualization toolbar */}
+      <div className="absolute top-3 right-3 flex flex-col gap-1">
+        <label className="flex items-center gap-1 px-2 py-1 text-xs bg-white/90 border border-[#C3CDD8] rounded cursor-pointer hover:border-[#FF6600]">
+          <input
+            type="checkbox"
+            checked={showColorMap}
+            onChange={(e) => useUIStore.getState().setViz({ showColorMap: e.target.checked })}
+            className="accent-[#FF6600]"
+          />
+          <span className="text-[#52606D]">Panel color map</span>
+        </label>
+        <label className="flex items-center gap-1 px-2 py-1 text-xs bg-white/90 border border-[#C3CDD8] rounded cursor-pointer hover:border-[#FF6600]">
+          <input
+            type="checkbox"
+            checked={showPathlines}
+            onChange={(e) => useUIStore.getState().setViz({ showPathlines: e.target.checked })}
+            className="accent-[#FF6600]"
+          />
+          <span className="text-[#52606D]">Flow pathlines</span>
+        </label>
+        {showColorMap && (
+          <div className="px-2 py-1 text-[10px] bg-white/90 border border-[#C3CDD8] rounded">
+            <span className="text-[#52606D]">|Γ|: </span>
+            <span className="text-blue-600">low</span>
+            <span className="mx-1">▓▓▓▓</span>
+            <span className="text-red-600">high</span>
+          </div>
         )}
       </div>
 

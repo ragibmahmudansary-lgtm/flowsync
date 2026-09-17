@@ -1,5 +1,7 @@
 import { useSolverStore } from "@/state/useSolverStore";
 import { useRecognitionStore } from "@/state/useRecognitionStore";
+import { useUIStore } from "@/state/useUIStore";
+import { runCommand } from "@/commands/registry";
 import { LineChart } from "@/ui/charts/LineChart";
 import { StabilityBox } from "@/ui/panels/StabilityBox";
 
@@ -117,9 +119,37 @@ export function ResultsWorkspace() {
           ]}
         />
       </div>
-      <div className="bg-white border border-[#C3CDD8] rounded p-3 text-xs font-mono text-[#52606D]">
-        Cases: {results.length} | Panels: {panelsCount} | e (last): {e.toFixed(3)} | CL range:{" "}
-        {results[0].CL.toFixed(3)} → {last.CL.toFixed(3)} | Report generator arrives Phase 4
+      <div className="bg-white border border-[#C3CDD8] rounded p-3 text-xs space-y-2">
+        <div className="font-mono text-[#52606D]">
+          Cases: {results.length} | Panels: {panelsCount} | e (last): {e.toFixed(3)} | CL range:{" "}
+          {results[0].CL.toFixed(3)} → {last.CL.toFixed(3)}
+        </div>
+        <div className="flex items-center gap-4">
+          <label className="flex items-center gap-1 cursor-pointer">
+            <input
+              type="checkbox"
+              className="accent-[#FF6600]"
+              checked={useUIStore.getState().showColorMap}
+              onChange={(e) => useUIStore.getState().setViz({ showColorMap: e.target.checked })}
+            />
+            <span className="text-[#52606D]">Panel color map</span>
+          </label>
+          <label className="flex items-center gap-1 cursor-pointer">
+            <input
+              type="checkbox"
+              className="accent-[#FF6600]"
+              checked={useUIStore.getState().showPathlines}
+              onChange={(e) => useUIStore.getState().setViz({ showPathlines: e.target.checked })}
+            />
+            <span className="text-[#52606D]">Flow pathlines</span>
+          </label>
+          <button
+            className="ml-auto px-3 py-1.5 bg-[#FF6600] text-white rounded hover:bg-[#C2410C] text-xs font-medium"
+            onClick={() => runCommand("report.generate")}
+          >
+            ⬇ Generate Report (PDF + JSON)
+          </button>
+        </div>
       </div>
     </div>
   );
