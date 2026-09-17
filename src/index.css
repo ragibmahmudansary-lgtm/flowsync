@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-flowsync-bg: #EEF2F6;
+  --color-flowsync-panel: #FFFFFF;
+  --color-flowsync-border: #C3CDD8;
+  --color-flowsync-accent: #FF6600;
+  --color-flowsync-accent-dark: #C2410C;
+  --color-flowsync-text: #0F172A;
+  --color-flowsync-muted: #52606D;
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}

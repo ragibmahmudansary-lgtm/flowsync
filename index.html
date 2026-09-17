@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowSync</title>
+    <style>
+      #boot-diag { font-family: monospace; font-size: 13px; padding: 16px; white-space: pre-wrap; }
+      #boot-diag.err { background: #FEE2E2; color: #7F1D1D; }
+      #boot-diag.ok { background: #ECFDF5; color: #065F46; }
+    </style>
+    <script>
+      window.__FLOWSYNC_BOOT__ = { errors: [], mounted: false };
+      function bootDiag(msg, cls) {
+        var el = document.getElementById("boot-diag");
+        if (!el) { el = document.createElement("div"); el.id = "boot-diag"; document.body.insertBefore(el, document.getElementById("root")); }
+        el.className = cls || ""; el.textContent = msg;
+      }
+      window.addEventListener("error", function (e) {
+        window.__FLOWSYNC_BOOT__.errors.push(String(e.message));
+        bootDiag("FlowSync load error:\n" + e.message + "\nfile: " + (e.filename || "?") + " line " + (e.lineno || "?") + "\n\nPaste this to the team.", "err");
+      });
+      window.addEventListener("unhandledrejection", function (e) {
+        var r = e.reason;
+        window.__FLOWSYNC_BOOT__.errors.push(String(r));
+        bootDiag("FlowSync async error:\n" + String(r && r.message ? r.message : r), "err");
+      });
+      setTimeout(function () {
+        var b = window.__FLOWSYNC_BOOT__;
+        if (!b.mounted && b.errors.length === 0)
+          bootDiag("FlowSync: React did not mount within 8 s and no JS error captured.\nCheck: dev server running? deps installed (npm install)? terminal 'Failed to resolve import' lines?", "err");
+      }, 8000);
+    </script>
+  </head>
+  <body>
+    <div id="boot-diag" class="ok">FlowSync booting…</div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
