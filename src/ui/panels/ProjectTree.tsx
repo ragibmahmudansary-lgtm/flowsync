@@ -1,5 +1,23 @@
 import { useState } from "react";
 import { useGeometryStore } from "@/state/useGeometryStore";
+import { useRecognitionStore } from "@/state/useRecognitionStore";
+import type { ComponentType } from "@/core/types";
+
+const COMPONENT_LABELS: Record<ComponentType, string> = {
+  wing: "Wing",
+  htail: "H. Tail",
+  vtail: "V. Tail",
+  fuselage: "Fuselage",
+  unassigned: "Unassigned",
+};
+
+const COMPONENT_ICONS: Record<ComponentType, string> = {
+  wing: "✈️",
+  htail: "➡️",
+  vtail: "🔺",
+  fuselage: "📦",
+  unassigned: "❓",
+};
 
 export function ProjectTree() {
   const model = useGeometryStore((s) => s.model);
@@ -11,6 +29,9 @@ export function ProjectTree() {
   const deleteNamedSelection = useGeometryStore((s) => s.deleteNamedSelection);
   const [newNsName, setNewNsName] = useState("");
   const [expanded, setExpanded] = useState(true);
+  const [componentsExpanded, setComponentsExpanded] = useState(true);
+  const recResult = useRecognitionStore((s) => s.result);
+  const setSelectedFaces = useGeometryStore((s) => s.setSelectedFaces);
 
   if (!model) {
     return (
@@ -85,6 +106,56 @@ export function ProjectTree() {
           </div>
         )}
       </div>
+
+      {/* Recognized Components */}
+      {recResult && (
+        <div className="mb-2">
+          <button
+            className="w-full text-left px-2 py-1 rounded hover:bg-[#EEF2F6] flex items-center gap-1"
+            onClick={() => setComponentsExpanded(!componentsExpanded)}
+          >
+            <span className="text-[10px]">{componentsExpanded ? "▼" : "▶"}</span>
+            <span className="font-medium text-[#0F172A]">
+              🔍 Recognized Components
+            </span>
+            <span
+              className={`ml-auto text-[9px] px-1 rounded ${
+                recResult.status === "confirmed"
+                  ? "bg-green-100 text-green-700"
+                  : "bg-amber-100 text-amber-700"
+              }`}
+            >
+              {recResult.status === "confirmed" ? "LOCKED" : "PROPOSED"}
+            </span>
+          </button>
+
+          {componentsExpanded && (
+            <div className="ml-4 mt-1 space-y-0.5">
+              {(["wing", "htail", "vtail", "fuselage", "unassigned"] as ComponentType[]).map(
+                (comp) => {
+                  const faceIds = model.faces
+                    .filter((f) => recResult.componentByFaceId[f.id] === comp)
+                    .map((f) => f.id);
+                  if (faceIds.length === 0) return null;
+                  return (
+                    <button
+                      key={comp}
+                      className="w-full text-left px-2 py-0.5 rounded text-[11px] flex items-center gap-1 hover:bg-[#EEF2F6]"
+                      onClick={() => setSelectedFaces(faceIds)}
+                    >
+                      <span>{COMPONENT_ICONS[comp]}</span>
+                      <span className="font-medium">{COMPONENT_LABELS[comp]}</span>
+                      <span className="ml-auto text-[9px] text-[#52606D]">
+                        {faceIds.length}
+                      </span>
+                    </button>
+                  );
+                }
+              )}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Named selections */}
       <div className="mt-3 border-t border-[#C3CDD8] pt-2">

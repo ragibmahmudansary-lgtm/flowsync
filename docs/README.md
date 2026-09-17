@@ -47,11 +47,15 @@ npm run typecheck    # TypeScript check
 ```
 
 ## Module Map (FS-01…FS-08 → src/modules)
-- FS-01: Project → `src/modules/project/`
-- FS-02: CAD Import → `src/modules/cad/`
-- FS-03: Recognition → `src/modules/recognition/`
-- FS-04: Solver → `src/modules/solver/`
-- FS-05: Report → `src/modules/report/`
-- FS-06: UI/UX → `src/ui/` + `src/three/`
-- FS-07: AeroBot → `src/modules/aerobot/`
+- FS-01: Project → `src/state/useProjectStore.ts`
+- FS-02: CAD Import → `src/modules/cad/` ✅ Phase 1
+- FS-03: Recognition → `src/modules/recognition/` ✅ Phase 2
+- FS-04: Solver → `src/modules/solver/` (Phase 3)
+- FS-05: Report → `src/modules/report/` (Phase 4)
+- FS-06: UI/UX → `src/ui/` + `src/three/` ✅ Phase 0-2
+- FS-07: AeroBot → `src/modules/aerobot/` (Phase 5)
 - FS-08: Constraints → `docs/DECISIONS.md`
+
+## Module Docs
+- [CAD Pipeline](modules/cad.md) — Import, segmentation, orientation, face DB
+- [Recognition Engine](modules/recognition.md) — Component classification, reference geometry

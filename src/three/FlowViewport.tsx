@@ -3,8 +3,18 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useUIStore } from "@/state/useUIStore";
 import { useGeometryStore } from "@/state/useGeometryStore";
+import { useRecognitionStore } from "@/state/useRecognitionStore";
+import { runCommand } from "@/commands/registry";
 import * as THREE from "three";
-import type { CadFace } from "@/core/types";
+import type { CadFace, ComponentType } from "@/core/types";
+
+const COMPONENT_COLORS: Record<ComponentType, string> = {
+  wing: "#4F86C6",
+  htail: "#5FA777",
+  vtail: "#8E7CC3",
+  fuselage: "#9AAAB9",
+  unassigned: "#B7C1CC",
+};
 
 function CameraController() {
   const { camera } = useThree();
@@ -51,11 +61,13 @@ function FaceMesh({
   face,
   isSelected,
   displayMode,
+  component,
   onClick,
 }: {
   face: CadFace;
   isSelected: boolean;
   displayMode: string;
+  component: ComponentType;
   onClick: (e: any) => void;
 }) {
   const geometry = useMemo(() => {
@@ -73,7 +85,7 @@ function FaceMesh({
     return edges;
   }, [geometry, displayMode]);
 
-  const color = isSelected ? "#FF6600" : face.baseColor;
+  const color = isSelected ? "#FF6600" : COMPONENT_COLORS[component];
 
   return (
     <group>
@@ -106,6 +118,7 @@ function ImportedModelMesh() {
   const toggleFace = useGeometryStore((s) => s.toggleFace);
   const floodSelect = useGeometryStore((s) => s.floodSelect);
   const displayMode = useUIStore((s) => s.displayMode);
+  const recResult = useRecognitionStore((s) => s.result);
 
   if (!model) return null;
 
@@ -113,24 +126,28 @@ function ImportedModelMesh() {
 
   return (
     <group>
-      {model.faces.map((face) => (
-        <FaceMesh
-          key={face.id}
-          face={face}
-          isSelected={selectedSet.has(face.id)}
-          displayMode={displayMode}
-          onClick={(e: any) => {
-            e.stopPropagation();
-            if (e.shiftKey && e.ctrlKey) {
-              floodSelect(face.id);
-            } else if (e.ctrlKey) {
-              toggleFace(face.id);
-            } else {
-              selectOnly(face.id);
-            }
-          }}
-        />
-      ))}
+      {model.faces.map((face) => {
+        const component = recResult?.componentByFaceId[face.id] ?? "unassigned";
+        return (
+          <FaceMesh
+            key={face.id}
+            face={face}
+            isSelected={selectedSet.has(face.id)}
+            displayMode={displayMode}
+            component={component}
+            onClick={(e: any) => {
+              e.stopPropagation();
+              if (e.shiftKey && e.ctrlKey) {
+                floodSelect(face.id);
+              } else if (e.ctrlKey) {
+                toggleFace(face.id);
+              } else {
+                selectOnly(face.id);
+              }
+            }}
+          />
+        );
+      })}
     </group>
   );
 }
@@ -346,12 +363,21 @@ export function FlowViewport() {
           ⬚ Box
         </button>
         {selectedCount > 0 && (
-          <button
-            className="px-2 py-1 text-xs rounded border bg-white border-[#C3CDD8] text-[#52606D] hover:border-red-400 hover:text-red-600"
-            onClick={clearSelection}
-          >
-            ✕ Clear
-          </button>
+          <>
+            <button
+              className="px-2 py-1 text-xs rounded border bg-white border-[#C3CDD8] text-[#52606D] hover:border-red-400 hover:text-red-600"
+              onClick={clearSelection}
+            >
+              ✕ Clear
+            </button>
+            <button
+              className="px-2 py-1 text-xs rounded border bg-white border-[#C3CDD8] text-[#52606D] hover:border-[#FF6600] hover:text-[#C2410C]"
+              onClick={() => runCommand("selection.component")}
+              title="Select all faces in same component"
+            >
+              ⇪ Component
+            </button>
+          </>
         )}
       </div>
 

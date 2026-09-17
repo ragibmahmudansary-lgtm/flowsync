@@ -48,3 +48,41 @@ export interface ModuleError {
   message: string;
   hint?: string;
 }
+
+export interface VlmStation {
+  y: number;
+  xLe: number;
+  xTe: number;
+  z: number;
+}
+
+export interface LiftingSurfaceProps {
+  span: number;
+  semiSpan: number;
+  rootChord: number;
+  tipChord: number;
+  mac: number;
+  macX: number;
+  macY: number;
+  area: number;
+  areaLeft: number;
+  areaRight: number;
+  aspectRatio: number;
+  sweepQuarterChordDeg: number;
+  dihedralDeg: number;
+  symmetric: boolean;
+  stations: VlmStation[];
+}
+
+export interface RecognitionResult {
+  status: "proposed" | "confirmed";
+  componentByFaceId: Record<string, ComponentType>;
+  wing: LiftingSurfaceProps | null;
+  htail: LiftingSurfaceProps | null;
+  vtailArea: number;
+  vtailHeight: number;
+  fuselageLength: number;
+  fuselageMaxWidth: number;
+  warnings: string[];
+  generatedAt: string;
+}

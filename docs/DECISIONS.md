@@ -47,3 +47,15 @@
 ## D-012: Worker Format (Phase 1)
 **Decision:** Vite worker format set to "es" (ES modules) to support code-splitting with OCCT WASM.
 **Rationale:** Default IIFE format doesn't support code-splitting. ES modules required for dynamic imports in workers.
+
+## D-013: Fuselage-Width-Aware Outboard Threshold (Phase 2)
+**Decision:** Recognition outboard threshold = `max(0.06·yLen, 1.25·fuselageHalfWidth)`. Replaces v1's fixed `0.18·yLen`.
+**Rationale:** v1's fixed threshold could swallow small horizontal tails into the fuselage class on wide-span models. The fuselage-width-aware threshold adapts to actual geometry.
+
+## D-014: Two-Path Recognition (Phase 2)
+**Decision:** Multi-lump models use lump-level classification (higher confidence). Single fused solid uses per-face heuristic (lower confidence, warning issued).
+**Rationale:** Connected components provide stronger classification signal. Per-face fallback handles degenerate cases.
+
+## D-015: Spanwise Binning (Phase 2)
+**Decision:** 48 spanwise bins for planform property computation. Upper skin only (projecting both skins would double-count area).
+**Rationale:** 48 bins balances resolution vs noise. Upper-skin filter avoids planform area doubling on closed sections.

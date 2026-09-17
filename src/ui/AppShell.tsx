@@ -9,6 +9,8 @@ import { SplashScreen } from "./SplashScreen";
 import { CommandPalette } from "./CommandPalette";
 import { ProjectTree } from "./panels/ProjectTree";
 import { GeometryInspector } from "./panels/GeometryInspector";
+import { RecognitionInspector } from "./panels/RecognitionInspector";
+import { PipelineChecklist } from "./panels/PipelineChecklist";
 import { ImportSummaryDialog } from "./dialogs/ImportSummaryDialog";
 
 const TABS = [
@@ -139,12 +141,14 @@ export function AppShell() {
           </div>
           {activeTab === "geometry" ? (
             <GeometryInspector />
+          ) : activeTab === "vlm" ? (
+            <div className="flex-1 flex flex-col overflow-hidden">
+              <PipelineChecklist />
+              <div className="border-t border-[#C3CDD8]" />
+              <RecognitionInspector />
+            </div>
           ) : (
             <div className="p-3 text-xs text-[#52606D] space-y-3">
-              <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-                <div className="font-medium text-[#0F172A] mb-1">Recognition</div>
-                <div className="text-[10px]">Component identification arrives in Phase 2.</div>
-              </div>
               <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
                 <div className="font-medium text-[#0F172A] mb-1">Flight Conditions</div>
                 <div className="text-[10px]">Set velocity, altitude, AoA in Phase 3.</div>

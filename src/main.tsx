@@ -4,6 +4,7 @@ import { AppShell } from "@/ui/AppShell";
 import { ErrorBoundary } from "@/app/ErrorBoundary";
 import { useConsoleStore } from "@/state/useConsoleStore";
 import "@/commands/cadCommands";
+import "@/commands/recognitionCommands";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
