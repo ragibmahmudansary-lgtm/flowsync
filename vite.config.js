@@ -21,7 +21,15 @@ export default defineConfig({
       port: 3000,
     },
   },
+  worker: {
+    format: "es",
+  },
   optimizeDeps: {
     exclude: ["occt-import-js"],
+  },
+  build: {
+    rollupOptions: {
+      external: [],
+    },
   },
 });

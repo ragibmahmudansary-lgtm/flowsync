@@ -36,6 +36,13 @@ export interface ImportedModel {
   importedAt: string;
 }
 
+export interface NamedSelection {
+  id: string;
+  name: string;
+  faceIds: string[];
+  color?: string;
+}
+
 export interface ModuleError {
   code: string;
   message: string;

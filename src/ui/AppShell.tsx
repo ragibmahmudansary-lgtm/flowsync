@@ -2,10 +2,14 @@ import { useEffect } from "react";
 import { useUIStore } from "@/state/useUIStore";
 import { useConsoleStore } from "@/state/useConsoleStore";
 import { useProjectStore } from "@/state/useProjectStore";
+import { useGeometryStore } from "@/state/useGeometryStore";
 import { runCommand } from "@/commands/registry";
-import { MinimalScene } from "@/three/MinimalScene";
+import { FlowViewport } from "@/three/FlowViewport";
 import { SplashScreen } from "./SplashScreen";
 import { CommandPalette } from "./CommandPalette";
+import { ProjectTree } from "./panels/ProjectTree";
+import { GeometryInspector } from "./panels/GeometryInspector";
+import { ImportSummaryDialog } from "./dialogs/ImportSummaryDialog";
 
 const TABS = [
   { id: "geometry" as const, label: "Geometry & Airfoils" },
@@ -23,6 +27,8 @@ export function AppShell() {
   const toggleConsole = useConsoleStore((s) => s.toggle);
   const lines = useConsoleStore((s) => s.lines);
   const projectName = useProjectStore((s) => s.projectName);
+  const importStatus = useGeometryStore((s) => s.importStatus);
+  const model = useGeometryStore((s) => s.model);
 
   useEffect(() => {
     const t = setTimeout(hideSplash, 1600);
@@ -35,7 +41,7 @@ export function AppShell() {
       <header className="h-10 shrink-0 flex items-center gap-3 border-b border-[#C3CDD8] px-3 bg-white">
         <div className="h-2.5 w-2.5 rounded-full bg-[#FF6600]" />
         <span className="font-semibold tracking-wide">FlowSync</span>
-        <span className="text-xs text-[#52606D]">v1.0.0-beta · redesign</span>
+        <span className="text-xs text-[#52606D]">v1.0.0-beta · Phase 1</span>
         <span className="ml-auto text-xs text-[#52606D]">
           {projectName} | Units: SI | X fwd · Y right · Z up
         </span>
@@ -50,9 +56,8 @@ export function AppShell() {
           New
         </button>
         <button
-          className="px-3 py-1.5 rounded border border-[#C3CDD8] bg-white text-sm opacity-50 cursor-not-allowed"
-          disabled
-          title="Phase 1"
+          className="px-3 py-1.5 rounded border border-[#C3CDD8] bg-white hover:border-[#FF6600] hover:text-[#C2410C] transition-colors text-sm"
+          onClick={() => runCommand("cad.import")}
         >
           Import CAD
         </button>
@@ -111,24 +116,7 @@ export function AppShell() {
           <div className="text-xs uppercase tracking-widest text-[#52606D] px-3 py-2 border-b border-[#C3CDD8]">
             Project Tree
           </div>
-          <div className="p-3 text-xs text-[#52606D]">
-            <div className="mb-3 p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">📐 Geometry</div>
-              <div className="text-[10px]">No model imported yet</div>
-            </div>
-            <div className="mb-3 p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">🔍 Recognition</div>
-              <div className="text-[10px]">Awaiting geometry import</div>
-            </div>
-            <div className="mb-3 p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">📊 VLM Setup</div>
-              <div className="text-[10px]">Configure in Phase 2</div>
-            </div>
-            <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">📈 Results</div>
-              <div className="text-[10px]">Available after Phase 3 analysis</div>
-            </div>
-          </div>
+          <ProjectTree />
         </aside>
 
         <main className="flex-1 relative overflow-hidden">
@@ -141,7 +129,7 @@ export function AppShell() {
               </div>
             </div>
           ) : (
-            <MinimalScene />
+            <FlowViewport />
           )}
         </main>
 
@@ -149,20 +137,20 @@ export function AppShell() {
           <div className="text-xs uppercase tracking-widest text-[#52606D] px-3 py-2 border-b border-[#C3CDD8]">
             Properties Inspector
           </div>
-          <div className="p-3 text-xs text-[#52606D] space-y-3">
-            <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">Selection</div>
-              <div className="text-[10px]">No faces selected. Import CAD in Phase 1 to enable selection.</div>
+          {activeTab === "geometry" ? (
+            <GeometryInspector />
+          ) : (
+            <div className="p-3 text-xs text-[#52606D] space-y-3">
+              <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
+                <div className="font-medium text-[#0F172A] mb-1">Recognition</div>
+                <div className="text-[10px]">Component identification arrives in Phase 2.</div>
+              </div>
+              <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
+                <div className="font-medium text-[#0F172A] mb-1">Flight Conditions</div>
+                <div className="text-[10px]">Set velocity, altitude, AoA in Phase 3.</div>
+              </div>
             </div>
-            <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">Recognition</div>
-              <div className="text-[10px]">Component identification arrives in Phase 2.</div>
-            </div>
-            <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-              <div className="font-medium text-[#0F172A] mb-1">Flight Conditions</div>
-              <div className="text-[10px]">Set velocity, altitude, AoA in Phase 3.</div>
-            </div>
-          </div>
+          )}
         </aside>
       </div>
 
@@ -206,9 +194,15 @@ export function AppShell() {
 
       {/* Status bar */}
       <footer className="h-7 shrink-0 border-t border-[#C3CDD8] bg-white px-3 flex items-center justify-between text-xs text-[#52606D]">
-        <button className="underline hover:text-[#FF6600]" onClick={toggleConsole}>
-          Console ({lines.length})
-        </button>
+        <div className="flex items-center gap-3">
+          <button className="underline hover:text-[#FF6600]" onClick={toggleConsole}>
+            Console ({lines.length})
+          </button>
+          <span>
+            Import: {importStatus}
+            {model ? ` · ${model.faces.length} faces` : ""}
+          </span>
+        </div>
         <div className="flex gap-4">
           <span>Tab: {activeTab}</span>
           <span>Solver: idle</span>
@@ -216,6 +210,7 @@ export function AppShell() {
         </div>
       </footer>
 
+      <ImportSummaryDialog />
       <CommandPalette />
       {splashVisible && <SplashScreen />}
     </div>

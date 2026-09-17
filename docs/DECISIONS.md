@@ -9,7 +9,7 @@
 **Rationale:** Modern, fast DX. vitest shares Vite config. CI catches broken module graphs.
 
 ## D-003: Commands-Layer Orchestration
-**Decision:** All cross-store logic lives in `src/commands/registry.ts`. Stores remain isolated. UI, Toolbar, Palette, and AeroBot tools all call `runCommand()`.
+**Decision:** All cross-store logic lives in `src/commands/`. Stores remain isolated. UI, Toolbar, Palette, and AeroBot tools all call `runCommand()`.
 **Rationale:** Single orchestration layer prevents store coupling. Every action is traceable and testable.
 
 ## D-004: AeroBot Opt-In Agent
@@ -31,3 +31,19 @@
 ## D-008: Failure Doctrine
 **Decision:** Every failure is structured `{code, message, hint}` + logged + visible. Boot watchdog → ErrorBoundary → console store → dialogs.
 **Rationale:** Never a blank page. Every error has context and recovery path.
+
+## D-009: Worker-Based CAD Pipeline (Phase 1)
+**Decision:** All heavy CAD processing (parse, segment, orient, face DB, adjacency) runs in a Web Worker. UI thread remains responsive. Progress reported via postMessage.
+**Rationale:** Rule R3 (heavy compute in workers). Large STL files (280k+ tris) would freeze the UI otherwise.
+
+## D-010: Segmentation Strategy (Phase 1)
+**Decision:** Position-welded dihedral-angle BFS with adaptive thresholds [28°, 35°, 45°]. Hard cap 2000 regions.
+**Rationale:** Validated against Cessna 152 STL. Adaptive thresholds handle varying mesh quality. Cap prevents pathological cases.
+
+## D-011: Orientation Heuristic (Phase 1)
+**Decision:** BBox-rank axes → span/length/vertical. Tail-fin nose heuristic. Manual override buttons.
+**Rationale:** Works for typical aircraft geometries. Manual override for edge cases.
+
+## D-012: Worker Format (Phase 1)
+**Decision:** Vite worker format set to "es" (ES modules) to support code-splitting with OCCT WASM.
+**Rationale:** Default IIFE format doesn't support code-splitting. ES modules required for dynamic imports in workers.

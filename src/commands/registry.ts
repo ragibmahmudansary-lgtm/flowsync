@@ -29,7 +29,7 @@ export function runCommand(id: string) {
   void cmd.run();
 }
 
-// ---- core commands (later phases register their own here) ----
+// ---- core commands ----
 const tabs = ["geometry", "vlm", "analysis", "results"] as const;
 tabs.forEach((t) =>
   registerCommand({
@@ -73,18 +73,4 @@ registerCommand({
     useProjectStore.getState().newProject();
     useConsoleStore.getState().log("info", "New project created.");
   },
-});
-
-registerCommand({
-  id: "select.click",
-  label: "Selection mode: click",
-  category: "Selection",
-  run: () => useUIStore.getState().setSelectMode("click"),
-});
-
-registerCommand({
-  id: "select.box",
-  label: "Selection mode: box",
-  category: "Selection",
-  run: () => useUIStore.getState().setSelectMode("box"),
 });

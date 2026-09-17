@@ -13,25 +13,70 @@ npm run dev
 
 Open http://localhost:3000
 
+## Current Phase: Phase 1 — CAD Pipeline ✅
+
+### What works now:
+- **Import**: STL (binary + ASCII), STEP, IGES, BREP via OCCT WASM
+- **Worker-based**: All heavy processing off UI thread with progress reporting
+- **Segmentation**: Position-welded dihedral BFS (adaptive 28°/35°/45° thresholds)
+- **Orientation**: Auto-normalize to FlowSync convention (X fwd, Y right, Z up) + manual override
+- **Face DB**: Area, centroid, normal, bbox per face
+- **Adjacency**: Welded-vertex graph filtered by ≤30° dihedral
+- **Selection**: Click / Ctrl+Click toggle / Ctrl+Shift+Click flood / Box marquee
+- **Named Selections**: Create, assign faces, delete
+- **Import Summary**: Dialog with full model stats
+- **Command Palette**: Ctrl+K to search 20+ commands
+
+### Gate checklist:
+- ✅ Toolbar Import CAD opens file picker
+- ✅ Worker processes STL without freezing UI
+- ✅ Console shows staged progress
+- ✅ Summary dialog shows faces/tris/orientation
+- ✅ Tree lists faces, clickable
+- ✅ Click/Ctrl+Click/Ctrl+Shift+Click/Box all select
+- ✅ Orange highlight on selected faces
+- ✅ Named Selections create + assign
+- ✅ Orientation override buttons re-orient
+- ✅ Build passes
+
 ## Architecture
 
-FlowSync v2 follows a strict modular architecture:
+```
+flowsync-v2/
+├─ src/
+│  ├─ app/                   # ErrorBoundary, boot contract
+│  ├─ core/                  # types.ts (THE data contract)
+│  ├─ state/                 # Zustand stores (ui, console, project, geometry)
+│  ├─ commands/              # registry.ts + cadCommands.ts = orchestration layer
+│  ├─ modules/cad/           # Phase 1: faceProperties, segmentation, orientation, adjacency, importers
+│  ├─ ui/                    # shell, panels, palette, dialogs
+│  ├─ three/                 # FlowViewport (R3F canvas + selection + camera)
+│  └─ workers/               # import.worker.ts (heavy compute off UI thread)
+├─ tests/                   # vitest per module
+└─ docs/                    # DECISIONS.md, modules/cad.md
+```
 
-- **Core types** (`src/core/types.ts`) — single data contract shared by all modules
-- **Isolated stores** (`src/state/`) — Zustand stores for UI, console, project state
-- **Command registry** (`src/commands/`) — single orchestration layer; all actions flow through `runCommand()`
-- **3D viewport** (`src/three/`) — React Three Fiber scene with camera controls
-- **UI shell** (`src/ui/`) — tabs, panels, command palette, console
+### Rules
+- **R1:** Modules communicate only via `core/types.ts`
+- **R2:** Cross-store logic lives only in `commands/`
+- **R3:** Heavy compute in workers
+- **R4:** Every failure is structured + logged + visible
+- **R5:** No phase merges without its green gate
 
-## Phase Gates
+## Phase Plan
 
-Each phase has an explicit green gate before merge. See `docs/README.md` for the full phase plan.
-
-**Current: Phase 0** — Shell, theme, stores, command registry + palette, console, watchdog.
+| Phase | Content | Status |
+|-------|---------|--------|
+| **0** | Shell, theme, stores, command registry+palette, console, watchdog | ✅ Complete |
+| **1** | CAD: import worker, segmentation, orientation, face DB, selection, named selections | ✅ Complete |
+| **2** | Recognition + reference geometry + overrides + Pipeline Health | Next |
+| **3** | Solver worker, sweep, charts, lattice, stability verdict, mass/CG | Pending |
+| **4** | Views, display modes, triad, airflow, viewport capture, Report PDF/JSON | Pending |
+| **5** | AeroBot v4 agent | Pending |
+| **6** | FS-01 save/load/autosave + docs + acceptance run → cutover | Pending |
 
 ## Key Features (Planned)
 
-- STEP/IGES/BREP/STL import with OCCT WASM
 - Automatic geometry segmentation and orientation
 - Component recognition (wing, htail, vtail, fuselage)
 - VLM solver with wake relaxation
@@ -43,6 +88,7 @@ Each phase has an explicit green gate before merge. See `docs/README.md` for the
 
 - [Architecture & Modules](docs/README.md)
 - [Design Decisions](docs/DECISIONS.md)
+- [CAD Pipeline](docs/modules/cad.md)
 
 ## Tech Stack
 
@@ -51,4 +97,5 @@ Each phase has an explicit green gate before merge. See `docs/README.md` for the
 - Tailwind CSS v4
 - Zustand (state management)
 - Three.js + React Three Fiber (3D viewport)
+- OCCT WASM (CAD kernel)
 - vitest (testing)
