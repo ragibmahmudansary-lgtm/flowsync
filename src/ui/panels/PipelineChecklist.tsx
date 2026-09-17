@@ -1,5 +1,7 @@
 import { useGeometryStore } from "@/state/useGeometryStore";
 import { useRecognitionStore } from "@/state/useRecognitionStore";
+import { useAeroStore } from "@/state/useAeroStore";
+import { useSolverStore } from "@/state/useSolverStore";
 import { runCommand } from "@/commands/registry";
 
 type RowStatus = "ok" | "warn" | "fail" | "pending";
@@ -107,18 +109,23 @@ export function PipelineChecklist() {
     });
   }
 
-  // Row 5: Paneling (Phase 3)
+  // Row 5: Paneling
+  const aero = useAeroStore.getState();
   rows.push({
     label: "Paneling",
-    status: "pending",
-    info: "Arrives Phase 3",
+    status: aero.spanwisePanels >= 8 && aero.chordwisePanels >= 4 ? "ok" : "warn",
+    info: `${aero.spanwisePanels} × ${aero.chordwisePanels} · ${aero.symmetry}`,
   });
 
-  // Row 6: Solver (Phase 3)
+  // Row 6: Solver
+  const solver = useSolverStore.getState();
+  const validation = solver.validationReport;
+  const valPass = validation.length > 0 && !validation.some((l) => l.startsWith("FAIL"));
   rows.push({
     label: "Solver",
-    status: "fail",
-    info: "Arrives Phase 3",
+    status: solver.results.length ? "ok" : validation.length ? (valPass ? "warn" : "fail") : "fail",
+    info: solver.results.length ? `${solver.results.length} cases solved` : validation.length ? "validation only" : "not run",
+    action: solver.results.length ? undefined : { label: "Validate", command: "solver.validate" },
   });
 
   const statusColor = (s: RowStatus) =>

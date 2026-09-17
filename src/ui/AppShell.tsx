@@ -11,6 +11,9 @@ import { ProjectTree } from "./panels/ProjectTree";
 import { GeometryInspector } from "./panels/GeometryInspector";
 import { RecognitionInspector } from "./panels/RecognitionInspector";
 import { PipelineChecklist } from "./panels/PipelineChecklist";
+import { AnalysisInspector } from "./panels/AnalysisInspector";
+import { CgBox } from "./panels/CgBox";
+import { ResultsWorkspace } from "./workspace/ResultsWorkspace";
 import { ImportSummaryDialog } from "./dialogs/ImportSummaryDialog";
 
 const TABS = [
@@ -64,9 +67,8 @@ export function AppShell() {
           Import CAD
         </button>
         <button
-          className="px-3 py-1.5 rounded border border-transparent bg-[#FF6600] text-white text-sm opacity-50 cursor-not-allowed"
-          disabled
-          title="Phase 3"
+          className="px-3 py-1.5 rounded border border-transparent bg-[#FF6600] text-white text-sm hover:bg-[#C2410C]"
+          onClick={() => runCommand("solver.run")}
         >
           Run Analysis
         </button>
@@ -123,13 +125,7 @@ export function AppShell() {
 
         <main className="flex-1 relative overflow-hidden">
           {activeTab === "results" ? (
-            <div className="h-full flex items-center justify-center text-sm text-[#52606D] bg-[#E8EDF2]">
-              <div className="text-center">
-                <div className="text-3xl mb-3">📊</div>
-                <div className="font-medium mb-1">Results workspace</div>
-                <div className="text-xs">Arrives in Phase 3 with solver integration</div>
-              </div>
-            </div>
+            <ResultsWorkspace />
           ) : (
             <FlowViewport />
           )}
@@ -147,11 +143,16 @@ export function AppShell() {
               <div className="border-t border-[#C3CDD8]" />
               <RecognitionInspector />
             </div>
+          ) : activeTab === "analysis" ? (
+            <div className="flex-1 flex flex-col overflow-hidden">
+              <CgBox />
+              <div className="border-t border-[#C3CDD8]" />
+              <AnalysisInspector />
+            </div>
           ) : (
-            <div className="p-3 text-xs text-[#52606D] space-y-3">
+            <div className="p-3 text-xs text-[#52606D]">
               <div className="p-2 rounded bg-[#EEF2F6] border border-[#C3CDD8]">
-                <div className="font-medium text-[#0F172A] mb-1">Flight Conditions</div>
-                <div className="text-[10px]">Set velocity, altitude, AoA in Phase 3.</div>
+                <div className="text-[10px]">Results are displayed in the main workspace.</div>
               </div>
             </div>
           )}

@@ -59,3 +59,11 @@
 ## D-015: Spanwise Binning (Phase 2)
 **Decision:** 48 spanwise bins for planform property computation. Upper skin only (projecting both skins would double-count area).
 **Rationale:** 48 bins balances resolution vs noise. Upper-skin filter avoids planform area doubling on closed sections.
+
+## D-016: Wake Relaxation Default (Phase 3)
+**Decision:** Wake relaxation ON by default. Simplified to straight trailing vortices aligned with freestream in Beta.
+**Rationale:** Reduced form of vorticity transport equation. Full nonlinear wake roll-up deferred to post-Beta (§8.9).
+
+## D-017: CD0 Momentum Integral Closure (Phase 3)
+**Decision:** CD0 estimated via von Kármán momentum integral (Schlichting + Blasius) with laminar-turbulent transition at Re = 5×10⁵.
+**Rationale:** Closure model for VLM. Full FVM/CFD deferred to §8.9. Provides physically reasonable viscous drag without full Navier-Stokes solve.

@@ -5,6 +5,8 @@ import { useUIStore } from "@/state/useUIStore";
 import { useGeometryStore } from "@/state/useGeometryStore";
 import { useRecognitionStore } from "@/state/useRecognitionStore";
 import { runCommand } from "@/commands/registry";
+import { VlmLatticeOverlay } from "./VlmLatticeOverlay";
+import { CgMarker } from "./CgMarker";
 import * as THREE from "three";
 import type { CadFace, ComponentType } from "@/core/types";
 
@@ -333,6 +335,8 @@ export function FlowViewport() {
           }}
         />
         <ImportedModelMesh />
+        <VlmLatticeOverlay />
+        <CgMarker />
         <CameraController />
         <CameraExporter />
       </Canvas>

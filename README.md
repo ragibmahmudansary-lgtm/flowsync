@@ -13,7 +13,7 @@ npm run dev
 
 Open http://localhost:3000
 
-## Current Phase: Phase 2 — Aircraft Recognition ✅
+## Current Phase: Phase 3 — VLM Solver + Stability + Mass/CG ✅
 
 ### What works now:
 - **Import**: STL (binary + ASCII), STEP, IGES, BREP via OCCT WASM
@@ -27,9 +27,16 @@ Open http://localhost:3000
 - **Recognition**: Auto-classify faces → Wing, Htail, Vtail, Fuselage
 - **Reference Geometry**: Span, chords, MAC, AR, sweep ¼-chord, dihedral
 - **Component Colors**: Viewport shows components in distinct colors
+- **VLM Solver**: Worker-based, horseshoe vortices, AIC matrix, Gaussian elimination
+- **AoA Sweep**: Configurable range, step, panel density
+- **Results Charts**: CL, CDi, CD0, CD, Cm vs α, drag polar, spanwise Γ, sectional cl
+- **Stability Analysis**: Neutral point, static margin, trim α, verdict (STABLE/UNSTABLE/NEUTRAL)
+- **Mass/CG**: Divergence theorem volumes, editable densities, CG markers in 3D
+- **Validation Harness**: AR=6 rect wing vs lifting-line theory (4 PASS criteria)
+- **VLM Lattice Overlay**: 3D visualization of bound + trailing vortices
 - **Pipeline Health**: Live checklist (Import → Orientation → Segmentation → Recognition → Paneling → Solver)
 - **Manual Override**: Assign selected faces to components, select whole component
-- **Command Palette**: Ctrl+K to search 25+ commands
+- **Command Palette**: Ctrl+K to search 30+ commands
 
 ### Gate checklist:
 - ✅ Toolbar Import CAD opens file picker
@@ -47,6 +54,12 @@ Open http://localhost:3000
 - ✅ Pipeline checklist shows live status
 - ✅ Manual override: assign selected → component
 - ✅ Select whole component button in toolbar
+- ✅ VLM solver runs in worker (UI responsive)
+- ✅ Results charts: CL, CD, Cm, polar, spanwise Γ
+- ✅ Stability verdict box with static margin
+- ✅ CG computation with divergence theorem
+- ✅ CG/NP markers in 3D viewport
+- ✅ Validation harness (4 PASS criteria)
 - ✅ Build passes
 
 ## Architecture
@@ -80,8 +93,8 @@ flowsync-v2/
 | **0** | Shell, theme, stores, command registry+palette, console, watchdog | ✅ Complete |
 | **1** | CAD: import worker, segmentation, orientation, face DB, selection, named selections | ✅ Complete |
 | **2** | Recognition + reference geometry + overrides + Pipeline Health | ✅ Complete |
-| **3** | Solver worker, sweep, charts, lattice, stability verdict, mass/CG | Next |
-| **4** | Views, display modes, triad, airflow, viewport capture, Report PDF/JSON | Pending |
+| **3** | Solver worker, sweep, charts, lattice, stability verdict, mass/CG | ✅ Complete |
+| **4** | Views, display modes, triad, airflow, viewport capture, Report PDF/JSON | Next |
 | **5** | AeroBot v4 agent | Pending |
 | **6** | FS-01 save/load/autosave + docs + acceptance run → cutover | Pending |
 

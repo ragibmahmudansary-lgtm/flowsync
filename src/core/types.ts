@@ -2,6 +2,7 @@ export type TabId = "geometry" | "vlm" | "analysis" | "results";
 export type SelectMode = "click" | "box";
 export type DisplayMode = "shaded" | "wireframe" | "shadedEdges";
 export type ComponentType = "wing" | "htail" | "vtail" | "fuselage" | "unassigned";
+export type SymmetryMode = "full" | "half";
 export type Vec3 = [number, number, number];
 
 export interface BoundingBox {
