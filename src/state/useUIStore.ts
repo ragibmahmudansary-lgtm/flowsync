@@ -17,6 +17,8 @@ interface UIState {
   showColorMap: boolean;
   showPathlines: boolean;
   setViz: (p: { showColorMap?: boolean; showPathlines?: boolean }) => void;
+  aeroBotOpen: boolean;
+  setAeroBotOpen: (open: boolean) => void;
 }
 
 export const useUIStore = create<UIState>((set) => ({
@@ -38,4 +40,6 @@ export const useUIStore = create<UIState>((set) => ({
   showColorMap: false,
   showPathlines: false,
   setViz: (p) => set(p),
+  aeroBotOpen: false,
+  setAeroBotOpen: (aeroBotOpen) => set({ aeroBotOpen }),
 }));

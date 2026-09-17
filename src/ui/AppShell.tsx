@@ -15,6 +15,7 @@ import { AnalysisInspector } from "./panels/AnalysisInspector";
 import { CgBox } from "./panels/CgBox";
 import { ResultsWorkspace } from "./workspace/ResultsWorkspace";
 import { ImportSummaryDialog } from "./dialogs/ImportSummaryDialog";
+import { AeroBot } from "./aerobot/AeroBot";
 
 const TABS = [
   { id: "geometry" as const, label: "Geometry & Airfoils" },
@@ -216,6 +217,7 @@ export function AppShell() {
       </footer>
 
       <ImportSummaryDialog />
+      <AeroBot />
       <CommandPalette />
       {splashVisible && <SplashScreen />}
     </div>

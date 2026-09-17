@@ -67,3 +67,7 @@
 ## D-017: CD0 Momentum Integral Closure (Phase 3)
 **Decision:** CD0 estimated via von Kármán momentum integral (Schlichting + Blasius) with laminar-turbulent transition at Re = 5×10⁵.
 **Rationale:** Closure model for VLM. Full FVM/CFD deferred to §8.9. Provides physically reasonable viscous drag without full Navier-Stokes solve.
+
+## D-018: AeroBot v4 Architecture (Phase 5)
+**Decision:** AeroBot v4 ships offline-first with local knowledge compendium (39 glossary, 8 playbooks, 7 theory entries). LLM mode is opt-in, requires user-supplied API key, and uses deterministic tool API for all app mutations.
+**Rationale:** Beta-compliant (§3.6, §8.9): no bundled AI service, no runtime AI dependency. Local expert mode works without internet. Agent mode is transparent and user-controlled. All app mutations go through the same 17-tool API used by UI, palette, and agent — single source of truth.

@@ -7,6 +7,7 @@ import "@/commands/cadCommands";
 import "@/commands/recognitionCommands";
 import "@/commands/solverCommands";
 import "@/commands/reportCommands";
+import "@/commands/aerobotCommands";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
