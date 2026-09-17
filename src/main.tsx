@@ -1,6 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { AppShell } from "@/ui/AppShell";
+import { ErrorBoundary } from "@/app/ErrorBoundary";
+import { useConsoleStore } from "@/state/useConsoleStore";
 import "./index.css";
-import App from "./App.tsx";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <AppShell />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+
+(window as any).__FLOWSYNC_BOOT__.mounted = true;
+document.getElementById("boot-diag")?.remove();
+useConsoleStore.getState().log("success", "FlowSync v2 shell booted (Phase 0).");
