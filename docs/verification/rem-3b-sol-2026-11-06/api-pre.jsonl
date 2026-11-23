@@ -1,0 +1,16 @@
+{"key":"baseline","cl":0.35422556511998826,"cdi":0.0040493023061504265,"cdiTrefftz":0.0040493023061504265,"nearFieldTrefftzDifference":-0.0007679226861770297,"cm":-0.08841123439633793,"wake":80,"validity":"ok"}
+{"key":"spoof span","cl":0.35489231846680064,"cdi":0.004064510130225425,"cdiTrefftz":0.004064510130225425,"nearFieldTrefftzDifference":-0.011696070600285671,"cm":-0.08857700709278686,"wake":20,"validity":"invalid"}
+{"key":"shift midpoint","cl":0.3542230184236532,"cdi":0.004049301147064776,"cdiTrefftz":0.004049301147064776,"nearFieldTrefftzDifference":0.014916409037730033,"cm":-0.09194817509439268,"wake":80,"validity":"invalid"}
+{"key":"ref area makes qS overflow","cl":0,"cdi":"NaN","cdiTrefftz":"NaN","nearFieldTrefftzDifference":-0.0007679226861770297,"cm":0,"wake":80,"validity":"ok"}
+{"key":"tiny qS coefficient overflow","cl":"Infinity","cdi":"Infinity","cdiTrefftz":"Infinity","nearFieldTrefftzDifference":-0.0007679226861761012,"cm":0,"wake":80,"validity":"ok"}
+{"key":"wake factor overflow","error":"Wake length must be finite."}
+{"key":"wake collapses at a far downstream origin","error":"VLM influence matrix is singular or near-singular."}
+{"key":"duplicate names","count":8}
+{"key":"resolution key collides with Object.prototype","claim":"current lattice vs 2x refined lattice","counts":{"constructor":"NaN"}}
+{"key":"near drag string","dragNTrefftz":0.5335479996985444,"dragNNearField":null,"cdiTrefftz":"NaN"}
+{"key":"near drag null","dragNTrefftz":0.5335479996985444,"dragNNearField":null,"cdiTrefftz":"NaN"}
+{"key":"negative near wake","error":"Near-field induced drag is negative (D = -0.5125525062836473 N; numerical cancellation tolerance -5.4463034301843216e-14 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."}
+{"key":"qS as string","dragNTrefftz":0.5335479996985444,"dragNNearField":null,"cdiTrefftz":"NaN"}
+{"key":"qS coefficient overflow","dragNTrefftz":0.5335479996985444,"dragNNearField":null,"cdiTrefftz":"Infinity"}
+{"key":"negative profile","error":"cd0 must be non-negative."}
+{"key":"sweep load overflow","error":"Nonfinite sweep output produced by VLM inputs."}

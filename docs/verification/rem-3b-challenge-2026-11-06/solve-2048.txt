@@ -1,0 +1,1 @@
+{"panels":2048,"cl":0.32765492293491755,"validity":{"status":"warning","messages":["Surface \"Main wing\" uses 16 chordwise rows, beyond the validated R2 envelope (M = 8): outputs are unverified."]},"seconds":8.405}

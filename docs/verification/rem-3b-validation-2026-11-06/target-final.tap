@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 1 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 1.45999
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 2 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.58654
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 3 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.573644
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 4 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 34.983885
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 5 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.74179
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 6 - decimal endpoint is included
+  ---
+  duration_ms: 1.275077
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 7 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.446766
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 8 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.286935
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 9 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.572929
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 10 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.728358
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 11 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.476677
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 60.132633

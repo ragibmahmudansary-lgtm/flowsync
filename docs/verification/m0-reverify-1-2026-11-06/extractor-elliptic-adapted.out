@@ -1,0 +1,8 @@
+AR 6 N 16 M 4: CLa 4.6114 (exact 4.7124, -2.14%)  e 1.0623  D>0 true  aspect min 1.18 max 3.39
+AR 6 N 32 M 4: CLa 4.5075 (exact 4.7124, -4.35%)  e 1.0305  D>0 true  aspect min 0.59 max 2.37
+AR 6 N 64 M 4: CLa 4.4739 (exact 4.7124, -5.06%)  e 1.0149  D>0 true  aspect min 0.29 max 1.67
+AR 6 N 64 M 8: CLa 4.4832 (exact 4.7124, -4.86%)  e 1.0151  D>0 true  aspect min 0.59 max 3.35
+AR 8 N 16 M 4: CLa 5.0119 (exact 5.0265, -0.29%)  e 1.0622  D>0 true  aspect min 1.57 max 4.51
+AR 8 N 32 M 4: CLa 4.8937 (exact 5.0265, -2.64%)  e 1.0307  D>0 true  aspect min 0.79 max 3.17
+AR 8 N 64 M 4: CLa 4.8534 (exact 5.0265, -3.44%)  e 1.0149  D>0 true  aspect min 0.39 max 2.23
+AR 8 N 64 M 8: CLa 4.8649 (exact 5.0265, -3.22%)  e 1.0153  D>0 true  aspect min 0.79 max 4.46

@@ -1,0 +1,41 @@
+[
+  {
+    "N": 16,
+    "actual": 0.3761021003525698,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.04226386594631104
+  },
+  {
+    "N": 32,
+    "actual": 0.3838215189433286,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.022606527922075292
+  },
+  {
+    "N": 64,
+    "actual": 0.3880571668095136,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.011820539200475655
+  },
+  {
+    "N": 128,
+    "actual": 0.39030681523838995,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.0060918565176821815
+  },
+  {
+    "N": 256,
+    "actual": 0.3914778851104992,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.003109751576047315
+  },
+  {
+    "N": 512,
+    "actual": 0.39207966306006353,
+    "expected": 0.39269908169872414,
+    "relativeError": -0.0015773366109773646
+  },
+  {
+    "psdError": "Trefftz-plane induced drag is negative (D = -0.0018968706654474725 N; numerical cancellation tolerance 6.652280965532162e-13 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "module": "src/vlmSolver.js (working tree)",
+  "results": [
+    {
+      "label": "sweep 0/2/4 deg, S=3e-307",
+      "outcome": "threw",
+      "message": "Nonfinite sweep fit or stability output produced by VLM inputs."
+    },
+    {
+      "label": "sweep 0/4 deg, S=3e-307",
+      "outcome": "returned",
+      "sweepStatus": "warning",
+      "points": 2,
+      "clAlphaPerRadFit": null
+    },
+    {
+      "label": "comparison 0/4 deg, S=3e-307",
+      "outcome": "returned",
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "deltaClAlpha": 0.0026045459320779354,
+      "deltaCdi": 0.010512702176666073
+    },
+    {
+      "label": "sweep 0/2/4 deg, S=2e-307",
+      "outcome": "threw",
+      "message": "Nonfinite sweep fit or stability output produced by VLM inputs."
+    },
+    {
+      "label": "sweep 0/4 deg, S=2e-307",
+      "outcome": "returned",
+      "sweepStatus": "warning",
+      "points": 2,
+      "clAlphaPerRadFit": null
+    },
+    {
+      "label": "comparison 0/4 deg, S=2e-307",
+      "outcome": "returned",
+      "badge": "amber",
+      "claim": "withheld",
+      "deltaClAlpha": null,
+      "deltaCdi": null
+    }
+  ]
+}

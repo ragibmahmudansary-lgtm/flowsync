@@ -1,0 +1,3458 @@
+[
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 0,
+    "chordIndex": 0,
+    "y0": -4,
+    "y1": -3.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -4,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      -3.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -3.666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -3.666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 0,
+    "chordIndex": 1,
+    "y0": -4,
+    "y1": -3.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -4,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      -3.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -3.666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -3.666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 0,
+    "chordIndex": 2,
+    "y0": -4,
+    "y1": -3.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -4,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      -3.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -3.666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -3.666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 0,
+    "chordIndex": 3,
+    "y0": -4,
+    "y1": -3.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -4,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      -3.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -3.666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -3.666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 1,
+    "chordIndex": 0,
+    "y0": -3.3333333333333335,
+    "y1": -2.666666666666667,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -3.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      -2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -3,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 1,
+    "chordIndex": 1,
+    "y0": -3.3333333333333335,
+    "y1": -2.666666666666667,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -3.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      -2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -3,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 1,
+    "chordIndex": 2,
+    "y0": -3.3333333333333335,
+    "y1": -2.666666666666667,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -3.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      -2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -3,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 1,
+    "chordIndex": 3,
+    "y0": -3.3333333333333335,
+    "y1": -2.666666666666667,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -3.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      -2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -3,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 2,
+    "chordIndex": 0,
+    "y0": -2.666666666666667,
+    "y1": -2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      -2,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 2,
+    "chordIndex": 1,
+    "y0": -2.666666666666667,
+    "y1": -2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      -2,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 2,
+    "chordIndex": 2,
+    "y0": -2.666666666666667,
+    "y1": -2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      -2,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 2,
+    "chordIndex": 3,
+    "y0": -2.666666666666667,
+    "y1": -2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      -2,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 3,
+    "chordIndex": 0,
+    "y0": -2,
+    "y1": -1.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -2,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      -1.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -1.6666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -1.6666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 3,
+    "chordIndex": 1,
+    "y0": -2,
+    "y1": -1.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -2,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      -1.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -1.6666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -1.6666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 3,
+    "chordIndex": 2,
+    "y0": -2,
+    "y1": -1.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -2,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      -1.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -1.6666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -1.6666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 3,
+    "chordIndex": 3,
+    "y0": -2,
+    "y1": -1.3333333333333335,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -2,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      -1.3333333333333335,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -1.6666666666666667,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -1.6666666666666667,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 4,
+    "chordIndex": 0,
+    "y0": -1.3333333333333335,
+    "y1": -0.6666666666666665,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -1.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      -0.6666666666666665,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -1,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 4,
+    "chordIndex": 1,
+    "y0": -1.3333333333333335,
+    "y1": -0.6666666666666665,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -1.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      -0.6666666666666665,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -1,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 4,
+    "chordIndex": 2,
+    "y0": -1.3333333333333335,
+    "y1": -0.6666666666666665,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -1.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      -0.6666666666666665,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -1,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 4,
+    "chordIndex": 3,
+    "y0": -1.3333333333333335,
+    "y1": -0.6666666666666665,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -1.3333333333333335,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      -0.6666666666666665,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -1,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 5,
+    "chordIndex": 0,
+    "y0": -0.6666666666666665,
+    "y1": 0,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      -0.6666666666666665,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      0,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      -0.33333333333333326,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      -0.33333333333333326,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 5,
+    "chordIndex": 1,
+    "y0": -0.6666666666666665,
+    "y1": 0,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      -0.6666666666666665,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      0,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      -0.33333333333333326,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      -0.33333333333333326,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 5,
+    "chordIndex": 2,
+    "y0": -0.6666666666666665,
+    "y1": 0,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      -0.6666666666666665,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      0,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      -0.33333333333333326,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      -0.33333333333333326,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 5,
+    "chordIndex": 3,
+    "y0": -0.6666666666666665,
+    "y1": 0,
+    "widthM": 0.6666666666666665,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666666,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      -0.6666666666666665,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      0,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      -0.33333333333333326,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      -0.33333333333333326,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 6,
+    "chordIndex": 0,
+    "y0": 0,
+    "y1": 0.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      0,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      0.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      0.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      0.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 6,
+    "chordIndex": 1,
+    "y0": 0,
+    "y1": 0.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      0,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      0.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      0.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      0.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 6,
+    "chordIndex": 2,
+    "y0": 0,
+    "y1": 0.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      0,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      0.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      0.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      0.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 6,
+    "chordIndex": 3,
+    "y0": 0,
+    "y1": 0.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      0,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      0.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      0.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      0.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 7,
+    "chordIndex": 0,
+    "y0": 0.666666666666667,
+    "y1": 1.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      0.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      1.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      1,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 7,
+    "chordIndex": 1,
+    "y0": 0.666666666666667,
+    "y1": 1.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      0.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      1.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      1,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 7,
+    "chordIndex": 2,
+    "y0": 0.666666666666667,
+    "y1": 1.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      0.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      1.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      1,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 7,
+    "chordIndex": 3,
+    "y0": 0.666666666666667,
+    "y1": 1.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      0.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      1.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      1,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 8,
+    "chordIndex": 0,
+    "y0": 1.333333333333333,
+    "y1": 2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      1.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      2,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      1.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      1.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 8,
+    "chordIndex": 1,
+    "y0": 1.333333333333333,
+    "y1": 2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      1.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      2,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      1.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      1.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 8,
+    "chordIndex": 2,
+    "y0": 1.333333333333333,
+    "y1": 2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      1.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      2,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      1.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      1.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 8,
+    "chordIndex": 3,
+    "y0": 1.333333333333333,
+    "y1": 2,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      1.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      2,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      1.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      1.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 9,
+    "chordIndex": 0,
+    "y0": 2,
+    "y1": 2.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      2,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 9,
+    "chordIndex": 1,
+    "y0": 2,
+    "y1": 2.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      2,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 9,
+    "chordIndex": 2,
+    "y0": 2,
+    "y1": 2.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      2,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 9,
+    "chordIndex": 3,
+    "y0": 2,
+    "y1": 2.666666666666667,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      2,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      2.666666666666667,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      2.3333333333333335,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      2.3333333333333335,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 10,
+    "chordIndex": 0,
+    "y0": 2.666666666666667,
+    "y1": 3.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      3.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      3,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 10,
+    "chordIndex": 1,
+    "y0": 2.666666666666667,
+    "y1": 3.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      3.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      3,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 10,
+    "chordIndex": 2,
+    "y0": 2.666666666666667,
+    "y1": 3.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      3.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      3,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 10,
+    "chordIndex": 3,
+    "y0": 2.666666666666667,
+    "y1": 3.333333333333333,
+    "widthM": 0.6666666666666661,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.6666666666666643,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      2.666666666666667,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      3.333333333333333,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      3,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      3,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 11,
+    "chordIndex": 0,
+    "y0": 3.333333333333333,
+    "y1": 4,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.0625,
+      3.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.0625,
+      4,
+      0
+    ],
+    "boundMidpoint": [
+      0.0625,
+      3.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.1875,
+      3.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 11,
+    "chordIndex": 1,
+    "y0": 3.333333333333333,
+    "y1": 4,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.3125,
+      3.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.3125,
+      4,
+      0
+    ],
+    "boundMidpoint": [
+      0.3125,
+      3.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.4375,
+      3.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 11,
+    "chordIndex": 2,
+    "y0": 3.333333333333333,
+    "y1": 4,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.5625,
+      3.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.5625,
+      4,
+      0
+    ],
+    "boundMidpoint": [
+      0.5625,
+      3.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.6875,
+      3.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Wing",
+    "spanIndex": 11,
+    "chordIndex": 3,
+    "y0": 3.333333333333333,
+    "y1": 4,
+    "widthM": 0.666666666666667,
+    "lengthM": 0.25,
+    "widthLengthRatio": 2.666666666666668,
+    "chordM": 1,
+    "boundA": [
+      0.8125,
+      3.333333333333333,
+      0
+    ],
+    "boundB": [
+      0.8125,
+      4,
+      0
+    ],
+    "boundMidpoint": [
+      0.8125,
+      3.6666666666666665,
+      0
+    ],
+    "controlPoint": [
+      0.9375,
+      3.6666666666666665,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 0,
+    "chordIndex": 0,
+    "y0": -1.5,
+    "y1": -1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -1.5,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      -1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 0,
+    "chordIndex": 1,
+    "y0": -1.5,
+    "y1": -1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -1.5,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      -1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 0,
+    "chordIndex": 2,
+    "y0": -1.5,
+    "y1": -1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -1.5,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      -1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 0,
+    "chordIndex": 3,
+    "y0": -1.5,
+    "y1": -1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -1.5,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      -1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 1,
+    "chordIndex": 0,
+    "y0": -1.25,
+    "y1": -1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -1.25,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      -1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 1,
+    "chordIndex": 1,
+    "y0": -1.25,
+    "y1": -1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -1.25,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      -1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 1,
+    "chordIndex": 2,
+    "y0": -1.25,
+    "y1": -1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -1.25,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      -1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 1,
+    "chordIndex": 3,
+    "y0": -1.25,
+    "y1": -1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -1.25,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      -1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 2,
+    "chordIndex": 0,
+    "y0": -1,
+    "y1": -0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -1,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      -0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 2,
+    "chordIndex": 1,
+    "y0": -1,
+    "y1": -0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -1,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      -0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 2,
+    "chordIndex": 2,
+    "y0": -1,
+    "y1": -0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -1,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      -0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 2,
+    "chordIndex": 3,
+    "y0": -1,
+    "y1": -0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -1,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      -0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 3,
+    "chordIndex": 0,
+    "y0": -0.75,
+    "y1": -0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -0.75,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      -0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 3,
+    "chordIndex": 1,
+    "y0": -0.75,
+    "y1": -0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -0.75,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      -0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 3,
+    "chordIndex": 2,
+    "y0": -0.75,
+    "y1": -0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -0.75,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      -0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 3,
+    "chordIndex": 3,
+    "y0": -0.75,
+    "y1": -0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -0.75,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      -0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 4,
+    "chordIndex": 0,
+    "y0": -0.5,
+    "y1": -0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -0.5,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      -0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 4,
+    "chordIndex": 1,
+    "y0": -0.5,
+    "y1": -0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -0.5,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      -0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 4,
+    "chordIndex": 2,
+    "y0": -0.5,
+    "y1": -0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -0.5,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      -0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 4,
+    "chordIndex": 3,
+    "y0": -0.5,
+    "y1": -0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -0.5,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      -0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 5,
+    "chordIndex": 0,
+    "y0": -0.25,
+    "y1": 0,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      -0.25,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      0,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      -0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      -0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 5,
+    "chordIndex": 1,
+    "y0": -0.25,
+    "y1": 0,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      -0.25,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      0,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      -0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      -0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 5,
+    "chordIndex": 2,
+    "y0": -0.25,
+    "y1": 0,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      -0.25,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      0,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      -0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      -0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 5,
+    "chordIndex": 3,
+    "y0": -0.25,
+    "y1": 0,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      -0.25,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      0,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      -0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      -0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 6,
+    "chordIndex": 0,
+    "y0": 0,
+    "y1": 0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      0,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 6,
+    "chordIndex": 1,
+    "y0": 0,
+    "y1": 0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      0,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 6,
+    "chordIndex": 2,
+    "y0": 0,
+    "y1": 0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      0,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 6,
+    "chordIndex": 3,
+    "y0": 0,
+    "y1": 0.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      0,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      0.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      0.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      0.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 7,
+    "chordIndex": 0,
+    "y0": 0.25,
+    "y1": 0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      0.25,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 7,
+    "chordIndex": 1,
+    "y0": 0.25,
+    "y1": 0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      0.25,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 7,
+    "chordIndex": 2,
+    "y0": 0.25,
+    "y1": 0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      0.25,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 7,
+    "chordIndex": 3,
+    "y0": 0.25,
+    "y1": 0.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      0.25,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      0.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      0.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      0.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 8,
+    "chordIndex": 0,
+    "y0": 0.5,
+    "y1": 0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      0.5,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 8,
+    "chordIndex": 1,
+    "y0": 0.5,
+    "y1": 0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      0.5,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 8,
+    "chordIndex": 2,
+    "y0": 0.5,
+    "y1": 0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      0.5,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 8,
+    "chordIndex": 3,
+    "y0": 0.5,
+    "y1": 0.75,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      0.5,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      0.75,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      0.625,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      0.625,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 9,
+    "chordIndex": 0,
+    "y0": 0.75,
+    "y1": 1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      0.75,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 9,
+    "chordIndex": 1,
+    "y0": 0.75,
+    "y1": 1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      0.75,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 9,
+    "chordIndex": 2,
+    "y0": 0.75,
+    "y1": 1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      0.75,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 9,
+    "chordIndex": 3,
+    "y0": 0.75,
+    "y1": 1,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      0.75,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      1,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      0.875,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      0.875,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 10,
+    "chordIndex": 0,
+    "y0": 1,
+    "y1": 1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      1,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 10,
+    "chordIndex": 1,
+    "y0": 1,
+    "y1": 1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      1,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 10,
+    "chordIndex": 2,
+    "y0": 1,
+    "y1": 1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      1,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 10,
+    "chordIndex": 3,
+    "y0": 1,
+    "y1": 1.25,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      1,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      1.25,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      1.125,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      1.125,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 11,
+    "chordIndex": 0,
+    "y0": 1.25,
+    "y1": 1.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.03125,
+      1.25,
+      0.6
+    ],
+    "boundB": [
+      4.03125,
+      1.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.03125,
+      1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.09375,
+      1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 11,
+    "chordIndex": 1,
+    "y0": 1.25,
+    "y1": 1.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.15625,
+      1.25,
+      0.6
+    ],
+    "boundB": [
+      4.15625,
+      1.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.15625,
+      1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.21875,
+      1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 11,
+    "chordIndex": 2,
+    "y0": 1.25,
+    "y1": 1.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.28125,
+      1.25,
+      0.6
+    ],
+    "boundB": [
+      4.28125,
+      1.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.28125,
+      1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.34375,
+      1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "surfaceName": "Tail",
+    "spanIndex": 11,
+    "chordIndex": 3,
+    "y0": 1.25,
+    "y1": 1.5,
+    "widthM": 0.25,
+    "lengthM": 0.125,
+    "widthLengthRatio": 2,
+    "chordM": 0.5,
+    "boundA": [
+      4.40625,
+      1.25,
+      0.6
+    ],
+    "boundB": [
+      4.40625,
+      1.5,
+      0.6
+    ],
+    "boundMidpoint": [
+      4.40625,
+      1.375,
+      0.6
+    ],
+    "controlPoint": [
+      4.46875,
+      1.375,
+      0.6
+    ],
+    "normal": [
+      0,
+      0,
+      1
+    ]
+  }
+]

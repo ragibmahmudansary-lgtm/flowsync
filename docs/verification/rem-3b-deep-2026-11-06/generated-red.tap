@@ -1,0 +1,29 @@
+TAP version 13
+# Subtest: panel generator refuses nonfinite and degenerate derived geometry
+not ok 1 - panel generator refuses nonfinite and degenerate derived geometry
+  ---
+  duration_ms: 3.82532
+  type: 'test'
+  location: '/home/tanvir/Coding/AirFLOW/tests/rem3b-generated-extremes.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///home/tanvir/Coding/AirFLOW/tests/rem3b-generated-extremes.test.mjs:11:13)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 24.313068

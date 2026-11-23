@@ -1,0 +1,14 @@
+file:///tmp/airflow-m0-reverify.jiN5hu/src/vlmSolver.js:735
+      throw new Error("Each panel must have nondegenerate geometry and positive diagnostics.");
+            ^
+
+Error: Each panel must have nondegenerate geometry and positive diagnostics.
+    at validateCasePanels (file:///tmp/airflow-m0-reverify.jiN5hu/src/vlmSolver.js:735:13)
+    at solveCase (file:///tmp/airflow-m0-reverify.jiN5hu/src/vlmSolver.js:839:26)
+    at solveVlmCase (file:///tmp/airflow-m0-reverify.jiN5hu/src/vlmSolver.js:797:10)
+    at file:///tmp/airflow-m0-reverify.jiN5hu/extractor-elliptic-current-api.mjs:14:13
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

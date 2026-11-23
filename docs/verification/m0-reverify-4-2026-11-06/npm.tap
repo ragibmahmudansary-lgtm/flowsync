@@ -1,0 +1,41 @@
+
+> airflow-browser-stability-mvp@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ tests/aud1.test.mjs (24271.78664ms)
+✔ tests/aud2.test.mjs (292.095516ms)
+✔ tests/demoRegression.test.mjs (1813.678089ms)
+✔ tests/geometry.test.mjs (61.374477ms)
+✔ tests/massStability.test.mjs (74.281706ms)
+✔ tests/projectAxis.test.mjs (84.960587ms)
+✔ tests/recognition.test.mjs (77.385515ms)
+✔ tests/rem3a.test.mjs (3433.649423ms)
+✔ tests/rem3b-acceptance.test.mjs (2125.740201ms)
+✔ tests/rem3b-app-boundary.test.mjs (3233.516132ms)
+✔ tests/rem3b-bounds.test.mjs (115.968689ms)
+✔ tests/rem3b-cap-boundary.test.mjs (15381.809954ms)
+✔ tests/rem3b-decimal.test.mjs (96.330119ms)
+✔ tests/rem3b-endpoint.test.mjs (114.604373ms)
+✔ tests/rem3b-entrypoints.test.mjs (71.609158ms)
+✔ tests/rem3b-generated-extremes.test.mjs (94.613709ms)
+✔ tests/rem3b-options.test.mjs (88.37775ms)
+✔ tests/rem3b-oracle.test.mjs (117.818899ms)
+✔ tests/rem3b-overflow.test.mjs (94.807309ms)
+✔ tests/rem3b-r.test.mjs (148.228082ms)
+✔ tests/rem3b-resume.test.mjs (96.169851ms)
+✔ tests/rem3b-sweep-overflow.test.mjs (111.409394ms)
+✔ tests/rem3b-validation.test.mjs (112.813779ms)
+✔ tests/rem3b.test.mjs (79.796809ms)
+✔ tests/solFindings.test.mjs (18342.136356ms)
+✔ tests/stlParser.test.mjs (80.660422ms)
+✔ tests/topology.test.mjs (3631.598751ms)
+✔ tests/vlmOracles.test.mjs (23994.472049ms)
+✔ tests/vlmSolver.test.mjs (10461.415492ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24280.961201

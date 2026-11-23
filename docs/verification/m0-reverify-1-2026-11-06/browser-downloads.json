@@ -1,0 +1,466 @@
+[
+  {
+    "file": "airflow-vlm-results (1).json",
+    "schema": "airflow.vlm-results",
+    "version": 1,
+    "method": "Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)",
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_malpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.008036665480246345 /deg from the least-squares slope 0.022150651517133763 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 0.6354790594154313,
+      "maxRatio": 1.7071081356060007
+    },
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 33.977,
+            "rootChordM": 5.435,
+            "tipChordM": 1.902,
+            "sweepDeg": 25,
+            "dihedralDeg": 4,
+            "incidenceDeg": 2,
+            "xLeadingRootM": 11.231,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": -6,
+        "alphaMaxDeg": 10,
+        "alphaStepDeg": 1,
+        "betaDeg": 0,
+        "velocityMS": 72,
+        "densityKgM3": 1.225,
+        "refAreaM2": 124.659,
+        "refChordM": 4.193,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0.025,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "coverage": {
+      "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+      "alphaDeg": [
+        0,
+        4
+      ],
+      "betaDeg": 0,
+      "latticeLabel": "R1",
+      "latticeCounts": {
+        "Main wing": 40
+      },
+      "coversPlottedLattice": true,
+      "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+    },
+    "inputIdentity": {
+      "betaDeg": 0,
+      "velocityMS": 72,
+      "densityKgM3": 1.225,
+      "refAreaM2": 124.659,
+      "refChordM": 4.193,
+      "referencePoint": [
+        17.28170074278219,
+        0.004715015891692671,
+        3.0967612251723766
+      ],
+      "cd0": 0.025,
+      "cm0": 0,
+      "alphaProtocolDeg": [
+        0,
+        4
+      ],
+      "surfaces": [
+        {
+          "name": "Main wing",
+          "planform": "linear",
+          "spanM": 33.977,
+          "rootChordM": 5.435,
+          "tipChordM": 1.902,
+          "sweepDeg": 25,
+          "dihedralDeg": 4,
+          "incidenceDeg": 2,
+          "xLeadingRootM": 11.231,
+          "zRootM": 5.604008956146245
+        }
+      ],
+      "lattices": {
+        "current": {
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r1": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r2": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 80
+          }
+        }
+      },
+      "wake": {
+        "direction": "freestream-aligned",
+        "lengthFactor": 20,
+        "lengthM": 339.77
+      }
+    },
+    "rowCount": 17,
+    "firstRow": {
+      "alphaDeg": -6,
+      "validity": {
+        "status": "warning",
+        "messages": [
+          "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+        ]
+      },
+      "availability": "available",
+      "cl": -0.3249899535336618,
+      "cdi": 0.0035524471261940403,
+      "cd": 0.028552447126194043,
+      "cm": -0.116388857776773,
+      "liftN": -128636.6318952535,
+      "dragN": 11301.551296417168,
+      "momentNm": -193166.13628175706
+    }
+  },
+  {
+    "file": "airflow-vlm-results (2).json",
+    "schema": "airflow.vlm-results",
+    "version": 1,
+    "method": "Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)",
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.00409679110796729 /deg from the least-squares slope 0.0800705488577032 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.008979602099029878 /deg from the least-squares slope 0.021501540367940906 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 0.6354790594154313,
+      "maxRatio": 1.7071081356060007
+    },
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 33.977,
+            "rootChordM": 5.435,
+            "tipChordM": 1.902,
+            "sweepDeg": 25,
+            "dihedralDeg": 4,
+            "incidenceDeg": 2,
+            "xLeadingRootM": 11.231,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": -6,
+        "alphaMaxDeg": 10,
+        "alphaStepDeg": 1,
+        "betaDeg": 5,
+        "velocityMS": 72,
+        "densityKgM3": 1.225,
+        "refAreaM2": 124.659,
+        "refChordM": 4.193,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0.025,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "coverage": {
+      "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+      "alphaDeg": [
+        0,
+        4
+      ],
+      "betaDeg": 5,
+      "latticeLabel": "R1",
+      "latticeCounts": {
+        "Main wing": 40
+      },
+      "coversPlottedLattice": true,
+      "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+    },
+    "inputIdentity": {
+      "betaDeg": 5,
+      "velocityMS": 72,
+      "densityKgM3": 1.225,
+      "refAreaM2": 124.659,
+      "refChordM": 4.193,
+      "referencePoint": [
+        17.28170074278219,
+        0.004715015891692671,
+        3.0967612251723766
+      ],
+      "cd0": 0.025,
+      "cm0": 0,
+      "alphaProtocolDeg": [
+        0,
+        4
+      ],
+      "surfaces": [
+        {
+          "name": "Main wing",
+          "planform": "linear",
+          "spanM": 33.977,
+          "rootChordM": 5.435,
+          "tipChordM": 1.902,
+          "sweepDeg": 25,
+          "dihedralDeg": 4,
+          "incidenceDeg": 2,
+          "xLeadingRootM": 11.231,
+          "zRootM": 5.604008956146245
+        }
+      ],
+      "lattices": {
+        "current": {
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r1": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r2": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 80
+          }
+        }
+      },
+      "wake": {
+        "direction": "freestream-aligned",
+        "lengthFactor": 20,
+        "lengthM": 339.77
+      }
+    },
+    "rowCount": 17,
+    "firstRow": {
+      "alphaDeg": -6,
+      "validity": {
+        "status": "warning",
+        "messages": [
+          "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+        ]
+      },
+      "availability": "available",
+      "cl": -0.3150142424069709,
+      "cdi": 0.0035413332836540736,
+      "cd": 0.028541333283654075,
+      "cm": -0.11225947126846991,
+      "liftN": -124688.07328245747,
+      "dragN": 11297.152245750493,
+      "momentNm": -186312.7514109064
+    }
+  },
+  {
+    "file": "airflow-project.json",
+    "schema": "airflow.browser-project",
+    "version": 1,
+    "source": {
+      "name": "samolot.stl",
+      "triangleCount": 197772,
+      "unitScale": 1,
+      "axisMapping": {
+        "longitudinal": "x",
+        "lateral": "z",
+        "vertical": "y"
+      }
+    },
+    "method": "Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)",
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.00409679110796729 /deg from the least-squares slope 0.0800705488577032 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.008979602099029878 /deg from the least-squares slope 0.021501540367940906 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 0.6354790594154313,
+      "maxRatio": 1.7071081356060007
+    },
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 33.977,
+            "rootChordM": 5.435,
+            "tipChordM": 1.902,
+            "sweepDeg": 25,
+            "dihedralDeg": 4,
+            "incidenceDeg": 2,
+            "xLeadingRootM": 11.231,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": -6,
+        "alphaMaxDeg": 10,
+        "alphaStepDeg": 1,
+        "betaDeg": 5,
+        "velocityMS": 72,
+        "densityKgM3": 1.225,
+        "refAreaM2": 124.659,
+        "refChordM": 4.193,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0.025,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "coverage": {
+      "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+      "alphaDeg": [
+        0,
+        4
+      ],
+      "betaDeg": 5,
+      "latticeLabel": "R1",
+      "latticeCounts": {
+        "Main wing": 40
+      },
+      "coversPlottedLattice": true,
+      "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+    },
+    "inputIdentity": {
+      "betaDeg": 5,
+      "velocityMS": 72,
+      "densityKgM3": 1.225,
+      "refAreaM2": 124.659,
+      "refChordM": 4.193,
+      "referencePoint": [
+        17.28170074278219,
+        0.004715015891692671,
+        3.0967612251723766
+      ],
+      "cd0": 0.025,
+      "cm0": 0,
+      "alphaProtocolDeg": [
+        0,
+        4
+      ],
+      "surfaces": [
+        {
+          "name": "Main wing",
+          "planform": "linear",
+          "spanM": 33.977,
+          "rootChordM": 5.435,
+          "tipChordM": 1.902,
+          "sweepDeg": 25,
+          "dihedralDeg": 4,
+          "incidenceDeg": 2,
+          "xLeadingRootM": 11.231,
+          "zRootM": 5.604008956146245
+        }
+      ],
+      "lattices": {
+        "current": {
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r1": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "r2": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 80
+          }
+        }
+      },
+      "wake": {
+        "direction": "freestream-aligned",
+        "lengthFactor": 20,
+        "lengthM": 339.77
+      }
+    },
+    "rowCount": 17,
+    "firstRow": {
+      "alphaDeg": -6,
+      "cl": -0.3150142424069709,
+      "cdi": 0.0035413332836540736,
+      "cdiNearField": 0.0035322983399748817,
+      "nearFieldTrefftzDifference": -0.002551283077730904,
+      "cd": 0.028541333283654075,
+      "cm": -0.11225947126846991,
+      "liftN": -124688.07328245747,
+      "inducedDragN": 1398.1446391280515,
+      "dragN": 11297.152245750493,
+      "momentNm": -186312.7514109064,
+      "validity": {
+        "status": "warning",
+        "messages": [
+          "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+        ]
+      }
+    }
+  }
+]

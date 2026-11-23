@@ -1,0 +1,4 @@
+2026-11-06T06:55:18+06:00
+Interrupted after identifying the old AUD-1 VM stub for the replaced app calls.
+2026-11-06T06:58:31+06:00
+The outer session returned 130 on interruption. The child completed with a failing TAP run and reported exit 1.

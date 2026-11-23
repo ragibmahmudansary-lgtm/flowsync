@@ -1,0 +1,4 @@
+{"options":{"chordwiseRows":1,"spanwisePanels":4},"cl":0.35422556511998826,"cdi":0.0040493023061504265,"validity":{"status":"ok","messages":[]},"claim":"flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %"}
+{"options":{"chordwiseRows":12,"spanwisePanels":48},"cl":0.32780813008741144,"cdi":0.004314078730433791,"validity":{"status":"warning","messages":["Surface \"wing\" uses 12 chordwise rows, beyond the validated R2 envelope (M = 8): outputs are unverified."]},"claim":"flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %"}
+{"options":{"alphaDeg":35},"cl":3.058930778363194,"cdi":0.36342569635304284,"validity":{"status":"ok","messages":[]},"claim":"flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %"}
+{"options":{"surfaces":[{"name":"wing","spanM":1,"rootChordM":1,"tipChordM":1}],"refAreaM2":1},"cl":0.1284203684440642,"cdi":0.004656347226315791,"validity":{"status":"ok","messages":[]},"claim":"flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %"}

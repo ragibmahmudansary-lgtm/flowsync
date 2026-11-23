@@ -1,0 +1,43 @@
+{
+ "case": "drone-with-winglets",
+ "region": {
+  "triangleCount": 542112,
+  "regionIndexSha256": "5413f99a0899df4231eac2b1d54acc5f3e8722dc6de7aba546e60919a687dc44"
+ },
+ "recognition": {
+  "valid": true,
+  "areaM2": 0.671740580342992,
+  "spanM": 2.1509606933593752,
+  "macM": 0.32931282262428,
+  "rootChordM": 0.39401982116699213,
+  "sweepDeg": 20.818439874202323,
+  "warnings": []
+ },
+ "stages": {
+  "parse": {
+   "ms": 113.7,
+   "rssMB": 335.3,
+   "heapUsedMB": 4.8
+  },
+  "map": {
+   "ms": 262.2,
+   "rssMB": 365.6,
+   "heapUsedMB": 5.1
+  },
+  "recognition": {
+   "ms": 193.2,
+   "rssMB": 553.7,
+   "heapUsedMB": 181.9
+  },
+  "topology": {
+   "ms": 4328.1,
+   "rssMB": 1152.8,
+   "heapUsedMB": 753.9
+  }
+ },
+ "topology": {
+  "components": 10,
+  "boundary": 6,
+  "nonManifold": 0
+ }
+}

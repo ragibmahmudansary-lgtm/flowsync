@@ -1,0 +1,584 @@
+{
+  "llt": [
+    {
+      "ar": 4,
+      "referenceSlope": 4.028386730661113,
+      "vlmTwoPointSlope": 3.80432829049053,
+      "slopeRelativeError": -0.05561989330994854,
+      "matchedClDragRatio": 0.941208448744304,
+      "e": 1.033045979499764,
+      "oracle60to120RelativeChange": 7.704947790898586e-13,
+      "pass": "reported, AR4 not gated"
+    },
+    {
+      "ar": 6,
+      "referenceSlope": 4.530424987977472,
+      "vlmTwoPointSlope": 4.3527387645519715,
+      "slopeRelativeError": -0.03922065234432359,
+      "matchedClDragRatio": 0.9478116673586567,
+      "e": 1.0064602480653244,
+      "oracle60to120RelativeChange": 1.6366907829024058e-12,
+      "pass": true
+    },
+    {
+      "ar": 8,
+      "referenceSlope": 4.837704011305983,
+      "vlmTwoPointSlope": 4.692784236045663,
+      "slopeRelativeError": -0.029956312937218788,
+      "matchedClDragRatio": 0.949965353292714,
+      "e": 0.9860047813068827,
+      "oracle60to120RelativeChange": 2.8061997170425457e-12,
+      "pass": true
+    },
+    {
+      "ar": 12,
+      "referenceSlope": 5.199084949193006,
+      "vlmTwoPointSlope": 5.094059846377424,
+      "slopeRelativeError": -0.020200689898687618,
+      "matchedClDragRatio": 0.9513151211809631,
+      "e": 0.952953051924606,
+      "oracle60to120RelativeChange": 6.056710688540079e-12,
+      "pass": true
+    }
+  ],
+  "independentVlm": [
+    {
+      "surface": {
+        "name": "wing",
+        "spanM": 8,
+        "rootChordM": 1,
+        "tipChordM": 1
+      },
+      "cl": 0.3326187770010029,
+      "cdi": 0.004260205083350889,
+      "cm": 0.051819473032027996,
+      "geometryMaxAbsError": 0.0,
+      "errors": {
+        "cl": 3.3306690738754696e-16,
+        "cdi": 7.771561172376096e-16,
+        "cm": 5.551115123125783e-16,
+        "circulationMaxRelative": 8.635660599412375e-16
+      },
+      "tolerance": 1e-09,
+      "pass": true
+    },
+    {
+      "surface": {
+        "name": "wing",
+        "spanM": 8,
+        "rootChordM": 1,
+        "tipChordM": 0.5,
+        "sweepDeg": 25,
+        "dihedralDeg": 5,
+        "incidenceDeg": 3
+      },
+      "cl": 0.4438462269142574,
+      "cdi": 0.0075105206833595995,
+      "cm": -0.3139714127800841,
+      "geometryMaxAbsError": 4.440892098500626e-16,
+      "errors": {
+        "cl": 2.220446049250313e-16,
+        "cdi": 1.3322676295501878e-15,
+        "cm": 0.0,
+        "circulationMaxRelative": 6.993995829581745e-15
+      },
+      "tolerance": 1e-09,
+      "pass": true
+    }
+  ],
+  "horseshoe": [
+    {
+      "qS": 1,
+      "expected": 0.3183098861837907,
+      "actual": 0.3183098861837907,
+      "relativeError": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "qS": 1000000000000,
+      "expected": 0.3183098861837907,
+      "actual": 0.3183098861837907,
+      "relativeError": 0.0,
+      "tolerance": 1e-12
+    }
+  ],
+  "elliptic": [
+    {
+      "n": 128,
+      "expected": 0.39269908169872414,
+      "actual": 0.39030681523838995,
+      "relativeError": -0.0060918565176821815,
+      "tolerance": 0.01,
+      "pass": true
+    },
+    {
+      "n": 256,
+      "expected": 0.39269908169872414,
+      "actual": 0.3914778851104992,
+      "relativeError": -0.003109751576047315,
+      "tolerance": 0.01,
+      "pass": true
+    }
+  ],
+  "scale": [
+    {
+      "scale": 0.001,
+      "cl": -2.220446049250313e-16,
+      "cdi": -7.771561172376096e-16,
+      "cm": -1.1102230246251565e-16,
+      "circulationMaxRelative": 1.3509602525327688e-15,
+      "status": "ok"
+    },
+    {
+      "scale": 0.01,
+      "cl": -6.661338147750939e-16,
+      "cdi": -5.551115123125783e-16,
+      "cm": 2.220446049250313e-16,
+      "circulationMaxRelative": 2.16153640405243e-15,
+      "status": "ok"
+    },
+    {
+      "scale": 0.1,
+      "cl": -8.881784197001252e-16,
+      "cdi": -9.992007221626409e-16,
+      "cm": -1.1102230246251565e-16,
+      "circulationMaxRelative": 1.4049986626340795e-15,
+      "status": "ok"
+    },
+    {
+      "scale": 1,
+      "cl": 0.0,
+      "cdi": 0.0,
+      "cm": 0.0,
+      "circulationMaxRelative": 0.0,
+      "status": "ok"
+    },
+    {
+      "scale": 10,
+      "cl": -6.661338147750939e-16,
+      "cdi": -1.4432899320127035e-15,
+      "cm": 2.220446049250313e-16,
+      "circulationMaxRelative": 1.7562483282925993e-15,
+      "status": "ok"
+    },
+    {
+      "scale": 1000,
+      "cl": -9.992007221626409e-16,
+      "cdi": -1.2212453270876722e-15,
+      "cm": -6.661338147750939e-16,
+      "circulationMaxRelative": 1.513075482836701e-15,
+      "status": "ok"
+    }
+  ],
+  "kernel": [
+    {
+      "scale": 0.001,
+      "h": 5e-07,
+      "value": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "truncations": 1
+      },
+      "expectedZ": 318309886.18363154,
+      "relativeError": -1.0,
+      "interpretation": "intentional cutoff; must count truncation"
+    },
+    {
+      "scale": 0.001,
+      "h": 2e-06,
+      "value": [
+        0,
+        0,
+        79577471.54531103
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 79577471.54531105,
+      "relativeError": -2.220446049250313e-16,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 0.001,
+      "h": 0.1,
+      "value": [
+        0,
+        0,
+        1560.6426163660067
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 1560.6426163660065,
+      "relativeError": 2.220446049250313e-16,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 0.001,
+      "h": 1,
+      "value": [
+        0,
+        0,
+        71.17625434171771
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 71.1762543417177,
+      "relativeError": 2.220446049250313e-16,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1,
+      "h": 5e-07,
+      "value": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "truncations": 1
+      },
+      "expectedZ": 318309.88618363155,
+      "relativeError": -1.0,
+      "interpretation": "intentional cutoff; must count truncation"
+    },
+    {
+      "scale": 1,
+      "h": 2e-06,
+      "value": [
+        0,
+        0,
+        79577.47154531104
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 79577.47154531105,
+      "relativeError": -2.220446049250313e-16,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1,
+      "h": 0.1,
+      "value": [
+        0,
+        0,
+        1.5606426163660068
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 1.5606426163660068,
+      "relativeError": 0.0,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1,
+      "h": 1,
+      "value": [
+        0,
+        0,
+        0.0711762543417177
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 0.0711762543417177,
+      "relativeError": 0.0,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1000,
+      "h": 5e-07,
+      "value": [
+        0,
+        0,
+        0
+      ],
+      "stats": {
+        "truncations": 1
+      },
+      "expectedZ": 318.30988618363153,
+      "relativeError": -1.0,
+      "interpretation": "intentional cutoff; must count truncation"
+    },
+    {
+      "scale": 1000,
+      "h": 2e-06,
+      "value": [
+        0,
+        0,
+        79.57747154531106
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 79.57747154531106,
+      "relativeError": 0.0,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1000,
+      "h": 0.1,
+      "value": [
+        0,
+        0,
+        0.0015606426163660067
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 0.0015606426163660065,
+      "relativeError": 2.220446049250313e-16,
+      "interpretation": "analytic check, tolerance 1e-9"
+    },
+    {
+      "scale": 1000,
+      "h": 1,
+      "value": [
+        0,
+        0,
+        7.117625434171771e-05
+      ],
+      "stats": {
+        "truncations": 0
+      },
+      "expectedZ": 7.117625434171771e-05,
+      "relativeError": 0.0,
+      "interpretation": "analytic check, tolerance 1e-9"
+    }
+  ],
+  "fits": [
+    {
+      "cl": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.08208585223670178,
+          "intercept": 0.00014811908407034478,
+          "maxDeviation": 0.0013509310109690031
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.08208585223670177,
+          "intercept": 0.00014811908407028757,
+          "leastSquaresSlopePerDeg": 0.08208585223670177,
+          "maxAdjacentSlopeDeviationPerDeg": 0.001350931010969017
+        },
+        "statusMatches": true,
+        "maxAbsError": 5.72187696529225e-17
+      },
+      "cm": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.012770201743947048,
+          "intercept": 0.009987654097924544,
+          "maxDeviation": 0.00011255328310217846
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.012770201743947048,
+          "intercept": 0.009987654097924544,
+          "leastSquaresSlopePerDeg": 0.012770201743947048,
+          "maxAdjacentSlopeDeviationPerDeg": 0.00011255328310217846
+        },
+        "statusMatches": true,
+        "maxAbsError": 0.0
+      },
+      "trim": null,
+      "trimStatus": "not determined: C_L(alpha_trim) = -0.06380415883573543 is not positive (DATA_CONTRACTS 2.5 requires C_L(alpha_trim) > 0)"
+    },
+    {
+      "cl": {
+        "reference": {
+          "status": "insufficient linear data"
+        },
+        "actual": {
+          "status": "insufficient linear data",
+          "pointCount": 0,
+          "slopePerDeg": null,
+          "intercept": null,
+          "leastSquaresSlopePerDeg": null,
+          "maxAdjacentSlopeDeviationPerDeg": null
+        },
+        "statusMatches": true
+      },
+      "cm": {
+        "reference": {
+          "status": "insufficient linear data"
+        },
+        "actual": {
+          "status": "insufficient linear data",
+          "pointCount": 0,
+          "slopePerDeg": null,
+          "intercept": null,
+          "leastSquaresSlopePerDeg": null,
+          "maxAdjacentSlopeDeviationPerDeg": null
+        },
+        "statusMatches": true
+      },
+      "trim": null,
+      "trimStatus": "not determined: C_m slope is \"insufficient linear data\" (fit contract, DATA_CONTRACTS 2.5)"
+    },
+    {
+      "cl": {
+        "reference": {
+          "status": "insufficient linear data"
+        },
+        "actual": {
+          "status": "insufficient linear data",
+          "pointCount": 2,
+          "slopePerDeg": null,
+          "intercept": null,
+          "leastSquaresSlopePerDeg": null,
+          "maxAdjacentSlopeDeviationPerDeg": null
+        },
+        "statusMatches": true
+      },
+      "cm": {
+        "reference": {
+          "status": "insufficient linear data"
+        },
+        "actual": {
+          "status": "insufficient linear data",
+          "pointCount": 2,
+          "slopePerDeg": null,
+          "intercept": null,
+          "leastSquaresSlopePerDeg": null,
+          "maxAdjacentSlopeDeviationPerDeg": null
+        },
+        "statusMatches": true
+      },
+      "trim": null,
+      "trimStatus": "not determined: C_m slope is \"insufficient linear data\" (fit contract, DATA_CONTRACTS 2.5)"
+    },
+    {
+      "cl": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.08208585223670178,
+          "intercept": 0.00014811908407034478,
+          "maxDeviation": 0.0013509310109690031
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.08208585223670177,
+          "intercept": 0.00014811908407028757,
+          "leastSquaresSlopePerDeg": 0.08208585223670177,
+          "maxAdjacentSlopeDeviationPerDeg": 0.001350931010969017
+        },
+        "statusMatches": true,
+        "maxAbsError": 5.72187696529225e-17
+      },
+      "cm": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.012770201743948092,
+          "intercept": 9.999987654097925,
+          "maxDeviation": 0.00011255328310315338
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.012770201743947194,
+          "intercept": 9.999987654097925,
+          "leastSquaresSlopePerDeg": 0.012770201743947194,
+          "maxAdjacentSlopeDeviationPerDeg": 0.00011255328310225479
+        },
+        "statusMatches": true,
+        "maxAbsError": 8.98586760555986e-16
+      },
+      "trim": null,
+      "trimStatus": "not determined: alpha_trim = -783.07201832874 deg lies outside the sampled sweep [-4, 8] deg (DATA_CONTRACTS 2.5)"
+    },
+    {
+      "cl": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.08208585223670178,
+          "intercept": 0.00014811908407034478,
+          "maxDeviation": 0.0013509310109690031
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.08208585223670177,
+          "intercept": 0.00014811908407028757,
+          "leastSquaresSlopePerDeg": 0.08208585223670177,
+          "maxAdjacentSlopeDeviationPerDeg": 0.001350931010969017
+        },
+        "statusMatches": true,
+        "maxAbsError": 5.72187696529225e-17
+      },
+      "cm": {
+        "reference": {
+          "status": "determined",
+          "slopePerDeg": 0.012770201743947046,
+          "intercept": -0.03831060523184114,
+          "maxDeviation": 0.00011255328310216979
+        },
+        "actual": {
+          "status": "determined",
+          "pointCount": 10,
+          "slopePerDeg": 0.012770201743947048,
+          "intercept": -0.038310605231841155,
+          "leastSquaresSlopePerDeg": 0.012770201743947048,
+          "maxAdjacentSlopeDeviationPerDeg": 0.00011255328310217153
+        },
+        "statusMatches": true,
+        "maxAbsError": 1.3877787807814457e-17
+      },
+      "trim": 3.000000000000001,
+      "trimStatus": "determined: alpha_trim = 3.000000000000001 deg inside the sampled sweep, C_L(alpha_trim) = 0.24565602528335306 > 0 (sampled C_L)"
+    }
+  ],
+  "trimRoundTrip": {
+    "target": 3,
+    "trimAlphaDeg": 3.000000000000001,
+    "directCm": 6.23975620724429e-05,
+    "trimStatus": "determined: alpha_trim = 3.000000000000001 deg inside the sampled sweep, C_L(alpha_trim) = 0.24565602528335306 > 0 (sampled C_L)"
+  },
+  "momentTransfer": [
+    {
+      "referencePoint": [
+        0.6,
+        0,
+        0
+      ],
+      "expected": 0.11666436703348003,
+      "actual": 0.11666436703347999,
+      "absError": 4.163336342344337e-17,
+      "tolerance": 1e-12
+    },
+    {
+      "referencePoint": [
+        0.6,
+        0,
+        2
+      ],
+      "expected": 0.15394445989323913,
+      "actual": 0.15394445989323904,
+      "absError": 8.326672684688674e-17,
+      "tolerance": 1e-12
+    }
+  ],
+  "recognition": {
+    "oracleAreaM2": 24.92543148217362,
+    "fullSelectedTriangleYBounds": [
+      6.9805216789245605,
+      16.993284225463867
+    ],
+    "oracleClippedAtY8AreaM2": 22.657281728037702,
+    "productionAreaM2": 8.299993221911025,
+    "relativeError": -0.6670070394630045,
+    "productionValid": true,
+    "tolerance": 0.02,
+    "pass": false
+  }
+}

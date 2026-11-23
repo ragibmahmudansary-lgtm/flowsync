@@ -1,0 +1,114 @@
+{
+  "module": "/home/tanvir/Coding/AirFLOW/src/vlmSolver.js",
+  "ia03": [
+    {
+      "extra": {
+        "chordwiseRows": 1,
+        "spanwisePanels": 4
+      },
+      "cl": 0.35422556511998826,
+      "cdi": 0.0040493023061504265,
+      "validityStatus": "ok",
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point.",
+      "legacyLabelShown": false
+    },
+    {
+      "extra": {
+        "chordwiseRows": 12,
+        "spanwisePanels": 48
+      },
+      "cl": 0.32780813008741133,
+      "cdi": 0.004314078730433786,
+      "validityStatus": "warning",
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point.",
+      "legacyLabelShown": false
+    },
+    {
+      "extra": {
+        "alphaDeg": 35
+      },
+      "cl": 3.058930778363194,
+      "cdi": 0.36342569635304284,
+      "validityStatus": "ok",
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point.",
+      "legacyLabelShown": false
+    },
+    {
+      "extra": {
+        "surfaces": [
+          {
+            "name": "wing",
+            "spanM": 1,
+            "rootChordM": 1,
+            "tipChordM": 1
+          }
+        ],
+        "refAreaM2": 1
+      },
+      "cl": 0.1284203684440642,
+      "cdi": 0.004656347226315791,
+      "validityStatus": "ok",
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point.",
+      "legacyLabelShown": false
+    }
+  ],
+  "ia01": {
+    "badge": "amber",
+    "claim": "withheld",
+    "withinGates": false,
+    "deltaClAlpha": null,
+    "deltaCdi": null,
+    "withholdingReason": "coarse sweep is quarantined or missing; coarse alpha 0 case is invalid or nonfinite; fine sweep is quarantined or missing; fine alpha 0 case is invalid or nonfinite",
+    "r1Valid": false,
+    "r2Valid": false,
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable"
+  },
+  "ia05": {
+    "movedCanardIdentityEqualToBase": false,
+    "wakeFactor200IdentityEqualToBase": false,
+    "wakeLengthM": 80,
+    "seedOmittedEqualToFalse": true,
+    "seedTrueEqualToFalse": false,
+    "seedTrueRecordsPlaceholder": true
+  },
+  "sol02": [
+    {
+      "betaDeg": 0,
+      "identityBetaDeg": 0,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "withinGates": true,
+      "deltaClAlpha": 0.002604545932077925,
+      "deltaCdi": 0.010512702176665865,
+      "coversPlottedLattice": true,
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable"
+    },
+    {
+      "betaDeg": 5,
+      "identityBetaDeg": 5,
+      "badge": "amber",
+      "claim": "prescribed R1 vs R2",
+      "withinGates": false,
+      "deltaClAlpha": 0.01752425309329866,
+      "deltaCdi": 0.05170673842746727,
+      "coversPlottedLattice": true,
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable"
+    }
+  ],
+  "sol02Custom": {
+    "badge": "amber",
+    "claim": "current lattice vs 2x refined lattice",
+    "latticeLabel": "custom",
+    "coversPlottedLattice": true,
+    "withholdingReason": null,
+    "currentGridClaim": "compared",
+    "currentGridDeltaClAlpha": 0.03688596741236277,
+    "currentGridDeltaCdi": 0.04144796263611684,
+    "currentGridWithinGates": false,
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable"
+  }
+}

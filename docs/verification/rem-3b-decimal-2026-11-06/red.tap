@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: strict decimal upper boundary excludes next integer
+not ok 1 - strict decimal upper boundary excludes next integer
+  ---
+  duration_ms: 5.072576
+  type: 'test'
+  location: '/tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        0,
+    +   1
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 0
+  actual:
+    0: 0
+    1: 1
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:6:71)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: decimal endpoints and samples are rounded once
+not ok 2 - decimal endpoints and samples are rounded once
+  ---
+  duration_ms: 1.616058
+  type: 'test'
+  location: '/tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        0,
+        0.1,
+        0.2,
+    +   0.30000000000000004
+    -   0.3
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 0
+    1: 0.1
+    2: 0.2
+    3: 0.3
+  actual:
+    0: 0
+    1: 0.1
+    2: 0.2
+    3: 0.30000000000000004
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:7:66)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: decimal interval just below endpoint does not add a point
+not ok 3 - decimal interval just below endpoint does not add a point
+  ---
+  duration_ms: 0.72528
+  type: 'test'
+  location: '/tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        0,
+        0.1,
+        0.2,
+    +   0.30000000000000004
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 0
+    1: 0.1
+    2: 0.2
+  actual:
+    0: 0
+    1: 0.1
+    2: 0.2
+    3: 0.30000000000000004
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:8:77)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: reversed and offset decimal intervals preserve endpoints
+not ok 4 - reversed and offset decimal intervals preserve endpoints
+  ---
+  duration_ms: 0.700645
+  type: 'test'
+  location: '/tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        -0.1,
+        0,
+        0.1,
+    +   0.20000000000000004,
+    +   0.30000000000000004
+    -   0.2,
+    -   0.3
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: -0.1
+    1: 0
+    2: 0.1
+    3: 0.2
+    4: 0.3
+  actual:
+    0: -0.1
+    1: 0
+    2: 0.1
+    3: 0.20000000000000004
+    4: 0.30000000000000004
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-decimal/tests/rem3b-decimal.test.mjs:9:76)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17.966172

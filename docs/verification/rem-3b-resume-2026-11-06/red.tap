@@ -1,0 +1,67 @@
+TAP version 13
+# Subtest: negative profile drag is refused, not silently converted to zero
+not ok 1 - negative profile drag is refused, not silently converted to zero
+  ---
+  duration_ms: 4.203157
+  type: 'test'
+  location: '/tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:7:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: degenerate supplied panels are refused before solving
+not ok 2 - degenerate supplied panels are refused before solving
+  ---
+  duration_ms: 0.501406
+  type: 'test'
+  location: '/tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /panel/i. Input:
+    
+    'Error: VLM influence matrix is singular or near-singular.'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+  error: 'VLM influence matrix is singular or near-singular.'
+  stack: |-
+    solveLinearSystem (file:///tmp/airflow-rem3b-continued/src/vlmSolver.js:1318:13)
+    solveVlmCase (file:///tmp/airflow-rem3b-continued/src/vlmSolver.js:717:18)
+    file:///tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:12:25
+    getActual (node:assert:611:5)
+    strict.throws (node:assert:759:24)
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:12:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-continued/tests/rem3b-resume.test.mjs:12:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16.090951

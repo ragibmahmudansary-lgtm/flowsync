@@ -1,0 +1,20 @@
+--- entry/src/vlmSolver.js
++++ final/src/vlmSolver.js
+@@ -1368,6 +1368,7 @@
+     velocityMS: options.velocityMS, densityKgM3: options.densityKgM3,
+     refAreaM2: options.refAreaM2, refChordM: options.refChordM,
+     referencePoint: Array.from(options.referencePoint ?? [0, 0, 0]),
++    seedReferencePlaceholder: options.seedReferencePlaceholder ?? false,
+     cd0: options.cd0 ?? 0, cm0: options.cm0 ?? 0,
+     alphaProtocolDeg: [0, 4],
+     surfaces: surfaces.map((surface) => ({ ...surface })),
+@@ -1458,6 +1459,9 @@
+       else if (!["ok", "warning"].includes(point.validity?.status) || !Number.isFinite(point.cl) || !Number.isFinite(point.cdi))
+         reasons.push(`${label} alpha ${alpha} case is invalid or nonfinite`);
+     }
++    if (reasons.length === 0 && !Number.isFinite(twoPointSlopePerRad(series))) {
++      reasons.push(`${label} two-point lift slope is nonfinite`);
++    }
+     return { valid: reasons.length === 0, reasons };
+   };
+   const a = inspect(coarse, "coarse"), b = inspect(fine, "fine");

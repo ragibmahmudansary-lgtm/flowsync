@@ -1,0 +1,69 @@
+{
+  "rows": 17,
+  "changed": {
+    "signed-positive-coarse": {
+      "head": {
+        "valid": false,
+        "reasons": [
+          "comparison metrics are nonfinite"
+        ],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      },
+      "entry": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 1.3333333333333333,
+        "deltaCdi": 0.076923076923077
+      }
+    },
+    "signed-negative-coarse": {
+      "head": {
+        "valid": false,
+        "reasons": [
+          "comparison metrics are nonfinite"
+        ],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      },
+      "entry": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 4,
+        "deltaCdi": 0.0714285714285715
+      }
+    }
+  }
+}

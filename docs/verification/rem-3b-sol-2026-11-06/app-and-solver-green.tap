@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: decimal sweep matches independent rational counts and binary64 rounding
+ok 1 - decimal sweep matches independent rational counts and binary64 rounding
+  ---
+  duration_ms: 26.466168
+  type: 'test'
+  ...
+# Subtest: wake span follows each named group’s bound endpoints, including translated panels
+ok 2 - wake span follows each named group’s bound endpoints, including translated panels
+  ---
+  duration_ms: 2.376745
+  type: 'test'
+  ...
+# Subtest: surface identity rejects duplicates and handles names inherited from Object.prototype
+ok 3 - surface identity rejects duplicates and handles names inherited from Object.prototype
+  ---
+  duration_ms: 650.857167
+  type: 'test'
+  ...
+# Subtest: case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+ok 4 - case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+  ---
+  duration_ms: 0.663157
+  type: 'test'
+  ...
+# Subtest: Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+ok 5 - Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+  ---
+  duration_ms: 0.556558
+  type: 'test'
+  ...
+# Subtest: wired Run and input events clear both old plots and recover through real parsing and rendering
+ok 6 - wired Run and input events clear both old plots and recover through real parsing and rendering
+  ---
+  duration_ms: 424.251262
+  type: 'test'
+  ...
+# Subtest: wired Run clears prior display on solver and resolution failure without an input event
+ok 7 - wired Run clears prior display on solver and resolution failure without an input event
+  ---
+  duration_ms: 291.157569
+  type: 'test'
+  ...
+# Subtest: invalid in-progress span text does not act like an intentionally blank automatic setting
+ok 8 - invalid in-progress span text does not act like an intentionally blank automatic setting
+  ---
+  duration_ms: 1.819483
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1437.528259

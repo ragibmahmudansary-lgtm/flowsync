@@ -1,0 +1,84 @@
+{
+  "queue": "P2",
+  "promptFile": "docs/implementation/QUEUE_PROMPT_P2_v2_2026-11-07.md",
+  "phases": [
+    {
+      "id": "P2-0",
+      "status": "pushed",
+      "commit": null,
+      "evidence": "docs/verification/drone-baseline-2026-11-07/",
+      "next": ""
+    },
+    {
+      "id": "P2-A",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": "Start P2-A: read M0-6/M0-7 plan rows, REC-V1..V3, DR-03/DR-04; list consumers by grep; red tests first."
+    },
+    {
+      "id": "P2-B",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-C",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-D",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-E",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-F",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-G",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    },
+    {
+      "id": "P2-H",
+      "status": "not_started",
+      "commit": null,
+      "evidence": null,
+      "next": ""
+    }
+  ],
+  "newFindings": [
+    {
+      "id": "OBS-P2-0-2",
+      "text": "42,600 kg caution shows for non-demo meshes (massModel.js), value still applied; prompt premise wrong. Not fixed; P2-E question."
+    },
+    {
+      "id": "OBS-P2-0-3",
+      "text": "One-sided wing / partial selection shown as 'Recognized wing' with half-wing values, no warning. P2-A adds half-wing warning. Gap-bridging convention pending in P2-A."
+    },
+    {
+      "id": "F-3",
+      "text": "Current planform area depends on skin selection (0.0144 vs 0.025 m2 on the same wing); unexplained; method replaced in P2-A."
+    }
+  ],
+  "hostModelEffort": "Sonnet 5.5 (claude-sonnet-5-5); host reports reasoning effort 10 (intended: high, xhigh for P2-A). Difference recorded, not changed by the agent."
+}

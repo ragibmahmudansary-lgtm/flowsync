@@ -1,0 +1,83 @@
+{
+  "generated": "2026-11-06T20:50:49.854Z",
+  "files": {
+    "a320": {
+      "path": "assets/airbus-a320-cfd-1.snapshot.7/samolot.stl",
+      "bytes": 9888684,
+      "sha256": "b58976ce9e3cd0a7ef4a2ff8f2a83db4ccaaecc64d28473734518d9719d60c7a",
+      "format": "binary",
+      "triangleCount": 197772,
+      "header80": "Visualization Toolkit generated SLA File                                        ",
+      "rawBounds": {
+        "min": [
+          -0.000042968749767169356,
+          -3.906249901319825e-7,
+          -16.983922958374023
+        ],
+        "max": [
+          37.43777847290039,
+          11.20801830291748,
+          16.993284225463867
+        ]
+      },
+      "nonFiniteValues": 0,
+      "exactlyZeroAreaTriangles": 0,
+      "unit": "m (A320 demo; scale as in the app default)",
+      "unitScaleToMetres": 1,
+      "provenance": "Committed demo model (assets/airbus-a320-cfd-1.snapshot.7); licence question Q-7 open.",
+      "licence": "to confirm"
+    },
+    "wing": {
+      "path": "assets/b737-wing-aerofoil-model-attempt/B737 aerofoil attempt.stl",
+      "bytes": 144584,
+      "sha256": "bb1de0d71a47625f30416fe0e70c00123007a01d9991bc3d849b15e6e7398288",
+      "format": "binary",
+      "triangleCount": 2890,
+      "header80": "STLB ASM 218.00.00.0000 COLOR=????                                              ",
+      "rawBounds": {
+        "min": [
+          -0.030668074265122414,
+          -14.863033294677734,
+          0
+        ],
+        "max": [
+          105.9486083984375,
+          9.078486442565918,
+          300
+        ]
+      },
+      "nonFiniteValues": 0,
+      "exactlyZeroAreaTriangles": 0,
+      "unit": "mm (assumed: SolidWorks default; STL carries no unit and the SLDPRT is not readable)",
+      "unitScaleToMetres": 0.001,
+      "provenance": "Local only, untracked. SolidWorks export 'B737 aerofoil attempt' (2012, companion SLDPRT + render). Licence not confirmed.",
+      "licence": "to confirm"
+    },
+    "drone": {
+      "path": "assets/drone-reverse-engineering-in-catia-v5-1.snapshot.8/Dron w100.stl",
+      "bytes": 70141684,
+      "sha256": "b7c4af099faca9c0e56c4203a787caf0ec7bb5ef4770a8fd9c2a4b2d821c02e7",
+      "format": "binary",
+      "triangleCount": 1402832,
+      "header80": "Dron w100.stl",
+      "rawBounds": {
+        "min": [
+          -777.5059814453125,
+          -66.63629913330078,
+          -1075.4803466796875
+        ],
+        "max": [
+          154.70059204101562,
+          240.2490234375,
+          1075.4803466796875
+        ]
+      },
+      "nonFiniteValues": 0,
+      "exactlyZeroAreaTriangles": 0,
+      "unit": "mm (STEP declares SI_UNIT(.MILLI.,.METRE.))",
+      "unitScaleToMetres": 0.001,
+      "provenance": "Local only, untracked. CATIA V5 export 'Dron w100' from a Windows folder, with STEP companion. Licence not confirmed.",
+      "licence": "to confirm"
+    }
+  }
+}

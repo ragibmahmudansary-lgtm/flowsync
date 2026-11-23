@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: panel generator refuses nonfinite and degenerate derived geometry
+ok 1 - panel generator refuses nonfinite and degenerate derived geometry
+  ---
+  duration_ms: 1.965517
+  type: 'test'
+  ...
+# Subtest: negative profile drag is refused, not silently converted to zero
+ok 2 - negative profile drag is refused, not silently converted to zero
+  ---
+  duration_ms: 0.613396
+  type: 'test'
+  ...
+# Subtest: degenerate supplied panels are refused before solving
+ok 3 - degenerate supplied panels are refused before solving
+  ---
+  duration_ms: 0.926042
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 4 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.399821
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 5 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.217919
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 6 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.346048
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 7 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.376558
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 8 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.18996
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21.731748

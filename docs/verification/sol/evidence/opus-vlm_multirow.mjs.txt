@@ -1,0 +1,18 @@
+// Multi-chordwise-row flat-plate VLM (uniform spanwise N, uniform chordwise M), using the repo kernel.
+import { solveVlmCase } from "/home/tanvir/Coding/AirFLOW/src/vlmSolver.js";
+const rho = 1.225, V = 50;
+function panels(b, c, N, M) { const ps = []; for (let i = 0; i < N; i++) for (let k = 0; k < M; k++) {
+  const y0 = -b/2 + i*b/N, y1 = y0 + b/N, ym = (y0+y1)/2, x0 = k*c/M, dx = c/M;
+  ps.push({ strip: i, y0, y1, chordM: dx, boundA: [x0+0.25*dx, y0, 0], boundB: [x0+0.25*dx, y1, 0], boundMidpoint: [x0+0.25*dx, ym, 0], controlPoint: [x0+0.75*dx, ym, 0], normal: [0,0,1] }); } return ps; }
+function run(AR, N, M) {
+  const p = panels(AR, 1, N, M), q = 0.5*rho*V*V;
+  const r = solveVlmCase({ velocityMS: V, densityKgM3: rho, refAreaM2: AR, refChordM: 1, alphaDeg: 4, panels: p, wakeLengthFactor: 2000 });
+  const G = new Float64Array(N); p.forEach((pp, j) => { G[pp.strip] += r.circulation[j]; }); // total shed per strip
+  const ys = Array.from({length: N+1}, (_, k) => -AR/2 + k*AR/N), shed = ys.map((_, k) => (k<N?G[k]:0) - (k>0?G[k-1]:0));
+  let d = 0; for (let i = 0; i < N; i++) { const ym = (ys[i]+ys[i+1])/2; let w = 0; for (let k = 0; k <= N; k++) w += shed[k]/(2*Math.PI*(ym-ys[k])); d += 0.5*rho*G[i]*w*(AR/N); }
+  const cdi = Math.abs(d)/(q*AR);
+  return { AR, N, M, widthOverLength: ((AR/N)/(1/M)).toFixed(2), CLa: (r.cl/(4*Math.PI/180)).toFixed(4), e: (r.cl**2/(Math.PI*AR*cdi)).toFixed(4), panels: N*M };
+}
+const rows = [];
+for (const AR of [4, 6, 8, 12]) for (const [N, M] of [[8*Math.ceil(AR/2), 4], [16*Math.ceil(AR/2), 8]].map(([n,m])=>[Math.max(16,n),m])) rows.push(run(AR, N, M));
+console.table(rows);

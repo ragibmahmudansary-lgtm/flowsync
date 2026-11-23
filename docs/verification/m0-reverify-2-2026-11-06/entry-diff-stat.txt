@@ -1,0 +1,16 @@
+ CALCULATION_PIPELINE.md                         |  32 +-
+ MVP_METHODOLOGY.md                              |  22 +-
+ docs/implementation/CURRENT_HANDOFF.md          | 253 +++++++++
+ docs/implementation/IMPLEMENTATION_CHANGELOG.md |  77 +++
+ docs/implementation/IMPLEMENTATION_STATUS.md    |  80 ++-
+ docs/implementation/ISSUE_AND_DECISION_LOG.md   |  82 +++
+ docs/implementation/SOL_FINDING_DISPOSITIONS.md |  66 +++
+ docs/implementation/milestones/M0.md            |  62 ++
+ index.html                                      |   4 +-
+ src/app.js                                      | 156 +++--
+ src/projectState.js                             |   4 +
+ src/vlmSolver.js                                | 725 +++++++++++++++++-------
+ tests/solFindings.test.mjs                      |   2 +-
+ tests/vlmOracles.test.mjs                       |  21 +-
+ tests/vlmSolver.test.mjs                        |   4 +-
+ 15 files changed, 1304 insertions(+), 286 deletions(-)

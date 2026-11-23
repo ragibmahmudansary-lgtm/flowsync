@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: decimal sweep matches independent rational counts and binary64 rounding
+not ok 1 - decimal sweep matches independent rational counts and binary64 rounding
+  ---
+  duration_ms: 23.60564
+  type: 'test'
+  location: '/tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'alphaStepDeg cannot advance at this magnitude.'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    runVlmSweep (file:///tmp/airflow-rem3b-sol.mwhmF0/src/vlmSolver.js:938:59)
+    solve (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:15:25)
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:17:27)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: wake span follows each named group’s bound endpoints, including translated panels
+not ok 2 - wake span follows each named group’s bound endpoints, including translated panels
+  ---
+  duration_ms: 8.971278
+  type: 'test'
+  location: '/tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:21:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:34:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: surface identity rejects duplicates and handles names inherited from Object.prototype
+not ok 3 - surface identity rejects duplicates and handles names inherited from Object.prototype
+  ---
+  duration_ms: 0.323883
+  type: 'test'
+  location: '/tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:39:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:40:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+not ok 4 - case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+  ---
+  duration_ms: 0.404465
+  type: 'test'
+  location: '/tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:48:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:50:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+not ok 5 - Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+  ---
+  duration_ms: 0.267293
+  type: 'test'
+  location: '/tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:62:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-sol.mwhmF0/tests/rem3b-acceptance.test.mjs:65:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 0
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.051709

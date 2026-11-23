@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 1 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 1.412802
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 2 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.678963
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 3 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.554801
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 4 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 20.279853
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 5 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.454943
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 6 - decimal endpoint is included
+  ---
+  duration_ms: 0.63727
+  type: 'test'
+  ...
+# Subtest: explicit malformed lattice options are rejected
+ok 7 - explicit malformed lattice options are rejected
+  ---
+  duration_ms: 0.309283
+  type: 'test'
+  ...
+# Subtest: negative profile drag is refused, not silently converted to zero
+ok 8 - negative profile drag is refused, not silently converted to zero
+  ---
+  duration_ms: 0.195198
+  type: 'test'
+  ...
+# Subtest: degenerate supplied panels are refused before solving
+ok 9 - degenerate supplied panels are refused before solving
+  ---
+  duration_ms: 0.465282
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 10 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.406861
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 11 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.209525
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 12 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.339563
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 13 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.563958
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 14 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.324955
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 47.852693

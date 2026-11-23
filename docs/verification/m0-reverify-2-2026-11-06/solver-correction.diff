@@ -1,0 +1,17 @@
+--- entry/src/vlmSolver.js
++++ final/src/vlmSolver.js
+@@ -1448,2 +1448 @@
+-// the certified >= 3-point fit of SOL-09 — the arithmetic is unchanged so the
+-// pinned deltas stay bit-identical.
++// the certified >= 3-point fit of SOL-09.
+@@ -1759,2 +1758,8 @@
+-  const window = series.filter((point) => Math.abs(point.alphaDeg) <= FIT_WINDOW_MAX_ABS_ALPHA_DEG + FIT_WINDOW_EPSILON_DEG);
+-  return slope(window, "alphaDeg", "cl") * 180 / Math.PI;
++  const converted = slope(series, "alphaDeg", "cl") * 180 / Math.PI;
++  if (Number.isFinite(converted)) return converted;
++  // The caller has checked both finite 0°/4° cases. Divide their difference
++  // directly by the radian interval to avoid overflow in the intermediate
++  // least-squares sums or degree conversion. Keep ordinary results identical.
++  const zero = series.find((point) => point.alphaDeg === 0);
++  const four = series.find((point) => point.alphaDeg === 4);
++  return (four.cl - zero.cl) / (4 * Math.PI / 180);

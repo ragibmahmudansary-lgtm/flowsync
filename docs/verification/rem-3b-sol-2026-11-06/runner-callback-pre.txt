@@ -1,0 +1,199 @@
+1793923496611 begin aud1.test.mjs AUD-1 quarantined zero point withholds badge and persists through display boundary
+1793923498534 end aud1.test.mjs AUD-1 quarantined zero point withholds badge and persists through display boundary
+1793923498536 begin aud1.test.mjs AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+1793923506326 end aud1.test.mjs AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+1793923506327 begin aud1.test.mjs AUD-1 rejects missing, quarantined and nonfinite comparison points
+1793923506328 end aud1.test.mjs AUD-1 rejects missing, quarantined and nonfinite comparison points
+1793923506328 begin aud1.test.mjs AUD-1 custom comparison with quarantined zero degree is withheld
+1793923508311 end aud1.test.mjs AUD-1 custom comparison with quarantined zero degree is withheld
+1793923508311 begin aud1.test.mjs AUD-1 application caller forwards flow and renders quarantined comparison
+1793923510258 end aud1.test.mjs AUD-1 application caller forwards flow and renders quarantined comparison
+1793923510258 begin aud2.test.mjs actual app export retains valid sweep values, provenance and persistence
+1793923510291 end aud2.test.mjs actual app export retains valid sweep values, provenance and persistence
+1793923510291 begin aud2.test.mjs actual app export quarantines invalid sweep including mixed points
+1793923510291 end aud2.test.mjs actual app export quarantines invalid sweep including mixed points
+1793923510292 begin aud2.test.mjs missing point validity and nonfinite values remain unavailable in JSON
+1793923510292 end aud2.test.mjs missing point validity and nonfinite values remain unavailable in JSON
+1793923510292 begin demoRegression.test.mjs demo STL regression metrics
+1793923510907 end demoRegression.test.mjs demo STL regression metrics
+1793923510907 begin geometry.test.mjs computes box volume, centroid, and inertia about CG
+1793923510907 end geometry.test.mjs computes box volume, centroid, and inertia about CG
+1793923510908 begin geometry.test.mjs computes tetrahedron volume and centroid
+1793923510908 end geometry.test.mjs computes tetrahedron volume and centroid
+1793923510908 begin geometry.test.mjs reports closed box topology
+1793923510908 end geometry.test.mjs reports closed box topology
+1793923510908 begin geometry.test.mjs mesh properties include warnings for open surfaces
+1793923510908 end geometry.test.mjs mesh properties include warnings for open surfaces
+1793923510908 begin geometry.test.mjs topology reports duplicate and degenerate triangles
+1793923510909 end geometry.test.mjs topology reports duplicate and degenerate triangles
+1793923510909 begin massStability.test.mjs aggregates mesh mass and point masses into total CG
+1793923510909 end massStability.test.mjs aggregates mesh mass and point masses into total CG
+1793923510909 begin massStability.test.mjs static stability follows neutral point relative to CG
+1793923510909 end massStability.test.mjs static stability follows neutral point relative to CG
+1793923510910 begin massStability.test.mjs pitch simulation returns finite RK4 samples
+1793923510910 end massStability.test.mjs pitch simulation returns finite RK4 samples
+1793923510910 begin projectAxis.test.mjs axis mapping rejects duplicate source axes
+1793923510911 end projectAxis.test.mjs axis mapping rejects duplicate source axes
+1793923510911 begin projectAxis.test.mjs project snapshot restores recognition assignments for the matching mesh
+1793923510911 end projectAxis.test.mjs project snapshot restores recognition assignments for the matching mesh
+1793923510911 begin recognition.test.mjs derives trapezoidal planform reference geometry
+1793923510912 end recognition.test.mjs derives trapezoidal planform reference geometry
+1793923510912 begin recognition.test.mjs region growth follows edge adjacency and normal threshold
+1793923510913 end recognition.test.mjs region growth follows edge adjacency and normal threshold
+1793923510913 begin recognition.test.mjs region growth does not accumulate curvature beyond the seed-normal limit
+1793923510913 end recognition.test.mjs region growth does not accumulate curvature beyond the seed-normal limit
+1793923510913 begin recognition.test.mjs region growth respects its explicit face cap
+1793923510913 end recognition.test.mjs region growth respects its explicit face cap
+1793923510913 begin recognition.test.mjs recognition assignments round-trip through run-length encoding
+1793923510913 end recognition.test.mjs recognition assignments round-trip through run-length encoding
+1793923510913 begin rem3a.test.mjs IA-03: fixed claim is withheld for counterexamples and ordinary case
+1793923511366 end rem3a.test.mjs IA-03: fixed claim is withheld for counterexamples and ordinary case
+1793923511366 begin rem3a.test.mjs claim withheld at sweep and resolution API boundaries
+1793923512016 end rem3a.test.mjs claim withheld at sweep and resolution API boundaries
+1793923512016 begin rem3a.test.mjs actual application stability rendering does not present the fixed claim
+1793923512073 end rem3a.test.mjs actual application stability rendering does not present the fixed claim
+1793923512074 begin rem3b-app-boundary.test.mjs actual Run handler propagates solver validation and discards prior result
+1793923512075 end rem3b-app-boundary.test.mjs actual Run handler propagates solver validation and discards prior result
+1793923512075 begin rem3b-app-boundary.test.mjs actual Run handler discards a sweep when resolution checking fails
+1793923512075 end rem3b-app-boundary.test.mjs actual Run handler discards a sweep when resolution checking fails
+1793923512076 begin rem3b-bounds.test.mjs sweep rejects missing, nonnumeric and nonpositive step values
+1793923512076 end rem3b-bounds.test.mjs sweep rejects missing, nonnumeric and nonpositive step values
+1793923512076 begin rem3b-bounds.test.mjs explicit invalid case and sweep inputs are not replaced by defaults
+1793923512076 end rem3b-bounds.test.mjs explicit invalid case and sweep inputs are not replaced by defaults
+1793923512076 begin rem3b-bounds.test.mjs excessive sweep and automatic lattice are refused before allocation
+1793923512076 end rem3b-bounds.test.mjs excessive sweep and automatic lattice are refused before allocation
+1793923512076 begin rem3b-bounds.test.mjs sweep resource boundary and floating point progress
+1793923512086 end rem3b-bounds.test.mjs sweep resource boundary and floating point progress
+1793923512087 begin rem3b-cap-boundary.test.mjs sweep accepts 201 points and refuses 202
+1793923512096 end rem3b-cap-boundary.test.mjs sweep accepts 201 points and refuses 202
+1793923512096 begin rem3b-cap-boundary.test.mjs generation accepts 4096 panels and refuses more
+1793923512100 end rem3b-cap-boundary.test.mjs generation accepts 4096 panels and refuses more
+1793923512100 begin rem3b-cap-boundary.test.mjs dense solve refuses 2049 panels before solving
+1793923512100 end rem3b-cap-boundary.test.mjs dense solve refuses 2049 panels before solving
+1793923512101 begin rem3b-cap-boundary.test.mjs dense solver accepts the 2048-panel operational boundary
+1793923519344 end rem3b-cap-boundary.test.mjs dense solver accepts the 2048-panel operational boundary
+1793923519344 begin rem3b-decimal.test.mjs strict decimal upper boundary excludes next integer
+1793923519345 end rem3b-decimal.test.mjs strict decimal upper boundary excludes next integer
+1793923519345 begin rem3b-decimal.test.mjs decimal endpoints and samples are rounded once
+1793923519345 end rem3b-decimal.test.mjs decimal endpoints and samples are rounded once
+1793923519346 begin rem3b-decimal.test.mjs decimal interval just below endpoint does not add a point
+1793923519346 end rem3b-decimal.test.mjs decimal interval just below endpoint does not add a point
+1793923519346 begin rem3b-decimal.test.mjs reversed and offset decimal intervals preserve endpoints
+1793923519346 end rem3b-decimal.test.mjs reversed and offset decimal intervals preserve endpoints
+1793923519346 begin rem3b-endpoint.test.mjs single point sweep is one point even for a small step
+1793923519347 end rem3b-endpoint.test.mjs single point sweep is one point even for a small step
+1793923519347 begin rem3b-endpoint.test.mjs decimal endpoint is included
+1793923519347 end rem3b-endpoint.test.mjs decimal endpoint is included
+1793923519347 begin rem3b-entrypoints.test.mjs public solver entry points reject absent or malformed option objects explicitly
+1793923519347 end rem3b-entrypoints.test.mjs public solver entry points reject absent or malformed option objects explicitly
+1793923519348 begin rem3b-entrypoints.test.mjs sweep and resolution reject absent, non-array and empty surfaces explicitly
+1793923519348 end rem3b-entrypoints.test.mjs sweep and resolution reject absent, non-array and empty surfaces explicitly
+1793923519348 begin rem3b-generated-extremes.test.mjs panel generator refuses nonfinite and degenerate derived geometry
+1793923519348 end rem3b-generated-extremes.test.mjs panel generator refuses nonfinite and degenerate derived geometry
+1793923519348 begin rem3b-options.test.mjs explicit malformed lattice options are rejected
+1793923519349 end rem3b-options.test.mjs explicit malformed lattice options are rejected
+1793923519349 begin rem3b-overflow.test.mjs finite reference coordinates cannot silently yield an infinite moment
+1793923519349 end rem3b-overflow.test.mjs finite reference coordinates cannot silently yield an infinite moment
+1793923519349 begin rem3b-resume.test.mjs negative profile drag is refused, not silently converted to zero
+1793923519349 end rem3b-resume.test.mjs negative profile drag is refused, not silently converted to zero
+1793923519349 begin rem3b-resume.test.mjs degenerate supplied panels are refused before solving
+1793923519349 end rem3b-resume.test.mjs degenerate supplied panels are refused before solving
+1793923519349 begin rem3b-sweep-overflow.test.mjs finite offsets cannot produce nonfinite sweep outputs
+1793923519350 end rem3b-sweep-overflow.test.mjs finite offsets cannot produce nonfinite sweep outputs
+1793923519350 begin rem3b-validation.test.mjs explicit malformed geometry is refused rather than defaulted
+1793923519350 end rem3b-validation.test.mjs explicit malformed geometry is refused rather than defaulted
+1793923519350 begin rem3b-validation.test.mjs lattice settings reject invalid or silently clamped counts
+1793923519350 end rem3b-validation.test.mjs lattice settings reject invalid or silently clamped counts
+1793923519351 begin rem3b-validation.test.mjs resolution check rejects malformed beta rather than silently changing flow
+1793923519351 end rem3b-validation.test.mjs resolution check rejects malformed beta rather than silently changing flow
+1793923519351 begin rem3b-validation.test.mjs sweep rejects duplicate representable samples before execution
+1793923519351 end rem3b-validation.test.mjs sweep rejects duplicate representable samples before execution
+1793923519351 begin rem3b-validation.test.mjs case rejects malformed wake, reference point and supplied panels
+1793923519351 end rem3b-validation.test.mjs case rejects malformed wake, reference point and supplied panels
+1793923519351 begin rem3b.test.mjs IA-04 rejects missing or nonnumeric circulation instead of zero
+1793923519351 end rem3b.test.mjs IA-04 rejects missing or nonnumeric circulation instead of zero
+1793923519351 begin solFindings.test.mjs SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+1793923519849 end solFindings.test.mjs SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+1793923519849 begin solFindings.test.mjs SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+1793923519850 end solFindings.test.mjs SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+1793923519850 begin solFindings.test.mjs SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+1793923523347 end solFindings.test.mjs SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+1793923523348 begin solFindings.test.mjs SOL-02: zero-yaw prescribed check is green with the measured deltas
+1793923527109 end solFindings.test.mjs SOL-02: zero-yaw prescribed check is green with the measured deltas
+1793923527109 begin solFindings.test.mjs SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+1793923531038 end solFindings.test.mjs SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+1793923531038 begin solFindings.test.mjs SOL-02: convergence claim is withheld when no refinement is available
+1793923534923 end solFindings.test.mjs SOL-02: convergence claim is withheld when no refinement is available
+1793923534923 begin solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793923535043 end solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793923535043 begin solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+1793923547882 end solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+1793923547882 begin solFindings.test.mjs SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+1793923552090 end solFindings.test.mjs SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+1793923552090 begin solFindings.test.mjs SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+1793923553094 end solFindings.test.mjs SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+1793923553094 begin solFindings.test.mjs SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+1793923553585 end solFindings.test.mjs SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+1793923553586 begin solFindings.test.mjs SOL-03: quarantine propagates from the point to the sweep
+1793923560802 end solFindings.test.mjs SOL-03: quarantine propagates from the point to the sweep
+1793923560802 begin solFindings.test.mjs SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+1793923560830 end solFindings.test.mjs SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+1793923560830 begin solFindings.test.mjs SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+1793923560830 end solFindings.test.mjs SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+1793923560831 begin solFindings.test.mjs SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+1793923561136 end solFindings.test.mjs SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+1793923561137 begin solFindings.test.mjs SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+1793923561444 end solFindings.test.mjs SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+1793923561444 begin solFindings.test.mjs SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+1793923561527 end solFindings.test.mjs SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+1793923561527 begin solFindings.test.mjs SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+1793923561636 end solFindings.test.mjs SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+1793923561637 begin solFindings.test.mjs SOL-08: the label is only shown inside the demonstrated envelope
+1793923561841 end solFindings.test.mjs SOL-08: the label is only shown inside the demonstrated envelope
+1793923561841 begin solFindings.test.mjs SOL-10: non-finite circulation raises naming the panel index
+1793923561842 end solFindings.test.mjs SOL-10: non-finite circulation raises naming the panel index
+1793923561842 begin solFindings.test.mjs SOL-10: array length, density, coordinates and wake direction are validated
+1793923561842 end solFindings.test.mjs SOL-10: array length, density, coordinates and wake direction are validated
+1793923561843 begin solFindings.test.mjs SOL-10: finite signed circulation is evaluated without absolute values
+1793923561843 end solFindings.test.mjs SOL-10: finite signed circulation is evaluated without absolute values
+1793923561843 begin solFindings.test.mjs SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+1793923562260 end solFindings.test.mjs SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+1793923562260 begin solFindings.test.mjs SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+1793923562458 end solFindings.test.mjs SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+1793923562458 begin solFindings.test.mjs SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+1793923562970 end solFindings.test.mjs SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+1793923562970 begin solFindings.test.mjs SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+1793923565940 end solFindings.test.mjs SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+1793923565940 begin solFindings.test.mjs SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+1793923566921 end solFindings.test.mjs SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+1793923566921 begin solFindings.test.mjs SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+1793923568404 end solFindings.test.mjs SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+1793923568404 begin solFindings.test.mjs SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+1793923570407 end solFindings.test.mjs SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+1793923570407 begin solFindings.test.mjs SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+1793923577750 end solFindings.test.mjs SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+1793923577750 begin solFindings.test.mjs SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+1793923580980 end solFindings.test.mjs SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+1793923580980 begin solFindings.test.mjs SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+1793923583934 end solFindings.test.mjs SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+1793923583935 begin solFindings.test.mjs SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+1793923590296 end solFindings.test.mjs SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+1793923590296 begin stlParser.test.mjs parses generated binary STL
+1793923590296 end stlParser.test.mjs parses generated binary STL
+1793923590297 begin stlParser.test.mjs parses generated ASCII STL
+1793923590297 end stlParser.test.mjs parses generated ASCII STL
+1793923590297 begin topology.test.mjs module matches independent oracle on a closed box
+1793923590298 end topology.test.mjs module matches independent oracle on a closed box
+1793923590298 begin topology.test.mjs module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+1793923590298 end topology.test.mjs module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+1793923590298 begin topology.test.mjs reference mesh independently yields the audited 28/5/0/1 topology
+1793923591215 end topology.test.mjs reference mesh independently yields the audited 28/5/0/1 topology
+1793923591215 begin vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793923591225 end vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793923591225 begin vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793923602157 end vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793923602163 begin vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793923602325 end vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793923602325 begin vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)

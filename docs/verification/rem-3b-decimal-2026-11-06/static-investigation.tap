@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: AUD-1 quarantined zero point withholds badge and persists through display boundary
+ok 1 - AUD-1 quarantined zero point withholds badge and persists through display boundary
+  ---
+  duration_ms: 2085.705752
+  type: 'test'
+  ...
+# Subtest: AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+ok 2 - AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+  ---
+  duration_ms: 10500.510106
+  type: 'test'
+  ...
+# Subtest: AUD-1 rejects missing, quarantined and nonfinite comparison points
+ok 3 - AUD-1 rejects missing, quarantined and nonfinite comparison points
+  ---
+  duration_ms: 0.750186
+  type: 'test'
+  ...
+# Subtest: AUD-1 custom comparison with quarantined zero degree is withheld
+ok 4 - AUD-1 custom comparison with quarantined zero degree is withheld
+  ---
+  duration_ms: 2584.805917
+  type: 'test'
+  ...
+# Subtest: AUD-1 application caller forwards flow and renders quarantined comparison
+ok 5 - AUD-1 application caller forwards flow and renders quarantined comparison
+  ---
+  duration_ms: 2682.892285
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 6 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.701607
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 7 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.237049
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 8 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.106642
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 9 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.468668
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 10 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.3031
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17883.790302

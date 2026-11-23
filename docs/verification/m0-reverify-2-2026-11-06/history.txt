@@ -1,0 +1,16 @@
+9a66316f63e22b9633e266716294eee68f9b2498 docs(implementation): record the final M0-5 verification round (OBS-M0-5-4)
+352e21e002e8455048fb711b72c9adfafae97439 docs(implementation): record M0-5 and checkpoint M0 handoff
+2ed3484e4aa957dcf24d48739a312830978db8ba fix(vlm): linear-window guard and fit/trim contract (M0-5, SOL-09)
+bf39f44cd7fb4bad96aea8d9f713852b419bf030 docs(implementation): record M0-3 and checkpoint M0 handoff
+5eb07d7d0829f0393e6a94983818bbedab4b0ba4 fix(vlm): incidence pivots about the local quarter chord (M0-3, review §7.2)
+a71c8b3f698df67f5534ca48094b11137327913b docs(implementation): record SOL-06 and checkpoint M0 handoff
+a4d0859417d79c67ce98fe9692e18a58504ae12a fix(vlm): forward-error drag cancellation tolerance, raw preservation (SOL-06)
+d5a700cc3339edc52cae2af1b5e3a1a9c3e4a4ac docs(implementation): record M0-4 and checkpoint M0 handoff
+bdaea41c54730979595e3ab7f9fd70ddf6be50ad fix(vlm): relative singularity cutoffs + rounding-robust auto-N (M0-4, SOL-01)
+b179efd209872ba8c0b1bc32a4949d25af1f9749 docs(implementation): record REM-1 and checkpoint M0 handoff
+84cf90faeb0593a3ed57a09e4279319707ede46a feat(vlm): Sol review remediation — exact-flow badge, corruption quarantine, input validation (REM-1)
+ab1fb44e9a674d664dc85034edfccc79eb570b6c docs(implementation): record M0-2 and checkpoint M0 handoff
+d57783a1428d55848eace8c74ef11067370d6010 feat(vlm): multi-row lattice, aspect guard, wake floor, R1/R2 badge (M0-2)
+039d98ba96a8c2ef1951236f6a937f34701e61a3 docs(implementation): record M0-1 and checkpoint M0 handoff
+af416b48e8c0fe7c3d3c680a85dbd95cbdb8e0ed fix(vlm): correct induced drag and add signed Trefftz drag (M0-1)
+21b869fd7a0b0da0c91931364b0482c984ae9629 docs(implementation): checkpoint M0 handoff

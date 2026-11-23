@@ -1,0 +1,241 @@
+{
+  "badgeInvalid": [
+    {
+      "chordwiseRows": 4,
+      "validity": {
+        "status": "invalid",
+        "messages": [
+          "SOL-01: the relative singular-kernel cutoffs (1e-6 x segment length) engaged 768 time(s); near-singular element proximity truncated real influence terms and the coefficients are numerically unreliable. Values are returned for measurement only and must not be reported.",
+          "fit: C_Lalpha is \"insufficient linear data\" — 1 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+          "fit: C_malpha is \"insufficient linear data\" — 1 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+        ],
+        "minRatio": 1,
+        "maxRatio": 1
+      },
+      "points": [
+        {
+          "alphaDeg": 0,
+          "cl": 0,
+          "cdi": 0,
+          "validity": {
+            "status": "invalid",
+            "messages": [
+              "SOL-01: the relative singular-kernel cutoffs (1e-6 x segment length) engaged 768 time(s); near-singular element proximity truncated real influence terms and the coefficients are numerically unreliable. Values are returned for measurement only and must not be reported."
+            ]
+          }
+        },
+        {
+          "alphaDeg": 4,
+          "cl": 0.37028637723662483,
+          "cdi": 0.005729622823260784,
+          "validity": {
+            "status": "ok",
+            "messages": []
+          }
+        }
+      ]
+    },
+    {
+      "chordwiseRows": 8,
+      "validity": {
+        "status": "invalid",
+        "messages": [
+          "SOL-01: the relative singular-kernel cutoffs (1e-6 x segment length) engaged 6144 time(s); near-singular element proximity truncated real influence terms and the coefficients are numerically unreliable. Values are returned for measurement only and must not be reported.",
+          "fit: C_Lalpha is \"insufficient linear data\" — 1 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+          "fit: C_malpha is \"insufficient linear data\" — 1 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+        ],
+        "minRatio": 1,
+        "maxRatio": 1
+      },
+      "points": [
+        {
+          "alphaDeg": 0,
+          "cl": 0,
+          "cdi": 0,
+          "validity": {
+            "status": "invalid",
+            "messages": [
+              "SOL-01: the relative singular-kernel cutoffs (1e-6 x segment length) engaged 6144 time(s); near-singular element proximity truncated real influence terms and the coefficients are numerically unreliable. Values are returned for measurement only and must not be reported."
+            ]
+          }
+        },
+        {
+          "alphaDeg": 4,
+          "cl": 0.3692439533048153,
+          "cdi": 0.005786746359622717,
+          "validity": {
+            "status": "ok",
+            "messages": []
+          }
+        }
+      ]
+    }
+  ],
+  "inputIdentityCollision": true,
+  "inputIdentity": {
+    "betaDeg": 0,
+    "velocityMS": 40,
+    "densityKgM3": 1.225,
+    "refAreaM2": 8,
+    "refChordM": 1,
+    "referencePoint": [
+      0.4,
+      0,
+      0
+    ],
+    "alphaProtocolDeg": [
+      0,
+      4
+    ],
+    "surfaces": [
+      {
+        "name": "wing",
+        "planform": "linear",
+        "spanM": 8,
+        "rootChordM": 1,
+        "tipChordM": 1,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      },
+      {
+        "name": "canard",
+        "planform": "linear",
+        "spanM": 3,
+        "rootChordM": 0.5,
+        "tipChordM": 0.5,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      }
+    ]
+  },
+  "changedIdentity": {
+    "betaDeg": 0,
+    "velocityMS": 40,
+    "densityKgM3": 1.225,
+    "refAreaM2": 8,
+    "refChordM": 1,
+    "referencePoint": [
+      0.4,
+      0,
+      0
+    ],
+    "alphaProtocolDeg": [
+      0,
+      4
+    ],
+    "surfaces": [
+      {
+        "name": "wing",
+        "planform": "linear",
+        "spanM": 8,
+        "rootChordM": 1,
+        "tipChordM": 1,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      },
+      {
+        "name": "canard",
+        "planform": "linear",
+        "spanM": 3,
+        "rootChordM": 0.5,
+        "tipChordM": 0.5,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      }
+    ]
+  },
+  "neutralPoint": [
+    {
+      "x": 0,
+      "np": 0.24376042182678748,
+      "clAlphaPerRad": 4.700244650618035,
+      "cmAlphaPerRad": -1.1457336187237535,
+      "cmFit": {
+        "status": "determined",
+        "pointCount": 5,
+        "slopePerDeg": -0.01999682399751885,
+        "intercept": 0,
+        "leastSquaresSlopePerDeg": -0.01999682399751885,
+        "maxAdjacentSlopeDeviationPerDeg": 0.0001976015437161402
+      }
+    },
+    {
+      "x": 0.2,
+      "np": 0.2440201260130012,
+      "clAlphaPerRad": 4.700244650618035,
+      "cmAlphaPerRad": -0.20690536181214056,
+      "cmFit": {
+        "status": "determined",
+        "pointCount": 5,
+        "slopePerDeg": -0.003611179803651994,
+        "intercept": 3.4694469519536144e-19,
+        "leastSquaresSlopePerDeg": -0.003611179803651994,
+        "maxAdjacentSlopeDeviationPerDeg": 0.00011976801390079818
+      }
+    },
+    {
+      "x": 0.25,
+      "np": null,
+      "clAlphaPerRad": 4.700244650618035,
+      "cmAlphaPerRad": null,
+      "cmFit": {
+        "status": "non-linear: not determined",
+        "pointCount": 5,
+        "slopePerDeg": null,
+        "intercept": null,
+        "leastSquaresSlopePerDeg": 0.00048523124481471513,
+        "maxAdjacentSlopeDeviationPerDeg": 0.00010030963144697043
+      }
+    },
+    {
+      "x": 0.3,
+      "np": 0.2441499781061081,
+      "clAlphaPerRad": 4.700244650618035,
+      "cmAlphaPerRad": 0.2625087666436654,
+      "cmFit": {
+        "status": "determined",
+        "pointCount": 5,
+        "slopePerDeg": 0.0045816422932814255,
+        "intercept": 0,
+        "leastSquaresSlopePerDeg": 0.0045816422932814255,
+        "maxAdjacentSlopeDeviationPerDeg": 0.00008085124899313845
+      }
+    },
+    {
+      "x": 0.6,
+      "np": 0.24453953438542886,
+      "clAlphaPerRad": 4.700244650618035,
+      "cmAlphaPerRad": 1.6707511520110838,
+      "cmFit": {
+        "status": "determined",
+        "pointCount": 5,
+        "slopePerDeg": 0.02916010858408169,
+        "intercept": -2.7755575615628915e-18,
+        "leastSquaresSlopePerDeg": 0.02916010858408169,
+        "maxAdjacentSlopeDeviationPerDeg": 0.00003589904572984942
+      }
+    }
+  ],
+  "slices": [
+    {
+      "n": 200,
+      "areaM2": 24.914138231867888
+    },
+    {
+      "n": 400,
+      "areaM2": 24.92291152662743
+    },
+    {
+      "n": 800,
+      "areaM2": 24.924171504379903
+    },
+    {
+      "n": 1600,
+      "areaM2": 24.916725375604987
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+ CALCULATION_PIPELINE.md                         |  2 +-
+ MVP_METHODOLOGY.md                              |  2 +-
+ docs/implementation/CURRENT_HANDOFF.md          | 24 ++++++++++++++++++++
+ docs/implementation/IMPLEMENTATION_CHANGELOG.md | 13 +++++++++++
+ docs/implementation/IMPLEMENTATION_STATUS.md    | 18 ++++++++++-----
+ docs/implementation/ISSUE_AND_DECISION_LOG.md   |  8 +++++++
+ docs/implementation/NEXT_CONVERSATION_PROMPT.md | 12 +++++-----
+ docs/implementation/SOL_FINDING_DISPOSITIONS.md |  8 +++++++
+ docs/implementation/milestones/M0.md            |  8 +++++++
+ src/vlmSolver.js                                |  8 ++++++-
+ tests/aud1.test.mjs                             | 30 +++++++++++++++++++++++++
+ 11 files changed, 120 insertions(+), 13 deletions(-)

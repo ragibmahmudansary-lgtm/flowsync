@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 1 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 1.161219
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 2 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.460026
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 3 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.478499
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 4 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 18.530749
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 5 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.408485
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 6 - decimal endpoint is included
+  ---
+  duration_ms: 0.634187
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 35.130033

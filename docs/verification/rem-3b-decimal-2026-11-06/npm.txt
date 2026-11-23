@@ -1,0 +1,32 @@
+
+> airflow-browser-stability-mvp@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ tests/aud1.test.mjs (23874.10871ms)
+✔ tests/aud2.test.mjs (291.148456ms)
+✔ tests/demoRegression.test.mjs (1707.932732ms)
+✔ tests/geometry.test.mjs (66.482618ms)
+✔ tests/massStability.test.mjs (77.13197ms)
+✔ tests/projectAxis.test.mjs (82.05003ms)
+✔ tests/recognition.test.mjs (83.798482ms)
+✔ tests/rem3a.test.mjs (3078.216248ms)
+✔ tests/rem3b-bounds.test.mjs (124.294621ms)
+✔ tests/rem3b-decimal.test.mjs (97.253196ms)
+✔ tests/rem3b-endpoint.test.mjs (88.140241ms)
+✔ tests/rem3b-options.test.mjs (85.001011ms)
+✔ tests/rem3b-resume.test.mjs (72.268405ms)
+✔ tests/rem3b-validation.test.mjs (136.031597ms)
+✔ tests/rem3b.test.mjs (100.091261ms)
+✔ tests/solFindings.test.mjs (21432.165955ms)
+✔ tests/stlParser.test.mjs (67.522063ms)
+✔ tests/topology.test.mjs (3037.197721ms)
+✔ tests/vlmOracles.test.mjs (56588.192044ms)
+✔ tests/vlmSolver.test.mjs (11859.064917ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56698.497101

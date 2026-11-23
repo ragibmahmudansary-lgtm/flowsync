@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0e141b">
+    <title>AirFLOW Stability MVP</title>
+    <link rel="stylesheet" href="./src/styles.css?v=0.2.2">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>AirFLOW</h1>
+        <p>Geometry recognition, mass properties, and inviscid stability analysis</p>
+      </div>
+      <div class="toolbar">
+        <button id="loadDemoButton" type="button">Load demo</button>
+        <label class="file-button">Import STL<input id="stlFileInput" type="file" accept=".stl,model/stl"></label>
+        <button id="exportProjectButton" type="button">Save project</button>
+        <label class="file-button">Open project<input id="projectFileInput" type="file" accept=".json,application/json"></label>
+        <button id="exportResultsButton" type="button">Export results</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="panel controls-panel">
+        <section>
+          <div class="section-heading">
+            <h2>Geometry import</h2>
+            <span id="geometrySourceBadge" class="badge">No geometry</span>
+          </div>
+          <div class="field-grid compact-grid">
+            <label>Source units
+              <select id="unitScaleSelect">
+                <option value="1" selected>meters</option>
+                <option value="0.001">millimeters</option>
+                <option value="0.01">centimeters</option>
+                <option value="0.0254">inches</option>
+                <option value="0.3048">feet</option>
+              </select>
+            </label>
+            <label>Longitudinal<select id="axisLongitudinal"></select></label>
+            <label>Lateral / span<select id="axisLateral"></select></label>
+            <label>Vertical<select id="axisVertical"></select></label>
+          </div>
+          <div id="meshWarnings" class="warning-list"></div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Manual surface recognition</h2>
+            <span id="selectedCount" class="badge">0 selected</span>
+          </div>
+          <div class="action-row">
+            <button id="selectionModeButton" type="button" aria-pressed="false">Select faces</button>
+            <label class="inline-check"><input id="regionGrowInput" type="checkbox" checked> Region grow</label>
+            <label>Normal limit deg<input id="growAngleInput" type="number" min="0" max="90" step="1" value="18"></label>
+            <label>Region face cap<input id="maxRegionFacesInput" type="number" min="1" max="100000" step="1000" value="15000"></label>
+          </div>
+          <div class="assignment-grid">
+            <button type="button" data-assign="wing">Assign wing</button>
+            <button type="button" data-assign="htail">Assign H-tail</button>
+            <button type="button" data-assign="vtail">Assign V-tail</button>
+            <button type="button" data-assign="fuselage">Assign fuselage</button>
+            <button id="clearSelectionButton" type="button">Clear selection</button>
+            <button id="clearAssignmentsButton" type="button">Clear assignments</button>
+          </div>
+          <div id="recognitionSummary" class="recognition-summary"></div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Mass manifest</h2>
+            <button id="addMassButton" type="button">Add mass</button>
+          </div>
+          <div class="table-wrap">
+            <table id="massTable">
+              <thead><tr><th>Name</th><th>Type</th><th>Mass kg</th><th>X m</th><th>Y m</th><th>Z m</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Flow</h2>
+          <div class="field-grid">
+            <label>Density kg/m3<input id="densityInput" type="number" step="0.001" value="1.225"></label>
+            <label>Velocity m/s<input id="velocityInput" type="number" step="0.5" value="72"></label>
+            <label>Alpha min deg<input id="alphaMinInput" type="number" step="1" value="-6"></label>
+            <label>Alpha max deg<input id="alphaMaxInput" type="number" step="1" value="10"></label>
+            <label>Step deg<input id="alphaStepInput" type="number" step="0.5" value="1"></label>
+            <label>Flow yaw deg<input id="flowYawInput" type="number" step="1" value="0"></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>Reference lifting surface</h2>
+            <span id="referenceSourceBadge" class="badge warn">Bounds seed</span>
+          </div>
+          <div class="field-grid">
+            <label>Area S m2<input id="refAreaInput" type="number" step="0.1"></label>
+            <label>Span b m<input id="refSpanInput" type="number" step="0.1"></label>
+            <label>MAC m<input id="refMacInput" type="number" step="0.01"></label>
+            <label>Root chord m<input id="rootChordInput" type="number" step="0.01"></label>
+            <label>Tip chord m<input id="tipChordInput" type="number" step="0.01"></label>
+            <label>Quarter-chord sweep deg<input id="sweepInput" type="number" step="0.5" value="25"></label>
+            <label>Dihedral deg<input id="dihedralInput" type="number" step="0.5" value="4"></label>
+            <label>Wing incidence deg<input id="incidenceInput" type="number" step="0.1" value="2"></label>
+            <label>Root leading edge x m<input id="rootLeadingXInput" type="number" step="0.01"></label>
+            <label>Aero center x m<input id="aeroCenterInput" type="number" step="0.01" readonly></label>
+            <label>Neutral point x m<input id="neutralPointInput" type="number" step="0.01" readonly></label>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-heading">
+            <h2>VLM setup</h2>
+            <span id="solverBadge" class="badge">Not run</span>
+            <span id="resolutionBadge" class="badge">R1/R2 not run</span>
+          </div>
+          <div class="field-grid">
+            <label>Chordwise rows<input id="chordwiseRowsInput" type="number" min="1" max="16" step="1" value="4"></label>
+            <label>Spanwise panels (blank = auto)<input id="spanPanelsInput" type="number" min="4" max="240" step="1" placeholder="auto"></label>
+            <label>Profile CD0<input id="cd0Input" type="number" min="0" step="0.001" value="0.025"></label>
+            <label>Non-lifting Cm0<input id="cm0Input" type="number" step="0.005" value="0"></label>
+            <label>Pitch damping 1/s<input id="pitchDampingInput" type="number" min="0" step="0.05" value="0.65"></label>
+          </div>
+          <button id="runVlmButton" class="primary-action" type="button">Run horseshoe VLM</button>
+          <p class="method-note">Multi-row horseshoe lattice (M chordwise rows x N spanwise strips, uniform spacing, panel width/length &ge; 0.25), freestream-aligned wake &ge; 10 b. The resolution badge names the flow and lattice it actually covers (amber if &Delta;C_L&alpha; &gt; 1 % or &Delta;C_Di &gt; 5 %): the prescribed R1 vs R2 comparison at the plotted yaw, or, for custom grids, the plotted lattice against a 2&times; refined lattice &mdash; otherwise the convergence claim is withheld. The fixed Tier-0 uncertainty claim is unverified and withheld pending a reviewed geometry, flow, angle and resolution envelope; R1/R2 agreement is self-comparison, not an error bound. Quarantined numbers are shown as unavailable. Steady, incompressible, induced-flow model; no stall, viscous separation, or fuselage interference.</p>
+        </section>
+      </aside>
+
+      <section class="viewport-panel">
+        <div id="viewer" class="viewer" aria-label="Three-dimensional aircraft geometry viewport"></div>
+        <div class="viewer-strip">
+          <div id="statusLine">Loading demo aircraft...</div>
+          <div id="meshQualityBadge" class="badge">No mesh</div>
+        </div>
+      </section>
+
+      <aside class="panel results-panel">
+        <section>
+          <h2>Mass properties</h2>
+          <div class="metric-grid" id="massMetrics"></div>
+        </section>
+        <section>
+          <h2>VLM stability result</h2>
+          <div class="metric-grid" id="stabilityMetrics"></div>
+          <div id="solverDiagnostics" class="diagnostics"></div>
+        </section>
+        <section class="graph-section">
+          <h2>Aerodynamic sweep</h2>
+          <canvas id="polarCanvas" width="680" height="340" aria-label="Aerodynamic coefficient and load plots"></canvas>
+        </section>
+        <section class="graph-section">
+          <h2>Pitch response</h2>
+          <canvas id="pitchCanvas" width="680" height="260" aria-label="Small-disturbance pitch response plot"></canvas>
+        </section>
+      </aside>
+    </main>
+
+    <script type="module" src="./src/app.js?v=0.2.5"></script>
+  </body>
+</html>

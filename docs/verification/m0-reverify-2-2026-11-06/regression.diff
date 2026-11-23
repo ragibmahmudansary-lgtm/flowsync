@@ -1,0 +1,42 @@
+--- entry/tests/aud1.test.mjs
++++ final/tests/aud1.test.mjs
+@@ -87,0 +88,39 @@
++
++test('resolution retains representable slopes when the degree conversion intermediate overflows', () => {
++  const options = { ...base, surfaces: [wing], refAreaM2: 3e-307 };
++  const prescribed = runVlmResolutionCheck(options);
++  assert.equal(prescribed.claim, 'prescribed R1 vs R2');
++  assert.equal(prescribed.badge, 'green');
++  assert.equal(prescribed.coverage.coversPlottedLattice, true);
++  for (const grid of [prescribed.r1, prescribed.r2]) {
++    assert.equal(grid.validity.valid, true);
++    assert.ok(Number.isFinite(grid.clAlphaTwoPointPerRad));
++    assert.ok(Number.isFinite(grid.cdiAt4Deg));
++  }
++
++  const custom = runVlmResolutionCheck({ ...options, chordwiseRows: 3, spanwisePanels: 12 });
++  assert.equal(custom.currentGrid.validity.valid, true);
++  assert.equal(custom.coverage.coversPlottedLattice, true);
++  assert.ok(Number.isFinite(custom.currentGrid.deltaClAlpha));
++  assert.ok(Number.isFinite(custom.currentGrid.deltaCdi));
++
++  const split = runVlmResolutionCheck({ ...options, refAreaM2: 2.09e-307 });
++  assert.equal(split.r1.validity.valid, false);
++  assert.equal(split.r1.clAlphaTwoPointPerRad, null);
++  assert.equal(split.r1.cdiAt4Deg, null);
++  assert.equal(split.r2.validity.valid, true);
++  assert.ok(Number.isFinite(split.r2.clAlphaTwoPointPerRad));
++  assert.ok(Number.isFinite(split.r2.cdiAt4Deg));
++  assert.equal(split.deltaClAlpha, null);
++  assert.equal(split.deltaCdi, null);
++  assert.equal(split.coverage.coversPlottedLattice, false);
++
++  const uncoveredCustom = runVlmResolutionCheck({
++    ...options, refAreaM2: 2.1e-307, chordwiseRows: 3, spanwisePanels: 12
++  });
++  assert.equal(uncoveredCustom.withinGates, true);
++  assert.equal(uncoveredCustom.currentGrid.validity.valid, false);
++  assert.equal(uncoveredCustom.claim, 'withheld');
++  assert.equal(uncoveredCustom.badge, 'amber');
++  assert.equal(uncoveredCustom.coverage.coversPlottedLattice, false);
++});

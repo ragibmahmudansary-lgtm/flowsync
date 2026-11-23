@@ -1,0 +1,15 @@
+✖ tests/rem3b.test.mjs (38.736401ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44.301273
+
+✖ failing tests:
+
+test at tests/rem3b.test.mjs:1:1
+✖ tests/rem3b.test.mjs (38.736401ms)
+  'test failed'

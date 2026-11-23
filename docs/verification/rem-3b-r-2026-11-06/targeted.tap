@@ -1,0 +1,274 @@
+TAP version 13
+# Subtest: decimal sweep matches independent rational counts and binary64 rounding
+ok 1 - decimal sweep matches independent rational counts and binary64 rounding
+  ---
+  duration_ms: 18.176866
+  type: 'test'
+  ...
+# Subtest: wake span follows each named group’s bound endpoints, including translated panels
+ok 2 - wake span follows each named group’s bound endpoints, including translated panels
+  ---
+  duration_ms: 1.310989
+  type: 'test'
+  ...
+# Subtest: surface identity rejects duplicates and handles names inherited from Object.prototype
+ok 3 - surface identity rejects duplicates and handles names inherited from Object.prototype
+  ---
+  duration_ms: 453.636648
+  type: 'test'
+  ...
+# Subtest: case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+ok 4 - case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+  ---
+  duration_ms: 0.587311
+  type: 'test'
+  ...
+# Subtest: Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+ok 5 - Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+  ---
+  duration_ms: 0.618903
+  type: 'test'
+  ...
+# Subtest: wired Run and input events clear both old plots and recover through real parsing and rendering
+ok 6 - wired Run and input events clear both old plots and recover through real parsing and rendering
+  ---
+  duration_ms: 351.629717
+  type: 'test'
+  ...
+# Subtest: wired Run clears prior display on solver and resolution failure without an input event
+ok 7 - wired Run clears prior display on solver and resolution failure without an input event
+  ---
+  duration_ms: 220.872491
+  type: 'test'
+  ...
+# Subtest: invalid in-progress span text does not act like an intentionally blank automatic setting
+ok 8 - invalid in-progress span text does not act like an intentionally blank automatic setting
+  ---
+  duration_ms: 1.534181
+  type: 'test'
+  ...
+# Subtest: wired Run rejects combined synchronous work and clears previous results
+ok 9 - wired Run rejects combined synchronous work and clears previous results
+  ---
+  duration_ms: 103.472403
+  type: 'test'
+  ...
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 10 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 0.36078
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 11 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.180047
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 12 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.196099
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 13 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 6.727554
+  type: 'test'
+  ...
+# Subtest: sweep accepts 201 points and refuses 202
+ok 14 - sweep accepts 201 points and refuses 202
+  ---
+  duration_ms: 6.736454
+  type: 'test'
+  ...
+# Subtest: generation accepts 4096 panels and refuses more
+ok 15 - generation accepts 4096 panels and refuses more
+  ---
+  duration_ms: 2.463261
+  type: 'test'
+  ...
+# Subtest: dense solve refuses 2049 panels before solving
+ok 16 - dense solve refuses 2049 panels before solving
+  ---
+  duration_ms: 0.143215
+  type: 'test'
+  ...
+# Subtest: dense solver accepts the 2048-panel operational boundary
+ok 17 - dense solver accepts the 2048-panel operational boundary
+  ---
+  duration_ms: 5175.162906
+  type: 'test'
+  ...
+# Subtest: strict decimal upper boundary excludes next integer
+ok 18 - strict decimal upper boundary excludes next integer
+  ---
+  duration_ms: 0.338439
+  type: 'test'
+  ...
+# Subtest: decimal endpoints and samples are rounded once
+ok 19 - decimal endpoints and samples are rounded once
+  ---
+  duration_ms: 0.343251
+  type: 'test'
+  ...
+# Subtest: decimal interval just below endpoint does not add a point
+ok 20 - decimal interval just below endpoint does not add a point
+  ---
+  duration_ms: 0.235755
+  type: 'test'
+  ...
+# Subtest: reversed and offset decimal intervals preserve endpoints
+ok 21 - reversed and offset decimal intervals preserve endpoints
+  ---
+  duration_ms: 0.301637
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 22 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.129844
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 23 - decimal endpoint is included
+  ---
+  duration_ms: 0.214083
+  type: 'test'
+  ...
+# Subtest: public solver entry points reject absent or malformed option objects explicitly
+ok 24 - public solver entry points reject absent or malformed option objects explicitly
+  ---
+  duration_ms: 0.209731
+  type: 'test'
+  ...
+# Subtest: sweep and resolution reject absent, non-array and empty surfaces explicitly
+ok 25 - sweep and resolution reject absent, non-array and empty surfaces explicitly
+  ---
+  duration_ms: 0.146214
+  type: 'test'
+  ...
+# Subtest: panel generator refuses nonfinite and degenerate derived geometry
+ok 26 - panel generator refuses nonfinite and degenerate derived geometry
+  ---
+  duration_ms: 0.312302
+  type: 'test'
+  ...
+# Subtest: explicit malformed lattice options are rejected
+ok 27 - explicit malformed lattice options are rejected
+  ---
+  duration_ms: 0.132392
+  type: 'test'
+  ...
+# Subtest: decimal samples match independent decimal arithmetic vectors
+ok 28 - decimal samples match independent decimal arithmetic vectors
+  ---
+  duration_ms: 1.179692
+  type: 'test'
+  ...
+# Subtest: finite reference coordinates cannot silently yield an infinite moment
+ok 29 - finite reference coordinates cannot silently yield an infinite moment
+  ---
+  duration_ms: 0.162641
+  type: 'test'
+  ...
+# Subtest: generated cases and sweeps match independent axial and oblique oracles after large translation
+ok 30 - generated cases and sweeps match independent axial and oblique oracles after large translation
+  ---
+  duration_ms: 1.569845
+  type: 'test'
+  ...
+# Subtest: finite wake uses the prescribed vector even when a world endpoint addition rounds it
+ok 31 - finite wake uses the prescribed vector even when a world endpoint addition rounds it
+  ---
+  duration_ms: 0.116886
+  type: 'test'
+  ...
+# Subtest: standalone Trefftz projects a relative displacement for oblique yaw at a large offset
+ok 32 - standalone Trefftz projects a relative displacement for oblique yaw at a large offset
+  ---
+  duration_ms: 0.134264
+  type: 'test'
+  ...
+# Subtest: sweep preflights aggregate work, accepting exactly four maximum-case equivalents
+ok 33 - sweep preflights aggregate work, accepting exactly four maximum-case equivalents
+  ---
+  duration_ms: 2.32948
+  type: 'test'
+  ...
+# Subtest: resolution preflights the dense cap and cumulative prescribed/custom work before solving
+ok 34 - resolution preflights the dense cap and cumulative prescribed/custom work before solving
+  ---
+  duration_ms: 0.526361
+  type: 'test'
+  ...
+# Subtest: one Run preflights the sweep plus R1, R2 and the custom refinement as a unit
+ok 35 - one Run preflights the sweep plus R1, R2 and the custom refinement as a unit
+  ---
+  duration_ms: 0.973353
+  type: 'test'
+  ...
+# Subtest: negative profile drag is refused, not silently converted to zero
+ok 36 - negative profile drag is refused, not silently converted to zero
+  ---
+  duration_ms: 0.100377
+  type: 'test'
+  ...
+# Subtest: degenerate supplied panels are refused before solving
+ok 37 - degenerate supplied panels are refused before solving
+  ---
+  duration_ms: 0.201754
+  type: 'test'
+  ...
+# Subtest: finite offsets cannot produce nonfinite sweep outputs
+ok 38 - finite offsets cannot produce nonfinite sweep outputs
+  ---
+  duration_ms: 0.299745
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 39 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.135944
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 40 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.098903
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 41 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.151309
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 42 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.103678
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 43 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.118883
+  type: 'test'
+  ...
+# Subtest: IA-04 rejects missing or nonnumeric circulation instead of zero
+ok 44 - IA-04 rejects missing or nonnumeric circulation instead of zero
+  ---
+  duration_ms: 0.137497
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6396.691942

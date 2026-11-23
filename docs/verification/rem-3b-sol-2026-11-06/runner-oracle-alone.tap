@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+ok 1 - oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+  ---
+  duration_ms: 5.790966
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+ok 2 - review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+  ---
+  duration_ms: 1521.57473
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: single-row table from an independently built lattice
+ok 3 - review record §4 reproduction: single-row table from an independently built lattice
+  ---
+  duration_ms: 35.745858
+  type: 'test'
+  ...
+# Subtest: VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+ok 4 - VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+  ---
+  duration_ms: 1029.047214
+  type: 'test'
+  ...
+# Subtest: VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+ok 5 - VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+  ---
+  duration_ms: 31988.495204
+  type: 'test'
+  ...
+# Subtest: VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+ok 6 - VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+  ---
+  duration_ms: 533.140067
+  type: 'test'
+  ...
+# Subtest: VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+ok 7 - VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+  ---
+  duration_ms: 1899.357304
+  type: 'test'
+  ...
+# Subtest: VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+ok 8 - VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+  ---
+  duration_ms: 498.966852
+  type: 'test'
+  ...
+# Subtest: VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+ok 9 - VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+  ---
+  duration_ms: 1062.654329
+  type: 'test'
+  ...
+# Subtest: VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+ok 10 - VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+  ---
+  duration_ms: 1308.192699
+  type: 'test'
+  ...
+# Subtest: zero lift gives exactly zero drag without raising
+ok 11 - zero lift gives exactly zero drag without raising
+  ---
+  duration_ms: 11.983096
+  type: 'test'
+  ...
+# Subtest: negative angle of attack: drag is even in alpha and strictly positive
+ok 12 - negative angle of attack: drag is even in alpha and strictly positive
+  ---
+  duration_ms: 30.377167
+  type: 'test'
+  ...
+# Subtest: degenerate zero-width panels contribute nothing and stay finite
+ok 13 - degenerate zero-width panels contribute nothing and stay finite
+  ---
+  duration_ms: 21.238396
+  type: 'test'
+  ...
+# Subtest: Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+ok 14 - Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+  ---
+  duration_ms: 44.60998
+  type: 'test'
+  ...
+# Subtest: wake-length convergence: near-field approaches Trefftz monotonically
+ok 15 - wake-length convergence: near-field approaches Trefftz monotonically
+  ---
+  duration_ms: 68.890549
+  type: 'test'
+  ...
+# Subtest: VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+ok 16 - VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+  ---
+  duration_ms: 30.836879
+  type: 'test'
+  ...
+# Subtest: VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+ok 17 - VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+  ---
+  duration_ms: 111.675587
+  type: 'test'
+  ...
+# Subtest: M0-4: analytic kernel references hold across scales (independent reference behavior)
+ok 18 - M0-4: analytic kernel references hold across scales (independent reference behavior)
+  ---
+  duration_ms: 0.385529
+  type: 'test'
+  ...
+# Subtest: near-field/Trefftz agreement is robust across spanwise resolution
+ok 19 - near-field/Trefftz agreement is robust across spanwise resolution
+  ---
+  duration_ms: 144.423521
+  type: 'test'
+  ...
+# Subtest: swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+ok 20 - swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+  ---
+  duration_ms: 7.179054
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 40383.626192

@@ -1,0 +1,1 @@
+tested-exec exit 0  OK=46 lines=46

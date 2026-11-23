@@ -1,0 +1,45 @@
+{
+ "case": "a320-all",
+ "region": {
+  "triangleCount": 197772,
+  "regionIndexSha256": "0b11984970453311fc4c652af14f54f120784bd7bc87a5ffdbe1c0f0d4305c50"
+ },
+ "recognition": {
+  "valid": true,
+  "areaM2": 329.8535737789879,
+  "spanM": 33.97720718383789,
+  "macM": 24.349032312086127,
+  "rootChordM": 37.194075682850475,
+  "sweepDeg": 14.929709557067916,
+  "warnings": [
+   "Both upper and lower skins appear selected; envelope integration was used to avoid double-counting planform area."
+  ]
+ },
+ "stages": {
+  "parse": {
+   "ms": 22.6,
+   "rssMB": 95.9,
+   "heapUsedMB": 5.6
+  },
+  "map": {
+   "ms": 39.9,
+   "rssMB": 110.9,
+   "heapUsedMB": 6
+  },
+  "recognition": {
+   "ms": 99.7,
+   "rssMB": 197.6,
+   "heapUsedMB": 90.1
+  },
+  "topology": {
+   "ms": 384.7,
+   "rssMB": 352.2,
+   "heapUsedMB": 191.8
+  }
+ },
+ "topology": {
+  "components": 1,
+  "boundary": 28,
+  "nonManifold": 5
+ }
+}

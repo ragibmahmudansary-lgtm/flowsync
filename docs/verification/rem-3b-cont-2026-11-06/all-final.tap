@@ -1,0 +1,706 @@
+TAP version 13
+# Subtest: AUD-1 quarantined zero point withholds badge and persists through display boundary
+ok 1 - AUD-1 quarantined zero point withholds badge and persists through display boundary
+  ---
+  duration_ms: 7589.834572
+  type: 'test'
+  ...
+# Subtest: AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+ok 2 - AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+  ---
+  duration_ms: 22539.836351
+  type: 'test'
+  ...
+# Subtest: AUD-1 rejects missing, quarantined and nonfinite comparison points
+ok 3 - AUD-1 rejects missing, quarantined and nonfinite comparison points
+  ---
+  duration_ms: 0.542811
+  type: 'test'
+  ...
+# Subtest: AUD-1 custom comparison with quarantined zero degree is withheld
+ok 4 - AUD-1 custom comparison with quarantined zero degree is withheld
+  ---
+  duration_ms: 5398.674608
+  type: 'test'
+  ...
+# Subtest: AUD-1 application caller forwards flow and renders quarantined comparison
+ok 5 - AUD-1 application caller forwards flow and renders quarantined comparison
+  ---
+  duration_ms: 3340.63316
+  type: 'test'
+  ...
+# Subtest: actual app export retains valid sweep values, provenance and persistence
+ok 6 - actual app export retains valid sweep values, provenance and persistence
+  ---
+  duration_ms: 65.030744
+  type: 'test'
+  ...
+# Subtest: actual app export quarantines invalid sweep including mixed points
+ok 7 - actual app export quarantines invalid sweep including mixed points
+  ---
+  duration_ms: 0.862419
+  type: 'test'
+  ...
+# Subtest: missing point validity and nonfinite values remain unavailable in JSON
+ok 8 - missing point validity and nonfinite values remain unavailable in JSON
+  ---
+  duration_ms: 0.649166
+  type: 'test'
+  ...
+# Subtest: demo STL regression metrics
+ok 9 - demo STL regression metrics
+  ---
+  duration_ms: 851.12825
+  type: 'test'
+  ...
+# Subtest: computes box volume, centroid, and inertia about CG
+ok 10 - computes box volume, centroid, and inertia about CG
+  ---
+  duration_ms: 0.428045
+  type: 'test'
+  ...
+# Subtest: computes tetrahedron volume and centroid
+ok 11 - computes tetrahedron volume and centroid
+  ---
+  duration_ms: 0.13875
+  type: 'test'
+  ...
+# Subtest: reports closed box topology
+ok 12 - reports closed box topology
+  ---
+  duration_ms: 0.22351
+  type: 'test'
+  ...
+# Subtest: mesh properties include warnings for open surfaces
+ok 13 - mesh properties include warnings for open surfaces
+  ---
+  duration_ms: 0.151185
+  type: 'test'
+  ...
+# Subtest: topology reports duplicate and degenerate triangles
+ok 14 - topology reports duplicate and degenerate triangles
+  ---
+  duration_ms: 0.098624
+  type: 'test'
+  ...
+# Subtest: aggregates mesh mass and point masses into total CG
+ok 15 - aggregates mesh mass and point masses into total CG
+  ---
+  duration_ms: 0.404932
+  type: 'test'
+  ...
+# Subtest: static stability follows neutral point relative to CG
+ok 16 - static stability follows neutral point relative to CG
+  ---
+  duration_ms: 0.255913
+  type: 'test'
+  ...
+# Subtest: pitch simulation returns finite RK4 samples
+ok 17 - pitch simulation returns finite RK4 samples
+  ---
+  duration_ms: 0.838432
+  type: 'test'
+  ...
+# Subtest: axis mapping rejects duplicate source axes
+ok 18 - axis mapping rejects duplicate source axes
+  ---
+  duration_ms: 0.322559
+  type: 'test'
+  ...
+# Subtest: project snapshot restores recognition assignments for the matching mesh
+ok 19 - project snapshot restores recognition assignments for the matching mesh
+  ---
+  duration_ms: 0.242178
+  type: 'test'
+  ...
+# Subtest: derives trapezoidal planform reference geometry
+ok 20 - derives trapezoidal planform reference geometry
+  ---
+  duration_ms: 0.802475
+  type: 'test'
+  ...
+# Subtest: region growth follows edge adjacency and normal threshold
+ok 21 - region growth follows edge adjacency and normal threshold
+  ---
+  duration_ms: 0.383982
+  type: 'test'
+  ...
+# Subtest: region growth does not accumulate curvature beyond the seed-normal limit
+ok 22 - region growth does not accumulate curvature beyond the seed-normal limit
+  ---
+  duration_ms: 0.139295
+  type: 'test'
+  ...
+# Subtest: region growth respects its explicit face cap
+ok 23 - region growth respects its explicit face cap
+  ---
+  duration_ms: 0.123193
+  type: 'test'
+  ...
+# Subtest: recognition assignments round-trip through run-length encoding
+ok 24 - recognition assignments round-trip through run-length encoding
+  ---
+  duration_ms: 0.069908
+  type: 'test'
+  ...
+# Subtest: IA-03: fixed claim is withheld for counterexamples and ordinary case
+ok 25 - IA-03: fixed claim is withheld for counterexamples and ordinary case
+  ---
+  duration_ms: 488.434403
+  type: 'test'
+  ...
+# Subtest: claim withheld at sweep and resolution API boundaries
+ok 26 - claim withheld at sweep and resolution API boundaries
+  ---
+  duration_ms: 886.214294
+  type: 'test'
+  ...
+# Subtest: actual application stability rendering does not present the fixed claim
+ok 27 - actual application stability rendering does not present the fixed claim
+  ---
+  duration_ms: 69.586505
+  type: 'test'
+  ...
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 28 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 0.36513
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 29 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.168988
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 30 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.225463
+  type: 'test'
+  ...
+# Subtest: IA-04 rejects missing or nonnumeric circulation instead of zero
+ok 31 - IA-04 rejects missing or nonnumeric circulation instead of zero
+  ---
+  duration_ms: 0.251656
+  type: 'test'
+  ...
+# Subtest: SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+ok 32 - SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+  ---
+  duration_ms: 118.57317
+  type: 'test'
+  ...
+# Subtest: SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+ok 33 - SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+  ---
+  duration_ms: 0.407681
+  type: 'test'
+  ...
+# Subtest: SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+ok 34 - SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+  ---
+  duration_ms: 743.134765
+  type: 'test'
+  ...
+# Subtest: SOL-02: zero-yaw prescribed check is green with the measured deltas
+ok 35 - SOL-02: zero-yaw prescribed check is green with the measured deltas
+  ---
+  duration_ms: 763.504146
+  type: 'test'
+  ...
+# Subtest: SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+ok 36 - SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+  ---
+  duration_ms: 781.535048
+  type: 'test'
+  ...
+# Subtest: SOL-02: convergence claim is withheld when no refinement is available
+ok 37 - SOL-02: convergence claim is withheld when no refinement is available
+  ---
+  duration_ms: 733.205715
+  type: 'test'
+  ...
+# Subtest: SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+ok 38 - SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+  ---
+  duration_ms: 24.863123
+  type: 'test'
+  ...
+# Subtest: SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+ok 39 - SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+  ---
+  duration_ms: 2755.629213
+  type: 'test'
+  ...
+# Subtest: SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+ok 40 - SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+  ---
+  duration_ms: 918.014124
+  type: 'test'
+  ...
+# Subtest: SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+ok 41 - SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+  ---
+  duration_ms: 178.416773
+  type: 'test'
+  ...
+# Subtest: SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+ok 42 - SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+  ---
+  duration_ms: 96.078443
+  type: 'test'
+  ...
+# Subtest: SOL-03: quarantine propagates from the point to the sweep
+ok 43 - SOL-03: quarantine propagates from the point to the sweep
+  ---
+  duration_ms: 1866.765947
+  type: 'test'
+  ...
+# Subtest: SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+ok 44 - SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+  ---
+  duration_ms: 9.085173
+  type: 'test'
+  ...
+# Subtest: SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+ok 45 - SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+  ---
+  duration_ms: 0.719923
+  type: 'test'
+  ...
+# Subtest: SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+ok 46 - SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+  ---
+  duration_ms: 157.139097
+  type: 'test'
+  ...
+# Subtest: SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+ok 47 - SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+  ---
+  duration_ms: 105.406046
+  type: 'test'
+  ...
+# Subtest: SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+ok 48 - SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+  ---
+  duration_ms: 19.97237
+  type: 'test'
+  ...
+# Subtest: SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+ok 49 - SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+  ---
+  duration_ms: 29.452774
+  type: 'test'
+  ...
+# Subtest: SOL-08: the label is only shown inside the demonstrated envelope
+ok 50 - SOL-08: the label is only shown inside the demonstrated envelope
+  ---
+  duration_ms: 50.010628
+  type: 'test'
+  ...
+# Subtest: SOL-10: non-finite circulation raises naming the panel index
+ok 51 - SOL-10: non-finite circulation raises naming the panel index
+  ---
+  duration_ms: 0.377111
+  type: 'test'
+  ...
+# Subtest: SOL-10: array length, density, coordinates and wake direction are validated
+ok 52 - SOL-10: array length, density, coordinates and wake direction are validated
+  ---
+  duration_ms: 0.212448
+  type: 'test'
+  ...
+# Subtest: SOL-10: finite signed circulation is evaluated without absolute values
+ok 53 - SOL-10: finite signed circulation is evaluated without absolute values
+  ---
+  duration_ms: 0.095907
+  type: 'test'
+  ...
+# Subtest: SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+ok 54 - SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+  ---
+  duration_ms: 112.7372
+  type: 'test'
+  ...
+# Subtest: SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+ok 55 - SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+  ---
+  duration_ms: 45.116666
+  type: 'test'
+  ...
+# Subtest: SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+ok 56 - SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+  ---
+  duration_ms: 128.100753
+  type: 'test'
+  ...
+# Subtest: SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+ok 57 - SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+  ---
+  duration_ms: 632.504412
+  type: 'test'
+  ...
+# Subtest: SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+ok 58 - SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+  ---
+  duration_ms: 223.992631
+  type: 'test'
+  ...
+# Subtest: SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+ok 59 - SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+  ---
+  duration_ms: 243.280475
+  type: 'test'
+  ...
+# Subtest: SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+ok 60 - SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+  ---
+  duration_ms: 440.512478
+  type: 'test'
+  ...
+# Subtest: SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+ok 61 - SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+  ---
+  duration_ms: 1762.340947
+  type: 'test'
+  ...
+# Subtest: SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+ok 62 - SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+  ---
+  duration_ms: 761.068287
+  type: 'test'
+  ...
+# Subtest: SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+ok 63 - SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+  ---
+  duration_ms: 668.258356
+  type: 'test'
+  ...
+# Subtest: SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+ok 64 - SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+  ---
+  duration_ms: 1598.283743
+  type: 'test'
+  ...
+# Subtest: parses generated binary STL
+ok 65 - parses generated binary STL
+  ---
+  duration_ms: 0.600649
+  type: 'test'
+  ...
+# Subtest: parses generated ASCII STL
+ok 66 - parses generated ASCII STL
+  ---
+  duration_ms: 0.448604
+  type: 'test'
+  ...
+# Subtest: module matches independent oracle on a closed box
+ok 67 - module matches independent oracle on a closed box
+  ---
+  duration_ms: 0.511595
+  type: 'test'
+  ...
+# Subtest: module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+ok 68 - module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+  ---
+  duration_ms: 0.299984
+  type: 'test'
+  ...
+# Subtest: reference mesh independently yields the audited 28/5/0/1 topology
+ok 69 - reference mesh independently yields the audited 28/5/0/1 topology
+  ---
+  duration_ms: 1631.607745
+  type: 'test'
+  ...
+# Subtest: oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+ok 70 - oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+  ---
+  duration_ms: 17.121404
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+ok 71 - review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+  ---
+  duration_ms: 2864.43991
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: single-row table from an independently built lattice
+ok 72 - review record §4 reproduction: single-row table from an independently built lattice
+  ---
+  duration_ms: 151.99817
+  type: 'test'
+  ...
+# Subtest: VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+ok 73 - VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+  ---
+  duration_ms: 5636.039414
+  type: 'test'
+  ...
+# Subtest: VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+ok 74 - VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+  ---
+  duration_ms: 90556.417677
+  type: 'test'
+  ...
+# Subtest: VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+ok 75 - VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+  ---
+  duration_ms: 1227.41499
+  type: 'test'
+  ...
+# Subtest: VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+ok 76 - VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+  ---
+  duration_ms: 3895.744488
+  type: 'test'
+  ...
+# Subtest: VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+ok 77 - VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+  ---
+  duration_ms: 1349.821791
+  type: 'test'
+  ...
+# Subtest: VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+ok 78 - VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+  ---
+  duration_ms: 2126.110886
+  type: 'test'
+  ...
+# Subtest: VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+ok 79 - VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+  ---
+  duration_ms: 2539.551117
+  type: 'test'
+  ...
+# Subtest: zero lift gives exactly zero drag without raising
+ok 80 - zero lift gives exactly zero drag without raising
+  ---
+  duration_ms: 25.902672
+  type: 'test'
+  ...
+# Subtest: negative angle of attack: drag is even in alpha and strictly positive
+ok 81 - negative angle of attack: drag is even in alpha and strictly positive
+  ---
+  duration_ms: 70.729741
+  type: 'test'
+  ...
+# Subtest: degenerate zero-width panels contribute nothing and stay finite
+ok 82 - degenerate zero-width panels contribute nothing and stay finite
+  ---
+  duration_ms: 40.520493
+  type: 'test'
+  ...
+# Subtest: Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+ok 83 - Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+  ---
+  duration_ms: 103.619017
+  type: 'test'
+  ...
+# Subtest: wake-length convergence: near-field approaches Trefftz monotonically
+ok 84 - wake-length convergence: near-field approaches Trefftz monotonically
+  ---
+  duration_ms: 114.218375
+  type: 'test'
+  ...
+# Subtest: VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+ok 85 - VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+  ---
+  duration_ms: 51.574958
+  type: 'test'
+  ...
+# Subtest: VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+ok 86 - VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+  ---
+  duration_ms: 243.52945
+  type: 'test'
+  ...
+# Subtest: M0-4: analytic kernel references hold across scales (independent reference behavior)
+ok 87 - M0-4: analytic kernel references hold across scales (independent reference behavior)
+  ---
+  duration_ms: 0.441182
+  type: 'test'
+  ...
+# Subtest: near-field/Trefftz agreement is robust across spanwise resolution
+ok 88 - near-field/Trefftz agreement is robust across spanwise resolution
+  ---
+  duration_ms: 326.983178
+  type: 'test'
+  ...
+# Subtest: swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+ok 89 - swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+  ---
+  duration_ms: 17.601721
+  type: 'test'
+  ...
+# Subtest: generates M x N sub-panels with quarter-chord vortices and three-quarter-chord control points
+ok 90 - generates M x N sub-panels with quarter-chord vortices and three-quarter-chord control points
+  ---
+  duration_ms: 0.595826
+  type: 'test'
+  ...
+# Subtest: default lattice is 4 chordwise rows with the prescribed spanwise count (R1/R2)
+ok 91 - default lattice is 4 chordwise rows with the prescribed spanwise count (R1/R2)
+  ---
+  duration_ms: 0.937061
+  type: 'test'
+  ...
+# Subtest: panel aspect guard refuses width/length < 0.25 and warns above 8
+ok 92 - panel aspect guard refuses width/length < 0.25 and warns above 8
+  ---
+  duration_ms: 0.66275
+  type: 'test'
+  ...
+# Subtest: sweep input is the c/4 sweep of the generated lattice (VLM-V6)
+ok 93 - sweep input is the c/4 sweep of the generated lattice (VLM-V6)
+  ---
+  duration_ms: 0.196839
+  type: 'test'
+  ...
+# Subtest: VLM-V6 with incidence: projected c/4 line of the generated panels is the input sweep at any incidence (M0-3)
+ok 94 - VLM-V6 with incidence: projected c/4 line of the generated panels is the input sweep at any incidence (M0-3)
+  ---
+  duration_ms: 5.58536
+  type: 'test'
+  ...
+# Subtest: sweep conversion c/4 -> LE is applied exactly once (M0-3, DR-21)
+ok 95 - sweep conversion c/4 -> LE is applied exactly once (M0-3, DR-21)
+  ---
+  duration_ms: 1.15545
+  type: 'test'
+  ...
+# Subtest: incidence rotates each section about its local quarter-chord point (M0-3, direct coordinates)
+ok 96 - incidence rotates each section about its local quarter-chord point (M0-3, direct coordinates)
+  ---
+  duration_ms: 1.058937
+  type: 'test'
+  ...
+# Subtest: elliptic planform c/4 anchors are exact at incidence (M0-3, direct coordinates)
+ok 97 - elliptic planform c/4 anchors are exact at incidence (M0-3, direct coordinates)
+  ---
+  duration_ms: 0.55675
+  type: 'test'
+  ...
+# Subtest: panel normals at incidence are the rotated flat-plate normals (M0-3)
+ok 98 - panel normals at incidence are the rotated flat-plate normals (M0-3)
+  ---
+  duration_ms: 0.344245
+  type: 'test'
+  ...
+# Subtest: multi-surface incidence keeps each surface's c/4 line at its own input sweep (M0-3)
+ok 99 - multi-surface incidence keeps each surface's c/4 line at its own input sweep (M0-3)
+  ---
+  duration_ms: 0.335521
+  type: 'test'
+  ...
+# Subtest: negative geometric incidence produces negative lift at zero freestream alpha (M0-3)
+ok 100 - negative geometric incidence produces negative lift at zero freestream alpha (M0-3)
+  ---
+  duration_ms: 9.808118
+  type: 'test'
+  ...
+# Subtest: elliptic planform chords follow c0 sqrt(1-eta^2) at the strip edges
+ok 101 - elliptic planform chords follow c0 sqrt(1-eta^2) at the strip edges
+  ---
+  duration_ms: 0.424743
+  type: 'test'
+  ...
+# Subtest: wake length is at least 10 spans of the largest surface (B-VLM-07)
+ok 102 - wake length is at least 10 spans of the largest surface (B-VLM-07)
+  ---
+  duration_ms: 67.414442
+  type: 'test'
+  ...
+# Subtest: R1 vs R2 resolution check reports the prescribed deltas and badge
+ok 103 - R1 vs R2 resolution check reports the prescribed deltas and badge
+  ---
+  duration_ms: 936.193051
+  type: 'test'
+  ...
+# Subtest: partial-pivot solver returns a low-residual solution
+ok 104 - partial-pivot solver returns a low-residual solution
+  ---
+  duration_ms: 0.300348
+  type: 'test'
+  ...
+# Subtest: symmetric finite wing has linear lift slope
+ok 105 - symmetric finite wing has linear lift slope
+  ---
+  duration_ms: 176.275826
+  type: 'test'
+  ...
+# Subtest: induced drag is signed, positive for both lift signs and zero at zero lift (M = 4 x 28)
+ok 106 - induced drag is signed, positive for both lift signs and zero at zero lift (M = 4 x 28)
+  ---
+  duration_ms: 37.319624
+  type: 'test'
+  ...
+# Subtest: quadratic induced drag trend holds across the multi-row lattice (DR-02 resolved)
+ok 107 - quadratic induced drag trend holds across the multi-row lattice (DR-02 resolved)
+  ---
+  duration_ms: 3642.316691
+  type: 'test'
+  ...
+# Subtest: zero-incidence symmetric wing produces approximately zero lift at zero alpha
+ok 108 - zero-incidence symmetric wing produces approximately zero lift at zero alpha
+  ---
+  duration_ms: 5.073434
+  type: 'test'
+  ...
+# Subtest: positive geometric incidence produces positive lift at zero freestream alpha
+ok 109 - positive geometric incidence produces positive lift at zero freestream alpha
+  ---
+  duration_ms: 6.923833
+  type: 'test'
+  ...
+# Subtest: trefftzDrag raises a validity error on a negative reported drag
+ok 110 - trefftzDrag raises a validity error on a negative reported drag
+  ---
+  duration_ms: 0.929817
+  type: 'test'
+  ...
+# Subtest: zero-lift physics validates the zero case; unresolved drag is explicitly suppressed, genuine negative drag still raises
+ok 111 - zero-lift physics validates the zero case; unresolved drag is explicitly suppressed, genuine negative drag still raises
+  ---
+  duration_ms: 1898.329777
+  type: 'test'
+  ...
+# Subtest: VLM-V7: a sweep with alpha outside the fit window reports 'insufficient linear data' — no NaN, no 'Unstable'
+ok 112 - VLM-V7: a sweep with alpha outside the fit window reports 'insufficient linear data' — no NaN, no 'Unstable'
+  ---
+  duration_ms: 95.843744
+  type: 'test'
+  ...
+# Subtest: VLM-V7: a two-point fit window is rejected (negative/edge)
+ok 113 - VLM-V7: a two-point fit window is rejected (negative/edge)
+  ---
+  duration_ms: 41.336411
+  type: 'test'
+  ...
+# Subtest: VLM-V8: the bounds-seed placeholder reference yields validity = warning with a message, values unchanged
+ok 114 - VLM-V8: the bounds-seed placeholder reference yields validity = warning with a message, values unchanged
+  ---
+  duration_ms: 187.82177
+  type: 'test'
+  ...
+# Subtest: VLM-V7: the 5 % adjacent-pair slope band is pinned at its boundary (fit contract primitive)
+ok 115 - VLM-V7: the 5 % adjacent-pair slope band is pinned at its boundary (fit contract primitive)
+  ---
+  duration_ms: 0.400595
+  type: 'test'
+  ...
+# Subtest: VLM-V7: the stability verdict obeys the DATA_CONTRACTS 2.5 rule set — no bare 'Unstable' at the source
+ok 116 - VLM-V7: the stability verdict obeys the DATA_CONTRACTS 2.5 rule set — no bare 'Unstable' at the source
+  ---
+  duration_ms: 669.124302
+  type: 'test'
+  ...
+1..116
+# tests 116
+# suites 0
+# pass 116
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 178048.113482

@@ -1,0 +1,13 @@
+file:///tmp/airflow-rem3b-cont/src/vlmSolver.js:884
+  if (start + step === start || end + step === end) throw new Error("alphaStepDeg cannot advance at this magnitude.");
+                                                          ^
+
+Error: alphaStepDeg cannot advance at this magnitude.
+    at runVlmSweep (file:///tmp/airflow-rem3b-cont/src/vlmSolver.js:884:59)
+    at file:///tmp/airflow-rem3b-cont/docs/verification/independent-2026-11-06/hang-probe.mjs:4:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0
+exit=1

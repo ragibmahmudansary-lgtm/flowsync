@@ -1,0 +1,404 @@
+diff --git a/src/vlmSolver.js b/src/vlmSolver.js
+index 72bede8..f5083a3 100644
+--- a/src/vlmSolver.js
++++ b/src/vlmSolver.js
+@@ -1,4 +1,8 @@
+ const FOUR_PI = 4 * Math.PI;
++// Operational safeguards for the synchronous dense solver, not scientific limits.
++export const MAX_VLM_PANELS = 2048;
++export const MAX_GENERATED_PANELS = 4096;
++export const MAX_SWEEP_POINTS = 201;
+ 
+ // M0-4 / SOL-01 — dimensionally consistent RELATIVE singularity handling.
+ // DATA_CONTRACTS 2.7: "Singularity cutoff | Relative: 1e-6 x segment length".
+@@ -55,15 +59,14 @@ export const DEFAULT_CHORDWISE_ROWS = 4;
+ export const MIN_SPANWISE_PANELS = 16;
+ export const UNCERTAINTY_LABEL = "flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %";
+ 
+-// SOL-08 scope restriction (REM-1): the approved label above is only backed by
+-// the zero-yaw R1/R2 comparison measurements of the validation matrix. Outside
+-// that demonstrated envelope no Tier-0 uncertainty is established and the label
+-// must not be displayed. The scope statement travels with every result.
++// The contract label is retained above as provenance, not applied to results:
++// the reviewed evidence does not establish a complete application envelope.
+ export const UNCERTAINTY_SCOPE =
+-  "Observed comparison agreement of R1/R2 zero-yaw lattices against the LLT/Helmbold reference bands of VALIDATION_AND_TEST_MATRIX VLM-V1/V1b/V2; " +
+-  "an acceptance band, not a confidence interval or validated error bound.";
++  "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. " +
++  "Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; " +
++  "R1/R2 agreement is self-comparison and does not validate moment or neutral point.";
+ export const UNCERTAINTY_UNVERIFIED_LABEL =
+-  "unverified outside the demonstrated comparison envelope (no Tier-0 uncertainty established)";
++  "unverified: fixed Tier-0 uncertainty claim unavailable";
+ 
+ // SOL-03 quarantine (REM-1): the VLM-V2b near-field/Trefftz gate (1 %) is
+ // enforced as an internal-consistency validity gate on planar (unswept, no
+@@ -75,23 +78,26 @@ export const NEAR_FIELD_TREFFTZ_GATE = 0.01;
+ export const VALIDATED_ELLIPTIC_ROWS_MAX = 8;
+ 
+ export function createLiftingSurface(reference, options = {}) {
++  if (!reference || typeof reference !== "object" || !options || typeof options !== "object") throw new Error("A lifting surface and options object are required.");
++  if (reference.planform !== undefined && !["linear", "elliptic"].includes(reference.planform)) throw new Error("Unknown planform.");
+   const spanM = positive(reference.spanM, "span");
+   const planform = reference.planform === "elliptic" ? "elliptic" : "linear";
+-  const rootChordM = positive(reference.rootChordM || reference.macM, "root chord");
++  const rootChordM = positive(reference.rootChordM === undefined ? reference.macM : reference.rootChordM, "root chord");
+   // The elliptic planform c(y) = c0 sqrt(1 - (2y/b)^2) tapers to zero tip chord
+   // (IMPLEMENTATION_HANDOFF 3.3).
+-  const tipChordM = planform === "elliptic" ? 0 : positive(reference.tipChordM || reference.macM, "tip chord");
++  const tipChordM = planform === "elliptic" ? 0 : positive(reference.tipChordM === undefined ? reference.macM : reference.tipChordM, "tip chord");
++  if (planform === "elliptic" && reference.tipChordM !== undefined && reference.tipChordM !== 0) throw new Error("Elliptic tip chord must be zero.");
+   return {
+     name: options.name || reference.name || "Main wing",
+     planform,
+     spanM,
+     rootChordM,
+     tipChordM,
+-    sweepDeg: finite(reference.sweepDeg, 0),
+-    dihedralDeg: finite(reference.dihedralDeg, 0),
+-    incidenceDeg: finite(options.incidenceDeg ?? reference.incidenceDeg, 0),
+-    xLeadingRootM: finite(reference.xLeadingRootM, 0),
+-    zRootM: finite(reference.zRootM, 0)
++    sweepDeg: optionalFinite(reference.sweepDeg, 0, "sweepDeg"),
++    dihedralDeg: optionalFinite(reference.dihedralDeg, 0, "dihedralDeg"),
++    incidenceDeg: optionalFinite(options.incidenceDeg === undefined ? reference.incidenceDeg : options.incidenceDeg, 0, "incidenceDeg"),
++    xLeadingRootM: optionalFinite(reference.xLeadingRootM, 0, "xLeadingRootM"),
++    zRootM: optionalFinite(reference.zRootM, 0, "zRootM")
+   };
+ }
+ 
+@@ -118,6 +124,10 @@ export function createLiftingSurface(reference, options = {}) {
+ export function generateVlmPanels(surfaces, options = {}) {
+   const config = typeof options === "number" ? { spanwisePanels: options } : (options || {});
+   const chordwiseRows = clampRows(config.chordwiseRows);
++  if (!Array.isArray(surfaces) || !surfaces.length) throw new Error("At least one lifting surface is required.");
++  const sizes = surfaces.map(reference => spanwisePanelsFor(createLiftingSurface(reference), config.spanwisePanels, chordwiseRows));
++  if (sizes.some(count => !Number.isSafeInteger(count)) || sizes.reduce((sum, count) => sum + count * chordwiseRows, 0) > MAX_GENERATED_PANELS)
++    throw new Error(`VLM panel generation resource limit is ${MAX_GENERATED_PANELS}.`);
+   const panels = [];
+   for (const reference of surfaces) {
+     // Idempotent normalisation so plain reference objects work too (no NaN
+@@ -280,12 +290,15 @@ export function resolutionLabel(surfaces, chordwiseRows, spanwiseCountsByName) {
+ }
+ 
+ function spanwisePanelsFor(surface, requested, chordwiseRows) {
+-  if (Number.isFinite(requested)) return Math.max(4, Math.min(240, Math.round(requested)));
+-  return autoSpanwisePanels(surface, chordwiseRows);
++  if (requested === undefined || requested === "auto") return autoSpanwisePanels(surface, chordwiseRows);
++  if (!Number.isInteger(requested) || requested < 4 || requested > 240) throw new Error("spanwisePanels must be auto or an integer from 4 to 240.");
++  return requested;
+ }
+ 
+ function clampRows(chordwiseRows) {
+-  return Math.max(1, Math.min(16, Math.round(finite(chordwiseRows, DEFAULT_CHORDWISE_ROWS))));
++  if (chordwiseRows === undefined) return DEFAULT_CHORDWISE_ROWS;
++  if (!Number.isInteger(chordwiseRows) || chordwiseRows < 1 || chordwiseRows > 16) throw new Error("chordwiseRows must be an integer from 1 to 16.");
++  return chordwiseRows;
+ }
+ 
+ function surfaceAspectRatio(surface) {
+@@ -633,7 +646,7 @@ function validateTrefftzInputs(panels, circulation, rho, wakeDirection) {
+     if (!panel || !isFinitePoint(panel.boundA) || !isFinitePoint(panel.boundB) || !isFinitePoint(panel.boundMidpoint)) {
+       throw new Error(`Trefftz drag: panel ${j} has non-finite coordinates.`);
+     }
+-    if (!Number.isFinite(Number(circulation[j]))) {
++    if (!Number.isFinite(circulation[j])) {
+       throw new Error(
+         `Trefftz drag: circulation[${j}] is not finite (${circulation[j]}). ` +
+         `Missing scientific data must not be evaluated as zero.`
+@@ -652,8 +665,11 @@ export function solveVlmCase(options) {
+   const densityKgM3 = positive(options.densityKgM3, "density");
+   const refAreaM2 = positive(options.refAreaM2, "reference area");
+   const refChordM = positive(options.refChordM, "reference chord");
+-  const alphaRad = finite(options.alphaDeg, 0) * Math.PI / 180;
+-  const betaRad = finite(options.betaDeg, 0) * Math.PI / 180;
++  const wakeLengthFactor = positive(optionalFinite(options.wakeLengthFactor, 20, "wakeLengthFactor"), "wakeLengthFactor");
++  const referencePoint = options.referencePoint === undefined ? [0, 0, 0] : options.referencePoint;
++  if (!isFinitePoint(referencePoint)) throw new Error("referencePoint must contain three finite coordinates.");
++  const alphaRad = optionalFinite(options.alphaDeg, 0, "alphaDeg") * Math.PI / 180;
++  const betaRad = optionalFinite(options.betaDeg, 0, "betaDeg") * Math.PI / 180;
+   // Freestream/wake direction per DATA_CONTRACTS §1: U_inf = V(cos a cos b, -sin b, sin a cos b).
+   // The wake legs stay aligned with the freestream (DATA_CONTRACTS §2.7).
+   const wakeDirection = normalize([
+@@ -662,16 +678,24 @@ export function solveVlmCase(options) {
+     Math.sin(alphaRad) * Math.cos(betaRad)
+   ]);
+   const freestream = scale(wakeDirection, velocityMS);
+-  const panels = options.panels || generateVlmPanels(options.surfaces, {
++  const panels = options.panels === undefined ? generateVlmPanels(options.surfaces, {
+     spanwisePanels: options.spanwisePanels,
+     chordwiseRows: options.chordwiseRows
+-  });
++  }) : options.panels;
++  if (!Array.isArray(panels)) throw new Error("panels must be an array.");
+   if (!panels.length) throw new Error("VLM requires at least one lifting-surface panel.");
++  if (panels.length > MAX_VLM_PANELS) throw new Error(`VLM panel resource limit is ${MAX_VLM_PANELS}.`);
++  for (const panel of panels) {
++    if (!panel || !["boundA", "boundB", "boundMidpoint", "controlPoint", "normal"].every(key => isFinitePoint(panel[key])) ||
++        !["y0", "y1", "widthLengthRatio"].every(key => Number.isFinite(panel[key])))
++      throw new Error("Each panel must have finite geometry and diagnostics.");
++  }
+   // DATA_CONTRACTS §2.7 / RB-07: straight freestream-aligned legs of length
+   // >= 10 b of the largest surface (B-VLM-07). The floor is enforced here so
+   // every caller gets the contract minimum.
+   const largestSpanM = largestSurfaceSpanM(panels);
+-  const wakeLengthM = Math.max(refChordM * finite(options.wakeLengthFactor, 20), 10 * largestSpanM);
++  const wakeLengthM = Math.max(refChordM * wakeLengthFactor, 10 * largestSpanM);
++  if (!Number.isFinite(wakeLengthM)) throw new Error("Wake length must be finite.");
+   // SOL-01 (M0-4): residual engagements of the relative singular-kernel
+   // cutoffs are counted; a non-zero count means a near-singular element
+   // proximity truncated real influence terms and the case is quarantined
+@@ -692,7 +716,6 @@ export function solveVlmCase(options) {
+ 
+   const solved = solveLinearSystem(matrix, rhs);
+   const circulation = solved.solution;
+-  const referencePoint = options.referencePoint || [0, 0, 0];
+   let totalForce = [0, 0, 0];
+   let totalMoment = [0, 0, 0];
+   // SOL-06: forward-error bookkeeping for the near-field drag projection (see
+@@ -844,9 +867,9 @@ export function solveVlmCase(options) {
+     nearFieldTrefftzDifference: trefftz.relativeDifference,
+     cm: totalMoment[1] / (qS * refChordM),
+     // M0-2 validity/uncertainty indicators, scoped per SOL-08 (REM-1): the
+-    // approved label is only backed by zero-yaw in-envelope comparisons.
++    // fixed label is withheld until an application envelope is reviewed.
+     validity,
+-    uncertaintyLabel: betaRad === 0 && validity.status !== "invalid" ? UNCERTAINTY_LABEL : UNCERTAINTY_UNVERIFIED_LABEL,
++    uncertaintyLabel: UNCERTAINTY_UNVERIFIED_LABEL,
+     uncertaintyScope: UNCERTAINTY_SCOPE,
+     diagnostics: {
+       panelCount: panels.length,
+@@ -864,6 +887,28 @@ export function solveVlmCase(options) {
+ }
+ 
+ export function runVlmSweep(options) {
++  for (const key of ["alphaMinDeg", "alphaMaxDeg", "alphaStepDeg"]) {
++    if (!Number.isFinite(options[key])) throw new Error(`${key} must be a finite number.`);
++  }
++  if (options.alphaStepDeg <= 0) throw new Error("alphaStepDeg must be positive.");
++  optionalFinite(options.betaDeg, 0, "betaDeg");
++  optionalFinite(options.cd0, 0, "cd0");
++  optionalFinite(options.cm0, 0, "cm0");
++  const start = Math.min(options.alphaMinDeg, options.alphaMaxDeg);
++  const end = Math.max(options.alphaMinDeg, options.alphaMaxDeg);
++  const step = options.alphaStepDeg;
++  if (start + step === start || end + step === end) throw new Error("alphaStepDeg cannot advance at this magnitude.");
++  const intervals = (end - start) / step;
++  const nearest = Math.round(intervals);
++  const rounded = Math.abs(intervals - nearest) <= 4 * Number.EPSILON * Math.max(1, Math.abs(intervals)) ? nearest : Math.floor(intervals);
++  if (!Number.isFinite(rounded) || rounded >= MAX_SWEEP_POINTS)
++    throw new Error(`Sweep resource limit is ${MAX_SWEEP_POINTS} points.`);
++  const pointCount = rounded + 1;
++  // Even when one addition advances, indexed values can round to duplicates.
++  for (let index = 1; index < pointCount; index += 1) {
++    if (!(start + index * step > start + (index - 1) * step))
++      throw new Error("Sweep samples cannot be represented as distinct advancing values.");
++  }
+   const surfaces = options.surfaces.map((surface) => createLiftingSurface(surface));
+   const chordwiseRows = clampRows(options.chordwiseRows);
+   const panels = generateVlmPanels(surfaces, { spanwisePanels: options.spanwisePanels, chordwiseRows });
+@@ -872,16 +917,14 @@ export function runVlmSweep(options) {
+     spanwiseCounts.set(panel.surfaceName, (spanwiseCounts.get(panel.surfaceName) || 0) + 1);
+   }
+   for (const [name, count] of spanwiseCounts) spanwiseCounts.set(name, count / chordwiseRows);
+-  const start = Math.min(options.alphaMinDeg, options.alphaMaxDeg);
+-  const end = Math.max(options.alphaMinDeg, options.alphaMaxDeg);
+-  const step = Math.max(0.1, Math.abs(options.alphaStepDeg));
+   const series = [];
+   let worstPivotRatio = Infinity;
+   let worstResidual = 0;
+   const VALIDITY_RANK = { ok: 0, warning: 1, invalid: 2 };
+   let sweepStatus = "ok";
+   const sweepMessages = [];
+-  for (let alphaDeg = start; alphaDeg <= end + 1e-9; alphaDeg += step) {
++  for (let index = 0; index < pointCount; index += 1) {
++    const alphaDeg = start + index * step;
+     const result = solveVlmCase({ ...options, surfaces, panels, alphaDeg });
+     const cdProfile = Math.max(0, finite(options.cd0, 0));
+     const cmOffset = finite(options.cm0, 0);
+@@ -1020,7 +1063,7 @@ export function runVlmSweep(options) {
+       minRatio: panelAspectDiagnostics(panels).minRatio,
+       maxRatio: panelAspectDiagnostics(panels).maxRatio
+     },
+-    uncertaintyLabel: finite(options.betaDeg, 0) === 0 && sweepStatus !== "invalid" ? UNCERTAINTY_LABEL : UNCERTAINTY_UNVERIFIED_LABEL,
++    uncertaintyLabel: UNCERTAINTY_UNVERIFIED_LABEL,
+     uncertaintyScope: UNCERTAINTY_SCOPE,
+     panels,
+     series,
+@@ -1068,7 +1111,7 @@ export function runVlmSweep(options) {
+  */
+ export function runVlmResolutionCheck(options) {
+   const surfaces = options.surfaces.map((surface) => createLiftingSurface(surface));
+-  const betaDeg = finite(options.betaDeg, 0);
++  const betaDeg = optionalFinite(options.betaDeg, 0, "betaDeg");
+   const common = {
+     ...options,
+     surfaces,
+@@ -1083,7 +1126,7 @@ export function runVlmResolutionCheck(options) {
+   const prescribed = resolutionDeltas(r1, r2);
+   const deltaClAlpha = prescribed.deltaClAlpha;
+   const deltaCdi = prescribed.deltaCdi;
+-  const withinGates = deltaClAlpha <= 0.01 && deltaCdi <= 0.05;
++  const withinGates = prescribed.valid && deltaClAlpha <= 0.01 && deltaCdi <= 0.05;
+ 
+   // The plotted lattice, classified against the prescribed R1/R2 counts.
+   const chordwiseRows = clampRows(options.chordwiseRows);
+@@ -1095,20 +1138,18 @@ export function runVlmResolutionCheck(options) {
+ 
+   const inputIdentity = {
+     betaDeg,
+-    velocityMS: options.velocityMS,
+-    densityKgM3: options.densityKgM3,
+-    refAreaM2: options.refAreaM2,
+-    refChordM: options.refChordM,
++    velocityMS: Number(options.velocityMS), densityKgM3: Number(options.densityKgM3),
++    refAreaM2: Number(options.refAreaM2), refChordM: Number(options.refChordM),
+     referencePoint: options.referencePoint || [0, 0, 0],
++    cd0: Math.max(0, finite(options.cd0, 0)), cm0: finite(options.cm0, 0),
+     alphaProtocolDeg: [0, 4],
+-    surfaces: surfaces.map((surface) => ({
+-      name: surface.name, planform: surface.planform, spanM: surface.spanM,
+-      rootChordM: surface.rootChordM, tipChordM: surface.tipChordM,
+-      sweepDeg: surface.sweepDeg, dihedralDeg: surface.dihedralDeg, incidenceDeg: surface.incidenceDeg
+-    }))
++    surfaces: surfaces.map((surface) => ({ ...surface })),
++    lattices: { current: { chordwiseRows, spanwisePanels: currentCounts }, r1: r1.resolution, r2: r2.resolution },
++    wake: { direction: "freestream-aligned", lengthFactor: finite(options.wakeLengthFactor, 20),
++      lengthM: Math.max(Number(options.refChordM) * finite(options.wakeLengthFactor, 20), 10 * Math.max(...surfaces.map(s => s.spanM))) }
+   };
+ 
+-  let claim = "prescribed R1 vs R2";
++  let claim = prescribed.valid ? "prescribed R1 vs R2" : "withheld";
+   let badge = withinGates ? "green" : "amber";
+   let currentGrid = null;
+   if (currentLabel === "custom") {
+@@ -1121,24 +1162,28 @@ export function runVlmResolutionCheck(options) {
+       badge = "amber";
+     }
+   }
+-  const sweepsClean = r1.validity.status !== "invalid" && r2.validity.status !== "invalid";
++  if (currentGrid?.refined) inputIdentity.lattices.refined = currentGrid.refined;
+   return {
+     r1: {
+       label: "R1",
+       resolution: r1.resolution,
+       // SOL-02/SOL-09: two-point resolution DIAGNOSTIC slope, never a
+       // certified lift derivative (see coverage.protocol).
+-      clAlphaTwoPointPerRad: twoPointSlopePerRad(r1.series),
+-      cdiAt4Deg: r1.series.find((p) => Math.abs(p.alphaDeg - 4) < 1e-9).cdi
++      validity: prescribed.coarse,
++      clAlphaTwoPointPerRad: prescribed.coarse.valid ? twoPointSlopePerRad(r1.series) : null,
++      cdiAt4Deg: prescribed.coarse.valid ? r1.series.find((p) => Math.abs(p.alphaDeg - 4) < 1e-9).cdi : null
+     },
+     r2: {
+       label: "R2",
+       resolution: r2.resolution,
+-      clAlphaTwoPointPerRad: twoPointSlopePerRad(r2.series),
+-      cdiAt4Deg: r2.series.find((p) => Math.abs(p.alphaDeg - 4) < 1e-9).cdi
++      validity: prescribed.fine,
++      clAlphaTwoPointPerRad: prescribed.fine.valid ? twoPointSlopePerRad(r2.series) : null,
++      cdiAt4Deg: prescribed.fine.valid ? r2.series.find((p) => Math.abs(p.alphaDeg - 4) < 1e-9).cdi : null
+     },
+     deltaClAlpha,
+     deltaCdi,
++    comparisonValidity: { valid: prescribed.valid, reasons: prescribed.reasons },
++    withholdingReason: claim === "withheld" ? (currentGrid?.reason || prescribed.reasons.join("; ")) : null,
+     gates: { clAlpha: 0.01, cdi: 0.05 },
+     withinGates,
+     badge,
+@@ -1151,10 +1196,10 @@ export function runVlmResolutionCheck(options) {
+       betaDeg,
+       latticeLabel: currentLabel,
+       latticeCounts: currentCounts,
+-      coversPlottedLattice: currentLabel !== "custom" || (currentGrid && currentGrid.claim === "compared"),
++      coversPlottedLattice: claim !== "withheld",
+       flow: "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+     },
+-    uncertaintyLabel: betaDeg === 0 && sweepsClean ? UNCERTAINTY_LABEL : UNCERTAINTY_UNVERIFIED_LABEL,
++    uncertaintyLabel: UNCERTAINTY_UNVERIFIED_LABEL,
+     uncertaintyScope: UNCERTAINTY_SCOPE
+   };
+ }
+@@ -1163,18 +1208,29 @@ export function runVlmResolutionCheck(options) {
+ // The slopes are the deliberate two-point DIAGNOSTIC (SOL-02 protocol), never
+ // the certified >= 3-point fit of SOL-09 — the arithmetic is unchanged so the
+ // pinned deltas stay bit-identical.
+-function resolutionDeltas(coarse, fine) {
+-  const atFourDeg = (sweep) => sweep.series.find((point) => Math.abs(point.alphaDeg - 4) < 1e-9);
+-  const cdiCoarse = atFourDeg(coarse).cdi;
+-  const cdiFine = atFourDeg(fine).cdi;
+-  const slopeCoarse = twoPointSlopePerRad(coarse.series);
+-  const slopeFine = twoPointSlopePerRad(fine.series);
+-  return {
+-    deltaClAlpha: Math.abs(slopeFine - slopeCoarse) / Math.max(Math.abs(slopeCoarse), 1e-300),
+-    deltaCdi: cdiCoarse === 0 && cdiFine === 0
+-      ? 0
+-      : Math.abs(cdiFine - cdiCoarse) / Math.max(Math.abs(cdiCoarse), 1e-300)
++export function resolutionDeltas(coarse, fine) {
++  const inspect = (sweep, label) => {
++    const reasons = [];
++    if (!["ok", "warning"].includes(sweep?.validity?.status)) reasons.push(`${label} sweep is quarantined or missing`);
++    for (const alpha of [0, 4]) {
++      const point = sweep?.series?.find(p => Math.abs(p.alphaDeg - alpha) < 1e-9);
++      if (!point) reasons.push(`${label} alpha ${alpha} case is missing`);
++      else if (!["ok", "warning"].includes(point.validity?.status) || !Number.isFinite(point.cl) || !Number.isFinite(point.cdi))
++        reasons.push(`${label} alpha ${alpha} case is invalid or nonfinite`);
++    }
++    return { valid: reasons.length === 0, reasons };
+   };
++  const a = inspect(coarse, "coarse"), b = inspect(fine, "fine");
++  const reasons = [...a.reasons, ...b.reasons];
++  if (reasons.length) return { valid: false, reasons, coarse: a, fine: b, deltaClAlpha: null, deltaCdi: null };
++  const cdiCoarse = coarse.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
++  const cdiFine = fine.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
++  const slopeCoarse = twoPointSlopePerRad(coarse.series), slopeFine = twoPointSlopePerRad(fine.series);
++  const deltaClAlpha = Math.abs(slopeFine - slopeCoarse) / Math.max(Math.abs(slopeCoarse), 1e-300);
++  const deltaCdi = cdiCoarse === 0 && cdiFine === 0 ? 0 : Math.abs(cdiFine - cdiCoarse) / Math.max(Math.abs(cdiCoarse), 1e-300);
++  if (!Number.isFinite(deltaClAlpha) || !Number.isFinite(deltaCdi))
++    return { valid: false, reasons: ["comparison metrics are nonfinite"], coarse: a, fine: b, deltaClAlpha: null, deltaCdi: null };
++  return { valid: true, reasons: [], coarse: a, fine: b, deltaClAlpha, deltaCdi };
+ }
+ 
+ // SOL-02 (REM-1): convergence of the plotted custom lattice, measured against a
+@@ -1205,21 +1261,26 @@ function compareLatticeWithRefined(sweepBase, requestedCount, rows, currentCount
+     return {
+       claim: "withheld",
+       reason: "no finer lattice is available (chordwise/spanwise limits reached); the plotted custom lattice has no convergence claim",
++      validity: { valid: false, reasons: ["no finer lattice is available"] },
+       ...identity
+     };
+   }
+   const current = runVlmSweep({ ...sweepBase, spanwisePanels: currentCount, chordwiseRows: rows });
+   const refined = runVlmSweep({ ...sweepBase, spanwisePanels: refinedCount, chordwiseRows: refinedRows });
+   const deltas = resolutionDeltas(current, refined);
+-  if (current.validity.status === "invalid" || refined.validity.status === "invalid") {
++  identity.current = current.resolution;
++  identity.refined = refined.resolution;
++  if (!deltas.valid) {
+     return {
+       claim: "withheld",
+-      reason: "a lattice in the comparison is quarantined (SOL-01/SOL-03 validity gate); the convergence claim is withheld",
++      reason: deltas.reasons.join("; "),
++      validity: { valid: false, reasons: deltas.reasons, current: deltas.coarse, refined: deltas.fine },
+       ...identity
+     };
+   }
+   return {
+     claim: "compared",
++    validity: { valid: true, reasons: [], current: deltas.coarse, refined: deltas.fine },
+     ...identity,
+     deltaClAlpha: deltas.deltaClAlpha,
+     deltaCdi: deltas.deltaCdi,
+@@ -1469,6 +1530,12 @@ function twoPointSlopePerRad(series) {
+   return slope(window, "alphaDeg", "cl") * 180 / Math.PI;
+ }
+ 
++function optionalFinite(value, fallback, name) {
++  if (value === undefined) return fallback;
++  if (!Number.isFinite(value)) throw new Error(`${name} must be a finite number.`);
++  return value;
++}
++
+ function positive(value, name) {
+   if (!Number.isFinite(value) || value <= 0) throw new Error(`${name} must be positive.`);
+   return value;

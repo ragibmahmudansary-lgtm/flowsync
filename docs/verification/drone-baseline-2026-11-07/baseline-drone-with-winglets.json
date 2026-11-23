@@ -1,0 +1,91 @@
+{
+  "case": "drone-with-winglets",
+  "fixture": "drone",
+  "rule": "|raw z centroid| >= 300 mm (excludes pod only; sensitivity)",
+  "node": "v24.21.0",
+  "loadavgStart": 0.81,
+  "stages": {
+    "parse": {
+      "ms": 113.7,
+      "rssMB": 335.3,
+      "heapUsedMB": 4.8
+    },
+    "map": {
+      "ms": 262.2,
+      "rssMB": 365.6,
+      "heapUsedMB": 5.1
+    },
+    "recognition": {
+      "ms": 193.2,
+      "rssMB": 553.7,
+      "heapUsedMB": 181.9
+    },
+    "topology": {
+      "ms": 4328.1,
+      "rssMB": 1152.8,
+      "heapUsedMB": 753.9
+    }
+  },
+  "region": {
+    "triangleCount": 542112,
+    "regionIndexSha256": "5413f99a0899df4231eac2b1d54acc5f3e8722dc6de7aba546e60919a687dc44"
+  },
+  "recognition": {
+    "valid": true,
+    "triangleCount": 542112,
+    "triangleAreaM2": 1.0659955171522857,
+    "projectedAreaSumM2": 0.9241542543121379,
+    "bounds": {
+      "min": [
+        -0.4755291748046875,
+        -1.0754803466796876,
+        0.010080183982849121
+      ],
+      "max": [
+        0.15470059204101563,
+        1.0754803466796876,
+        0.24024902343750001
+      ],
+      "size": [
+        0.6302297668457031,
+        2.1509606933593752,
+        0.2301688394546509
+      ]
+    },
+    "spanM": 2.1509606933593752,
+    "areaM2": 0.671740580342992,
+    "macM": 0.32931282262428,
+    "rootChordM": 0.39401982116699213,
+    "tipChordM": 0.17100169849395752,
+    "aspectRatio": 6.88752777450884,
+    "sweepDeg": 20.818439874202323,
+    "dihedralDeg": 1.8285177407138506,
+    "xLeadingRootM": -0.4755291748046875,
+    "zRootM": 0.0337989764213562,
+    "aeroCenterXM": -0.27775106391217186,
+    "warnings": [],
+    "stationCount": 120,
+    "reportJsonBytes": 22310
+  },
+  "topology": {
+    "uniqueVertices": 701333,
+    "uniqueEdges": 2104251,
+    "manifoldEdges": 2104245,
+    "boundaryEdges": 6,
+    "nonManifoldEdges": 0,
+    "duplicateTriangles": 0,
+    "degenerateTriangles": 0,
+    "componentCount": 10,
+    "largestComponents": [
+      345186,
+      271968,
+      271968,
+      214040,
+      116304,
+      63390,
+      63390,
+      28214
+    ]
+  },
+  "loadavgEnd": 0.83
+}

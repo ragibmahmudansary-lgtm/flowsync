@@ -1,0 +1,5 @@
+src/app.js: OK
+src/projectState.js: OK
+src/vlmSolver.js: OK
+index.html: OK
+tests/aud1.test.mjs: OK

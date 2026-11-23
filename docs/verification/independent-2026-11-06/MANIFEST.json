@@ -1,0 +1,96 @@
+{
+  "auditDate": "2026-11-06",
+  "timezone": "Asia/Dhaka",
+  "reviewedHead": "9a66316f63e22b9633e266716294eee68f9b2498",
+  "branch": "impl/m0",
+  "main": "25afe85",
+  "initialWorkingTree": "clean",
+  "node": "v24.21.0",
+  "numpy": "2.4.6",
+  "independence": "No subagents. Oracle imports NumPy/stdlib only; production imported solely by measurement drivers. No production/test/plan/frozen-evidence modifications.",
+  "runs": {
+    "npm test": {
+      "exit": 0,
+      "reportedTestFiles": 10,
+      "fail": 0,
+      "skip": 0,
+      "durationMs": 45070.317003
+    },
+    "individual tests": {
+      "exit": 0,
+      "tests": 101,
+      "fail": 0,
+      "skip": 0,
+      "durationMs": 69593.386695
+    },
+    "measure.mjs": {
+      "exit": 0
+    },
+    "oracle.py": {
+      "exit": 0
+    },
+    "app-probes.mjs": {
+      "exit": 0
+    },
+    "edge-probes.mjs": {
+      "exit": 0
+    },
+    "timeout 2s hang-probe.mjs": {
+      "exit": 124,
+      "expected": "finite-alpha nonprogress reproducer"
+    },
+    "frozen Sol probes": {
+      "exit": 1,
+      "expected": "uncaught NaN-circulation rejection; 50 rows captured"
+    },
+    "frozen Sol PSD/analytic/LLT": {
+      "exit": 0
+    }
+  },
+  "artifactSha256": {
+    "REPORT.md": "a60b835e0ccfdfe7bc06e2deb52a2cfeeac262720b46f67e8c5ee7047e5df7ad",
+    "analytic-replay.json": "cd28828cf854298108f41e1d212f224a2b15abc74ff531c20240a8169329825d",
+    "app-probe-results.json": "3a1af88ae42ab2056f465a63e218bb1db45e83993fa102440fc07e39fe9bef99",
+    "app-probes.mjs": "80c1673d5ffa256891be15f831cfaa2db32f7131f763a014a69eda3a055f5e40",
+    "edge-probe-results.json": "e1a8cba9356876ca0d656d55bb0f26440a683b4b0a61ea6ec8df964637a7634b",
+    "edge-probes.mjs": "a006c39f1bd13c01b8b298ce805475792f6a97ed81a374c296a361a8fa0d3929",
+    "hang-probe.mjs": "3944be078ec89fd1285ed15a7b6e6456448962e664caf6568bfe6fa9a4732161",
+    "history.txt": "6cb16d1bae6bbe75358be870427aa3e68f4c99b0b6260c24445a07bfeb4c210f",
+    "individual-tests.tap": "60e975e82d22626aa82d25cb7c440234b20db9202e86249b6377ffc40a650643",
+    "llt-replay.json": "658fdb38c54231401094c6788aa33015d6f7dec1bd2a1fdbf864727229a0beb3",
+    "measure.mjs": "ec3afcdfe917ca12933ceb396d3ec77f20ddd82168226566765f53bd47682d8f",
+    "measurements.json": "46bef29be309d3c41059d34d6916703574b48c41a0f8102b5cb3870efc1f93c7",
+    "npm-test.txt": "9b9ecfe92f8040be55add2278722c16d50a4fdff7730cc1d3b9bbb1c4251f4f8",
+    "oracle-results.json": "78f298dcd50ba1535a5cd1f77e6c5991c7464b274ee2eaf3c81f6a35d33ee041",
+    "oracle.py": "cc31305747d4fa541303e5eb2d30e8cf3de8da0e55901e019c62d6482ac956f6",
+    "psd-replay.json": "c93cd1808a2ca4d4f9e4daf11512736c0a72a27d7b27f77e8207e9267554f823",
+    "replay-comparison.json": "5845780bd927ee6c9a50c3511f5a9214f847ff3684b21e051d6196be9ee40d44",
+    "sol-replay.ndjson": "fe5cc9ece35a26d8d9432cc8dd55754260cac2738c5ba9a81805e94f99a0024f",
+    "sol-replay.stderr": "ee628dddfa6fbcf60dc09f9a5245e8bb4ce2c11858e90f6022c26373eff71e04"
+  },
+  "reviewedSourceSha256": {
+    "src/app.js": "aa5549275f7fe84d53757bae7bc8007c40ddbcc14154765fff344c2bb058ef4c",
+    "src/axisMapping.js": "aff9452611fb66dc2b48700cf028bf06c8e77caf27dccc8862f551ab4c5bd198",
+    "src/core/topology.js": "b65fe457f1ef993fb98927943999d175754a69265887a1d5d5dd894a10fd7831",
+    "src/geometry.js": "6691ab415596fa91ea13e5fc7b9060d59dada8ec92584757c1dd2de1a8df03ba",
+    "src/graphs.js": "fa8c67ea29e112330c5ccc79fdb70d8c2e3ff081c006a08417f661479fabf5d6",
+    "src/massModel.js": "b29702bc4d610ace2a8d5886f5b28b6a9935f01895ad23be273cc12762c3ee56",
+    "src/projectState.js": "30a318eed55b28c802a8f0a7ceb95d74ba630bb49718cd41cf10f2ab84b63052",
+    "src/recognition.js": "bbe7958a86024fb80a8df9d47db73f07fe4e88abb9be7504c78226532b591454",
+    "src/stability.js": "f76add7fa5caeb700d432d587f43328b02a2a9d047355b1f50fc8958f52b8a5f",
+    "src/stlParser.js": "db55392ab3d328c892a9c3222fd144955ecec64f58e83153a0dc4fb9d101acd5",
+    "src/styles.css": "6173fe7806d425c6daa583560f24849f48027888d9fd46a8e73956269cfb8576",
+    "src/vlmSolver.js": "b4cdc2827b99c144e4f76a9ec3dd71fed574745b220d8377ec0972ce13b192a1",
+    "tests/demoRegression.test.mjs": "ad1c40ecfbbce6b9185abc87ceaaabb7b04bf31ce6473094dfc2519e1e55bfad",
+    "tests/fixtures.mjs": "946351e99926bd85d5f5f6d04d8fef45b310b8b3fda91d919e5e1edd4bb70cf5",
+    "tests/geometry.test.mjs": "bbd0a7e91ad8da01f84654dc395e2843227a0a6f30577004e1f6cf307e96c411",
+    "tests/massStability.test.mjs": "8adf953acf42db25f165e879aa200d4438a6fd5da6cd48dd9ef172d5f41eda01",
+    "tests/projectAxis.test.mjs": "a7218768918ecd39f9189257a644e6bd8fe30042adf9cca765dd6fe443bcd49c",
+    "tests/recognition.test.mjs": "31b680686f282794fe6e47c9ca1e3e6ab0bb018ca7845790d282bf31886b3476",
+    "tests/solFindings.test.mjs": "001285af6214a830fb3b64a9116117fce7827822e6c6102dbb71aac05a9ad6f8",
+    "tests/stlParser.test.mjs": "9bc6c14f6a3112a33ae6952bd37f798b6169d709d141cd42e7b037b19d99fc3d",
+    "tests/topology.test.mjs": "5f63ddf274454069b55bf70cfebcaf12ae57c772774aeb1889fc9965f319f35a",
+    "tests/vlmOracles.test.mjs": "7467ca586832bfacbfbd447505592587e8a11db96ebc027a75822889a3dd3617",
+    "tests/vlmSolver.test.mjs": "55593f6a57e1b8b449088312dd2b59841fb47bdd346a7f81c967cd0c0f648722"
+  }
+}

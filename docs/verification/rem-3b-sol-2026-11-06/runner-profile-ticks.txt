@@ -1,0 +1,85 @@
+Statistical profiling result from ./isolate-0x23a33000-294-airflow-v8.log, (159045 ticks, 108067 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      6    0.0%          [vdso]
+      5    0.0%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+  14019    8.8%    8.8%  Builtin: MathHypot
+  12373    7.8%    7.8%  JS: *inducedVelocityFiniteSegment file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:316:45
+   8936    5.6%    5.6%  JS: *solveLinearSystem file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1406:34
+   3119    2.0%    2.0%  JS: *inductionDistanceErrorOps file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1810:35
+   3088    1.9%    1.9%  JS: *solveVlmCase file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:733:29
+   2316    1.5%    1.5%  JS: *inducedVelocityHorseshoe file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:378:41
+   1994    1.3%    1.3%  JS: *trefftzDrag file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:429:28
+   1001    0.6%    0.6%  Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+    819    0.5%    0.5%  JS: +solveLinearSystem file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1406:34
+    613    0.4%    0.4%  JS: *add file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1691:13
+    432    0.3%    0.3%  Builtin: FindOrderedHashMapEntry
+    295    0.2%    0.2%  JS: *subtract file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1692:18
+    189    0.1%    0.1%  Builtin: FindOrderedHashSetEntry
+    155    0.1%    0.1%  JS: +solveVlmCase file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:733:29
+     59    0.0%    0.0%  JS: *dot file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1694:13
+     51    0.0%    0.0%  Builtin: ToString
+     41    0.0%    0.0%  JS: *magnitude file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1696:19
+     39    0.0%    0.0%  Builtin: StringAdd_CheckNone
+     38    0.0%    0.0%  Builtin: KeyedLoadIC
+     37    0.0%    0.0%  JS: *computeTopology file:///tmp/airflow-rem3b-profile.cLQoow/src/core/topology.js:92:32
+     36    0.0%    0.0%  JS: *referenceTopology file:///tmp/airflow-rem3b-profile.cLQoow/trace-tests/topology.test.mjs:27:27
+     31    0.0%    0.0%  Builtin: LoadIC
+     29    0.0%    0.0%  JS: *scale file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1693:15
+     28    0.0%    0.0%  JS: +trefftzDrag file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:429:28
+     26    0.0%    0.0%  Builtin: KeyedLoadIC_Megamorphic
+     25    0.0%    0.0%  JS: *weld file:///tmp/airflow-rem3b-profile.cLQoow/src/core/topology.js:48:9
+     23    0.0%    0.0%  JS: *mapPositions file:///tmp/airflow-rem3b-profile.cLQoow/src/axisMapping.js:18:29
+     21    0.0%    0.0%  Builtin: StringEqual
+     21    0.0%    0.0%  Builtin: RecordWriteSaveFP
+     20    0.0%    0.0%  JS: ^solveVlmCase file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:733:29
+     20    0.0%    0.0%  Builtin: ArrayTimSort
+     19    0.0%    0.0%  JS: *computePolyhedralMassProperties file:///tmp/airflow-rem3b-profile.cLQoow/src/geometry.js:58:48
+     16    0.0%    0.0%  JS: *cross file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1695:15
+     16    0.0%    0.0%  Builtin: ArrayIteratorPrototypeNext
+     13    0.0%    0.0%  JS: +generateVlmPanels file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:125:34
+     13    0.0%    0.0%  JS: *parseBinarySTL file:///tmp/airflow-rem3b-profile.cLQoow/src/stlParser.js:19:24
+     13    0.0%    0.0%  Builtin: MapPrototypeSet
+     12    0.0%    0.0%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     11    0.0%    0.0%  Builtin: MathMax
+     11    0.0%    0.0%  Builtin: Call_ReceiverIsNullOrUndefined_Baseline_Compact
+     10    0.0%    0.0%  Builtin: SetPrototypeAdd
+     10    0.0%    0.0%  Builtin: MathSqrt
+      9    0.0%    0.0%  Builtin: AllocateInYoungGeneration
+      8    0.0%    0.0%  JS: +inductionDistanceErrorOps file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1810:35
+      8    0.0%    0.0%  Builtin: StringPrototypeReplace
+      8    0.0%    0.0%  Builtin: Multiply_Baseline
+      8    0.0%    0.0%  Builtin: ArrayPrototypeSort
+      6    0.0%    0.0%  JS: +validateCasePanels file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:670:28
+      6    0.0%    0.0%  JS: +inducedVelocityFiniteSegment file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:316:45
+      6    0.0%    0.0%  JS: *validateWakeEndpoints file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:721:31
+      6    0.0%    0.0%  JS: *validateCasePanels file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:670:28
+      6    0.0%    0.0%  Builtin: KeyedStoreIC_Megamorphic
+      6    0.0%    0.0%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+      6    0.0%    0.0%  Builtin: BaselineOutOfLinePrologue
+      5    0.0%    0.0%  JS: +panelAspectDiagnostics file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:229:39
+      5    0.0%    0.0%  JS: *project file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1704:17
+      5    0.0%    0.0%  Builtin: StringIndexOf
+      5    0.0%    0.0%  Builtin: NumberToString
+      5    0.0%    0.0%  Builtin: Load_FastSmiElements_0
+      5    0.0%    0.0%  Builtin: Call_ReceiverIsNullOrUndefined
+      5    0.0%    0.0%  Builtin: CallFunction_ReceiverIsAny
+      5    0.0%    0.0%  Builtin: Add_Baseline
+      4    0.0%    0.0%  JS: ^trefftzDrag file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:429:28
+      4    0.0%    0.0%  JS: ^solveLinearSystem file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:1406:34
+      4    0.0%    0.0%  JS: +mapPositions file:///tmp/airflow-rem3b-profile.cLQoow/src/axisMapping.js:18:29
+      4    0.0%    0.0%  JS: *isFinitePoint file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:665:23
+      4    0.0%    0.0%  JS: *computeSurfaceArea file:///tmp/airflow-rem3b-profile.cLQoow/src/geometry.js:25:35
+      4    0.0%    0.0%  Builtin: ToBoolean
+      4    0.0%    0.0%  Builtin: MathAbs
+      4    0.0%    0.0%  Builtin: LoadIC_Megamorphic
+      4    0.0%    0.0%  Builtin: LoadGlobalIC
+      4    0.0%    0.0%  Builtin: DataViewPrototypeGetFloat32
+      4    0.0%    0.0%  Builtin: ArrayEvery
+      3    0.0%    0.0%  JS: +validateWakeEndpoints file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:721:31
+      3    0.0%    0.0%  JS: +parseBinarySTL file:///tmp/airflow-rem3b-profile.cLQoow/src/stlParser.js:19:24
+      3    0.0%    0.0%  JS: +inducedVelocityHorseshoe file:///tmp/airflow-rem3b-profile.cLQoow/src/vlmSolver.js:378:41

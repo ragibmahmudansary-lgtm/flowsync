@@ -1,0 +1,84 @@
+TAP version 13
+# Subtest: IA-03: fixed claim is withheld for counterexamples and ordinary case
+not ok 1 - IA-03: fixed claim is withheld for counterexamples and ordinary case
+  ---
+  duration_ms: 33.919794
+  type: 'test'
+  location: '/home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" to be strictly unequal to:
+    
+    'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  actual: 'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  operator: 'notStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:11:52)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: claim withheld at sweep and resolution API boundaries
+not ok 2 - claim withheld at sweep and resolution API boundaries
+  ---
+  duration_ms: 524.989287
+  type: 'test'
+  location: '/home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" to be strictly unequal to:
+    
+    'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  actual: 'flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %'
+  operator: 'notStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:15:76)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: actual application stability rendering does not present the fixed claim
+not ok 3 - actual application stability rendering does not present the fixed claim
+  ---
+  duration_ms: 40.583627
+  type: 'test'
+  location: '/home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input was expected to not match the regular expression /C_Lα ±5/. Input:
+    
+    '{"solverDiagnostics":{"innerHTML":"<strong>Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)</strong> R1 (4 chordwise rows).<br>128 panels; residual 1.5807450834404158e-14; pivot ratio 0.8030106728827577; numerically resolved.<br><em>flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %</em> (Observed comparison agreement of R1/R2 zero-yaw lattices against the LLT/Helmbold reference bands of VALIDATION_AND_TEST_MATRIX VLM-V1/V1b/V2; an acceptance band, not a confidence interval or validated error bound.)"},"stabilityMetrics":{"innerHTML":"Static margin: -15.547639306479196 %Pitch stability: not determined — no valid horizontal stabiliser — wing-alone run (STAB-V2); mass source is the assumed uniform-density lump or unestablished (RB-01, STAB-V3); no model description supplied to accompany the verdict (2.5 rule 4)Neutral point x: 0.24452360693520805 mTrim alpha: not determinedCL alpha: 4.705038725518481 /radCm alpha: 0.7315224502737792 /radCL at 0 deg: 0CDi at 0 deg: 0"}}'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: '{"solverDiagnostics":{"innerHTML":"<strong>Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)</strong> R1 (4 chordwise rows).<br>128 panels; residual 1.5807450834404158e-14; pivot ratio 0.8030106728827577; numerically resolved.<br><em>flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %</em> (Observed comparison agreement of R1/R2 zero-yaw lattices against the LLT/Helmbold reference bands of VALIDATION_AND_TEST_MATRIX VLM-V1/V1b/V2; an acceptance band, not a confidence interval or validated error bound.)"},"stabilityMetrics":{"innerHTML":"Static margin: -15.547639306479196 %Pitch stability: not determined — no valid horizontal stabiliser — wing-alone run (STAB-V2); mass source is the assumed uniform-density lump or unestablished (RB-01, STAB-V3); no model description supplied to accompany the verdict (2.5 rule 4)Neutral point x: 0.24452360693520805 mTrim alpha: not determinedCL alpha: 4.705038725518481 /radCm alpha: 0.7315224502737792 /radCL at 0 deg: 0CDi at 0 deg: 0"}}'
+  operator: 'doesNotMatch'
+  stack: |-
+    TestContext.<anonymous> (file:///home/tanvir/Coding/AirFLOW/tests/rem3a.test.mjs:23:9)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 0
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 610.357814

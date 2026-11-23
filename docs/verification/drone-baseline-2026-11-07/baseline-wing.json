@@ -1,0 +1,86 @@
+{
+  "case": "wing",
+  "fixture": "wing",
+  "rule": "every triangle",
+  "node": "v24.21.0",
+  "loadavgStart": 0.87,
+  "stages": {
+    "parse": {
+      "ms": 1.4,
+      "rssMB": 53.2,
+      "heapUsedMB": 5.6
+    },
+    "map": {
+      "ms": 5.6,
+      "rssMB": 58.2,
+      "heapUsedMB": 6
+    },
+    "recognition": {
+      "ms": 6.7,
+      "rssMB": 63.6,
+      "heapUsedMB": 6.4
+    },
+    "topology": {
+      "ms": 4.7,
+      "rssMB": 64.6,
+      "heapUsedMB": 8.8
+    }
+  },
+  "region": {
+    "triangleCount": 2890,
+    "regionIndexSha256": "a6bef07c2c90e852834357b723cfa1648c7b106a4eaa40d191f9865baaa9d06d"
+  },
+  "recognition": {
+    "valid": true,
+    "triangleCount": 2890,
+    "triangleAreaM2": 0.055409369432541954,
+    "projectedAreaSumM2": 0.049458807191759095,
+    "bounds": {
+      "min": [
+        -0.00003066807426512241,
+        0,
+        -0.014863033294677735
+      ],
+      "max": [
+        0.1059486083984375,
+        0.3,
+        0.009078486442565918
+      ],
+      "size": [
+        0.10597927647270262,
+        0.3,
+        0.023941519737243653
+      ]
+    },
+    "spanM": 0.3,
+    "areaM2": 0.014389337900581046,
+    "macM": 0.0833162031425287,
+    "rootChordM": 0.04121290206909179,
+    "tipChordM": 0.06671648184815422,
+    "aspectRatio": 6.254631076275286,
+    "sweepDeg": 7.974989319526529,
+    "dihedralDeg": -0.9560026369915451,
+    "xLeadingRootM": 0.021559403419494628,
+    "zRootM": -0.004248790621757507,
+    "aeroCenterXM": 0.036925055149140656,
+    "warnings": [
+      "Both upper and lower skins appear selected; envelope integration was used to avoid double-counting planform area."
+    ],
+    "stationCount": 54,
+    "reportJsonBytes": 10270
+  },
+  "topology": {
+    "uniqueVertices": 1447,
+    "uniqueEdges": 4335,
+    "manifoldEdges": 4335,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "duplicateTriangles": 0,
+    "degenerateTriangles": 0,
+    "componentCount": 1,
+    "largestComponents": [
+      2890
+    ]
+  },
+  "loadavgEnd": 0.87
+}

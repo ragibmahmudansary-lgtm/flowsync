@@ -1,0 +1,61 @@
+TAP version 13
+# Subtest: resolution identity distinguishes bounds-seed validity from a measured reference
+not ok 1 - resolution identity distinguishes bounds-seed validity from a measured reference
+  ---
+  duration_ms: 1593.144309
+  type: 'test'
+  location: '/tmp/airflow-m0-reverify.jiN5hu/tests/aud1.test.mjs:65:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + undefined
+    - false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-m0-reverify.jiN5hu/tests/aud1.test.mjs:71:10)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: finite comparison cases can yield an unrepresentable slope and withhold the grid summary
+not ok 2 - finite comparison cases can yield an unrepresentable slope and withhold the grid summary
+  ---
+  duration_ms: 475.54172
+  type: 'test'
+  location: '/tmp/airflow-m0-reverify.jiN5hu/tests/aud1.test.mjs:75:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    true !== false
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: false
+  actual: true
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///tmp/airflow-m0-reverify.jiN5hu/tests/aud1.test.mjs:82:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+    Test.postRun (node:internal/test_runner/test:1542:19)
+    Test.run (node:internal/test_runner/test:1467:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2085.202231

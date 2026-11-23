@@ -1,0 +1,57 @@
+diff --git a/src/vlmSolver.js b/src/vlmSolver.js
+index e2ff7c8..ac96697 100644
+--- a/src/vlmSolver.js
++++ b/src/vlmSolver.js
+@@ -1469,7 +1469,13 @@ export function resolutionDeltas(coarse, fine) {
+   const cdiCoarse = coarse.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
+   const cdiFine = fine.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
+   const slopeCoarse = twoPointSlopePerRad(coarse.series), slopeFine = twoPointSlopePerRad(fine.series);
+-  const deltaClAlpha = Math.abs(slopeFine - slopeCoarse) / Math.max(Math.abs(slopeCoarse), 1e-300);
++  const slopeScale = Math.max(Math.abs(slopeCoarse), 1e-300);
++  const slopeDifference = slopeFine - slopeCoarse;
++  // Finite slopes of opposite sign can overflow on subtraction. Normalize
++  // first in that case to preserve a representable relative difference.
++  const deltaClAlpha = Number.isFinite(slopeDifference)
++    ? Math.abs(slopeDifference) / slopeScale
++    : Math.abs(slopeFine / slopeScale - slopeCoarse / slopeScale);
+   const deltaCdi = cdiCoarse === 0 && cdiFine === 0 ? 0 : Math.abs(cdiFine - cdiCoarse) / Math.max(Math.abs(cdiCoarse), 1e-300);
+   if (!Number.isFinite(deltaClAlpha) || !Number.isFinite(deltaCdi))
+     return { valid: false, reasons: ["comparison metrics are nonfinite"], coarse: a, fine: b, deltaClAlpha: null, deltaCdi: null };
+diff --git a/tests/aud1.test.mjs b/tests/aud1.test.mjs
+index 71ddf2f..69577d8 100644
+--- a/tests/aud1.test.mjs
++++ b/tests/aud1.test.mjs
+@@ -124,3 +124,33 @@ test('resolution retains representable slopes when the degree conversion interme
+   assert.equal(uncoveredCustom.badge, 'amber');
+   assert.equal(uncoveredCustom.coverage.coversPlottedLattice, false);
+ });
++
++test('resolution retains a finite relative delta between large slopes of opposite sign', () => {
++  const sweep = clAt4 => ({
++    validity: { status: 'ok' },
++    series: [
++      { alphaDeg: 4, cl: clAt4, cdi: 0.01, validity: { status: 'ok' } },
++      { alphaDeg: 0, cl: 0, cdi: 0, validity: { status: 'ok' } }
++    ]
++  });
++  const positive = sweep(1e307);
++  const negative = sweep(-1.1e307);
++  for (const [coarse, fine, expected] of [
++    [positive, negative, 2.1],
++    [negative, positive, 21 / 11]
++  ]) {
++    const comparison = resolutionDeltas(coarse, fine);
++    assert.equal(comparison.coarse.valid, true);
++    assert.equal(comparison.fine.valid, true);
++    assert.equal(comparison.valid, true);
++    assert.ok(Math.abs(comparison.deltaClAlpha - expected) <= 1e-15);
++    assert.equal(comparison.deltaCdi, 0);
++  }
++
++  const unrepresentable = resolutionDeltas(sweep(0), positive);
++  assert.equal(unrepresentable.coarse.valid, true);
++  assert.equal(unrepresentable.fine.valid, true);
++  assert.equal(unrepresentable.deltaClAlpha, null);
++  assert.equal(unrepresentable.deltaCdi, null);
++  assert.deepEqual(unrepresentable.reasons, ['comparison metrics are nonfinite']);
++});

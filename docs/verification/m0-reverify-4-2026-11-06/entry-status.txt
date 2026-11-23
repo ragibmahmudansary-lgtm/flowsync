@@ -1,0 +1,100 @@
+ M CALCULATION_PIPELINE.md
+ M MVP_METHODOLOGY.md
+ M docs/implementation/CURRENT_HANDOFF.md
+ M docs/implementation/IMPLEMENTATION_CHANGELOG.md
+ M docs/implementation/IMPLEMENTATION_STATUS.md
+ M docs/implementation/ISSUE_AND_DECISION_LOG.md
+ M docs/implementation/NEXT_CONVERSATION_PROMPT.md
+ M docs/implementation/SOL_FINDING_DISPOSITIONS.md
+ M docs/implementation/milestones/M0.md
+ M src/vlmSolver.js
+ M tests/aud1.test.mjs
+?? docs/implementation/continuation-prompts/m0-reverify-3-entry-2026-11-06.md
+?? docs/verification/m0-reverify-3-2026-11-06/README.md
+?? docs/verification/m0-reverify-3-2026-11-06/airflow-r3-frozen-entry
+?? docs/verification/m0-reverify-3-2026-11-06/airflow-r3-r1-entry
+?? docs/verification/m0-reverify-3-2026-11-06/airflow-r3-source-entry
+?? docs/verification/m0-reverify-3-2026-11-06/api-post.jsonl
+?? docs/verification/m0-reverify-3-2026-11-06/api-pre.exit
+?? docs/verification/m0-reverify-3-2026-11-06/api-pre.jsonl
+?? docs/verification/m0-reverify-3-2026-11-06/browser-downloads.json
+?? docs/verification/m0-reverify-3-2026-11-06/browser-smoke.md
+?? docs/verification/m0-reverify-3-2026-11-06/check-downloads.mjs
+?? docs/verification/m0-reverify-3-2026-11-06/combined.err
+?? docs/verification/m0-reverify-3-2026-11-06/combined.exit
+?? docs/verification/m0-reverify-3-2026-11-06/combined.start
+?? docs/verification/m0-reverify-3-2026-11-06/combined.tap
+?? docs/verification/m0-reverify-3-2026-11-06/combined.time
+?? docs/verification/m0-reverify-3-2026-11-06/compare-replay.py
+?? docs/verification/m0-reverify-3-2026-11-06/correction.diff
+?? docs/verification/m0-reverify-3-2026-11-06/entry-diff.txt
+?? docs/verification/m0-reverify-3-2026-11-06/entry-head.txt
+?? docs/verification/m0-reverify-3-2026-11-06/entry-status.txt
+?? docs/verification/m0-reverify-3-2026-11-06/entry-tracked-diff.sha256
+?? docs/verification/m0-reverify-3-2026-11-06/final-source.sha256
+?? docs/verification/m0-reverify-3-2026-11-06/final-status.txt
+?? docs/verification/m0-reverify-3-2026-11-06/frozen-final.txt
+?? docs/verification/m0-reverify-3-2026-11-06/history.txt
+?? docs/verification/m0-reverify-3-2026-11-06/npm.err
+?? docs/verification/m0-reverify-3-2026-11-06/npm.exit
+?? docs/verification/m0-reverify-3-2026-11-06/npm.start
+?? docs/verification/m0-reverify-3-2026-11-06/npm.tap
+?? docs/verification/m0-reverify-3-2026-11-06/npm.time
+?? docs/verification/m0-reverify-3-2026-11-06/oracle-post.json
+?? docs/verification/m0-reverify-3-2026-11-06/oracle-pre.exit
+?? docs/verification/m0-reverify-3-2026-11-06/oracle-pre.json
+?? docs/verification/m0-reverify-3-2026-11-06/oracle.py
+?? docs/verification/m0-reverify-3-2026-11-06/other-api-rows.diff
+?? docs/verification/m0-reverify-3-2026-11-06/pre-source-and-regression.sha256
+?? docs/verification/m0-reverify-3-2026-11-06/probe.mjs
+?? docs/verification/m0-reverify-3-2026-11-06/regression-pre.exit
+?? docs/verification/m0-reverify-3-2026-11-06/regression-pre.tap
+?? docs/verification/m0-reverify-3-2026-11-06/replay-comparison.json
+?? docs/verification/m0-reverify-3-2026-11-06/replay.sh
+?? docs/verification/m0-reverify-3-2026-11-06/replay/analytic.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/analytic.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/analytic.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/api.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/api.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/api.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/app.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/app.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/app.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/edges.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/edges.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/edges.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/hang.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/hang.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/hang.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/llt.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/llt.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/llt.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/measure.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/measure.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/measure.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/measurements.json.gz
+?? docs/verification/m0-reverify-3-2026-11-06/replay/oracle.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/oracle.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/oracle.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/panel.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/panel.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/panel.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/prior-counterexamples.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/prior-counterexamples.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/prior-counterexamples.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/psd.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/psd.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/psd.out
+?? docs/verification/m0-reverify-3-2026-11-06/replay/sol.err
+?? docs/verification/m0-reverify-3-2026-11-06/replay/sol.exit
+?? docs/verification/m0-reverify-3-2026-11-06/replay/sol.out
+?? docs/verification/m0-reverify-3-2026-11-06/reverify-1-final.txt
+?? docs/verification/m0-reverify-3-2026-11-06/reverify-2-final.txt
+?? docs/verification/m0-reverify-3-2026-11-06/reverify-2.sha256
+?? docs/verification/m0-reverify-3-2026-11-06/runtime.txt
+?? docs/verification/m0-reverify-3-2026-11-06/scratch-path.txt
+?? docs/verification/m0-reverify-3-2026-11-06/targeted.err
+?? docs/verification/m0-reverify-3-2026-11-06/targeted.exit
+?? docs/verification/m0-reverify-3-2026-11-06/targeted.start
+?? docs/verification/m0-reverify-3-2026-11-06/targeted.tap
+?? docs/verification/m0-reverify-3-2026-11-06/targeted.time

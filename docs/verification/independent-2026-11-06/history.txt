@@ -1,0 +1,19 @@
+9a66316 2026-10-23T23:22:57+06:00 docs(implementation): record the final M0-5 verification round (OBS-M0-5-4)
+352e21e 2026-10-23T23:13:59+06:00 docs(implementation): record M0-5 and checkpoint M0 handoff
+2ed3484 2026-10-23T23:12:06+06:00 fix(vlm): linear-window guard and fit/trim contract (M0-5, SOL-09)
+bf39f44 2026-10-23T18:05:38+06:00 docs(implementation): record M0-3 and checkpoint M0 handoff
+5eb07d7 2026-10-23T17:59:04+06:00 fix(vlm): incidence pivots about the local quarter chord (M0-3, review §7.2)
+a71c8b3 2026-10-23T17:00:52+06:00 docs(implementation): record SOL-06 and checkpoint M0 handoff
+a4d0859 2026-10-23T17:00:28+06:00 fix(vlm): forward-error drag cancellation tolerance, raw preservation (SOL-06)
+d5a700c 2026-10-23T13:24:58+06:00 docs(implementation): record M0-4 and checkpoint M0 handoff
+bdaea41 2026-10-23T13:22:56+06:00 fix(vlm): relative singularity cutoffs + rounding-robust auto-N (M0-4, SOL-01)
+b179efd 2026-10-23T11:50:27+06:00 docs(implementation): record REM-1 and checkpoint M0 handoff
+84cf90f 2026-10-23T11:49:53+06:00 feat(vlm): Sol review remediation — exact-flow badge, corruption quarantine, input validation (REM-1)
+ab1fb44 2026-10-23T10:12:30+06:00 docs(implementation): record M0-2 and checkpoint M0 handoff
+d57783a 2026-10-23T10:11:23+06:00 feat(vlm): multi-row lattice, aspect guard, wake floor, R1/R2 badge (M0-2)
+039d98b 2026-10-23T08:24:04+06:00 docs(implementation): record M0-1 and checkpoint M0 handoff
+af416b4 2026-10-23T08:22:23+06:00 fix(vlm): correct induced drag and add signed Trefftz drag (M0-1)
+21b869f 2026-10-23T07:30:08+06:00 docs(implementation): checkpoint M0 handoff
+3e663b3 2026-10-23T07:28:49+06:00 docs(implementation): establish implementation docs and record M0-10
+2c6ec84 2026-10-23T07:26:58+06:00 fix(topology): implement exact mesh topology classification (M0-10)
+776457a 2026-10-23T07:15:25+06:00 chore(baseline): add audited documentation and reference baseline (plan v1.0)

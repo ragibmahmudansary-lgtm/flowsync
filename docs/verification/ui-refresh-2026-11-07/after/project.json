@@ -1,0 +1,666 @@
+{
+  "schema": "airflow.browser-project",
+  "version": 1,
+  "savedAt": "2026-11-06T20:10:20.300Z",
+  "workflowStage": "analyzed",
+  "source": {
+    "name": "samolot.stl",
+    "triangleCount": 197772,
+    "unitScale": 1,
+    "axisMapping": {
+      "longitudinal": "x",
+      "lateral": "z",
+      "vertical": "y"
+    }
+  },
+  "massManifest": {
+    "version": 1,
+    "units": "SI",
+    "components": [
+      {
+        "id": "airframe-mesh",
+        "name": "Airframe mesh volume",
+        "type": "mesh-volume",
+        "massKg": 42600,
+        "positionM": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.096761225172377
+        ],
+        "notes": "Uniform distributed mass over the imported STL volume. Edit this mass or import a real manifest for precise CG."
+      }
+    ]
+  },
+  "recognition": {
+    "assignmentsRle": [
+      [
+        0,
+        197772
+      ]
+    ],
+    "report": {
+      "wing": {
+        "valid": false,
+        "triangleCount": 0,
+        "warnings": [
+          "Not assigned."
+        ]
+      },
+      "htail": {
+        "valid": false,
+        "triangleCount": 0,
+        "warnings": [
+          "Not assigned."
+        ]
+      },
+      "vtail": {
+        "valid": false,
+        "triangleCount": 0,
+        "warnings": [
+          "Not assigned."
+        ]
+      },
+      "fuselage": {
+        "valid": false,
+        "triangleCount": 0,
+        "warnings": [
+          "Not assigned."
+        ]
+      }
+    }
+  },
+  "controls": {
+    "densityInput": "1.225",
+    "velocityInput": "72",
+    "alphaMinInput": "-6",
+    "alphaMaxInput": "10",
+    "alphaStepInput": "1",
+    "flowYawInput": "0",
+    "refAreaInput": "124.659",
+    "refSpanInput": "33.977",
+    "refMacInput": "4.193",
+    "rootChordInput": "5.435",
+    "tipChordInput": "1.902",
+    "sweepInput": "25.00",
+    "dihedralInput": "4.00",
+    "incidenceInput": "2",
+    "rootLeadingXInput": "11.231",
+    "chordwiseRowsInput": "4",
+    "spanPanelsInput": "",
+    "cd0Input": "0.025",
+    "cm0Input": "0",
+    "pitchDampingInput": "0.65",
+    "growAngleInput": "18",
+    "maxRegionFacesInput": "15000",
+    "regionGrowInput": true
+  },
+  "analysis": {
+    "method": "Horseshoe VLM, 4 chordwise rows x N spanwise strips (multi-row lattice)",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 33.977,
+            "rootChordM": 5.435,
+            "tipChordM": 1.902,
+            "sweepDeg": 25,
+            "dihedralDeg": 4,
+            "incidenceDeg": 2,
+            "xLeadingRootM": 11.231,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": -6,
+        "alphaMaxDeg": 10,
+        "alphaStepDeg": 1,
+        "betaDeg": 0,
+        "velocityMS": 72,
+        "densityKgM3": 1.225,
+        "refAreaM2": 124.659,
+        "refChordM": 4.193,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0.025,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "resolution": {
+      "label": "R1",
+      "chordwiseRows": 4,
+      "spanwisePanels": {
+        "Main wing": 40
+      }
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point.",
+    "limitations": [
+      "Steady incompressible potential flow",
+      "Induced drag plus optional constant CD0",
+      "No viscous separation or stall",
+      "No fuselage interference"
+    ],
+    "fit": {
+      "status": "C_Lalpha: determined; C_malpha: non-linear: not determined",
+      "windowDeg": [
+        -5,
+        5
+      ],
+      "convergedPointsInWindow": 11,
+      "cl": {
+        "status": "determined",
+        "pointCount": 11,
+        "slopePerDeg": 0.08194732135842948,
+        "intercept": 0.1644972603759668,
+        "leastSquaresSlopePerDeg": 0.08194732135842948,
+        "maxAdjacentSlopeDeviationPerDeg": 0.0008581262386426619
+      },
+      "cm": {
+        "status": "non-linear: not determined",
+        "pointCount": 11,
+        "slopePerDeg": null,
+        "intercept": null,
+        "leastSquaresSlopePerDeg": 0.022150651517133763,
+        "maxAdjacentSlopeDeviationPerDeg": 0.008036665480246345
+      },
+      "messages": [
+        "fit: C_malpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.008036665480246345 /deg from the least-squares slope 0.022150651517133763 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ]
+    },
+    "clAlphaPerRad": 4.6952356562402775,
+    "cmAlphaPerRad": null,
+    "staticMargin": null,
+    "neutralPointXM": null,
+    "trimAlphaDeg": null,
+    "trimStatus": "not determined: C_m slope is \"non-linear: not determined\" (fit contract, DATA_CONTRACTS 2.5)",
+    "cmSlopeNegative": null,
+    "stabilityVerdict": {
+      "status": "not determined",
+      "verdict": null,
+      "unmetConditions": [
+        "linearity criteria not met (DATA_CONTRACTS 2.5)",
+        "no valid horizontal stabiliser — wing-alone run (STAB-V2)",
+        "mass source is the assumed uniform-density lump or unestablished (RB-01, STAB-V3)"
+      ],
+      "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+    },
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_malpha is \"non-linear: not determined\" — 11 converged point(s) in the |alpha| <= 5 deg window, but the worst adjacent-pair slope deviates by 0.008036665480246345 /deg from the least-squares slope 0.022150651517133763 /deg (band: 5 % of the slope, DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 0.6354790594154313,
+      "maxRatio": 1.7071081356060007
+    },
+    "resolutionCheck": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 40
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.706388229852258,
+        "cdiAt4Deg": 0.008201778445849617
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 80
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.68762700660013,
+        "cdiAt4Deg": 0.0082581248959951
+      },
+      "deltaClAlpha": 0.003986331415059745,
+      "deltaCdi": 0.006870028313675727,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 72,
+        "densityKgM3": 1.225,
+        "refAreaM2": 124.659,
+        "refChordM": 4.193,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0.025,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 33.977,
+            "rootChordM": 5.435,
+            "tipChordM": 1.902,
+            "sweepDeg": 25,
+            "dihedralDeg": 4,
+            "incidenceDeg": 2,
+            "xLeadingRootM": 11.231,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 40
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 40
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 80
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 339.77
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 40
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "diagnostics": {
+      "panelCount": 160,
+      "worstPivotRatio": 0.4977129113715086,
+      "worstResidual": 8.658950834995738e-14
+    },
+    "series": [
+      {
+        "alphaDeg": -6,
+        "cl": -0.3249899535336618,
+        "cdi": 0.0035524471261940403,
+        "cdiNearField": 0.003486350714810946,
+        "nearFieldTrefftzDifference": -0.018605881814744277,
+        "cd": 0.028552447126194043,
+        "cm": -0.116388857776773,
+        "liftN": -128636.6318952535,
+        "inducedDragN": 1379.957776179188,
+        "dragN": 11301.551296417168,
+        "momentNm": -193166.13628175706,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": -5,
+        "cl": -0.2441764082829068,
+        "cdi": 0.0020066171944725488,
+        "cdiNearField": 0.001963224323272711,
+        "nearFieldTrefftzDifference": -0.021624887556713872,
+        "cd": 0.02700661719447255,
+        "cm": -0.0848243827877099,
+        "liftN": -96649.23610181698,
+        "inducedDragN": 777.078066120841,
+        "dragN": 10689.685133363837,
+        "momentNm": -140779.7842385613,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": -4,
+        "cl": -0.16308721316311997,
+        "cdi": 0.0008959966036874684,
+        "cdiNearField": 0.0008737516928796231,
+        "nearFieldTrefftzDifference": -0.02482700349119232,
+        "cd": 0.02589599660368747,
+        "cm": -0.054869822823695416,
+        "liftN": -64552.733333383,
+        "inducedDragN": 345.84599819996856,
+        "dragN": 10250.08233777369,
+        "momentNm": -91065.34659568578,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": -3,
+        "cl": -0.0816909637768784,
+        "cdi": 0.000225078162604935,
+        "cdiNearField": 0.0002187691606227884,
+        "nearFieldTrefftzDifference": -0.028030271391633676,
+        "cd": 0.025225078162604938,
+        "cm": -0.0265772536259221,
+        "liftN": -32334.693187512177,
+        "inducedDragN": 86.5926090301507,
+        "dragN": 9984.52124088787,
+        "momentNm": -44109.25146929499,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": -2,
+        "cl": 0,
+        "cdi": 0,
+        "cdiNearField": 0,
+        "nearFieldTrefftzDifference": 0,
+        "cd": 0.025,
+        "cm": 0,
+        "liftN": 0,
+        "inducedDragN": 0,
+        "dragN": 9895.43142,
+        "momentNm": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": -1,
+        "cl": 0.08193682024124213,
+        "cdi": 0.0002269450404648242,
+        "cdiNearField": 0.00021937824654868248,
+        "nearFieldTrefftzDifference": -0.03334196641020907,
+        "cd": 0.025226945040464827,
+        "cm": 0.024825339877509015,
+        "liftN": 32432.007418803176,
+        "inducedDragN": 86.83369575049358,
+        "dragN": 9985.260183361153,
+        "momentNm": 41201.66721815561,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 0,
+        "cl": 0.16405230314261812,
+        "cdi": 0.0009103048854645726,
+        "cdiNearField": 0.0008784303398025231,
+        "nearFieldTrefftzDifference": -0.03501524178438565,
+        "cd": 0.025910304885464575,
+        "cm": 0.0478874552043995,
+        "liftN": 64934.73260163313,
+        "inducedDragN": 347.69788739052655,
+        "dragN": 10255.745802616226,
+        "momentNm": 79476.97807930186,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 1,
+        "cl": 0.24626335122232076,
+        "cdi": 0.002051622310105346,
+        "cdiNearField": 0.001977813526217285,
+        "nearFieldTrefftzDifference": -0.035975814614859894,
+        "cd": 0.02705162231010535,
+        "cm": 0.06918552095046211,
+        "liftN": 97475.28413119394,
+        "inducedDragN": 782.8527244092608,
+        "dragN": 10707.498934775578,
+        "momentNm": 114824.5633123513,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 2,
+        "cl": 0.32847789956449763,
+        "cdi": 0.0036495959793579713,
+        "cdiNearField": 0.0035170621704618626,
+        "nearFieldTrefftzDifference": -0.03631465226444706,
+        "cd": 0.028649595979357973,
+        "cm": 0.08871272834962637,
+        "liftN": 130017.22112504538,
+        "inducedDragN": 1392.1139003072685,
+        "dragN": 11340.004488977782,
+        "momentNm": 147233.1226686392,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 3,
+        "cl": 0.41061547846252483,
+        "cdi": 0.00570098977654317,
+        "cdiNearField": 0.005494859109232953,
+        "nearFieldTrefftzDifference": -0.0361569964847763,
+        "cd": 0.03070098977654317,
+        "cm": 0.10645413128245958,
+        "liftN": 162528.69228465608,
+        "inducedDragN": 2174.9600591190792,
+        "dragN": 12151.981554396163,
+        "momentNm": 176677.85064531615,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 4,
+        "cl": 0.4926201850947364,
+        "cdi": 0.008201778445849617,
+        "cdiNearField": 0.007909568729249446,
+        "nearFieldTrefftzDifference": -0.035627604248202945,
+        "cd": 0.03320177844584962,
+        "cm": 0.12239119321884386,
+        "liftN": 194987.5703085068,
+        "inducedDragN": 3130.743796882578,
+        "dragN": 13141.836865317564,
+        "momentNm": 203127.98287222392,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 5,
+        "cl": 0.5744584116306001,
+        "cdi": 0.011147892791657633,
+        "cdiNearField": 0.010759552894187098,
+        "nearFieldTrefftzDifference": -0.03483527378027399,
+        "cd": 0.036147892791657636,
+        "cm": 0.13650517925573127,
+        "liftN": 227380.55263730936,
+        "inducedDragN": 4258.816710971638,
+        "dragN": 14307.95976389442,
+        "momentNm": 226552.42574723845,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 6,
+        "cl": 0.6561099208297837,
+        "cdi": 0.014535462885460997,
+        "cdiNearField": 0.0140431771633177,
+        "nearFieldTrefftzDifference": -0.03386790816518846,
+        "cd": 0.039535462885461,
+        "cm": 0.14877862636874792,
+        "liftN": 259699.6290221102,
+        "inducedDragN": 5558.531861540818,
+        "dragN": 15648.818465641387,
+        "momentNm": 246922.1965566315,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 7,
+        "cl": 0.7375598497018425,
+        "cdi": 0.018360763980555122,
+        "cdiNearField": 0.017758657145346888,
+        "nearFieldTrefftzDifference": -0.03279312537571375,
+        "cd": 0.04336076398055512,
+        "cm": 0.1591959774508927,
+        "liftN": 291938.9164348036,
+        "inducedDragN": 7029.182955722925,
+        "dragN": 17162.93865153558,
+        "momentNm": 264211.47576485196,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 8,
+        "cl": 0.8187938501675885,
+        "cdi": 0.02262006254035875,
+        "cdiNearField": 0.02190388320400039,
+        "nearFieldTrefftzDifference": -0.03166124475034291,
+        "cd": 0.04762006254035875,
+        "cm": 0.16774392022687545,
+        "liftN": 324092.73565804516,
+        "inducedDragN": 8669.93496307503,
+        "dragN": 18848.84252336924,
+        "momentNm": 278398.1694976919,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 9,
+        "cl": 0.8997958622092276,
+        "cdi": 0.027309466109400233,
+        "cdiNearField": 0.02647628641536722,
+        "nearFieldTrefftzDifference": -0.030508823962187313,
+        "cd": 0.05230946610940024,
+        "cm": 0.17441155568245056,
+        "liftN": 356154.7298596473,
+        "inducedDragN": 10479.77105918176,
+        "dragN": 20704.989380095372,
+        "momentNm": 289464.1890780106,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      },
+      {
+        "alphaDeg": 10,
+        "cl": 0.9805474863089839,
+        "cdi": 0.032424812510196174,
+        "cdiNearField": 0.03147275839250254,
+        "nearFieldTrefftzDifference": -0.029361900470334247,
+        "cd": 0.057424812510196176,
+        "cm": 0.1791904291831193,
+        "liftN": 388117.6161929576,
+        "inducedDragN": 12457.460890849536,
+        "dragN": 22729.731760040173,
+        "momentNm": 297395.50267225463,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+## impl/m0...origin/impl/m0
+ M CALCULATION_PIPELINE.md
+ M MVP_METHODOLOGY.md
+ M docs/implementation/CURRENT_HANDOFF.md
+ M docs/implementation/IMPLEMENTATION_CHANGELOG.md
+ M docs/implementation/IMPLEMENTATION_STATUS.md
+ M docs/implementation/ISSUE_AND_DECISION_LOG.md
+ M docs/implementation/SOL_FINDING_DISPOSITIONS.md
+ M docs/implementation/milestones/M0.md
+ M index.html
+ M src/app.js
+ M src/projectState.js
+ M src/vlmSolver.js
+ M tests/solFindings.test.mjs
+ M tests/vlmSolver.test.mjs
+?? docs/implementation/AGENT_IMPLEMENTATION_PROTOCOL.md
+?? docs/implementation/NEXT_CONVERSATION_PROMPT.md
+?? docs/implementation/continuation-prompts/
+?? docs/verification/aud-1-2026-11-06/
+?? docs/verification/aud-2-2026-11-06/
+?? docs/verification/independent-2026-11-06/
+?? docs/verification/rem-3a-2026-11-06/
+?? docs/verification/rem-3b-2026-11-06/
+?? docs/verification/rem-3b-audit-2026-11-06/
+?? docs/verification/rem-3b-challenge-2026-11-06/
+?? docs/verification/rem-3b-cont-2026-11-06/
+?? docs/verification/rem-3b-continuation-2026-11-06/
+?? docs/verification/rem-3b-decimal-2026-11-06/
+?? docs/verification/rem-3b-deep-2026-11-06/
+?? docs/verification/rem-3b-followup-2026-11-06/
+?? docs/verification/rem-3b-investigation-2026-11-06/
+?? docs/verification/rem-3b-resume-2026-11-06/
+?? docs/verification/rem-3b-review-2026-11-06/
+?? docs/verification/rem-3b-validation-2026-11-06/
+?? tests/aud1.test.mjs
+?? tests/aud2.test.mjs
+?? tests/rem3a.test.mjs
+?? tests/rem3b-app-boundary.test.mjs
+?? tests/rem3b-bounds.test.mjs
+?? tests/rem3b-cap-boundary.test.mjs
+?? tests/rem3b-decimal.test.mjs
+?? tests/rem3b-endpoint.test.mjs
+?? tests/rem3b-entrypoints.test.mjs
+?? tests/rem3b-generated-extremes.test.mjs
+?? tests/rem3b-options.test.mjs
+?? tests/rem3b-oracle.test.mjs
+?? tests/rem3b-overflow.test.mjs
+?? tests/rem3b-resume.test.mjs
+?? tests/rem3b-sweep-overflow.test.mjs
+?? tests/rem3b-validation.test.mjs
+?? tests/rem3b.test.mjs

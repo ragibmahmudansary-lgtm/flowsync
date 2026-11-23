@@ -1,0 +1,15 @@
+file:///home/tanvir/Coding/AirFLOW/src/vlmSolver.js:1171
+    throw new Error("Nonfinite sweep fit or stability output produced by VLM inputs.");
+          ^
+
+Error: Nonfinite sweep fit or stability output produced by VLM inputs.
+    at solveSweep (file:///home/tanvir/Coding/AirFLOW/src/vlmSolver.js:1171:11)
+    at runVlmAnalysis (file:///home/tanvir/Coding/AirFLOW/src/vlmSolver.js:1317:17)
+    at file:///home/tanvir/Coding/AirFLOW/docs/verification/m0-reverify-4-2026-11-06/probe.mjs:59:20
+    at Array.map (<anonymous>)
+    at file:///home/tanvir/Coding/AirFLOW/docs/verification/m0-reverify-4-2026-11-06/probe.mjs:58:44
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

@@ -1,0 +1,93 @@
+{
+  "r1": {
+    "label": "R1",
+    "resolution": {
+      "label": "R1",
+      "chordwiseRows": 4,
+      "spanwisePanels": {
+        "wing": 32,
+        "canard": 24
+      }
+    },
+    "clAlphaTwoPointPerRad": 5.3039616567119205,
+    "cdiAt4Deg": 0.005729622823260784
+  },
+  "r2": {
+    "label": "R2",
+    "resolution": {
+      "label": "R2",
+      "chordwiseRows": 8,
+      "spanwisePanels": {
+        "wing": 64,
+        "canard": 48
+      }
+    },
+    "clAlphaTwoPointPerRad": 5.289030033772891,
+    "cdiAt4Deg": 0.005786746359622717
+  },
+  "deltaClAlpha": 0.002815183047210505,
+  "deltaCdi": 0.009969859818699689,
+  "gates": {
+    "clAlpha": 0.01,
+    "cdi": 0.05
+  },
+  "withinGates": true,
+  "badge": "green",
+  "claim": "prescribed R1 vs R2",
+  "currentGrid": null,
+  "inputIdentity": {
+    "betaDeg": 0,
+    "velocityMS": 40,
+    "densityKgM3": 1.225,
+    "refAreaM2": 8,
+    "refChordM": 1,
+    "referencePoint": [
+      0.4,
+      0,
+      0
+    ],
+    "alphaProtocolDeg": [
+      0,
+      4
+    ],
+    "surfaces": [
+      {
+        "name": "wing",
+        "planform": "linear",
+        "spanM": 8,
+        "rootChordM": 1,
+        "tipChordM": 1,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      },
+      {
+        "name": "canard",
+        "planform": "linear",
+        "spanM": 3,
+        "rootChordM": 0.5,
+        "tipChordM": 0.5,
+        "sweepDeg": 0,
+        "dihedralDeg": 0,
+        "incidenceDeg": 0
+      }
+    ]
+  },
+  "coverage": {
+    "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+    "alphaDeg": [
+      0,
+      4
+    ],
+    "betaDeg": 0,
+    "latticeLabel": "R1",
+    "latticeCounts": {
+      "wing": 32,
+      "canard": 24
+    },
+    "coversPlottedLattice": true,
+    "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+  },
+  "uncertaintyLabel": "unverified outside the demonstrated comparison envelope (no Tier-0 uncertainty established)",
+  "uncertaintyScope": "Observed comparison agreement of R1/R2 zero-yaw lattices against the LLT/Helmbold reference bands of VALIDATION_AND_TEST_MATRIX VLM-V1/V1b/V2; an acceptance band, not a confidence interval or validated error bound."
+}

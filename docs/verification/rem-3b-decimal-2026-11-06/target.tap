@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 1 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 2.195425
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 2 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.512916
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 3 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.565136
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 4 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 18.693191
+  type: 'test'
+  ...
+# Subtest: strict decimal upper boundary excludes next integer
+ok 5 - strict decimal upper boundary excludes next integer
+  ---
+  duration_ms: 0.881578
+  type: 'test'
+  ...
+# Subtest: decimal endpoints and samples are rounded once
+ok 6 - decimal endpoints and samples are rounded once
+  ---
+  duration_ms: 0.538492
+  type: 'test'
+  ...
+# Subtest: decimal interval just below endpoint does not add a point
+ok 7 - decimal interval just below endpoint does not add a point
+  ---
+  duration_ms: 0.633195
+  type: 'test'
+  ...
+# Subtest: reversed and offset decimal intervals preserve endpoints
+ok 8 - reversed and offset decimal intervals preserve endpoints
+  ---
+  duration_ms: 0.469007
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 9 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.307835
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 10 - decimal endpoint is included
+  ---
+  duration_ms: 0.450688
+  type: 'test'
+  ...
+# Subtest: explicit malformed lattice options are rejected
+ok 11 - explicit malformed lattice options are rejected
+  ---
+  duration_ms: 0.254482
+  type: 'test'
+  ...
+# Subtest: negative profile drag is refused, not silently converted to zero
+ok 12 - negative profile drag is refused, not silently converted to zero
+  ---
+  duration_ms: 0.161088
+  type: 'test'
+  ...
+# Subtest: degenerate supplied panels are refused before solving
+ok 13 - degenerate supplied panels are refused before solving
+  ---
+  duration_ms: 0.287598
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 14 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.309646
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 15 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.112262
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 16 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.246518
+  type: 'test'
+  ...
+# Subtest: sweep rejects duplicate representable samples before execution
+ok 17 - sweep rejects duplicate representable samples before execution
+  ---
+  duration_ms: 0.237116
+  type: 'test'
+  ...
+# Subtest: case rejects malformed wake, reference point and supplied panels
+ok 18 - case rejects malformed wake, reference point and supplied panels
+  ---
+  duration_ms: 0.223563
+  type: 'test'
+  ...
+# Subtest: IA-04 rejects missing or nonnumeric circulation instead of zero
+ok 19 - IA-04 rejects missing or nonnumeric circulation instead of zero
+  ---
+  duration_ms: 0.21096
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 43.562395

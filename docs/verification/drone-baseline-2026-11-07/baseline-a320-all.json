@@ -1,0 +1,86 @@
+{
+  "case": "a320-all",
+  "fixture": "a320",
+  "rule": "every triangle",
+  "node": "v24.21.0",
+  "loadavgStart": 0.8,
+  "stages": {
+    "parse": {
+      "ms": 22.6,
+      "rssMB": 95.9,
+      "heapUsedMB": 5.6
+    },
+    "map": {
+      "ms": 39.9,
+      "rssMB": 110.9,
+      "heapUsedMB": 6
+    },
+    "recognition": {
+      "ms": 99.7,
+      "rssMB": 197.6,
+      "heapUsedMB": 90.1
+    },
+    "topology": {
+      "ms": 384.7,
+      "rssMB": 352.2,
+      "heapUsedMB": 191.8
+    }
+  },
+  "region": {
+    "triangleCount": 197772,
+    "regionIndexSha256": "0b11984970453311fc4c652af14f54f120784bd7bc87a5ffdbe1c0f0d4305c50"
+  },
+  "recognition": {
+    "valid": true,
+    "triangleCount": 197772,
+    "triangleAreaM2": 842.8068729751362,
+    "projectedAreaSumM2": 559.3506384668414,
+    "bounds": {
+      "min": [
+        -0.000042968749767169356,
+        -16.983922958374023,
+        -3.906249901319825e-7
+      ],
+      "max": [
+        37.43777847290039,
+        16.993284225463867,
+        11.20801830291748
+      ],
+      "size": [
+        37.43782144165016,
+        33.97720718383789,
+        11.20801869354247
+      ]
+    },
+    "spanM": 33.97720718383789,
+    "areaM2": 329.8535737789879,
+    "macM": 24.349032312086127,
+    "rootChordM": 37.194075682850475,
+    "tipChordM": 1.8369340896606445,
+    "aspectRatio": 3.499888131534882,
+    "sweepDeg": 14.929709557067916,
+    "dihedralDeg": 1.862618988400855,
+    "xLeadingRootM": 0.02917057365993969,
+    "zRootM": 5.1732751826445265,
+    "aeroCenterXM": 15.012742162722967,
+    "warnings": [
+      "Both upper and lower skins appear selected; envelope integration was used to avoid double-counting planform area."
+    ],
+    "stationCount": 120,
+    "reportJsonBytes": 21461
+  },
+  "topology": {
+    "uniqueVertices": 98895,
+    "uniqueEdges": 296667,
+    "manifoldEdges": 296634,
+    "boundaryEdges": 28,
+    "nonManifoldEdges": 5,
+    "duplicateTriangles": 4,
+    "degenerateTriangles": 0,
+    "componentCount": 1,
+    "largestComponents": [
+      197772
+    ]
+  },
+  "loadavgEnd": 0.8
+}

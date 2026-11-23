@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: demo STL regression metrics
+ok 1 - demo STL regression metrics
+  ---
+  duration_ms: 711.630397
+  type: 'test'
+  ...
+# Subtest: computes box volume, centroid, and inertia about CG
+ok 2 - computes box volume, centroid, and inertia about CG
+  ---
+  duration_ms: 0.359252
+  type: 'test'
+  ...
+# Subtest: computes tetrahedron volume and centroid
+ok 3 - computes tetrahedron volume and centroid
+  ---
+  duration_ms: 0.124191
+  type: 'test'
+  ...
+# Subtest: reports closed box topology
+ok 4 - reports closed box topology
+  ---
+  duration_ms: 0.244044
+  type: 'test'
+  ...
+# Subtest: mesh properties include warnings for open surfaces
+ok 5 - mesh properties include warnings for open surfaces
+  ---
+  duration_ms: 0.204538
+  type: 'test'
+  ...
+# Subtest: topology reports duplicate and degenerate triangles
+ok 6 - topology reports duplicate and degenerate triangles
+  ---
+  duration_ms: 0.154142
+  type: 'test'
+  ...
+# Subtest: aggregates mesh mass and point masses into total CG
+ok 7 - aggregates mesh mass and point masses into total CG
+  ---
+  duration_ms: 0.471174
+  type: 'test'
+  ...
+# Subtest: static stability follows neutral point relative to CG
+ok 8 - static stability follows neutral point relative to CG
+  ---
+  duration_ms: 0.286203
+  type: 'test'
+  ...
+# Subtest: pitch simulation returns finite RK4 samples
+ok 9 - pitch simulation returns finite RK4 samples
+  ---
+  duration_ms: 1.02162
+  type: 'test'
+  ...
+# Subtest: axis mapping rejects duplicate source axes
+ok 10 - axis mapping rejects duplicate source axes
+  ---
+  duration_ms: 0.412428
+  type: 'test'
+  ...
+# Subtest: project snapshot restores recognition assignments for the matching mesh
+ok 11 - project snapshot restores recognition assignments for the matching mesh
+  ---
+  duration_ms: 0.983282
+  type: 'test'
+  ...
+# Subtest: derives trapezoidal planform reference geometry
+ok 12 - derives trapezoidal planform reference geometry
+  ---
+  duration_ms: 0.865873
+  type: 'test'
+  ...
+# Subtest: region growth follows edge adjacency and normal threshold
+ok 13 - region growth follows edge adjacency and normal threshold
+  ---
+  duration_ms: 0.392755
+  type: 'test'
+  ...
+# Subtest: region growth does not accumulate curvature beyond the seed-normal limit
+ok 14 - region growth does not accumulate curvature beyond the seed-normal limit
+  ---
+  duration_ms: 0.117647
+  type: 'test'
+  ...
+# Subtest: region growth respects its explicit face cap
+ok 15 - region growth respects its explicit face cap
+  ---
+  duration_ms: 0.135524
+  type: 'test'
+  ...
+# Subtest: recognition assignments round-trip through run-length encoding
+ok 16 - recognition assignments round-trip through run-length encoding
+  ---
+  duration_ms: 0.090452
+  type: 'test'
+  ...
+# Subtest: parses generated binary STL
+ok 17 - parses generated binary STL
+  ---
+  duration_ms: 0.231909
+  type: 'test'
+  ...
+# Subtest: parses generated ASCII STL
+ok 18 - parses generated ASCII STL
+  ---
+  duration_ms: 0.270311
+  type: 'test'
+  ...
+# Subtest: module matches independent oracle on a closed box
+ok 19 - module matches independent oracle on a closed box
+  ---
+  duration_ms: 0.40889
+  type: 'test'
+  ...
+# Subtest: module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+ok 20 - module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+  ---
+  duration_ms: 0.289827
+  type: 'test'
+  ...
+# Subtest: reference mesh independently yields the audited 28/5/0/1 topology
+ok 21 - reference mesh independently yields the audited 28/5/0/1 topology
+  ---
+  duration_ms: 1372.53493
+  type: 'test'
+  ...
+# Subtest: oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+ok 22 - oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+  ---
+  duration_ms: 15.604097
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+ok 23 - review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+  ---
+  duration_ms: 1714.713876
+  type: 'test'
+  ...
+# Subtest: review record §4 reproduction: single-row table from an independently built lattice
+ok 24 - review record §4 reproduction: single-row table from an independently built lattice
+  ---
+  duration_ms: 21.330689
+  type: 'test'
+  ...
+# Subtest: VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+ok 25 - VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+  ---
+  duration_ms: 1079.618854
+  type: 'test'
+  ...
+# Subtest: VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+ok 26 - VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+  ---
+  duration_ms: 31793.494069
+  type: 'test'
+  ...
+# Subtest: VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+ok 27 - VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+  ---
+  duration_ms: 497.439332
+  type: 'test'
+  ...
+# Subtest: VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+ok 28 - VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+  ---
+  duration_ms: 1685.263074
+  type: 'test'
+  ...
+# Subtest: VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+ok 29 - VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+  ---
+  duration_ms: 447.795655
+  type: 'test'
+  ...
+# Subtest: VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+ok 30 - VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+  ---
+  duration_ms: 899.895019
+  type: 'test'
+  ...
+# Subtest: VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+ok 31 - VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+  ---
+  duration_ms: 1141.073225
+  type: 'test'
+  ...
+# Subtest: zero lift gives exactly zero drag without raising
+ok 32 - zero lift gives exactly zero drag without raising
+  ---
+  duration_ms: 9.805841
+  type: 'test'
+  ...
+# Subtest: negative angle of attack: drag is even in alpha and strictly positive
+ok 33 - negative angle of attack: drag is even in alpha and strictly positive
+  ---
+  duration_ms: 25.284051
+  type: 'test'
+  ...
+# Subtest: degenerate zero-width panels contribute nothing and stay finite
+ok 34 - degenerate zero-width panels contribute nothing and stay finite
+  ---
+  duration_ms: 14.94254
+  type: 'test'
+  ...
+# Subtest: Trefftz drag is positive semi-definite in the circulations (arbitrary mixed signs)
+ok 35 - Trefftz drag is positive semi-definite in the circulations (arbitrary mixed signs)
+  ---
+  duration_ms: 42.328088
+  type: 'test'
+  ...
+# Subtest: wake-length convergence: near-field approaches Trefftz monotonically
+ok 36 - wake-length convergence: near-field approaches Trefftz monotonically
+  ---
+  duration_ms: 51.238928
+  type: 'test'
+  ...
+# Subtest: drag formulas are scale invariant (0.1x and 10x geometry)
+ok 37 - drag formulas are scale invariant (0.1x and 10x geometry)
+  ---
+  duration_ms: 10.638795
+  type: 'test'
+  ...
+# Subtest: near-field/Trefftz agreement is robust across spanwise resolution
+ok 38 - near-field/Trefftz agreement is robust across spanwise resolution
+  ---
+  duration_ms: 143.806729
+  type: 'test'
+  ...
+# Subtest: swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+ok 39 - swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+  ---
+  duration_ms: 7.783014
+  type: 'test'
+  ...
+# Subtest: generates M x N sub-panels with quarter-chord vortices and three-quarter-chord control points
+ok 40 - generates M x N sub-panels with quarter-chord vortices and three-quarter-chord control points
+  ---
+  duration_ms: 0.327576
+  type: 'test'
+  ...
+# Subtest: default lattice is 4 chordwise rows with the prescribed spanwise count (R1/R2)
+ok 41 - default lattice is 4 chordwise rows with the prescribed spanwise count (R1/R2)
+  ---
+  duration_ms: 0.629152
+  type: 'test'
+  ...
+# Subtest: panel aspect guard refuses width/length < 0.25 and warns above 8
+ok 42 - panel aspect guard refuses width/length < 0.25 and warns above 8
+  ---
+  duration_ms: 0.44339
+  type: 'test'
+  ...
+# Subtest: sweep input is the c/4 sweep of the generated lattice (VLM-V6)
+ok 43 - sweep input is the c/4 sweep of the generated lattice (VLM-V6)
+  ---
+  duration_ms: 0.140083
+  type: 'test'
+  ...
+# Subtest: elliptic planform chords follow c0 sqrt(1-eta^2) at the strip edges
+ok 44 - elliptic planform chords follow c0 sqrt(1-eta^2) at the strip edges
+  ---
+  duration_ms: 0.098429
+  type: 'test'
+  ...
+# Subtest: wake length is at least 10 spans of the largest surface (B-VLM-07)
+ok 45 - wake length is at least 10 spans of the largest surface (B-VLM-07)
+  ---
+  duration_ms: 28.867396
+  type: 'test'
+  ...
+# Subtest: R1 vs R2 resolution check reports the prescribed deltas and badge
+ok 46 - R1 vs R2 resolution check reports the prescribed deltas and badge
+  ---
+  duration_ms: 417.457653
+  type: 'test'
+  ...
+# Subtest: partial-pivot solver returns a low-residual solution
+ok 47 - partial-pivot solver returns a low-residual solution
+  ---
+  duration_ms: 0.097893
+  type: 'test'
+  ...
+# Subtest: symmetric finite wing has linear lift slope
+ok 48 - symmetric finite wing has linear lift slope
+  ---
+  duration_ms: 74.974198
+  type: 'test'
+  ...
+# Subtest: induced drag is signed, positive for both lift signs and zero at zero lift (M = 4 x 28)
+ok 49 - induced drag is signed, positive for both lift signs and zero at zero lift (M = 4 x 28)
+  ---
+  duration_ms: 25.966298
+  type: 'test'
+  ...
+# Subtest: quadratic induced drag trend holds across the multi-row lattice (DR-02 resolved)
+ok 50 - quadratic induced drag trend holds across the multi-row lattice (DR-02 resolved)
+  ---
+  duration_ms: 1586.108629
+  type: 'test'
+  ...
+# Subtest: zero-incidence symmetric wing produces approximately zero lift at zero alpha
+ok 51 - zero-incidence symmetric wing produces approximately zero lift at zero alpha
+  ---
+  duration_ms: 2.623847
+  type: 'test'
+  ...
+# Subtest: positive geometric incidence produces positive lift at zero freestream alpha
+ok 52 - positive geometric incidence produces positive lift at zero freestream alpha
+  ---
+  duration_ms: 3.827748
+  type: 'test'
+  ...
+# Subtest: trefftzDrag raises a validity error on a negative reported drag
+ok 53 - trefftzDrag raises a validity error on a negative reported drag
+  ---
+  duration_ms: 0.898533
+  type: 'test'
+  ...
+# Subtest: zero-lift drag roundoff is reported as 0 while genuine negative drag still raises
+ok 54 - zero-lift drag roundoff is reported as 0 while genuine negative drag still raises
+  ---
+  duration_ms: 1011.292918
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 44880.197248

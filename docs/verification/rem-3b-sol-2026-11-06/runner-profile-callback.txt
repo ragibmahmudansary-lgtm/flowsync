@@ -1,0 +1,426 @@
+1793924592913 begin aud1.test.mjs AUD-1 quarantined zero point withholds badge and persists through display boundary
+1793924594612 end aud1.test.mjs AUD-1 quarantined zero point withholds badge and persists through display boundary
+1793924594614 begin aud1.test.mjs AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+1793924602084 end aud1.test.mjs AUD-1 scientific identity distinguishes placement and wake and normalizes defaults
+1793924602087 begin aud1.test.mjs AUD-1 rejects missing, quarantined and nonfinite comparison points
+1793924602087 end aud1.test.mjs AUD-1 rejects missing, quarantined and nonfinite comparison points
+1793924602087 begin aud1.test.mjs AUD-1 custom comparison with quarantined zero degree is withheld
+1793924603912 end aud1.test.mjs AUD-1 custom comparison with quarantined zero degree is withheld
+1793924603912 begin aud1.test.mjs AUD-1 application caller forwards flow and renders quarantined comparison
+1793924605731 end aud1.test.mjs AUD-1 application caller forwards flow and renders quarantined comparison
+1793924605731 begin aud2.test.mjs actual app export retains valid sweep values, provenance and persistence
+1793924605758 end aud2.test.mjs actual app export retains valid sweep values, provenance and persistence
+1793924605758 begin aud2.test.mjs actual app export quarantines invalid sweep including mixed points
+1793924605759 end aud2.test.mjs actual app export quarantines invalid sweep including mixed points
+1793924605759 begin aud2.test.mjs missing point validity and nonfinite values remain unavailable in JSON
+1793924605760 end aud2.test.mjs missing point validity and nonfinite values remain unavailable in JSON
+1793924605760 begin demoRegression.test.mjs demo STL regression metrics
+1793924606331 end demoRegression.test.mjs demo STL regression metrics
+1793924606332 begin geometry.test.mjs computes box volume, centroid, and inertia about CG
+1793924606332 end geometry.test.mjs computes box volume, centroid, and inertia about CG
+1793924606332 begin geometry.test.mjs computes tetrahedron volume and centroid
+1793924606333 end geometry.test.mjs computes tetrahedron volume and centroid
+1793924606333 begin geometry.test.mjs reports closed box topology
+1793924606333 end geometry.test.mjs reports closed box topology
+1793924606333 begin geometry.test.mjs mesh properties include warnings for open surfaces
+1793924606333 end geometry.test.mjs mesh properties include warnings for open surfaces
+1793924606333 begin geometry.test.mjs topology reports duplicate and degenerate triangles
+1793924606334 end geometry.test.mjs topology reports duplicate and degenerate triangles
+1793924606334 begin massStability.test.mjs aggregates mesh mass and point masses into total CG
+1793924606334 end massStability.test.mjs aggregates mesh mass and point masses into total CG
+1793924606334 begin massStability.test.mjs static stability follows neutral point relative to CG
+1793924606335 end massStability.test.mjs static stability follows neutral point relative to CG
+1793924606335 begin massStability.test.mjs pitch simulation returns finite RK4 samples
+1793924606335 end massStability.test.mjs pitch simulation returns finite RK4 samples
+1793924606336 begin projectAxis.test.mjs axis mapping rejects duplicate source axes
+1793924606336 end projectAxis.test.mjs axis mapping rejects duplicate source axes
+1793924606336 begin projectAxis.test.mjs project snapshot restores recognition assignments for the matching mesh
+1793924606336 end projectAxis.test.mjs project snapshot restores recognition assignments for the matching mesh
+1793924606336 begin recognition.test.mjs derives trapezoidal planform reference geometry
+1793924606337 end recognition.test.mjs derives trapezoidal planform reference geometry
+1793924606337 begin recognition.test.mjs region growth follows edge adjacency and normal threshold
+1793924606338 end recognition.test.mjs region growth follows edge adjacency and normal threshold
+1793924606338 begin recognition.test.mjs region growth does not accumulate curvature beyond the seed-normal limit
+1793924606338 end recognition.test.mjs region growth does not accumulate curvature beyond the seed-normal limit
+1793924606338 begin recognition.test.mjs region growth respects its explicit face cap
+1793924606338 end recognition.test.mjs region growth respects its explicit face cap
+1793924606338 begin recognition.test.mjs recognition assignments round-trip through run-length encoding
+1793924606338 end recognition.test.mjs recognition assignments round-trip through run-length encoding
+1793924606339 begin rem3a.test.mjs IA-03: fixed claim is withheld for counterexamples and ordinary case
+1793924606727 end rem3a.test.mjs IA-03: fixed claim is withheld for counterexamples and ordinary case
+1793924606728 begin rem3a.test.mjs claim withheld at sweep and resolution API boundaries
+1793924607283 end rem3a.test.mjs claim withheld at sweep and resolution API boundaries
+1793924607283 begin rem3a.test.mjs actual application stability rendering does not present the fixed claim
+1793924607330 end rem3a.test.mjs actual application stability rendering does not present the fixed claim
+1793924607330 begin rem3b-acceptance.test.mjs decimal sweep matches independent rational counts and binary64 rounding
+1793924607337 end rem3b-acceptance.test.mjs decimal sweep matches independent rational counts and binary64 rounding
+1793924607337 begin rem3b-acceptance.test.mjs wake span follows each named group’s bound endpoints, including translated panels
+1793924607339 end rem3b-acceptance.test.mjs wake span follows each named group’s bound endpoints, including translated panels
+1793924607339 begin rem3b-acceptance.test.mjs surface identity rejects duplicates and handles names inherited from Object.prototype
+1793924607891 end rem3b-acceptance.test.mjs surface identity rejects duplicates and handles names inherited from Object.prototype
+1793924607891 begin rem3b-acceptance.test.mjs case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+1793924607892 end rem3b-acceptance.test.mjs case rejects extreme pressure references, invalid angles and collapsed wakes explicitly
+1793924607892 begin rem3b-acceptance.test.mjs Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+1793924607893 end rem3b-acceptance.test.mjs Trefftz rejects malformed optional data, retaining omitted normalizer and numeric zero
+1793924607893 begin rem3b-app-boundary.test.mjs wired Run and input events clear both old plots and recover through real parsing and rendering
+1793924608352 end rem3b-app-boundary.test.mjs wired Run and input events clear both old plots and recover through real parsing and rendering
+1793924608352 begin rem3b-app-boundary.test.mjs wired Run clears prior display on solver and resolution failure without an input event
+1793924608686 end rem3b-app-boundary.test.mjs wired Run clears prior display on solver and resolution failure without an input event
+1793924608687 begin rem3b-app-boundary.test.mjs invalid in-progress span text does not act like an intentionally blank automatic setting
+1793924608689 end rem3b-app-boundary.test.mjs invalid in-progress span text does not act like an intentionally blank automatic setting
+1793924608689 begin rem3b-bounds.test.mjs sweep rejects missing, nonnumeric and nonpositive step values
+1793924608690 end rem3b-bounds.test.mjs sweep rejects missing, nonnumeric and nonpositive step values
+1793924608690 begin rem3b-bounds.test.mjs explicit invalid case and sweep inputs are not replaced by defaults
+1793924608690 end rem3b-bounds.test.mjs explicit invalid case and sweep inputs are not replaced by defaults
+1793924608690 begin rem3b-bounds.test.mjs excessive sweep and automatic lattice are refused before allocation
+1793924608690 end rem3b-bounds.test.mjs excessive sweep and automatic lattice are refused before allocation
+1793924608690 begin rem3b-bounds.test.mjs sweep resource boundary and floating point progress
+1793924608696 end rem3b-bounds.test.mjs sweep resource boundary and floating point progress
+1793924608696 begin rem3b-cap-boundary.test.mjs sweep accepts 201 points and refuses 202
+1793924608708 end rem3b-cap-boundary.test.mjs sweep accepts 201 points and refuses 202
+1793924608709 begin rem3b-cap-boundary.test.mjs generation accepts 4096 panels and refuses more
+1793924608713 end rem3b-cap-boundary.test.mjs generation accepts 4096 panels and refuses more
+1793924608713 begin rem3b-cap-boundary.test.mjs dense solve refuses 2049 panels before solving
+1793924608714 end rem3b-cap-boundary.test.mjs dense solve refuses 2049 panels before solving
+1793924608715 begin rem3b-cap-boundary.test.mjs dense solver accepts the 2048-panel operational boundary
+1793924615991 end rem3b-cap-boundary.test.mjs dense solver accepts the 2048-panel operational boundary
+1793924615992 begin rem3b-decimal.test.mjs strict decimal upper boundary excludes next integer
+1793924615992 end rem3b-decimal.test.mjs strict decimal upper boundary excludes next integer
+1793924615993 begin rem3b-decimal.test.mjs decimal endpoints and samples are rounded once
+1793924615993 end rem3b-decimal.test.mjs decimal endpoints and samples are rounded once
+1793924615993 begin rem3b-decimal.test.mjs decimal interval just below endpoint does not add a point
+1793924615993 end rem3b-decimal.test.mjs decimal interval just below endpoint does not add a point
+1793924615993 begin rem3b-decimal.test.mjs reversed and offset decimal intervals preserve endpoints
+1793924615994 end rem3b-decimal.test.mjs reversed and offset decimal intervals preserve endpoints
+1793924615994 begin rem3b-endpoint.test.mjs single point sweep is one point even for a small step
+1793924615994 end rem3b-endpoint.test.mjs single point sweep is one point even for a small step
+1793924615994 begin rem3b-endpoint.test.mjs decimal endpoint is included
+1793924615994 end rem3b-endpoint.test.mjs decimal endpoint is included
+1793924615995 begin rem3b-entrypoints.test.mjs public solver entry points reject absent or malformed option objects explicitly
+1793924615995 end rem3b-entrypoints.test.mjs public solver entry points reject absent or malformed option objects explicitly
+1793924615995 begin rem3b-entrypoints.test.mjs sweep and resolution reject absent, non-array and empty surfaces explicitly
+1793924615995 end rem3b-entrypoints.test.mjs sweep and resolution reject absent, non-array and empty surfaces explicitly
+1793924615995 begin rem3b-generated-extremes.test.mjs panel generator refuses nonfinite and degenerate derived geometry
+1793924615996 end rem3b-generated-extremes.test.mjs panel generator refuses nonfinite and degenerate derived geometry
+1793924615996 begin rem3b-options.test.mjs explicit malformed lattice options are rejected
+1793924615996 end rem3b-options.test.mjs explicit malformed lattice options are rejected
+1793924615996 begin rem3b-oracle.test.mjs decimal samples match independent decimal arithmetic vectors
+1793924615998 end rem3b-oracle.test.mjs decimal samples match independent decimal arithmetic vectors
+1793924615999 begin rem3b-overflow.test.mjs finite reference coordinates cannot silently yield an infinite moment
+1793924615999 end rem3b-overflow.test.mjs finite reference coordinates cannot silently yield an infinite moment
+1793924615999 begin rem3b-resume.test.mjs negative profile drag is refused, not silently converted to zero
+1793924615999 end rem3b-resume.test.mjs negative profile drag is refused, not silently converted to zero
+1793924615999 begin rem3b-resume.test.mjs degenerate supplied panels are refused before solving
+1793924616000 end rem3b-resume.test.mjs degenerate supplied panels are refused before solving
+1793924616000 begin rem3b-sweep-overflow.test.mjs finite offsets cannot produce nonfinite sweep outputs
+1793924616000 end rem3b-sweep-overflow.test.mjs finite offsets cannot produce nonfinite sweep outputs
+1793924616001 begin rem3b-validation.test.mjs explicit malformed geometry is refused rather than defaulted
+1793924616001 end rem3b-validation.test.mjs explicit malformed geometry is refused rather than defaulted
+1793924616001 begin rem3b-validation.test.mjs lattice settings reject invalid or silently clamped counts
+1793924616001 end rem3b-validation.test.mjs lattice settings reject invalid or silently clamped counts
+1793924616001 begin rem3b-validation.test.mjs resolution check rejects malformed beta rather than silently changing flow
+1793924616001 end rem3b-validation.test.mjs resolution check rejects malformed beta rather than silently changing flow
+1793924616001 begin rem3b-validation.test.mjs sweep rejects duplicate representable samples before execution
+1793924616001 end rem3b-validation.test.mjs sweep rejects duplicate representable samples before execution
+1793924616001 begin rem3b-validation.test.mjs case rejects malformed wake, reference point and supplied panels
+1793924616002 end rem3b-validation.test.mjs case rejects malformed wake, reference point and supplied panels
+1793924616002 begin rem3b.test.mjs IA-04 rejects missing or nonnumeric circulation instead of zero
+1793924616002 end rem3b.test.mjs IA-04 rejects missing or nonnumeric circulation instead of zero
+1793924616002 begin solFindings.test.mjs SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+1793924616442 end solFindings.test.mjs SOL-01: the review's five-row scale table is scale invariant (M0-4 regression)
+1793924616443 begin solFindings.test.mjs SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+1793924616449 end solFindings.test.mjs SOL-01: the truncation counter still flags near-singular proximity, scale-invariantly
+1793924616449 begin solFindings.test.mjs SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+1793924619621 end solFindings.test.mjs SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+1793924619621 begin solFindings.test.mjs SOL-02: zero-yaw prescribed check is green with the measured deltas
+1793924623140 end solFindings.test.mjs SOL-02: zero-yaw prescribed check is green with the measured deltas
+1793924623140 begin solFindings.test.mjs SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+1793924626513 end solFindings.test.mjs SOL-02: a custom plotted lattice is compared with a refined lattice, never certified by R1/R2
+1793924626514 begin solFindings.test.mjs SOL-02: convergence claim is withheld when no refinement is available
+1793924629814 end solFindings.test.mjs SOL-02: convergence claim is withheld when no refinement is available
+1793924629814 begin solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793924629917 end solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793924629917 begin solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+1793924641600 end solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+1793924641601 begin solFindings.test.mjs SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+1793924645358 end solFindings.test.mjs SOL-03: elliptic 12x64 tip mode is quarantined by envelope and consistency gates (values corrected by M0-4)
+1793924645358 begin solFindings.test.mjs SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+1793924646274 end solFindings.test.mjs SOL-03: rectangular lattices beyond R2 are flagged unverified but not quarantined
+1793924646275 begin solFindings.test.mjs SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+1793924646684 end solFindings.test.mjs SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+1793924646685 begin solFindings.test.mjs SOL-03: quarantine propagates from the point to the sweep
+1793924653581 end solFindings.test.mjs SOL-03: quarantine propagates from the point to the sweep
+1793924653581 begin solFindings.test.mjs SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+1793924653590 end solFindings.test.mjs SOL-04: the review's negative eigenmode reproduces and is rejected by the signed-drag guard
+1793924653590 begin solFindings.test.mjs SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+1793924653590 end solFindings.test.mjs SOL-06: roundoff-floor probe — reference area cannot change dimensional drag or error detection
+1793924653591 begin solFindings.test.mjs SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+1793924653892 end solFindings.test.mjs SOL-06: alpha probe — the true tiny drag at alpha = 0.001 deg is reported, not zeroed
+1793924653892 begin solFindings.test.mjs SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+1793924654192 end solFindings.test.mjs SOL-06: solveVlmCase dimensional forces and raw drags are bitwise reference-area invariant
+1793924654192 begin solFindings.test.mjs SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+1793924654265 end solFindings.test.mjs SOL-06: suppression is explicit, size-declared, scale invariant, never applied without an error basis
+1793924654265 begin solFindings.test.mjs SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+1793924654366 end solFindings.test.mjs SOL-06: the tolerance covers coordinate-translation error and non-finite evaluations fail loudly
+1793924654366 begin solFindings.test.mjs SOL-08: the label is only shown inside the demonstrated envelope
+1793924654562 end solFindings.test.mjs SOL-08: the label is only shown inside the demonstrated envelope
+1793924654562 begin solFindings.test.mjs SOL-10: non-finite circulation raises naming the panel index
+1793924654562 end solFindings.test.mjs SOL-10: non-finite circulation raises naming the panel index
+1793924654562 begin solFindings.test.mjs SOL-10: array length, density, coordinates and wake direction are validated
+1793924654563 end solFindings.test.mjs SOL-10: array length, density, coordinates and wake direction are validated
+1793924654563 begin solFindings.test.mjs SOL-10: finite signed circulation is evaluated without absolute values
+1793924654563 end solFindings.test.mjs SOL-10: finite signed circulation is evaluated without absolute values
+1793924654563 begin solFindings.test.mjs SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+1793924654959 end solFindings.test.mjs SOL-09: frozen fit-trim row 1 (alpha 6..12 deg) reports 'insufficient linear data' — no NaN, no verdict, validity not silent
+1793924654959 begin solFindings.test.mjs SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+1793924655141 end solFindings.test.mjs SOL-09: frozen fit-trim row 2 (0/4 deg) rejects the two-point window as a derivative
+1793924655141 begin solFindings.test.mjs SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+1793924655641 end solFindings.test.mjs SOL-09: frozen fit-trim row 3 (2..6 deg, cm0 = 0.02) — certified C_L slope unchanged, no trim from the 2 deg moment
+1793924655641 begin solFindings.test.mjs SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+1793924658569 end solFindings.test.mjs SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+1793924658570 begin solFindings.test.mjs SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+1793924659562 end solFindings.test.mjs SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+1793924659562 begin solFindings.test.mjs SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+1793924661042 end solFindings.test.mjs SOL-09: trim with C_L(alpha_trim) <= 0 is explicitly 'not determined' (positive-lift rule)
+1793924661042 begin solFindings.test.mjs SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+1793924662972 end solFindings.test.mjs SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+1793924662973 begin solFindings.test.mjs SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+1793924669764 end solFindings.test.mjs SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+1793924669764 begin solFindings.test.mjs SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+1793924672991 end solFindings.test.mjs SOL-09: the R1/R2 two-point slope is a labelled diagnostic, never a certified derivative
+1793924672992 begin solFindings.test.mjs SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+1793924676058 end solFindings.test.mjs SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+1793924676059 begin solFindings.test.mjs SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+1793924682479 end solFindings.test.mjs SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+1793924682480 begin stlParser.test.mjs parses generated binary STL
+1793924682480 end stlParser.test.mjs parses generated binary STL
+1793924682480 begin stlParser.test.mjs parses generated ASCII STL
+1793924682480 end stlParser.test.mjs parses generated ASCII STL
+1793924682480 begin topology.test.mjs module matches independent oracle on a closed box
+1793924682481 end topology.test.mjs module matches independent oracle on a closed box
+1793924682481 begin topology.test.mjs module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+1793924682481 end topology.test.mjs module matches oracle on degenerate, duplicate, non-manifold and disconnected cases
+1793924682482 begin topology.test.mjs reference mesh independently yields the audited 28/5/0/1 topology
+1793924683705 end topology.test.mjs reference mesh independently yields the audited 28/5/0/1 topology
+1793924683706 begin vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793924683709 end vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793924683709 begin vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793924694574 end vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793924694575 begin vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793924694718 end vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793924694718 begin vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793924701528 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793924701529 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+1793924701643 solve begin vlmOracles.test.mjs matchCl 4x24 i=0 alpha=4.011009637211819
+1793924701700 solve end vlmOracles.test.mjs matchCl 4x24 i=0 alpha=4.011009637211819
+1793924701700 solve begin vlmOracles.test.mjs matchCl 4x24 i=1 alpha=4.265770997596415
+1793924701757 solve end vlmOracles.test.mjs matchCl 4x24 i=1 alpha=4.265770997596415
+1793924701757 solve begin vlmOracles.test.mjs matchCl 4x24 i=2 alpha=4.102255137001381
+1793924701814 solve end vlmOracles.test.mjs matchCl 4x24 i=2 alpha=4.102255137001381
+1793924701814 solve begin vlmOracles.test.mjs matchCl 4x24 i=3 alpha=4.17057328997353
+1793924701871 solve end vlmOracles.test.mjs matchCl 4x24 i=3 alpha=4.17057328997353
+1793924701871 solve begin vlmOracles.test.mjs matchCl 4x24 i=4 alpha=4.133843346599722
+1793924701929 solve end vlmOracles.test.mjs matchCl 4x24 i=4 alpha=4.133843346599722
+1793924701929 solve begin vlmOracles.test.mjs matchCl 4x24 i=5 alpha=4.151495099221883
+1793924701986 solve end vlmOracles.test.mjs matchCl 4x24 i=5 alpha=4.151495099221883
+1793924701986 solve begin vlmOracles.test.mjs matchCl 4x24 i=6 alpha=4.142502423342654
+1793924702044 solve end vlmOracles.test.mjs matchCl 4x24 i=6 alpha=4.142502423342654
+1793924702044 solve begin vlmOracles.test.mjs matchCl 4x24 i=7 alpha=4.146956184035574
+1793924702102 solve end vlmOracles.test.mjs matchCl 4x24 i=7 alpha=4.146956184035574
+1793924702102 solve begin vlmOracles.test.mjs matchCl 4x24 i=8 alpha=4.144718890381498
+1793924702159 solve end vlmOracles.test.mjs matchCl 4x24 i=8 alpha=4.144718890381498
+1793924702159 solve begin vlmOracles.test.mjs matchCl 4x24 i=9 alpha=4.145834935516138
+1793924702217 solve end vlmOracles.test.mjs matchCl 4x24 i=9 alpha=4.145834935516138
+1793924702217 solve begin vlmOracles.test.mjs matchCl 4x24 i=10 alpha=4.145276269800247
+1793924702274 solve end vlmOracles.test.mjs matchCl 4x24 i=10 alpha=4.145276269800247
+1793924702275 solve begin vlmOracles.test.mjs matchCl 4x24 i=11 alpha=4.1455554428419825
+1793924702332 solve end vlmOracles.test.mjs matchCl 4x24 i=11 alpha=4.1455554428419825
+1793924702332 solve begin vlmOracles.test.mjs matchCl 4x24 i=12 alpha=4.145415816713976
+1793924702389 solve end vlmOracles.test.mjs matchCl 4x24 i=12 alpha=4.145415816713976
+1793924702389 solve begin vlmOracles.test.mjs matchCl 4x24 i=13 alpha=4.145485619950091
+1793924702447 solve end vlmOracles.test.mjs matchCl 4x24 i=13 alpha=4.145485619950091
+1793924702448 solve begin vlmOracles.test.mjs matchCl 4x24 i=14 alpha=4.1454507158951115
+1793924702505 solve end vlmOracles.test.mjs matchCl 4x24 i=14 alpha=4.1454507158951115
+1793924702505 solve begin vlmOracles.test.mjs matchCl 4x24 i=15 alpha=4.1454681673181915
+1793924702562 solve end vlmOracles.test.mjs matchCl 4x24 i=15 alpha=4.1454681673181915
+1793924702562 solve begin vlmOracles.test.mjs matchCl 4x24 i=16 alpha=4.14545944145678
+1793924702620 solve end vlmOracles.test.mjs matchCl 4x24 i=16 alpha=4.14545944145678
+1793924702620 solve begin vlmOracles.test.mjs matchCl 4x24 i=17 alpha=4.145463804350321
+1793924702678 solve end vlmOracles.test.mjs matchCl 4x24 i=17 alpha=4.145463804350321
+1793924702678 solve begin vlmOracles.test.mjs matchCl 4x24 i=18 alpha=4.145461622894335
+1793924702736 solve end vlmOracles.test.mjs matchCl 4x24 i=18 alpha=4.145461622894335
+1793924702736 solve begin vlmOracles.test.mjs matchCl 4x24 i=19 alpha=4.145462713620043
+1793924702793 solve end vlmOracles.test.mjs matchCl 4x24 i=19 alpha=4.145462713620043
+1793924702793 solve begin vlmOracles.test.mjs matchCl 4x24 i=20 alpha=4.145462168256624
+1793924702851 solve end vlmOracles.test.mjs matchCl 4x24 i=20 alpha=4.145462168256624
+1793924702851 solve begin vlmOracles.test.mjs matchCl 4x24 i=21 alpha=4.145462440938193
+1793924702908 solve end vlmOracles.test.mjs matchCl 4x24 i=21 alpha=4.145462440938193
+1793924702908 solve begin vlmOracles.test.mjs matchCl 4x24 i=22 alpha=4.145462304597373
+1793924702965 solve end vlmOracles.test.mjs matchCl 4x24 i=22 alpha=4.145462304597373
+1793924702965 solve begin vlmOracles.test.mjs matchCl 4x24 i=23 alpha=4.145462372767778
+1793924703023 solve end vlmOracles.test.mjs matchCl 4x24 i=23 alpha=4.145462372767778
+1793924703023 solve begin vlmOracles.test.mjs matchCl 4x24 i=24 alpha=4.145462338682573
+1793924703081 solve end vlmOracles.test.mjs matchCl 4x24 i=24 alpha=4.145462338682573
+1793924703081 solve begin vlmOracles.test.mjs matchCl 4x24 i=25 alpha=4.145462355725173
+1793924703138 solve end vlmOracles.test.mjs matchCl 4x24 i=25 alpha=4.145462355725173
+1793924703138 solve begin vlmOracles.test.mjs matchCl 4x24 i=26 alpha=4.14546234720387
+1793924703201 solve end vlmOracles.test.mjs matchCl 4x24 i=26 alpha=4.14546234720387
+1793924703201 solve begin vlmOracles.test.mjs matchCl 4x24 i=27 alpha=4.145462351464522
+1793924703259 solve end vlmOracles.test.mjs matchCl 4x24 i=27 alpha=4.145462351464522
+1793924703259 solve begin vlmOracles.test.mjs matchCl 4x24 i=28 alpha=4.145462349334195
+1793924703319 solve end vlmOracles.test.mjs matchCl 4x24 i=28 alpha=4.145462349334195
+1793924703319 solve begin vlmOracles.test.mjs matchCl 4x24 i=29 alpha=4.1454623503993595
+1793924703383 solve end vlmOracles.test.mjs matchCl 4x24 i=29 alpha=4.1454623503993595
+1793924705224 solve begin vlmOracles.test.mjs matchCl 8x48 i=0 alpha=4.0136985246374115
+1793924706146 solve end vlmOracles.test.mjs matchCl 8x48 i=0 alpha=4.0136985246374115
+1793924706146 solve begin vlmOracles.test.mjs matchCl 8x48 i=1 alpha=4.289429072344929
+1793924707056 solve end vlmOracles.test.mjs matchCl 8x48 i=1 alpha=4.289429072344929
+1793924707056 solve begin vlmOracles.test.mjs matchCl 8x48 i=2 alpha=4.1123663395649475
+1793924707981 solve end vlmOracles.test.mjs matchCl 8x48 i=2 alpha=4.1123663395649475
+1793924707981 solve begin vlmOracles.test.mjs matchCl 8x48 i=3 alpha=4.186319109014368
+1793924708903 solve end vlmOracles.test.mjs matchCl 8x48 i=3 alpha=4.186319109014368
+1793924708903 solve begin vlmOracles.test.mjs matchCl 8x48 i=4 alpha=4.146559246253194
+1793924709820 solve end vlmOracles.test.mjs matchCl 8x48 i=4 alpha=4.146559246253194
+1793924709820 solve begin vlmOracles.test.mjs matchCl 8x48 i=5 alpha=4.16566781800376
+1793924710731 solve end vlmOracles.test.mjs matchCl 8x48 i=5 alpha=4.16566781800376
+1793924710732 solve begin vlmOracles.test.mjs matchCl 8x48 i=6 alpha=4.155933354295862
+1793924711656 solve end vlmOracles.test.mjs matchCl 8x48 i=6 alpha=4.155933354295862
+1793924711656 solve begin vlmOracles.test.mjs matchCl 8x48 i=7 alpha=4.160754652701043
+1793924712572 solve end vlmOracles.test.mjs matchCl 8x48 i=7 alpha=4.160754652701043
+1793924712572 solve begin vlmOracles.test.mjs matchCl 8x48 i=8 alpha=4.158332783092089
+1793924713483 solve end vlmOracles.test.mjs matchCl 8x48 i=8 alpha=4.158332783092089
+1793924713483 solve begin vlmOracles.test.mjs matchCl 8x48 i=9 alpha=4.159540918221804
+1793924714396 solve end vlmOracles.test.mjs matchCl 8x48 i=9 alpha=4.159540918221804
+1793924714396 solve begin vlmOracles.test.mjs matchCl 8x48 i=10 alpha=4.158936159455517
+1793924715310 solve end vlmOracles.test.mjs matchCl 8x48 i=10 alpha=4.158936159455517
+1793924715310 solve begin vlmOracles.test.mjs matchCl 8x48 i=11 alpha=4.15923836731118
+1793924716238 solve end vlmOracles.test.mjs matchCl 8x48 i=11 alpha=4.15923836731118
+1793924716238 solve begin vlmOracles.test.mjs matchCl 8x48 i=12 alpha=4.159087220930802
+1793924717151 solve end vlmOracles.test.mjs matchCl 8x48 i=12 alpha=4.159087220930802
+1793924717151 solve begin vlmOracles.test.mjs matchCl 8x48 i=13 alpha=4.159162783601538
+1793924718064 solve end vlmOracles.test.mjs matchCl 8x48 i=13 alpha=4.159162783601538
+1793924718064 solve begin vlmOracles.test.mjs matchCl 8x48 i=14 alpha=4.159124999661399
+1793924718971 solve end vlmOracles.test.mjs matchCl 8x48 i=14 alpha=4.159124999661399
+1793924718971 solve begin vlmOracles.test.mjs matchCl 8x48 i=15 alpha=4.159143890986344
+1793924719890 solve end vlmOracles.test.mjs matchCl 8x48 i=15 alpha=4.159143890986344
+1793924719890 solve begin vlmOracles.test.mjs matchCl 8x48 i=16 alpha=4.159134445164134
+1793924720806 solve end vlmOracles.test.mjs matchCl 8x48 i=16 alpha=4.159134445164134
+1793924720806 solve begin vlmOracles.test.mjs matchCl 8x48 i=17 alpha=4.159139168035686
+1793924721719 solve end vlmOracles.test.mjs matchCl 8x48 i=17 alpha=4.159139168035686
+1793924721719 solve begin vlmOracles.test.mjs matchCl 8x48 i=18 alpha=4.15913680659012
+1793924722628 solve end vlmOracles.test.mjs matchCl 8x48 i=18 alpha=4.15913680659012
+1793924722628 solve begin vlmOracles.test.mjs matchCl 8x48 i=19 alpha=4.15913798731048
+1793924723549 solve end vlmOracles.test.mjs matchCl 8x48 i=19 alpha=4.15913798731048
+1793924723549 solve begin vlmOracles.test.mjs matchCl 8x48 i=20 alpha=4.159137396949699
+1793924724468 solve end vlmOracles.test.mjs matchCl 8x48 i=20 alpha=4.159137396949699
+1793924724468 solve begin vlmOracles.test.mjs matchCl 8x48 i=21 alpha=4.15913769212994
+1793924725376 solve end vlmOracles.test.mjs matchCl 8x48 i=21 alpha=4.15913769212994
+1793924725376 solve begin vlmOracles.test.mjs matchCl 8x48 i=22 alpha=4.1591375445397825
+1793924726300 solve end vlmOracles.test.mjs matchCl 8x48 i=22 alpha=4.1591375445397825
+1793924726300 solve begin vlmOracles.test.mjs matchCl 8x48 i=23 alpha=4.159137618334854
+1793924727231 solve end vlmOracles.test.mjs matchCl 8x48 i=23 alpha=4.159137618334854
+1793924727231 solve begin vlmOracles.test.mjs matchCl 8x48 i=24 alpha=4.159137581437317
+1793924728141 solve end vlmOracles.test.mjs matchCl 8x48 i=24 alpha=4.159137581437317
+1793924728141 solve begin vlmOracles.test.mjs matchCl 8x48 i=25 alpha=4.159137599886084
+1793924729033 solve end vlmOracles.test.mjs matchCl 8x48 i=25 alpha=4.159137599886084
+1793924729034 solve begin vlmOracles.test.mjs matchCl 8x48 i=26 alpha=4.159137590661703
+1793924729935 solve end vlmOracles.test.mjs matchCl 8x48 i=26 alpha=4.159137590661703
+1793924729935 solve begin vlmOracles.test.mjs matchCl 8x48 i=27 alpha=4.159137595273889
+1793924730831 solve end vlmOracles.test.mjs matchCl 8x48 i=27 alpha=4.159137595273889
+1793924730831 solve begin vlmOracles.test.mjs matchCl 8x48 i=28 alpha=4.159137592967796
+1793924731729 solve end vlmOracles.test.mjs matchCl 8x48 i=28 alpha=4.159137592967796
+1793924731729 solve begin vlmOracles.test.mjs matchCl 8x48 i=29 alpha=4.159137594120844
+1793924732639 solve end vlmOracles.test.mjs matchCl 8x48 i=29 alpha=4.159137594120844
+1793924732833 solve begin vlmOracles.test.mjs matchCl 4x32 i=0 alpha=4.018114232553865
+1793924732932 solve end vlmOracles.test.mjs matchCl 4x32 i=0 alpha=4.018114232553865
+1793924732932 solve begin vlmOracles.test.mjs matchCl 4x32 i=1 alpha=4.197749504260234
+1793924733030 solve end vlmOracles.test.mjs matchCl 4x32 i=1 alpha=4.197749504260234
+1793924733030 solve begin vlmOracles.test.mjs matchCl 4x32 i=2 alpha=4.081066628352508
+1793924733128 solve end vlmOracles.test.mjs matchCl 4x32 i=2 alpha=4.081066628352508
+1793924733128 solve begin vlmOracles.test.mjs matchCl 4x32 i=3 alpha=4.129174266787966
+1793924733231 solve end vlmOracles.test.mjs matchCl 4x32 i=3 alpha=4.129174266787966
+1793924733231 solve begin vlmOracles.test.mjs matchCl 4x32 i=4 alpha=4.103189228991741
+1793924733328 solve end vlmOracles.test.mjs matchCl 4x32 i=4 alpha=4.103189228991741
+1793924733328 solve begin vlmOracles.test.mjs matchCl 4x32 i=5 alpha=4.115640079982118
+1793924733426 solve end vlmOracles.test.mjs matchCl 4x32 i=5 alpha=4.115640079982118
+1793924733426 solve begin vlmOracles.test.mjs matchCl 4x32 i=6 alpha=4.109287995808802
+1793924733525 solve end vlmOracles.test.mjs matchCl 4x32 i=6 alpha=4.109287995808802
+1793924733525 solve begin vlmOracles.test.mjs matchCl 4x32 i=7 alpha=4.112431507770935
+1793924733623 solve end vlmOracles.test.mjs matchCl 4x32 i=7 alpha=4.112431507770935
+1793924733623 solve begin vlmOracles.test.mjs matchCl 4x32 i=8 alpha=4.110851771839069
+1793924733722 solve end vlmOracles.test.mjs matchCl 4x32 i=8 alpha=4.110851771839069
+1793924733722 solve begin vlmOracles.test.mjs matchCl 4x32 i=9 alpha=4.111639636580692
+1793924733823 solve end vlmOracles.test.mjs matchCl 4x32 i=9 alpha=4.111639636580692
+1793924733823 solve begin vlmOracles.test.mjs matchCl 4x32 i=10 alpha=4.1112452070643055
+1793924733927 solve end vlmOracles.test.mjs matchCl 4x32 i=10 alpha=4.1112452070643055
+1793924733927 solve begin vlmOracles.test.mjs matchCl 4x32 i=11 alpha=4.11144229773899
+1793924734028 solve end vlmOracles.test.mjs matchCl 4x32 i=11 alpha=4.11144229773899
+1793924734028 solve begin vlmOracles.test.mjs matchCl 4x32 i=12 alpha=4.111343721519752
+1793924734128 solve end vlmOracles.test.mjs matchCl 4x32 i=12 alpha=4.111343721519752
+1793924734128 solve begin vlmOracles.test.mjs matchCl 4x32 i=13 alpha=4.1113930019326785
+1793924734228 solve end vlmOracles.test.mjs matchCl 4x32 i=13 alpha=4.1113930019326785
+1793924734228 solve begin vlmOracles.test.mjs matchCl 4x32 i=14 alpha=4.111368359809347
+1793924734329 solve end vlmOracles.test.mjs matchCl 4x32 i=14 alpha=4.111368359809347
+1793924734329 solve begin vlmOracles.test.mjs matchCl 4x32 i=15 alpha=4.111380680393456
+1793924734429 solve end vlmOracles.test.mjs matchCl 4x32 i=15 alpha=4.111380680393456
+1793924734429 solve begin vlmOracles.test.mjs matchCl 4x32 i=16 alpha=4.11137451998245
+1793924734531 solve end vlmOracles.test.mjs matchCl 4x32 i=16 alpha=4.11137451998245
+1793924734531 solve begin vlmOracles.test.mjs matchCl 4x32 i=17 alpha=4.111377600158321
+1793924734632 solve end vlmOracles.test.mjs matchCl 4x32 i=17 alpha=4.111377600158321
+1793924734632 solve begin vlmOracles.test.mjs matchCl 4x32 i=18 alpha=4.111376060063001
+1793924734734 solve end vlmOracles.test.mjs matchCl 4x32 i=18 alpha=4.111376060063001
+1793924734734 solve begin vlmOracles.test.mjs matchCl 4x32 i=19 alpha=4.111376830108822
+1793924734835 solve end vlmOracles.test.mjs matchCl 4x32 i=19 alpha=4.111376830108822
+1793924734835 solve begin vlmOracles.test.mjs matchCl 4x32 i=20 alpha=4.111376445085454
+1793924734936 solve end vlmOracles.test.mjs matchCl 4x32 i=20 alpha=4.111376445085454
+1793924734936 solve begin vlmOracles.test.mjs matchCl 4x32 i=21 alpha=4.111376637597025
+1793924735036 solve end vlmOracles.test.mjs matchCl 4x32 i=21 alpha=4.111376637597025
+1793924735037 solve begin vlmOracles.test.mjs matchCl 4x32 i=22 alpha=4.111376541341212
+1793924735138 solve end vlmOracles.test.mjs matchCl 4x32 i=22 alpha=4.111376541341212
+1793924735138 solve begin vlmOracles.test.mjs matchCl 4x32 i=23 alpha=4.111376589469111
+1793924735240 solve end vlmOracles.test.mjs matchCl 4x32 i=23 alpha=4.111376589469111
+1793924735240 solve begin vlmOracles.test.mjs matchCl 4x32 i=24 alpha=4.111376565405159
+1793924735341 solve end vlmOracles.test.mjs matchCl 4x32 i=24 alpha=4.111376565405159
+1793924735341 solve begin vlmOracles.test.mjs matchCl 4x32 i=25 alpha=4.111376577437138
+1793924735444 solve end vlmOracles.test.mjs matchCl 4x32 i=25 alpha=4.111376577437138
+1793924735444 solve begin vlmOracles.test.mjs matchCl 4x32 i=26 alpha=4.111376571421148
+1793924735549 solve end vlmOracles.test.mjs matchCl 4x32 i=26 alpha=4.111376571421148
+1793924735549 solve begin vlmOracles.test.mjs matchCl 4x32 i=27 alpha=4.111376574429137
+1793924735652 solve end vlmOracles.test.mjs matchCl 4x32 i=27 alpha=4.111376574429137
+1793924735652 solve begin vlmOracles.test.mjs matchCl 4x32 i=28 alpha=4.111376572925145
+1793924735755 solve end vlmOracles.test.mjs matchCl 4x32 i=28 alpha=4.111376572925145
+1793924735755 solve begin vlmOracles.test.mjs matchCl 4x32 i=29 alpha=4.111376573677142
+1793924735858 solve end vlmOracles.test.mjs matchCl 4x32 i=29 alpha=4.111376573677142
+1793924739071 solve begin vlmOracles.test.mjs matchCl 8x64 i=0 alpha=4.020017597731829
+1793924740700 solve end vlmOracles.test.mjs matchCl 8x64 i=0 alpha=4.020017597731829
+1793924740700 solve begin vlmOracles.test.mjs matchCl 8x64 i=1 alpha=4.2151738419176565
+1793924742333 solve end vlmOracles.test.mjs matchCl 8x64 i=1 alpha=4.2151738419176565
+1793924742333 solve begin vlmOracles.test.mjs matchCl 8x64 i=2 alpha=4.088370295557053
+1793924743966 solve end vlmOracles.test.mjs matchCl 8x64 i=2 alpha=4.088370295557053
+1793924743966 solve begin vlmOracles.test.mjs matchCl 8x64 i=3 alpha=4.140638085301317
+1793924745575 solve end vlmOracles.test.mjs matchCl 8x64 i=3 alpha=4.140638085301317
+1793924745576 solve begin vlmOracles.test.mjs matchCl 8x64 i=4 alpha=4.112405328148629
+1793924747184 solve end vlmOracles.test.mjs matchCl 8x64 i=4 alpha=4.112405328148629
+1793924747184 solve begin vlmOracles.test.mjs matchCl 8x64 i=5 alpha=4.125933324939455
+1793924748796 solve end vlmOracles.test.mjs matchCl 8x64 i=5 alpha=4.125933324939455
+1793924748796 solve begin vlmOracles.test.mjs matchCl 8x64 i=6 alpha=4.1190318302661595
+1793924750374 solve end vlmOracles.test.mjs matchCl 8x64 i=6 alpha=4.1190318302661595
+1793924750374 solve begin vlmOracles.test.mjs matchCl 8x64 i=7 alpha=4.122447286182955
+1793924751974 solve end vlmOracles.test.mjs matchCl 8x64 i=7 alpha=4.122447286182955
+1793924751975 solve begin vlmOracles.test.mjs matchCl 8x64 i=8 alpha=4.120730906117807
+1793924753562 solve end vlmOracles.test.mjs matchCl 8x64 i=8 alpha=4.120730906117807
+1793924753562 solve begin vlmOracles.test.mjs matchCl 8x64 i=9 alpha=4.121586925574877
+1793924755161 solve end vlmOracles.test.mjs matchCl 8x64 i=9 alpha=4.121586925574877
+1793924755161 solve begin vlmOracles.test.mjs matchCl 8x64 i=10 alpha=4.121158377502486
+1793924756795 solve end vlmOracles.test.mjs matchCl 8x64 i=10 alpha=4.121158377502486
+1793924756795 solve begin vlmOracles.test.mjs matchCl 8x64 i=11 alpha=4.121372517258221
+1793924758438 solve end vlmOracles.test.mjs matchCl 8x64 i=11 alpha=4.121372517258221
+1793924758438 solve begin vlmOracles.test.mjs matchCl 8x64 i=12 alpha=4.121265413981854
+1793924760131 solve end vlmOracles.test.mjs matchCl 8x64 i=12 alpha=4.121265413981854
+1793924760131 solve begin vlmOracles.test.mjs matchCl 8x64 i=13 alpha=4.121318957301503
+1793924761929 solve end vlmOracles.test.mjs matchCl 8x64 i=13 alpha=4.121318957301503
+1793924761929 solve begin vlmOracles.test.mjs matchCl 8x64 i=14 alpha=4.12129218357128
+1793924763637 solve end vlmOracles.test.mjs matchCl 8x64 i=14 alpha=4.12129218357128
+1793924763637 solve begin vlmOracles.test.mjs matchCl 8x64 i=15 alpha=4.121305569920919
+1793924765329 solve end vlmOracles.test.mjs matchCl 8x64 i=15 alpha=4.121305569920919
+1793924765329 solve begin vlmOracles.test.mjs matchCl 8x64 i=16 alpha=4.121298876617784

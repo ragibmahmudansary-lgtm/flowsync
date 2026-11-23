@@ -1,0 +1,15 @@
+import { newPage, Page, closePage } from './cdp.mjs';
+const target = await newPage('http://127.0.0.1:4173/');
+const page = new Page(target.webSocketDebuggerUrl);
+await page.send('Page.enable'); await page.send('Runtime.enable');
+await page.waitFor("document.readyState === 'complete'");
+console.log('target', target.id);
+console.log('webgl', await page.eval("(() => { const c = document.createElement('canvas'); const g = c.getContext('webgl2') || c.getContext('webgl'); return !!g; })()"));
+console.log('status before:', await page.eval("document.getElementById('statusLine').textContent"));
+await page.eval("document.getElementById('loadDemoButton').click()");
+await new Promise(r => setTimeout(r, 4000));
+console.log('status after load:', await page.eval("document.getElementById('statusLine').textContent"));
+console.log('solver badge:', await page.eval("document.getElementById('solverBadge').textContent"));
+console.log('geometry badge:', await page.eval("document.getElementById('geometrySourceBadge').textContent"));
+console.log('mesh quality:', await page.eval("document.getElementById('meshQualityBadge').textContent"));
+page.close();

@@ -1,0 +1,47 @@
+{
+  "invalidSolve": {
+    "validity": {
+      "status": "invalid",
+      "messages": [
+        "Near-field/Trefftz inconsistency -1.14 % exceeds the approved VLM-V2b gate 1 %: circulation accuracy is not established (SOL-03, OBS-M0-2-2)."
+      ]
+    },
+    "cl": 0.9448874856350236,
+    "cdi": 0.03626370365757923
+  },
+  "exportsFromInvalid": [
+    {
+      "name": "airflow-vlm-results.csv",
+      "content": "alpha_deg,CL,CDi,CD_total,Cm,lift_N,drag_N,pitching_moment_Nm\n10,0.9448874856350236,0.03626370365757923,0.06126370365757923,-0.2579798041951321,7407.917887378586,284.3074366754212,-2022.5616648898358",
+      "type": "text/csv"
+    }
+  ],
+  "drawsFromInvalid": [
+    {
+      "canvas": "polar",
+      "panels": [
+        {
+          "title": "Results unavailable — quarantined solution (see solver diagnostics)",
+          "series": []
+        }
+      ]
+    },
+    {
+      "canvas": "pitch",
+      "panels": [
+        {
+          "title": "Results unavailable — quarantined solution (see solver diagnostics)",
+          "series": []
+        }
+      ]
+    }
+  ],
+  "redrawsAfterInvalidation": [],
+  "canvasesUpdatedWithUndeterminedPitch": [
+    "polar"
+  ],
+  "autoHighAR": {
+    "ar": 100000,
+    "N": 400000
+  }
+}

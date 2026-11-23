@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+
+# Build and test output
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Runtime logs
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Generated analysis exports
+exports/
+downloads/
+
+# Temporary and cache files
+.cache/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Local tooling metadata
+.agents/
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Local-only fixtures whose licence is not confirmed (commit manifests only; see docs/verification/drone-baseline-2026-11-07/)
+# A320 demo STL excluded from the public push — licence question Q-7 is still open.
+assets/airbus-a320-cfd-1.snapshot.7/
+assets/airbus-a320-cfd-1.snapshot.7.zip
+assets/b737-wing-aerofoil-model-attempt/
+assets/b737-wing-aerofoil-model-attempt.zip
+assets/drone-reverse-engineering-in-catia-v5-1.snapshot.8/
+assets/drone-reverse-engineering-in-catia-v5-1.snapshot.8.zip

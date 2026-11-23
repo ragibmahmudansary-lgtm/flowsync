@@ -1,0 +1,14 @@
+file:///tmp/airflow-r4-replay.9jyxC7/src/vlmSolver.js:739
+      throw new Error("Each panel's span edges must match its ordered bound endpoints.");
+            ^
+
+Error: Each panel's span edges must match its ordered bound endpoints.
+    at validateCasePanels (file:///tmp/airflow-r4-replay.9jyxC7/src/vlmSolver.js:739:13)
+    at solveCase (file:///tmp/airflow-r4-replay.9jyxC7/src/vlmSolver.js:839:26)
+    at solveVlmCase (file:///tmp/airflow-r4-replay.9jyxC7/src/vlmSolver.js:797:10)
+    at file:///tmp/airflow-r4-replay.9jyxC7/docs/verification/rem-3b-deep-2026-11-06/panel-metadata-probe.mjs:5:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

@@ -1,0 +1,184 @@
+{
+  "sol": {
+    "entryCount": 50,
+    "finalCount": 50,
+    "entryVsRem3bR": [],
+    "entryVsFrozenIndependent": [
+      {
+        "key": "2",
+        "id": "OBS1-projection",
+        "row": 3
+      },
+      {
+        "key": "7",
+        "id": "scale",
+        "row": 8
+      },
+      {
+        "key": "8",
+        "id": "scale",
+        "row": 9
+      },
+      {
+        "key": "9",
+        "id": "scale",
+        "row": 10
+      },
+      {
+        "key": "11",
+        "id": "elliptic-tip",
+        "row": 12
+      },
+      {
+        "key": "12",
+        "id": "elliptic-tip",
+        "row": 13
+      },
+      {
+        "key": "13",
+        "id": "elliptic-tip",
+        "row": 14
+      },
+      {
+        "key": "14",
+        "id": "elliptic-tip",
+        "row": 15
+      },
+      {
+        "key": "15",
+        "id": "elliptic-tip",
+        "row": 16
+      },
+      {
+        "key": "17",
+        "id": "OBS2-counts",
+        "row": 18
+      },
+      {
+        "key": "19",
+        "id": "OBS2-counts",
+        "row": 20
+      },
+      {
+        "key": "20",
+        "id": "OBS2-counts",
+        "row": 21
+      },
+      {
+        "key": "21",
+        "id": "OBS2-counts",
+        "row": 22
+      },
+      {
+        "key": "22",
+        "id": "badge-baseline",
+        "row": 23
+      },
+      {
+        "key": "26",
+        "id": "custom-resolution",
+        "row": 27
+      },
+      {
+        "key": "33",
+        "id": "alpha",
+        "row": 34
+      },
+      {
+        "key": "34",
+        "id": "yaw-resolution",
+        "row": 35
+      },
+      {
+        "key": "35",
+        "id": "yaw-resolution",
+        "row": 36
+      },
+      {
+        "key": "36",
+        "id": "yaw-resolution",
+        "row": 37
+      },
+      {
+        "key": "37",
+        "id": "yaw-resolution",
+        "row": 38
+      },
+      {
+        "key": "38",
+        "id": "yaw-resolution",
+        "row": 39
+      },
+      {
+        "key": "48",
+        "id": "roundoff-floor",
+        "row": 49
+      },
+      {
+        "key": "49",
+        "id": "roundoff-floor",
+        "row": 50
+      }
+    ],
+    "finalVsEntry": [
+      {
+        "key": "22",
+        "id": "badge-baseline",
+        "row": 23
+      }
+    ]
+  },
+  "edges": {
+    "entryVsRem3bR": [],
+    "finalVsEntry": [
+      {
+        "key": "inputIdentity"
+      },
+      {
+        "key": "changedIdentity"
+      }
+    ]
+  },
+  "measurementGroups": {
+    "entrySummaryVsRem3bR": [],
+    "finalFullVsEntry": [
+      {
+        "key": "badges"
+      }
+    ]
+  },
+  "finalVsEntryEqual": {
+    "analytic": true,
+    "psd": true,
+    "llt": true,
+    "api": true,
+    "decimal": true,
+    "oracle": true
+  },
+  "benchmark": [
+    {
+      "ar": 4,
+      "freestream": 1.0330458323296587,
+      "body": 1.0121245866496984,
+      "bodyPrinted": "1.0121"
+    },
+    {
+      "ar": 6,
+      "freestream": 1.0064601460422304,
+      "body": 0.9898060125842212,
+      "bodyPrinted": "0.9898"
+    },
+    {
+      "ar": 8,
+      "freestream": 0.9860046888432555,
+      "body": 0.9716646445523743,
+      "bodyPrinted": "0.9717"
+    },
+    {
+      "ar": 12,
+      "freestream": 0.9529529657189952,
+      "body": 0.9411530008921087,
+      "bodyPrinted": "0.9412"
+    }
+  ]
+}

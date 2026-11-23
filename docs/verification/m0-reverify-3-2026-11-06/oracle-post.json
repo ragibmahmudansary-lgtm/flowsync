@@ -1,0 +1,499 @@
+{
+  "max_slope_relative_error": "6.67048715691457437191388902739572889664220998225438593588636335593312443364033283909628185E-17",
+  "max_delta_absolute_error": "3.4279736594545809393846121675782129092976603500450677796820089097104887209E-16",
+  "slope_relative_tolerance": "1E-14",
+  "delta_absolute_tolerance": "1E-15",
+  "failures": [],
+  "results": [
+    {
+      "id": "near-max-within",
+      "grids": [
+        {
+          "slope": "1.79769313485682263425E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79049310978382254706E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "0.00400514689264446324567123811744622536362967065184284058485480280870981690891053939369983058",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 0.004005146892644555,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "near-max-over",
+      "grids": [
+        {
+          "slope": "1.79769313486828189959E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79769313485682263425E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        false,
+        true
+      ],
+      "expected_reasons": [
+        "coarse two-point lift slope is nonfinite"
+      ],
+      "expected_delta": "None",
+      "actual": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite"
+        ],
+        "coarse": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      }
+    },
+    {
+      "id": "adjacent-below-overflow-midpoint",
+      "grids": [
+        {
+          "slope": "1.79769313486231552000E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79049310978382254706E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "0.00400514689568774456828861470164490199037540010056495647029394020629184364002674783606597152",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 0.004005146895687762,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "adjacent-above-overflow-midpoint",
+      "grids": [
+        {
+          "slope": "1.79769313486231587736E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79049310978382254706E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        false,
+        true
+      ],
+      "expected_reasons": [
+        "coarse two-point lift slope is nonfinite"
+      ],
+      "expected_delta": "None",
+      "actual": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite"
+        ],
+        "coarse": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      }
+    },
+    {
+      "id": "fine-only-over",
+      "grids": [
+        {
+          "slope": "1.79769313485682263425E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79769313486828189959E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        false
+      ],
+      "expected_reasons": [
+        "fine two-point lift slope is nonfinite"
+      ],
+      "expected_delta": "None",
+      "actual": {
+        "valid": false,
+        "reasons": [
+          "fine two-point lift slope is nonfinite"
+        ],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      }
+    },
+    {
+      "id": "positive-common-offset",
+      "grids": [
+        {
+          "slope": "1.43239448782705746588E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.44671843270532967007E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "0.0100000000000011376289764347907342591852201140559819061990828606522766523338527177802870193",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 0.010000000000001093,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "negative-common-offset-reversed",
+      "grids": [
+        {
+          "slope": "-1.43239448782705746588E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "-1.44671843270532967007E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "0.0100000000000011376289764347907342591852201140559819061990828606522766523338527177802870193",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 0.010000000000001093,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "opposite-signs",
+      "grids": [
+        {
+          "slope": "1.43239448782705800191E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "-1.57563393660976378423E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "2.09999999999999998752599806540800100289908296875879092976603500450677796820089097104887209",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 2.0999999999999996,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "opposite-signs-swapped",
+      "grids": [
+        {
+          "slope": "-1.57563393660976378423E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.43239448782705800191E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [],
+      "expected_delta": "1.90909090909090910121818341701818110624472802296789283820143501393944397892637290844258971",
+      "actual": {
+        "valid": true,
+        "reasons": [],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": 1.9090909090909092,
+        "deltaCdi": 0
+      }
+    },
+    {
+      "id": "true-delta-overflow",
+      "grids": [
+        {
+          "slope": "0.00000000000000000000E+104",
+          "old_degree_product_overflows": false
+        },
+        {
+          "slope": "1.43239448782705800191E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "expected_flags": [
+        true,
+        true
+      ],
+      "expected_reasons": [
+        "comparison metrics are nonfinite"
+      ],
+      "expected_delta": "1.43239448782705796601641585545333560229621577896597643952084999077369111288103187551158450E+608",
+      "actual": {
+        "valid": false,
+        "reasons": [
+          "comparison metrics are nonfinite"
+        ],
+        "coarse": {
+          "valid": true,
+          "reasons": []
+        },
+        "fine": {
+          "valid": true,
+          "reasons": []
+        },
+        "deltaClAlpha": null,
+        "deltaCdi": null
+      }
+    },
+    {
+      "area": 8,
+      "grids": [
+        {
+          "slope": "4.70503872551848058826E+0",
+          "old_degree_product_overflows": false
+        },
+        {
+          "slope": "4.69278423604566238605E+0",
+          "old_degree_product_overflows": false
+        },
+        {
+          "slope": "4.80677760676543834433E+0",
+          "old_degree_product_overflows": false
+        },
+        {
+          "slope": "4.72372217054633074394E+0",
+          "old_degree_product_overflows": false
+        }
+      ],
+      "prescribed": "prescribed R1 vs R2",
+      "custom": "current lattice vs 2x refined lattice"
+    },
+    {
+      "area": 3e-307,
+      "grids": [
+        {
+          "slope": "1.25467699347159484657E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.25140912961217662915E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.28180736180411688195E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.25965924547902153369E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "prescribed": "prescribed R1 vs R2",
+      "custom": "current lattice vs 2x refined lattice"
+    },
+    {
+      "area": 2e-307,
+      "grids": [
+        {
+          "slope": "1.88201549020739235919E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.87711369441826485438E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.92271104270617568028E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.88948886821853256855E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "prescribed": "withheld",
+      "custom": "withheld"
+    },
+    {
+      "area": 2.09e-307,
+      "grids": [
+        {
+          "slope": "1.80097176096401172780E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79628104729020534068E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.83991487340303856089E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.80812331886940875299E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "prescribed": "withheld",
+      "custom": "withheld"
+    },
+    {
+      "area": 2.1e-307,
+      "grids": [
+        {
+          "slope": "1.79239570495942105623E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.78772732801739498030E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.83115337400588120888E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.79951320782717356850E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "prescribed": "prescribed R1 vs R2",
+      "custom": "withheld"
+    },
+    {
+      "area": 2.12e-307,
+      "grids": [
+        {
+          "slope": "1.77548631151640815573E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.77086197586628773333E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.81387834217563748817E+308",
+          "old_degree_product_overflows": true
+        },
+        {
+          "slope": "1.78253666813069102824E+308",
+          "old_degree_product_overflows": true
+        }
+      ],
+      "prescribed": "prescribed R1 vs R2",
+      "custom": "withheld"
+    }
+  ]
+}

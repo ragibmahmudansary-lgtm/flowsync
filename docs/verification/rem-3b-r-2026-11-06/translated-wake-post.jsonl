@@ -1,0 +1,4 @@
+{"x":0,"origin":15.999999999999996,"nominalM":1329,"actualXDisplacement":1329,"controlXFromBoundM":31.980506464611057,"controlZFromBoundM":-1.1167838944800308,"cl":0.10390985448231332,"validity":{"status":"ok","messages":[]}}
+{"x":10000000000000000,"origin":10000000000000016,"nominalM":1329,"actualXDisplacement":1328,"controlXFromBoundM":32,"controlZFromBoundM":-1.1167838944800308,"cl":0.10390985448231332,"validity":{"status":"ok","messages":[]}}
+{"x":100000000000000000,"origin":100000000000000020,"nominalM":1329,"actualXDisplacement":1328,"controlXFromBoundM":32,"controlZFromBoundM":-1.1167838944800308,"cl":0.10390985448231332,"validity":{"status":"ok","messages":[]}}
+{"x":1000000000000000000,"origin":1000000000000000000,"nominalM":1329,"actualXDisplacement":1280,"controlXFromBoundM":0,"controlZFromBoundM":-1.1167838944800308,"cl":0.10390985448231332,"validity":{"status":"ok","messages":[]}}

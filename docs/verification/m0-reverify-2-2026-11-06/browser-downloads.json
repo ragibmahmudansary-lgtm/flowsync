@@ -1,0 +1,3579 @@
+{
+  "entry-prescribed-overflow": {
+    "projectNo": 1,
+    "resultNo": 3,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.3138946751061638e+307,
+        "cdi": 1.714491060882082e+305,
+        "cd": 1.714491060882082e+305,
+        "cm": -1.3785678313747677e+306,
+        "liftN": 2575.2335632080813,
+        "dragN": 33.60402479328881,
+        "momentNm": -270.1992949494545
+      }
+    ]
+  },
+  "entry-custom-overflow": {
+    "projectNo": 2,
+    "resultNo": 4,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": {
+        "claim": "withheld",
+        "reason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite",
+            "fine two-point lift slope is nonfinite"
+          ],
+          "current": {
+            "valid": false,
+            "reasons": [
+              "coarse two-point lift slope is nonfinite"
+            ]
+          },
+          "refined": {
+            "valid": false,
+            "reasons": [
+              "fine two-point lift slope is nonfinite"
+            ]
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        }
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.3423055303870428e+307,
+        "cdi": 1.69946587774744e+305,
+        "cd": 1.69946587774744e+305,
+        "cm": -1.4236243086878112e+306,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "entry-custom-usable": {
+    "projectNo": 3,
+    "resultNo": 5,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-306,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.8820154902073926e+307,
+        "cdiAt4Deg": 1.7144910608820819e+304
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.877113694418265e+307,
+        "cdiAt4Deg": 1.7325149947896914e+304
+      },
+      "deltaClAlpha": 0.002604545932078147,
+      "deltaCdi": 0.010512702176666045,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "amber",
+      "claim": "current lattice vs 2x refined lattice",
+      "currentGrid": {
+        "claim": "compared",
+        "validity": {
+          "valid": true,
+          "reasons": [],
+          "current": {
+            "valid": true,
+            "reasons": []
+          },
+          "refined": {
+            "valid": true,
+            "reasons": []
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        },
+        "deltaClAlpha": 0.017278818163380276,
+        "deltaCdi": 0.006221550604309885,
+        "gates": {
+          "clAlpha": 0.01,
+          "cdi": 0.05
+        },
+        "withinGates": false
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-306,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.3423055303870427e+306,
+        "cdi": 1.6994658777474398e+304,
+        "cd": 1.6994658777474398e+304,
+        "cm": -1.423624308687811e+305,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "entry-custom-representable": {
+    "projectNo": 4,
+    "resultNo": 6,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": {
+        "claim": "withheld",
+        "reason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite",
+            "fine two-point lift slope is nonfinite"
+          ],
+          "current": {
+            "valid": false,
+            "reasons": [
+              "coarse two-point lift slope is nonfinite"
+            ]
+          },
+          "refined": {
+            "valid": false,
+            "reasons": [
+              "fine two-point lift slope is nonfinite"
+            ]
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        }
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 8.948703535913617e+306,
+        "cdi": 1.1329772518316264e+305,
+        "cd": 1.1329772518316264e+305,
+        "cm": -9.490828724585406e+305,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "entry-prescribed-representable": {
+    "projectNo": 5,
+    "resultNo": 7,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 8.759297834041092e+306,
+        "cdi": 1.1429940405880546e+305,
+        "cd": 1.1429940405880546e+305,
+        "cm": -9.190452209165119e+305,
+        "liftN": 2575.2335632080813,
+        "dragN": 33.60402479328881,
+        "momentNm": -270.1992949494545
+      }
+    ]
+  },
+  "entry-seed-true": {
+    "projectNo": 6,
+    "resultNo": 8,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "review-wing.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.658026661702732,
+        "cdiAt4Deg": 0.004249921738566785
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.675694630274133,
+        "cdiAt4Deg": 0.004365294225873486
+      },
+      "deltaClAlpha": 0.0037930157670979696,
+      "deltaCdi": 0.027146967498184654,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 3.25,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0.32519160756957094,
+        "cdi": 0.004249921738566785,
+        "cd": 0.004249921738566785,
+        "cm": 0.050753780493142366,
+        "liftN": 2549.5022033454366,
+        "dragN": 33.3193864303636,
+        "momentNm": 397.9096390662362
+      }
+    ]
+  },
+  "entry-seed-false": {
+    "projectNo": 7,
+    "resultNo": 9,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": false,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "recognized",
+      "sourceName": "review-wing.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.658026661702732,
+        "cdiAt4Deg": 0.004249921738566785
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.675694630274133,
+        "cdiAt4Deg": 0.004365294225873486
+      },
+      "deltaClAlpha": 0.0037930157670979696,
+      "deltaCdi": 0.027146967498184654,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "seedReferencePlaceholder": false,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 3.25,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "ok",
+          "messages": []
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "ok",
+          "messages": []
+        },
+        "availability": "available",
+        "cl": 0.32519160756957094,
+        "cdi": 0.004249921738566785,
+        "cd": 0.004249921738566785,
+        "cm": 0.050753780493142366,
+        "liftN": 2549.5022033454366,
+        "dragN": 33.3193864303636,
+        "momentNm": 397.9096390662362
+      }
+    ]
+  },
+  "final-prescribed-overflow": {
+    "projectNo": 8,
+    "resultNo": 10,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.3138946751061638e+307,
+        "cdi": 1.714491060882082e+305,
+        "cd": 1.714491060882082e+305,
+        "cm": -1.3785678313747677e+306,
+        "liftN": 2575.2335632080813,
+        "dragN": 33.60402479328881,
+        "momentNm": -270.1992949494545
+      }
+    ]
+  },
+  "final-prescribed-split": {
+    "projectNo": 9,
+    "resultNo": 11,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2.09e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.7962810472902053e+308,
+        "cdiAt4Deg": 1.6579090859231494e+305
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2.09e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.2573154785704916e+307,
+        "cdi": 1.640661302279504e+305,
+        "cd": 1.640661302279504e+305,
+        "cm": -1.3192036663873374e+306,
+        "liftN": 2575.2335632080813,
+        "dragN": 33.60402479328881,
+        "momentNm": -270.1992949494545
+      }
+    ]
+  },
+  "final-prescribed-representable": {
+    "projectNo": 10,
+    "resultNo": 12,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.2546769934715948e+308,
+        "cdiAt4Deg": 1.1429940405880546e+305
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.2514091296121766e+308,
+        "cdiAt4Deg": 1.155009996526461e+305
+      },
+      "deltaClAlpha": 0.0026045459320779354,
+      "deltaCdi": 0.010512702176666073,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 8.759297834041092e+306,
+        "cdi": 1.1429940405880546e+305,
+        "cd": 1.1429940405880546e+305,
+        "cm": -9.190452209165119e+305,
+        "liftN": 2575.2335632080813,
+        "dragN": 33.60402479328881,
+        "momentNm": -270.1992949494545
+      }
+    ]
+  },
+  "final-custom-overflow": {
+    "projectNo": 11,
+    "resultNo": 13,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "fine two-point lift slope is nonfinite"
+          ]
+        },
+        "clAlphaTwoPointPerRad": null,
+        "cdiAt4Deg": null
+      },
+      "deltaClAlpha": null,
+      "deltaCdi": null,
+      "comparisonValidity": {
+        "valid": false,
+        "reasons": [
+          "coarse two-point lift slope is nonfinite",
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": false,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": {
+        "claim": "withheld",
+        "reason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite",
+            "fine two-point lift slope is nonfinite"
+          ],
+          "current": {
+            "valid": false,
+            "reasons": [
+              "coarse two-point lift slope is nonfinite"
+            ]
+          },
+          "refined": {
+            "valid": false,
+            "reasons": [
+              "fine two-point lift slope is nonfinite"
+            ]
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        }
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.3423055303870428e+307,
+        "cdi": 1.69946587774744e+305,
+        "cd": 1.69946587774744e+305,
+        "cm": -1.4236243086878112e+306,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "final-custom-uncovered": {
+    "projectNo": 12,
+    "resultNo": 14,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2.1e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.792395704959421e+308,
+        "cdiAt4Deg": 1.6328486294115064e+305
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.787727328017395e+308,
+        "cdiAt4Deg": 1.6500142807520868e+305
+      },
+      "deltaClAlpha": 0.002604545932077936,
+      "deltaCdi": 0.010512702176665938,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "amber",
+      "claim": "withheld",
+      "currentGrid": {
+        "claim": "withheld",
+        "reason": "coarse two-point lift slope is nonfinite; fine two-point lift slope is nonfinite",
+        "validity": {
+          "valid": false,
+          "reasons": [
+            "coarse two-point lift slope is nonfinite",
+            "fine two-point lift slope is nonfinite"
+          ],
+          "current": {
+            "valid": false,
+            "reasons": [
+              "coarse two-point lift slope is nonfinite"
+            ]
+          },
+          "refined": {
+            "valid": false,
+            "reasons": [
+              "fine two-point lift slope is nonfinite"
+            ]
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        }
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 2.1e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": false,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 1.278386219416231e+307,
+        "cdi": 1.6185389311880377e+305,
+        "cd": 1.6185389311880377e+305,
+        "cm": -1.3558326749407723e+306,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "final-custom-representable": {
+    "projectNo": 13,
+    "resultNo": 15,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1.9999999999999982,
+      "maxRatio": 2.000000000000001
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "spanwisePanels": 12,
+        "chordwiseRows": 3,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "samolot.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.2546769934715948e+308,
+        "cdiAt4Deg": 1.1429940405880546e+305
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 1.2514091296121766e+308,
+        "cdiAt4Deg": 1.155009996526461e+305
+      },
+      "deltaClAlpha": 0.0026045459320779354,
+      "deltaCdi": 0.010512702176666073,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "amber",
+      "claim": "current lattice vs 2x refined lattice",
+      "currentGrid": {
+        "claim": "compared",
+        "validity": {
+          "valid": true,
+          "reasons": [],
+          "current": {
+            "valid": true,
+            "reasons": []
+          },
+          "refined": {
+            "valid": true,
+            "reasons": []
+          }
+        },
+        "current": {
+          "label": "custom",
+          "chordwiseRows": 3,
+          "spanwisePanels": {
+            "Main wing": 12
+          }
+        },
+        "refined": {
+          "label": "custom",
+          "chordwiseRows": 6,
+          "spanwisePanels": {
+            "Main wing": 24
+          }
+        },
+        "deltaClAlpha": 0.01727881816338002,
+        "deltaCdi": 0.006221550604309943,
+        "gates": {
+          "clAlpha": 0.01,
+          "cdi": 0.05
+        },
+        "withinGates": false
+      },
+      "inputIdentity": {
+        "betaDeg": 0,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 3e-307,
+        "refChordM": 1,
+        "referencePoint": [
+          17.28170074278219,
+          0.004715015891692671,
+          3.0967612251723766
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 17,
+            "zRootM": 5.604008956146245
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 3,
+            "spanwisePanels": {
+              "Main wing": 12
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          },
+          "refined": {
+            "label": "custom",
+            "chordwiseRows": 6,
+            "spanwisePanels": {
+              "Main wing": 24
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 0,
+        "latticeLabel": "custom",
+        "latticeCounts": {
+          "Main wing": 12
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 8.948703535913617e+306,
+        "cdi": 1.1329772518316264e+305,
+        "cd": 1.1329772518316264e+305,
+        "cm": -9.490828724585406e+305,
+        "liftN": 2630.918839558604,
+        "dragN": 33.30953120384982,
+        "momentNm": -279.030364502811
+      }
+    ]
+  },
+  "final-seed-true": {
+    "projectNo": 14,
+    "resultNo": 16,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates.",
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": true,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "bounds",
+      "sourceName": "review-wing.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.658026661702732,
+        "cdiAt4Deg": 0.004249921738566785
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.675694630274133,
+        "cdiAt4Deg": 0.004365294225873486
+      },
+      "deltaClAlpha": 0.0037930157670979696,
+      "deltaCdi": 0.027146967498184654,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "seedReferencePlaceholder": true,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 3.25,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "warning",
+          "messages": [
+            "VLM-V8: reference area, chord and moment reference are the bounds-seed placeholder (geometric-bounds heuristic with A320-tuned constants, DR-36); reference-dependent coefficients are unvalidated estimates."
+          ]
+        },
+        "availability": "available",
+        "cl": 0.32519160756957094,
+        "cdi": 0.004249921738566785,
+        "cd": 0.004249921738566785,
+        "cm": 0.050753780493142366,
+        "liftN": 2549.5022033454366,
+        "dragN": 33.3193864303636,
+        "momentNm": 397.9096390662362
+      }
+    ]
+  },
+  "final-seed-false": {
+    "projectNo": 15,
+    "resultNo": 17,
+    "validity": {
+      "status": "warning",
+      "messages": [
+        "fit: C_Lalpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_Lalpha derivative is reported.",
+        "fit: C_malpha is \"insufficient linear data\" — 2 converged point(s) in the |alpha| <= 5 deg window; at least 3 are required (DATA_CONTRACTS 2.5). No C_malpha derivative is reported."
+      ],
+      "minRatio": 1,
+      "maxRatio": 1
+    },
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "provenance": {
+      "inputs": {
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "spanwisePanels": "auto",
+        "chordwiseRows": 4,
+        "alphaMinDeg": 0,
+        "alphaMaxDeg": 4,
+        "alphaStepDeg": 4,
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "cd0": 0,
+        "cm0": 0,
+        "seedReferencePlaceholder": false,
+        "verdictInputs": {
+          "horizontalStabilizerPresent": false,
+          "massSource": "assumedUniform",
+          "modelDescription": "wing + H-tail flat-plate VLM; fuselage, camber and twist omitted; fuselage omission over-estimates SM"
+        }
+      },
+      "referenceSource": "recognized",
+      "sourceName": "review-wing.stl",
+      "massSource": "assumedUniform"
+    },
+    "check": {
+      "r1": {
+        "label": "R1",
+        "resolution": {
+          "label": "R1",
+          "chordwiseRows": 4,
+          "spanwisePanels": {
+            "Main wing": 32
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.658026661702732,
+        "cdiAt4Deg": 0.004249921738566785
+      },
+      "r2": {
+        "label": "R2",
+        "resolution": {
+          "label": "R2",
+          "chordwiseRows": 8,
+          "spanwisePanels": {
+            "Main wing": 64
+          }
+        },
+        "validity": {
+          "valid": true,
+          "reasons": []
+        },
+        "clAlphaTwoPointPerRad": 4.675694630274133,
+        "cdiAt4Deg": 0.004365294225873486
+      },
+      "deltaClAlpha": 0.0037930157670979696,
+      "deltaCdi": 0.027146967498184654,
+      "comparisonValidity": {
+        "valid": true,
+        "reasons": []
+      },
+      "withholdingReason": null,
+      "gates": {
+        "clAlpha": 0.01,
+        "cdi": 0.05
+      },
+      "withinGates": true,
+      "badge": "green",
+      "claim": "prescribed R1 vs R2",
+      "currentGrid": null,
+      "inputIdentity": {
+        "betaDeg": 3.25,
+        "velocityMS": 40,
+        "densityKgM3": 1.225,
+        "refAreaM2": 8,
+        "refChordM": 1,
+        "referencePoint": [
+          0.4,
+          0,
+          0
+        ],
+        "seedReferencePlaceholder": false,
+        "cd0": 0,
+        "cm0": 0,
+        "alphaProtocolDeg": [
+          0,
+          4
+        ],
+        "surfaces": [
+          {
+            "name": "Main wing",
+            "planform": "linear",
+            "spanM": 8,
+            "rootChordM": 1,
+            "tipChordM": 1,
+            "sweepDeg": 0,
+            "dihedralDeg": 0,
+            "incidenceDeg": 0,
+            "xLeadingRootM": 0,
+            "zRootM": 0
+          }
+        ],
+        "lattices": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Main wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Main wing": 64
+            }
+          }
+        },
+        "wake": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      "coverage": {
+        "protocol": "two-point (alpha = 0/4 deg) resolution diagnostic; not a certified lift derivative",
+        "alphaDeg": [
+          0,
+          4
+        ],
+        "betaDeg": 3.25,
+        "latticeLabel": "R1",
+        "latticeCounts": {
+          "Main wing": 32
+        },
+        "coversPlottedLattice": true,
+        "flow": "exact plotted flow (surfaces, beta, velocity, density, reference values)"
+      },
+      "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+      "uncertaintyScope": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+    },
+    "series": [
+      {
+        "alphaDeg": 0,
+        "validity": {
+          "status": "ok",
+          "messages": []
+        },
+        "availability": "available",
+        "cl": 0,
+        "cdi": 0,
+        "cd": 0,
+        "cm": 0,
+        "liftN": 0,
+        "dragN": 0,
+        "momentNm": 0
+      },
+      {
+        "alphaDeg": 4,
+        "validity": {
+          "status": "ok",
+          "messages": []
+        },
+        "availability": "available",
+        "cl": 0.32519160756957094,
+        "cdi": 0.004249921738566785,
+        "cd": 0.004249921738566785,
+        "cm": 0.050753780493142366,
+        "liftN": 2549.5022033454366,
+        "dragN": 33.3193864303636,
+        "momentNm": 397.9096390662362
+      }
+    ]
+  }
+}

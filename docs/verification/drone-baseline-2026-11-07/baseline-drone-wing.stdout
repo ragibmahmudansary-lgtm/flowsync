@@ -1,0 +1,43 @@
+{
+ "case": "drone-wing",
+ "region": {
+  "triangleCount": 448142,
+  "regionIndexSha256": "ee5fecd6a658ad695bd8a98ccca8b1d2ebf5d81cdd4d84712833008b60d0c935"
+ },
+ "recognition": {
+  "valid": true,
+  "areaM2": 0.6402977143226684,
+  "spanM": 1.9838916015625,
+  "macM": 0.33629938791468644,
+  "rootChordM": 0.3950041198730469,
+  "sweepDeg": 19.577613324206034,
+  "warnings": []
+ },
+ "stages": {
+  "parse": {
+   "ms": 112.1,
+   "rssMB": 334.9,
+   "heapUsedMB": 5.3
+  },
+  "map": {
+   "ms": 271.1,
+   "rssMB": 365.5,
+   "heapUsedMB": 5.7
+  },
+  "recognition": {
+   "ms": 164.8,
+   "rssMB": 518.2,
+   "heapUsedMB": 186.9
+  },
+  "topology": {
+   "ms": 4183,
+   "rssMB": 1126.3,
+   "heapUsedMB": 705.1
+  }
+ },
+ "topology": {
+  "components": 10,
+  "boundary": 6,
+  "nonManifold": 0
+ }
+}

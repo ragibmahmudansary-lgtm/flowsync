@@ -1,0 +1,20 @@
+// Multi-row VLM on an elliptic planform with straight c/4 line; exact: e = 1, CLa = 2pi/(1+2/AR).
+import { solveVlmCase } from "/home/tanvir/Coding/AirFLOW/src/vlmSolver.js";
+const rho = 1.225, V = 50, c0 = 1;
+function panels(b, N, M) { const ps = []; for (let i = 0; i < N; i++) {
+  const y0 = -b/2 + i*b/N, y1 = y0 + b/N, ym = (y0+y1)/2; const ch = (y) => c0*Math.sqrt(Math.max(0, 1 - (2*y/b)**2));
+  for (let k = 0; k < M; k++) {
+    // chordwise lattice on each edge uses that edge's chord; quarter-chord line at x = 0 => LE at -c/4
+    const xa = (y) => -ch(y)/4 + k*ch(y)/M, dx = (y) => ch(y)/M;
+    const A = [xa(y0) + 0.25*dx(y0), y0, 0], B = [xa(y1) + 0.25*dx(y1), y1, 0];
+    ps.push({ strip: i, y0, y1, chordM: dx(ym), boundA: A, boundB: B, boundMidpoint: [(A[0]+B[0])/2, ym, 0], controlPoint: [xa(ym) + 0.75*dx(ym), ym, 0], normal: [0,0,1], aspect: (b/N)/dx(ym) }); } }
+  return ps; }
+for (const AR of [6, 8]) for (const [N, M] of [[16,4],[32,4],[64,4],[64,8]]) {
+  const b = AR*Math.PI*c0/4, S = Math.PI*b*c0/4, p = panels(b, N, M), q = 0.5*rho*V*V;
+  const r = solveVlmCase({ velocityMS: V, densityKgM3: rho, refAreaM2: S, refChordM: c0, alphaDeg: 4, panels: p, wakeLengthFactor: 20*b });
+  const G = new Float64Array(N); p.forEach((pp, j) => { G[pp.strip] += r.circulation[j]; });
+  const ys = Array.from({length: N+1}, (_, k) => -b/2 + k*b/N), shed = ys.map((_, k) => (k<N?G[k]:0) - (k>0?G[k-1]:0));
+  let d = 0; for (let i = 0; i < N; i++) { const ym = (ys[i]+ys[i+1])/2; let w = 0; for (let k = 0; k <= N; k++) w += shed[k]/(2*Math.PI*(ym-ys[k])); d += 0.5*rho*G[i]*w*(b/N); }
+  const cdi = d/(q*S), cla = r.cl/(4*Math.PI/180), exact = 2*Math.PI/(1+2/AR);
+  const asp = p.map(x=>x.aspect); console.log(`AR ${AR} N ${N} M ${M}: CLa ${cla.toFixed(4)} (exact ${exact.toFixed(4)}, ${((cla/exact-1)*100).toFixed(2)}%)  e ${(r.cl**2/(Math.PI*AR*cdi)).toFixed(4)}  D>0 ${d>0}  aspect min ${Math.min(...asp).toFixed(2)} max ${Math.max(...asp).toFixed(2)}`);
+}

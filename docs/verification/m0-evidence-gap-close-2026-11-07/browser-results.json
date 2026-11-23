@@ -1,0 +1,76 @@
+{
+  "recordedAt": "2026-11-07",
+  "method": "Claude in Chrome connected to the user's Brave (extension installed by the user). Page: http://localhost:4173/ served by the local node server.mjs. Exports were captured in the page with a patched URL.createObjectURL that reads the same JSON blob the app would download; the app's own export buttons were clicked. Values below were transcribed from the javascript_tool results in this session.",
+  "fixture": {
+    "wing": "8 m x 1 m rectangular, zero sweep, dihedral and incidence, root leading x 17 m",
+    "flow": "V 40 m/s, rho 1.225 kg/m3, zero cd0 and cm0",
+    "reference": "refAreaM2 8, refChord 1 (UI moment reference is the CG)",
+    "alpha": "0 to 4 deg, step 4",
+    "yaw": "beta 5 deg",
+    "lattice": "4 chordwise rows, automatic spanwise count"
+  },
+  "G1_beta5_claudeInChrome": {
+    "status": "VLM solved 2 cases with 128 panels (R1)",
+    "solver": "VLM R1 current",
+    "resolutionBadge": "R1 vs R2 @ b=5.0, a=0..4: dCLa 1.75%, dCDi 5.17%",
+    "claim": "prescribed R1 vs R2",
+    "badge": "amber",
+    "withinGates": false,
+    "beta": 5,
+    "deltaClAlpha": 0.01752425309329866,
+    "deltaCdi": 0.05170673842746727,
+    "withholdingReason": null,
+    "coversPlottedLattice": true,
+    "uncertaintyLabel": "unverified: fixed Tier-0 uncertainty claim unavailable",
+    "referencePoint": [17.28170074278219, 0.004715015891692671, 3.0967612251723766],
+    "seedReferencePlaceholder": true,
+    "validity": "warning",
+    "apiExpectedFromLedgerProbe": { "deltaClAlpha": 0.01752425309329866, "deltaCdi": 0.05170673842746727 },
+    "result": "PASS: exact agreement with the API probe at all printed digits"
+  },
+  "G1_beta5_headlessBrave": {
+    "note": "Same fixture run in a separate headless Brave started by the session with a temporary profile (browser-automation/g1.mjs). Deltas 0.01752425309329866 and 0.05170673842746727, badge amber, prescribed claim. Recorded as a cross-check of the same build.",
+    "result": "PASS"
+  },
+  "G1_IA01_invalidGeometry": {
+    "result": "LIMIT (not expressible in the UI)",
+    "reason": "The UI provides only the main wing and a recognised horizontal tail. It has no control for a coplanar forward surface at x = -4 m. The IA-01 fixture therefore cannot be entered in the browser without a constructed input file, which this gap-closure step does not use."
+  },
+  "G2_invalidSweepExport": {
+    "result": "LIMIT (no invalid sweep reachable from the wing-only UI geometry)",
+    "scan": [
+      { "config": "4 rows, 32 spanwise, alpha 0 and 10", "validity": "warning", "series": "both available", "method": "headless Brave" },
+      { "config": "8 rows, 32 spanwise, alpha 0 and 10", "validity": "warning", "series": "both available", "lattice": "custom", "method": "headless Brave" },
+      { "config": "2 rows, 4 spanwise, alpha -10 and 10", "validity": "warning", "series": "both available", "lattice": "custom", "method": "headless Brave" },
+      { "config": "1 row, 2 spanwise, alpha 0 and 20", "result": "no export produced; the Run did not complete in the scan", "method": "headless Brave" }
+    ],
+    "reason": "The frozen invalid case (AUD-2) is a wing plus a 3 m x 0.5 m tail at x = 4 m, z = 0.6 m. The UI tail comes only from recognition of the demo geometry, which contributes no tail to the export. Creating the tail needs face selection in the 3D viewer, which this step did not attempt."
+  },
+  "G3_restoreSolveExport_claudeInChrome": {
+    "saved": "project exported and held in the page while the app was reloaded",
+    "afterRestoreStatus": "VLM solved 2 cases with 128 panels (R1)",
+    "exactEqual": { "provenance": true, "series": true, "validity": true, "uncertaintyLabel": true },
+    "deltaClAlpha": 0.01752425309329866,
+    "deltaCdi": 0.05170673842746727,
+    "claim": "prescribed R1 vs R2",
+    "badge": "amber",
+    "result": "PASS for the valid fixture"
+  },
+  "G3_invalidRestore_substitute_claudeInChrome": {
+    "note": "No invalid project can be produced by the UI, so an invalid input was used: alphaStepInput 0, which the solver refuses with a message. This tests whether a refused Run clears previous results.",
+    "before": {
+      "statusLine": "VLM solved 2 cases with 128 panels (R1)",
+      "resolutionBadge": "R1 vs R2 @ b=5.0, a=0..4: dCLa 1.75%, dCDi 5.17%",
+      "canvasInk": [97400, 97400]
+    },
+    "afterRefusedRun": {
+      "statusLine": "VLM failed: alphaStepInput must be positive.",
+      "solverBadge": "Solver error",
+      "resolutionBadge": "R1/R2 not run",
+      "solverDiagnostics": "",
+      "canvasInk": [97400, 97400],
+      "exportButton": "Run VLM before exporting results."
+    },
+    "result": "PARTIAL: text, badges, diagnostics and export are cleared, but the polar and pitch canvases keep their previous curves. This is the stale-curve item in SOL-07 (review item 3), which belongs to the M0a display phases and is outside this step. Observed here in the user's Brave and in headless Brave."
+  }
+}

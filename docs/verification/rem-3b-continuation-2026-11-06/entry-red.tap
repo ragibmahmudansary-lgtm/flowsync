@@ -1,0 +1,15 @@
+✖ tests/rem3b-entrypoints.test.mjs (52.932368ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.260961
+
+✖ failing tests:
+
+test at tests/rem3b-entrypoints.test.mjs:1:1
+✖ tests/rem3b-entrypoints.test.mjs (52.932368ms)
+  'test failed'

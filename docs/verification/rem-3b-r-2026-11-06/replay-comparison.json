@@ -1,0 +1,451 @@
+{
+  "solRows": 50,
+  "apiRows": 16,
+  "analyticRows": 7,
+  "solVsImmediate": {
+    "changes": [
+      {
+        "key": "2",
+        "id": "OBS1-projection",
+        "changedFields": 1
+      },
+      {
+        "key": "7",
+        "id": "scale",
+        "changedFields": 5
+      },
+      {
+        "key": "8",
+        "id": "scale",
+        "changedFields": 10
+      },
+      {
+        "key": "9",
+        "id": "scale",
+        "changedFields": 3
+      },
+      {
+        "key": "11",
+        "id": "elliptic-tip",
+        "changedFields": 8
+      },
+      {
+        "key": "12",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "13",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "14",
+        "id": "elliptic-tip",
+        "changedFields": 11
+      },
+      {
+        "key": "15",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "17",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "19",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "20",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "21",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "22",
+        "id": "badge-baseline",
+        "changedFields": 2
+      },
+      {
+        "key": "26",
+        "id": "custom-resolution",
+        "changedFields": 3
+      },
+      {
+        "key": "33",
+        "id": "alpha",
+        "changedFields": 3
+      },
+      {
+        "key": "34",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "35",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "36",
+        "id": "yaw-resolution",
+        "changedFields": 7
+      },
+      {
+        "key": "37",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "38",
+        "id": "yaw-resolution",
+        "changedFields": 7
+      },
+      {
+        "key": "48",
+        "id": "roundoff-floor",
+        "changedFields": 1
+      },
+      {
+        "key": "49",
+        "id": "roundoff-floor",
+        "changedFields": 1
+      }
+    ],
+    "metricMaxRelative": {
+      "path": "15.maxPanelForce",
+      "error": 1.8742785101721893e-11,
+      "before": 614.1658083208094,
+      "after": 614.1658083323206
+    },
+    "categorical": [
+      {
+        "path": "48.error",
+        "before": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 3.039196695620694e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04).",
+        "after": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 4.311418568206101e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+      },
+      {
+        "path": "49.error",
+        "before": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 3.039196695620694e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04).",
+        "after": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 4.311418568206101e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+      }
+    ]
+  },
+  "solVsFrozenIndependent": {
+    "changes": [
+      {
+        "key": "2",
+        "id": "OBS1-projection",
+        "changedFields": 1
+      },
+      {
+        "key": "7",
+        "id": "scale",
+        "changedFields": 5
+      },
+      {
+        "key": "8",
+        "id": "scale",
+        "changedFields": 10
+      },
+      {
+        "key": "9",
+        "id": "scale",
+        "changedFields": 3
+      },
+      {
+        "key": "11",
+        "id": "elliptic-tip",
+        "changedFields": 8
+      },
+      {
+        "key": "12",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "13",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "14",
+        "id": "elliptic-tip",
+        "changedFields": 11
+      },
+      {
+        "key": "15",
+        "id": "elliptic-tip",
+        "changedFields": 12
+      },
+      {
+        "key": "17",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "19",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "20",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "21",
+        "id": "OBS2-counts",
+        "changedFields": 3
+      },
+      {
+        "key": "22",
+        "id": "badge-baseline",
+        "changedFields": 14
+      },
+      {
+        "key": "26",
+        "id": "custom-resolution",
+        "changedFields": 3
+      },
+      {
+        "key": "33",
+        "id": "alpha",
+        "changedFields": 3
+      },
+      {
+        "key": "34",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "35",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "36",
+        "id": "yaw-resolution",
+        "changedFields": 7
+      },
+      {
+        "key": "37",
+        "id": "yaw-resolution",
+        "changedFields": 4
+      },
+      {
+        "key": "38",
+        "id": "yaw-resolution",
+        "changedFields": 7
+      },
+      {
+        "key": "48",
+        "id": "roundoff-floor",
+        "changedFields": 1
+      },
+      {
+        "key": "49",
+        "id": "roundoff-floor",
+        "changedFields": 1
+      }
+    ],
+    "metricMaxRelative": {
+      "path": "15.maxPanelForce",
+      "error": 1.8742785101721893e-11,
+      "before": 614.1658083208094,
+      "after": 614.1658083323206
+    },
+    "categorical": [
+      {
+        "path": "22.r1.validity",
+        "after": {
+          "valid": true,
+          "reasons": []
+        }
+      },
+      {
+        "path": "22.r2.validity",
+        "after": {
+          "valid": true,
+          "reasons": []
+        }
+      },
+      {
+        "path": "22.inputIdentity.surfaces.0.xLeadingRootM",
+        "after": 0
+      },
+      {
+        "path": "22.inputIdentity.surfaces.0.zRootM",
+        "after": 0
+      },
+      {
+        "path": "22.inputIdentity.cd0",
+        "after": 0
+      },
+      {
+        "path": "22.inputIdentity.cm0",
+        "after": 0
+      },
+      {
+        "path": "22.inputIdentity.lattices",
+        "after": {
+          "current": {
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Wing": 32
+            }
+          },
+          "r1": {
+            "label": "R1",
+            "chordwiseRows": 4,
+            "spanwisePanels": {
+              "Wing": 32
+            }
+          },
+          "r2": {
+            "label": "R2",
+            "chordwiseRows": 8,
+            "spanwisePanels": {
+              "Wing": 64
+            }
+          }
+        }
+      },
+      {
+        "path": "22.inputIdentity.wake",
+        "after": {
+          "direction": "freestream-aligned",
+          "lengthFactor": 20,
+          "lengthM": 80
+        }
+      },
+      {
+        "path": "22.uncertaintyLabel",
+        "before": "flat-plate inviscid estimate: C_Lα ±5 %, C_Di ±8 %",
+        "after": "unverified: fixed Tier-0 uncertainty claim unavailable"
+      },
+      {
+        "path": "22.uncertaintyScope",
+        "before": "Observed comparison agreement of R1/R2 zero-yaw lattices against the LLT/Helmbold reference bands of VALIDATION_AND_TEST_MATRIX VLM-V1/V1b/V2; an acceptance band, not a confidence interval or validated error bound.",
+        "after": "Fixed numerical claim withheld pending a reviewed geometry, flow, angle and resolution envelope. Published benchmark comparisons are limited cases, not a confidence interval or validated aircraft error bound; R1/R2 agreement is self-comparison and does not validate moment or neutral point."
+      },
+      {
+        "path": "22.comparisonValidity",
+        "after": {
+          "valid": true,
+          "reasons": []
+        }
+      },
+      {
+        "path": "22.withholdingReason",
+        "after": null
+      },
+      {
+        "path": "48.error",
+        "before": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 3.039196695620694e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04).",
+        "after": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 4.311418568206101e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+      },
+      {
+        "path": "49.error",
+        "before": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 3.039196695620694e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04).",
+        "after": "Near-field induced drag is negative (D = -1 N; numerical cancellation tolerance 4.311418568206101e-15 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+      }
+    ]
+  },
+  "analytic": {
+    "changes": [
+      {
+        "key": "6",
+        "changedFields": 1
+      }
+    ],
+    "metricMaxRelative": {
+      "error": 0
+    },
+    "categorical": [
+      {
+        "path": "6.psdError",
+        "before": "Trefftz-plane induced drag is negative (D = -0.001896870665447428 N; numerical cancellation tolerance 3.2047748868928183e-13 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04).",
+        "after": "Trefftz-plane induced drag is negative (D = -0.0018968706654474725 N; numerical cancellation tolerance 6.652280965532162e-13 N). Refusing to report |D|; cause may be a sign/circulation-orientation defect or a non-physical discrete mode (SOL-04)."
+      }
+    ]
+  },
+  "edges": {
+    "changes": [
+      {
+        "key": "badgeInvalid",
+        "changedFields": 1
+      }
+    ],
+    "metricMaxRelative": {
+      "path": "badgeInvalid.1.points.1.cdi",
+      "error": 1.1102230246251565e-16,
+      "before": 0.005786746359622717,
+      "after": 0.005786746359622716
+    },
+    "categorical": []
+  },
+  "api": {
+    "changes": [],
+    "metricMaxRelative": {
+      "error": 0
+    },
+    "categorical": []
+  },
+  "decimalOracleExact": true,
+  "independent": {
+    "changes": [
+      {
+        "key": "rectangles",
+        "changedFields": 9
+      },
+      {
+        "key": "independentVlm",
+        "changedFields": 56
+      },
+      {
+        "key": "scales",
+        "changedFields": 200
+      },
+      {
+        "key": "unitHorseshoe",
+        "changedFields": 4
+      },
+      {
+        "key": "prescribedElliptic",
+        "changedFields": 2
+      },
+      {
+        "key": "fits",
+        "changedFields": 32
+      },
+      {
+        "key": "trimRoundTrip",
+        "changedFields": 8
+      },
+      {
+        "key": "labels",
+        "changedFields": 524
+      },
+      {
+        "key": "badges",
+        "changedFields": 5
+      }
+    ],
+    "metricMaxRelative": {
+      "path": "scales.1.dragNNearFieldRaw",
+      "error": 1.5543122344752192e-15,
+      "before": 0.0033583055060908834,
+      "after": 0.003358305506090878
+    },
+    "categorical": []
+  }
+}

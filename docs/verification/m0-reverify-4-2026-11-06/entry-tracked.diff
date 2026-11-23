@@ -1,0 +1,203 @@
+diff --git a/CALCULATION_PIPELINE.md b/CALCULATION_PIPELINE.md
+index 6669323..714b0e8 100644
+--- a/CALCULATION_PIPELINE.md
++++ b/CALCULATION_PIPELINE.md
+@@ -627,7 +627,7 @@ They should not be labeled CFD results, ANSYS-derived aerodynamics, or validated
+ 
+ ### AUD-1 comparison validity and identity (2026-11-06)
+ 
+-The 0°/4° R1/R2 diagnostic measures relative grid sensitivity. A missing, quarantined or nonfinite required point withholds the comparison. If the degree-based slope calculation overflows, the solver divides the lift difference directly by the radian interval. A nonfinite final slope invalidates its grid summary and leaves that grid's slope and 4° induced-drag summary null. A failed prescribed comparison carries null deltas. A failed custom comparison omits its metrics and receives no plotted-grid coverage, even when the prescribed comparison passes. The applicable failed comparison yields an amber badge and a reason. The gates remain 1% for lift slope and 5% for induced drag. Identity includes the effective bounds-seed flag, where omission equals false, together with normalized surface placement, flow, reference values, actual lattices, the angle protocol and effective wake. Both the project snapshot and result download retain the identity and coverage.
++The 0°/4° R1/R2 diagnostic measures relative grid sensitivity. A missing, quarantined or nonfinite required point withholds the comparison. If the degree-based slope calculation overflows, the solver divides the lift difference directly by the radian interval. A nonfinite final slope invalidates its grid summary and leaves that grid's slope and 4° induced-drag summary null. The relative lift-slope delta uses the absolute coarse slope as its denominator with the existing 1e-300 minimum. When two finite slopes overflow on subtraction, the solver divides each slope by that denominator before taking their absolute difference. A nonfinite final delta withholds the comparison while retaining the separate per-grid validity. A failed prescribed comparison carries null deltas. A failed custom comparison omits its metrics and receives no plotted-grid coverage, even when the prescribed comparison passes. The applicable failed comparison yields an amber badge and a reason. The gates remain 1% for lift slope and 5% for induced drag. Identity includes the effective bounds-seed flag, where omission equals false, together with normalized surface placement, flow, reference values, actual lattices, the angle protocol and effective wake. Both the project snapshot and result download retain the identity and coverage.
+ 
+ ### AUD-2 result export (2026-11-06)
+ 
+diff --git a/MVP_METHODOLOGY.md b/MVP_METHODOLOGY.md
+index a705c15..3f9f86f 100644
+--- a/MVP_METHODOLOGY.md
++++ b/MVP_METHODOLOGY.md
+@@ -78,7 +78,7 @@ The MVP uses a multi-row horseshoe lattice (default 4 chordwise rows x N spanwis
+ - Static stability is longitudinal only. The pitch response is a linearized demonstrator driven by VLM `Cm_alpha` and manifest `Iyy`, not a complete six-degree-of-freedom flight dynamics model.
+ - Numerical self-tests compare a rectangular wing against finite-wing lift-slope theory with 16% tolerance and require a quadratic induced-drag trend. The plan's 5% AVL/benchmark criterion remains unmet until controlled AVL fixtures are added.
+ 
+-**AUD-1 comparison qualification.** The badge uses a two-point 0°/4° diagnostic. Each grid needs two usable cases and a finite slope per radian. If the degree-based conversion overflows, the diagnostic divides the lift difference directly by the radian interval. A grid with a nonfinite final slope is invalid for the comparison and its prescribed summary metrics are null. Failed prescribed comparisons have null deltas. Failed custom comparisons omit the custom deltas and withhold plotted-grid coverage. The effective bounds-seed flag is part of the comparison identity and survives both downloads with the exact comparison coverage. Omitting the flag is equivalent to false.
++**AUD-1 comparison qualification.** The badge uses a two-point 0°/4° diagnostic. Each grid needs two usable cases and a finite slope per radian. If the degree-based conversion overflows, the diagnostic divides the lift difference directly by the radian interval. A grid with a nonfinite final slope is invalid for the comparison and its prescribed summary metrics are null. If subtracting two finite lift slopes overflows, the relative delta is formed by normalizing both slopes before subtraction. A nonfinite final delta still withholds the comparison. Failed prescribed comparisons have null deltas. Failed custom comparisons omit the custom deltas and withhold plotted-grid coverage. The effective bounds-seed flag is part of the comparison identity and survives both downloads with the exact comparison coverage. Omitting the flag is equivalent to false.
+ 
+ ### AUD-2 result export
+ 
+diff --git a/docs/implementation/CURRENT_HANDOFF.md b/docs/implementation/CURRENT_HANDOFF.md
+index a02ccd6..d70a4cd 100644
+--- a/docs/implementation/CURRENT_HANDOFF.md
++++ b/docs/implementation/CURRENT_HANDOFF.md
+@@ -1,3 +1,15 @@
++# Current checkpoint — M0-REVERIFY-3 (2026-11-06)
++
++**Independent review of the inherited 0°/4° slope fallback is complete for the tested scope. The new relative-delta correction is implemented and tested, pending independent review. G0 remains BLOCKED.** Branch `impl/m0` at `6c625a31f43892f71581fac8cde5a02a4ec9f168`, clean at entry. This is the documentation-only follow-up to tested source/evidence `e2e62030e49dc7b597fbc4f90981263f8943f2e5`. The earlier M0-REVERIFY-2 entry HEAD was `9a66316f63e22b9633e266716294eee68f9b2498`. There were no pre-existing local changes. M0-REVERIFY-3 leaves uncommitted changes to `src/vlmSolver.js`, `tests/aud1.test.mjs`, `CALCULATION_PIPELINE.md`, `MVP_METHODOLOGY.md`, the handoff, next prompt, implementation status, M0 tracker, changelog, decision log and SOL dispositions. It adds an archived entry prompt and [versioned evidence](../verification/m0-reverify-3-2026-11-06/README.md).
++
++At 3e-307 m² the four historical degree-conversion intermediates overflow while the direct-radian slopes fit binary64. At 2e-307 m² all four final slopes exceed the finite range. At 2.09e-307 m² R1 fails and R2 remains valid. At 2.12e-307 m² the prescribed comparison passes and the custom coarse grid fails while the refinement remains valid. The amber custom claim is withheld with a coarse-only reason, omitted custom deltas and no coverage. Actual Run and four download pairs confirm recovery, both-grid withholding and custom split validity. Omitted and explicit false seed flags identify the same comparison. True changes the effective identity and warning status. The fixed uncertainty claim stays withheld. The 0°/4° protocol and 1%/5% gates are preserved.
++
++Two individually finite opposite-signed slopes exposed a separate intermediate overflow on subtraction. The correction divides each slope by the existing coarse denominator only when their difference overflows. It recovers deltas of about 2.1 and 1.90909 for the two grid orders. A genuinely nonfinite final delta still withholds. The new case uses constructed inputs to the exported comparison API. The browser verifies real solver-produced recovery and withheld controls. The independent Decimal oracle works on represented case values and gives 6.67e-17 maximum relative slope error against 1e-14 and 3.43e-16 maximum absolute fractional delta error against 1e-15. It does not establish universal rounding behavior, aircraft accuracy or a browser latency bound.
++
++Targeted `node --test --test-isolation=none --test-reporter=tap tests/aud1.test.mjs tests/aud2.test.mjs tests/rem3a.test.mjs tests/rem3b*.test.mjs` passed 59 individuals across 19 input files. `npm test` passed 29 files. The exact `node --test --test-isolation=none --test-reporter=tap tests/*.test.mjs` passed 160 individuals across 29 input files in 211.78 s. All exited 0 with no skips. The exact runner used only an outer timeout guard. VLM-V2 matched-lift completed in 42.09 s, so no recurrence profiling was needed. Scratch replays had zero changed Sol rows and independent measurement groups relative to M0-REVERIFY-2. Sol stops at the expected NaN circulation refusal after 50 rows, leaving zero-net-lift and final writes unreached. The old app VM stops at its stale helper. All 389 frozen, 143 M0-REVERIFY-1 and 87 M0-REVERIFY-2 hashes matched. See the [replay ledger](../verification/m0-reverify-3-2026-11-06/README.md) for stops and omissions.
++
++**Next bounded task — [M0-REVERIFY-4](NEXT_CONVERSATION_PROMPT.md).** Independently verify the signed relative-delta correction, both grid orders, coarse denominator, true overflow and ordinary benchmark compatibility. Administrative dispositions stay open. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science are outside scope. M0-6/7 remains deferred.
++
+ # Current checkpoint — M0-REVERIFY-2 (2026-11-06)
+ 
+ **The two M0-REVERIFY-1 changes were independently exercised. A follow-up arithmetic correction is implemented and tested, pending independent review. G0 remains BLOCKED.** Branch `impl/m0`. Entry HEAD was `9a66316f63e22b9633e266716294eee68f9b2498`. The exact tested source and evidence revision is `e2e62030e49dc7b597fbc4f90981263f8943f2e5`. The next commit, `docs(m0): hand off the comparison arithmetic review`, updates this handoff and its prompt. The user authorized committing and pushing this checkpoint on `impl/m0`.
+diff --git a/docs/implementation/IMPLEMENTATION_CHANGELOG.md b/docs/implementation/IMPLEMENTATION_CHANGELOG.md
+index 22871b6..a987e15 100644
+--- a/docs/implementation/IMPLEMENTATION_CHANGELOG.md
++++ b/docs/implementation/IMPLEMENTATION_CHANGELOG.md
+@@ -589,3 +589,9 @@ Recorded a fresh independent re-verification of the four inherited patches. Adde
+ - Independently exercised the M0-REVERIFY-1 comparison records through solver entry points, browser Run and both downloads.
+ - Fixed a false nonfinite-slope result when the conversion's intermediate product overflows and the per-radian result fits binary64. The existing ordinary calculation and gates are preserved. Added a regression covering recovery, split prescribed validity and failed custom coverage.
+ - Final verification passed 58 targeted individuals, 29 npm files and 159 individuals in the exact combined command. The frozen replay matched prior final Sol rows and independent measurements. [Commands, tolerances, downloads and replay limits](../verification/m0-reverify-2-2026-11-06/README.md).
++
++## M0-REVERIFY-3 — 2026-11-06
++
++- Independently checked the inherited 0°/4° slope quotient around the finite limit, including signed offsets, reversed input order and asymmetric prescribed and custom validity. The browser Run and four pairs of downloads preserved the applicable coverage, seed flag and fixed-claim withholding.
++- The comparison API now normalizes each lift slope before subtraction when the difference of two finite slopes overflows. The ordinary relative delta, 1%/5% gates and true final-overflow handling remain in place.
++- The new regression reproduced the defect before the correction. Final tests passed 59 targeted individuals across 19 files, 29 npm files and 160 exact-runner individuals across 29 files. The correction awaits independent re-verification. [Evidence and limitations](../verification/m0-reverify-3-2026-11-06/README.md).
+diff --git a/docs/implementation/IMPLEMENTATION_STATUS.md b/docs/implementation/IMPLEMENTATION_STATUS.md
+index 294a988..fb2fab7 100644
+--- a/docs/implementation/IMPLEMENTATION_STATUS.md
++++ b/docs/implementation/IMPLEMENTATION_STATUS.md
+@@ -5,11 +5,11 @@ per-milestone trackers live in [`milestones/`](milestones/); chronological detai
+ [`IMPLEMENTATION_CHANGELOG.md`](IMPLEMENTATION_CHANGELOG.md); the live continuity
+ checkpoint is [`CURRENT_HANDOFF.md`](CURRENT_HANDOFF.md).
+ 
+-**Current implementation revision:** M0 in progress on `impl/m0` at
+-`9a66316f63e22b9633e266716294eee68f9b2498` with the uncommitted protocol,
+-independent audit, AUD-1, AUD-2, REM-3a, REM-3b through REM-3b-R and
+-M0-REVERIFY-1. See
+-[CURRENT_HANDOFF.md](CURRENT_HANDOFF.md) for verification and limitations.
++**Current implementation revision** — M0 in progress on `impl/m0` at
++`6c625a31f43892f71581fac8cde5a02a4ec9f168`, with uncommitted M0-REVERIFY-3
++solver, regression, method, evidence and handoff changes. The inherited tested
++source and evidence are at `e2e62030e49dc7b597fbc4f90981263f8943f2e5`.
++See [CURRENT_HANDOFF.md](CURRENT_HANDOFF.md) for verification and limitations.
+ Plan baseline **v1.0** (2026-10-23), immutable.
+ 
+ ## Milestone rollup
+@@ -125,3 +125,7 @@ Independent entry checks corroborated the tested AUD-1, AUD-2, REM-3a and REM-3b
+ ## M0-REVERIFY-2 — 2026-11-06
+ 
+ Independently exercised the bounds-seed identity and true slope-overflow withholding at the solver, browser Run, project snapshot and result-download boundaries. The neighboring representable slope exposed an intermediate degree-conversion overflow. The direct-radian fallback is implemented and tested, pending independent review. Final targeted tests passed 58 individuals across 19 input files. npm passed 29 files, and the exact combined command passed 159 individuals across 29 input files in 207.75 s. The fixed uncertainty claim remains withheld. G0 remains **BLOCKED** and administrative dispositions stay open. See [M0-REVERIFY-2 evidence](../verification/m0-reverify-2-2026-11-06/README.md).
++
++## M0-REVERIFY-3 — 2026-11-06
++
++Independent review corroborated the inherited 0°/4° slope recovery, true overflow and asymmetric grid validity in the tested scope. A signed relative lift-slope delta could still overflow before normalization. Its correction is implemented and tested, pending independent review. The targeted suite passed 59 individuals across 19 files. npm passed 29 files. The exact combined runner passed 160 individuals across 29 input files in 211.78 s. M0-REVERIFY-4 is the next bounded task. Administrative dispositions stay open and **G0 remains BLOCKED**. [Evidence](../verification/m0-reverify-3-2026-11-06/README.md).
+diff --git a/docs/implementation/ISSUE_AND_DECISION_LOG.md b/docs/implementation/ISSUE_AND_DECISION_LOG.md
+index 467168f..59221bb 100644
+--- a/docs/implementation/ISSUE_AND_DECISION_LOG.md
++++ b/docs/implementation/ISSUE_AND_DECISION_LOG.md
+@@ -1444,3 +1444,7 @@ The same numerical reference can carry either measured or bounds-seed validity,
+ ## M0-REVERIFY-2 — 2026-11-06
+ 
+ The entry Run withheld both comparisons at `S_ref=3e-307 m²` despite four slopes around 1.25–1.28e308 per radian. Converting by multiplying the per-degree slope by 180 before dividing by π overflowed the intermediate. The solver now retains ordinary results and falls back to the direct 0°/4° quotient in radians when needed. At `2e-307 m²` the final slopes exceed the finite range and all affected grid summaries remain withheld. At `2.09e-307 m²` only R2 is usable, and at `2.1e-307 m²` the prescribed comparison passes while the custom comparison remains invalid with no coverage. This is a representability decision within the existing diagnostic. The fixed uncertainty claim stays withheld. [Entry results, regression, decimal oracle and browser evidence](../verification/m0-reverify-2-2026-11-06/README.md).
++
++## M0-REVERIFY-3 — Finite signed grid deltas (2026-11-06)
++
++The inherited 0°/4° quotient recovers from intermediate overflow and withholds genuinely nonfinite slopes on the independent entry fixtures. With opposite-signed slopes near 1.43e308 and −1.58e308 per radian, their subtraction overflows even though the absolute difference normalized by the coarse slope is about 2.1 (about 1.90909 after swapping grids). The API previously withheld both comparisons while reporting each grid as valid. For finite slopes with an overflowing difference, divide each slope by the existing coarse magnitude denominator before subtracting. This is algebraically the same relative delta. The ordinary path, denominator minimum, grid validity and scientific gates are preserved. A genuinely nonfinite final delta continues to withhold the aggregate. The signed reproduction uses constructed coefficient pairs at the exported comparison API. [Independent entry and separate correction evidence](../verification/m0-reverify-3-2026-11-06/README.md).
+diff --git a/docs/implementation/NEXT_CONVERSATION_PROMPT.md b/docs/implementation/NEXT_CONVERSATION_PROMPT.md
+index 6d5a29e..61a946b 100644
+--- a/docs/implementation/NEXT_CONVERSATION_PROMPT.md
++++ b/docs/implementation/NEXT_CONVERSATION_PROMPT.md
+@@ -1,9 +1,11 @@
+-You are the AirFLOW implementation agent in Codex. Use GPT-6.1 Sol with reasoning effort high, selected by the host. Work in `/home/tanvir/Coding/AirFLOW`. Run **M0-REVERIFY-3**, a focused independent review of the M0-REVERIFY-2 two-point slope arithmetic correction.
++You are the AirFLOW implementation agent in Codex. Use GPT-6.1 Sol with reasoning effort high, selected by the host. Work in `/home/tanvir/Coding/AirFLOW`. Run **M0-REVERIFY-4**, an independent review of the signed relative lift-slope delta recovery from M0-REVERIFY-3.
+ 
+-Read applicable AGENTS.md files, `docs/implementation/AGENT_IMPLEMENTATION_PROTOCOL.md`, `docs/START_HERE.md`, `docs/implementation/CURRENT_HANDOFF.md`, SOL dispositions, implementation status, the M0 tracker, decision log and changelog. Apply DATA_CONTRACTS > MASTER > PHASED > TEST MATRIX > original IMPLEMENTATION_HANDOFF. Read the frozen Sol review and independent audit, then the M0-REVERIFY-1 and M0-REVERIFY-2 evidence READMEs, pre-edit records, regression and browser results. Check the branch, full HEAD, status, history, diff and frozen hashes before editing. The tested source and evidence are at `e2e62030e49dc7b597fbc4f90981263f8943f2e5` on `impl/m0`, followed by the documentation-only commit titled `docs(m0): hand off the comparison arithmetic review`. The earlier entry HEAD was `9a66316f63e22b9633e266716294eee68f9b2498`. Preserve all existing changes and frozen evidence.
++Read applicable AGENTS.md files, `docs/implementation/AGENT_IMPLEMENTATION_PROTOCOL.md`, `docs/START_HERE.md` and `docs/implementation/CURRENT_HANDOFF.md`. Apply DATA_CONTRACTS > MASTER > PHASED > TEST MATRIX > original IMPLEMENTATION_HANDOFF. Read SOL dispositions, implementation status, M0 tracker, decision log and changelog, then the frozen Sol review, independent audit and the M0-REVERIFY-2/3 evidence with pre-edit and final records. Check branch, full HEAD, status, history, diff and frozen hashes before editing. M0-REVERIFY-3 entered clean on `impl/m0` at `6c625a31f43892f71581fac8cde5a02a4ec9f168`, a documentation-only follow-up to source/evidence at `e2e62030e49dc7b597fbc4f90981263f8943f2e5`. It left uncommitted changes to `src/vlmSolver.js`, `tests/aud1.test.mjs`, both method docs, implementation records, an archived entry prompt and versioned evidence. Verify the actual tree and preserve existing work. M0-REVERIFY-3 passed 59 targeted individuals across 19 files, 29 npm files and 160 individuals across 29 input files on the exact combined runner in 211.78 s. Its four browser download pairs and independent arithmetic results are in the phase evidence. The scratch replay had zero changed Sol rows or independent measurement groups relative to M0-REVERIFY-2 and retained the same expected stops.
+ 
+-Independently check the 0°/4° quotient near the binary64 finite limit. Reproduce the difference between a nonfinite intermediate with a finite final slope and a genuinely unrepresentable final slope. Derive expectations independently from the saved finite case coefficients or constructed pairs. Exercise unequal per-grid representability, large common offsets and a negative or reversed-order case through the comparison API. Check that prescribed and custom claims, grid reasons, null or omitted metrics, amber status and coverage agree with the applicable grid. Verify the real Run and both downloads for a representable recovery and a withheld control. Confirm ordinary benchmark rows, effective seed identity, fixed uncertainty withholding and the unchanged 0°/4° protocol and 1%/5% gates. Preserve versioned independent pre-edit evidence before any smallest in-scope correction, and verify a correction separately. Document tolerances and limitations.
++Independently derive the relative lift-slope delta from represented 0°/4° inputs. Exercise both grid orders with finite opposite-signed slopes whose difference overflows, a finite ordinary subtraction, and a genuinely nonfinite final delta. Check the existing coarse-denominator convention, its floor and per-grid versus aggregate validity. Exercise both prescribed and custom comparison records with real Run controls and both downloads for a finite slope recovery and a withheld control. Distinguish any constructed API input from the real flow fixtures. Confirm the ordinary benchmarks, effective seed identity, fixed uncertainty withholding and 0°/4° and 1%/5% comparison behavior. Preserve independent pre-edit evidence, document tolerances and limitations, and verify any smallest in-scope correction separately.
+ 
+-Run targeted tests, `npm test` and `node --test --test-isolation=none --test-reporter=tap tests/*.test.mjs`. Report files and individuals separately. M0-REVERIFY-2 passed 58 targeted individuals across 19 files, 29 npm files and 159 individuals in the exact combined runner in 207.75 s. Replay the relevant frozen probes in scratch and record changed rows, expected stops and unreached checks. If the exact runner times out, use the retained REM-3b Sol VLM-V2 traces and corrected test-only Illinois search as controls. Isolate load, record the slow solve's grid, angle, wall and CPU time and V8 evidence, and distinguish any control or workaround from the exact command. If it recurs, ask whether a minimal isolated solve after the captured test prelude reproduces the CPU-bound path under V8 profiling. Complete the other authorized work.
++Run the targeted AUD/REM suite, `npm test`, and the exact `node --test --test-isolation=none --test-reporter=tap tests/*.test.mjs`. Report input files and individual results separately. Replay relevant frozen probes in scratch and report changed rows, expected stops and unreached checks. If the exact runner times out, isolate load and consult the retained REM-3b Sol VLM-V2 traces and corrected test-only Illinois search. Record the slow solve's grid, angle, wall and CPU time and V8 profile evidence. Label every diagnostic run or workaround separately from the exact command. For a recurrence, ask whether a minimal isolated solve after the captured test prelude reproduces the CPU-bound path under V8 profiling. Complete unaffected work.
+ 
+-Keep administrative dispositions open and G0 BLOCKED. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science are outside scope. Do not start M0-6/7 or later milestones, close findings, clear G0, commit, push or merge without separate authorization. Before ending, even if partial, update `CURRENT_HANDOFF.md` with exact revision, pre-existing and new changes, verification, limitations and the next bounded task. Update implementation status, M0 tracker, changelog, decision log, SOL dispositions and affected method documents. Archive the active prompt under `docs/implementation/continuation-prompts/` and replace `NEXT_CONVERSATION_PROMPT.md` with a complete next prompt that includes the model and effort, workspace, reading order, verified state, scope, tests, exclusions, recurring-blocker guidance and these handoff obligations. Finish with the outcome, actual verification, findings and G0 state, clickable absolute links to handoff, evidence and next prompt, and the full copyable next prompt.
++Keep administrative dispositions open and G0 BLOCKED. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science are outside scope. Do not start M0-6/7 or later milestones, close findings, clear G0, commit, push or merge without separate authorization.
++
++Before ending, even if partial, update `CURRENT_HANDOFF.md` with exact revision, pre-existing and new changes, verification, limitations and the next bounded task. Update implementation status, M0 tracker, changelog, decision log, SOL dispositions and affected method docs. Archive the active prompt under `docs/implementation/continuation-prompts/` and replace `NEXT_CONVERSATION_PROMPT.md` with a complete next prompt with model and effort, workspace, reading order, verified state, scope, tests, exclusions, recurring-blocker guidance and these handoff obligations. Finish with outcome, actual verification, findings and G0 state, clickable absolute links to handoff, evidence and next prompt, and the full copyable next prompt.
+diff --git a/docs/implementation/SOL_FINDING_DISPOSITIONS.md b/docs/implementation/SOL_FINDING_DISPOSITIONS.md
+index a7e7096..e4459bd 100644
+--- a/docs/implementation/SOL_FINDING_DISPOSITIONS.md
++++ b/docs/implementation/SOL_FINDING_DISPOSITIONS.md
+@@ -685,3 +685,7 @@ SOL-02 / IA-01 and IA-05: the entry audit re-observed quarantine and exact-flow
+ ## M0-REVERIFY-2 — comparison identity and representability (2026-11-06)
+ 
+ **SOL-02 / IA-01 / IA-05 remain open administratively.** Independently verified the effective seed flag, warning propagation, true slope overflow, per-grid reasons and comparison coverage at the requested boundaries. The newly found intermediate overflow correction is **implemented/tested, pending independent re-verification**. Both downloads retain the identity and validity records relevant to IA-02. SOL-08's fixed claim stays withheld. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science stay open. G0 remains **BLOCKED**. [Evidence](../verification/m0-reverify-2-2026-11-06/README.md).
++
++## M0-REVERIFY-3 — slope and signed delta (2026-11-06)
++
++SOL-02 / IA-01 / IA-05: independently verified the inherited 0°/4° slope fallback, true overflow, grid-specific reasons, effective seed identity and applicable coverage on the recorded entry fixtures. A finite relative lift-slope delta between large opposite-signed slopes was falsely withheld. Its correction is **implemented/tested, pending independent re-verification**. IA-02 project and result downloads agree for the inherited recovery and withholding controls. SOL-08's fixed uncertainty claim stays withheld. Administrative dispositions stay open. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science remain open. **G0 BLOCKED.** [Evidence](../verification/m0-reverify-3-2026-11-06/README.md).
+diff --git a/docs/implementation/milestones/M0.md b/docs/implementation/milestones/M0.md
+index bf7dccf..5722acc 100644
+--- a/docs/implementation/milestones/M0.md
++++ b/docs/implementation/milestones/M0.md
+@@ -325,3 +325,7 @@ Independent entry checks cover AUD-1, AUD-2, REM-3a and REM-3b-R. The comparison
+ ## M0-REVERIFY-2 — 2026-11-06
+ 
+ The independent review confirmed the effective seed flag, per-grid handling of true overflow and serialization of 0°/4° coverage. A newly corrected intermediate overflow now recovers representable slopes at the adjacent fixture. The VLM-V3 1%/5% gates and benchmark gates passed. A passing prescribed comparison supplied no coverage to a failing custom grid. The new arithmetic correction awaits independent review. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science remain open. No M0-6/7 work began. G0 remains **BLOCKED**. [Evidence and replay limits](../../verification/m0-reverify-2-2026-11-06/README.md).
++
++## M0-REVERIFY-3 — 2026-11-06
++
++The inherited slope fallback passed independent arithmetic, solver and browser checks. The signed relative-delta correction passed red/green and final verification and awaits independent review in M0-REVERIFY-4. Project and result downloads agree on the tested grid summaries, applicable coverage and seed provenance. VLM-V3 and ordinary benchmark tests retain the existing gates. IA-06, IA-08, remaining SOL-07 safeguards, proximity and elliptic science stay open. M0-6/7 remains deferred. **G0 BLOCKED.** [Evidence](../../verification/m0-reverify-3-2026-11-06/README.md).
+diff --git a/src/vlmSolver.js b/src/vlmSolver.js
+index e2ff7c8..ac96697 100644
+--- a/src/vlmSolver.js
++++ b/src/vlmSolver.js
+@@ -1469,7 +1469,13 @@ export function resolutionDeltas(coarse, fine) {
+   const cdiCoarse = coarse.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
+   const cdiFine = fine.series.find(p => Math.abs(p.alphaDeg - 4) < 1e-9).cdi;
+   const slopeCoarse = twoPointSlopePerRad(coarse.series), slopeFine = twoPointSlopePerRad(fine.series);
+-  const deltaClAlpha = Math.abs(slopeFine - slopeCoarse) / Math.max(Math.abs(slopeCoarse), 1e-300);
++  const slopeScale = Math.max(Math.abs(slopeCoarse), 1e-300);
++  const slopeDifference = slopeFine - slopeCoarse;
++  // Finite slopes of opposite sign can overflow on subtraction. Normalize
++  // first in that case to preserve a representable relative difference.
++  const deltaClAlpha = Number.isFinite(slopeDifference)
++    ? Math.abs(slopeDifference) / slopeScale
++    : Math.abs(slopeFine / slopeScale - slopeCoarse / slopeScale);
+   const deltaCdi = cdiCoarse === 0 && cdiFine === 0 ? 0 : Math.abs(cdiFine - cdiCoarse) / Math.max(Math.abs(cdiCoarse), 1e-300);
+   if (!Number.isFinite(deltaClAlpha) || !Number.isFinite(deltaCdi))
+     return { valid: false, reasons: ["comparison metrics are nonfinite"], coarse: a, fine: b, deltaClAlpha: null, deltaCdi: null };
+diff --git a/tests/aud1.test.mjs b/tests/aud1.test.mjs
+index 71ddf2f..69577d8 100644
+--- a/tests/aud1.test.mjs
++++ b/tests/aud1.test.mjs
+@@ -124,3 +124,33 @@ test('resolution retains representable slopes when the degree conversion interme
+   assert.equal(uncoveredCustom.badge, 'amber');
+   assert.equal(uncoveredCustom.coverage.coversPlottedLattice, false);
+ });
++
++test('resolution retains a finite relative delta between large slopes of opposite sign', () => {
++  const sweep = clAt4 => ({
++    validity: { status: 'ok' },
++    series: [
++      { alphaDeg: 4, cl: clAt4, cdi: 0.01, validity: { status: 'ok' } },
++      { alphaDeg: 0, cl: 0, cdi: 0, validity: { status: 'ok' } }
++    ]
++  });
++  const positive = sweep(1e307);
++  const negative = sweep(-1.1e307);
++  for (const [coarse, fine, expected] of [
++    [positive, negative, 2.1],
++    [negative, positive, 21 / 11]
++  ]) {
++    const comparison = resolutionDeltas(coarse, fine);
++    assert.equal(comparison.coarse.valid, true);
++    assert.equal(comparison.fine.valid, true);
++    assert.equal(comparison.valid, true);
++    assert.ok(Math.abs(comparison.deltaClAlpha - expected) <= 1e-15);
++    assert.equal(comparison.deltaCdi, 0);
++  }
++
++  const unrepresentable = resolutionDeltas(sweep(0), positive);
++  assert.equal(unrepresentable.coarse.valid, true);
++  assert.equal(unrepresentable.fine.valid, true);
++  assert.equal(unrepresentable.deltaClAlpha, null);
++  assert.equal(unrepresentable.deltaCdi, null);
++  assert.deepEqual(unrepresentable.reasons, ['comparison metrics are nonfinite']);
++});

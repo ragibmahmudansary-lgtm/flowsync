@@ -1,0 +1,294 @@
+{
+  "exit": {
+    "analytic": 0,
+    "api": 0,
+    "app": 1,
+    "edges": 0,
+    "hang": 1,
+    "llt": 0,
+    "measure": 0,
+    "oracle": 0,
+    "panel": 1,
+    "prior-counterexamples": 0,
+    "psd": 0,
+    "sol": 1
+  },
+  "sol": {
+    "rows": 50,
+    "changedVsM0Reverify1Final": [],
+    "changedVsRem3bR": [
+      {
+        "row": 23,
+        "id": "badge-baseline",
+        "changedFields": [
+          "inputIdentity"
+        ]
+      }
+    ],
+    "changedVsFrozenIndependent": [
+      {
+        "row": 3,
+        "id": "OBS1-projection",
+        "changedFields": [
+          "eFreestream"
+        ]
+      },
+      {
+        "row": 8,
+        "id": "scale",
+        "changedFields": [
+          "cdiNearField",
+          "cm",
+          "diagnostics",
+          "gap",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 9,
+        "id": "scale",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cl",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "maxPanelForce",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 10,
+        "id": "scale",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 12,
+        "id": "elliptic-tip",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 13,
+        "id": "elliptic-tip",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cl",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "maxPanelForce",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 14,
+        "id": "elliptic-tip",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cl",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "maxPanelForce",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 15,
+        "id": "elliptic-tip",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "maxPanelForce",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 16,
+        "id": "elliptic-tip",
+        "changedFields": [
+          "cdi",
+          "cdiNearField",
+          "cl",
+          "cm",
+          "diagnostics",
+          "e",
+          "gap",
+          "maxGamma",
+          "maxPanelForce",
+          "minGamma"
+        ]
+      },
+      {
+        "row": 18,
+        "id": "OBS2-counts",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 20,
+        "id": "OBS2-counts",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 21,
+        "id": "OBS2-counts",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 22,
+        "id": "OBS2-counts",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 23,
+        "id": "badge-baseline",
+        "changedFields": [
+          "comparisonValidity",
+          "deltaCdi",
+          "inputIdentity",
+          "r1",
+          "r2",
+          "uncertaintyLabel",
+          "uncertaintyScope"
+        ]
+      },
+      {
+        "row": 27,
+        "id": "custom-resolution",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 34,
+        "id": "alpha",
+        "changedFields": [
+          "cdi",
+          "e",
+          "gap"
+        ]
+      },
+      {
+        "row": 35,
+        "id": "yaw-resolution",
+        "changedFields": [
+          "deltaCdi",
+          "r2"
+        ]
+      },
+      {
+        "row": 36,
+        "id": "yaw-resolution",
+        "changedFields": [
+          "deltaCdi",
+          "r2"
+        ]
+      },
+      {
+        "row": 37,
+        "id": "yaw-resolution",
+        "changedFields": [
+          "deltaCdi",
+          "r1",
+          "r2"
+        ]
+      },
+      {
+        "row": 38,
+        "id": "yaw-resolution",
+        "changedFields": [
+          "deltaCdi",
+          "r1"
+        ]
+      },
+      {
+        "row": 39,
+        "id": "yaw-resolution",
+        "changedFields": [
+          "deltaCdi",
+          "r1",
+          "r2"
+        ]
+      },
+      {
+        "row": 49,
+        "id": "roundoff-floor",
+        "changedFields": [
+          "error"
+        ]
+      },
+      {
+        "row": 50,
+        "id": "roundoff-floor",
+        "changedFields": [
+          "error"
+        ]
+      }
+    ]
+  },
+  "edges": {
+    "changedVsM0Reverify1Final": [],
+    "changedVsRem3bR": [
+      "changedIdentity",
+      "inputIdentity"
+    ]
+  },
+  "fullMeasurementGroupsChangedVsM0Reverify1Final": [],
+  "stdoutEqualToM0Reverify1Final": {
+    "analytic": true,
+    "llt": true,
+    "psd": true,
+    "app": true,
+    "hang": true,
+    "panel": true,
+    "api": true,
+    "measure": true,
+    "oracle": true
+  },
+  "counterexamplesEqualToM0Reverify1Post": true
+}

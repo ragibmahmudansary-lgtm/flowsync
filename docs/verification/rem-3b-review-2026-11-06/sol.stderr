@@ -1,0 +1,13 @@
+file:///tmp/airflow-rem3b-review/src/vlmSolver.js:644
+      throw new Error(
+            ^
+
+Error: Trefftz drag: circulation[0] is not finite (NaN). Missing scientific data must not be evaluated as zero.
+    at validateTrefftzInputs (file:///tmp/airflow-rem3b-review/src/vlmSolver.js:644:13)
+    at trefftzDrag (file:///tmp/airflow-rem3b-review/src/vlmSolver.js:418:3)
+    at file:///tmp/airflow-rem3b-review/docs/verification/sol/probes.mjs:71:34
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

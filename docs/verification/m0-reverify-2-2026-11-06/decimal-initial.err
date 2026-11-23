@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/tanvir/Coding/AirFLOW/docs/verification/m0-reverify-2-2026-11-06/decimal-slope.py", line 61, in <module>
+    "deltaClAlpha": relative(metric["deltaClAlpha"], abs(slopes[fine] - slopes[coarse]) / abs(slopes[coarse])),
+                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tanvir/Coding/AirFLOW/docs/verification/m0-reverify-2-2026-11-06/decimal-slope.py", line 22, in relative
+    assert error <= tolerance, (actual, expected, error)
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: (0.002604545932077936, Decimal('0.002604545932077964702215300543732755426638001775213939407291090758918433007356091686159'), Decimal('1.106702475911875712877878236482043085751321353094625043648355634340065785570271479199E-14'))

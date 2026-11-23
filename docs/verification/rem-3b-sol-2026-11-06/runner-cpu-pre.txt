@@ -1,0 +1,119 @@
+Fri Nov  6 00:04:56 UTC 2026
+      7       2       00:00 00:00:00  0.0  7584 do_sigtimedwait.isra.0   timeout
+      9       7       00:00 00:00:00  0.0 18656 -                        node
+tail: cannot open '/home/tanvir/Coding/AirFLOW/docs/verification/rem-3b-sol-2026-11-06/runner-callback-pre.txt' for reading: No such file or directory
+Fri Nov  6 00:05:06 UTC 2026
+      7       2       00:10 00:00:00  0.0  7584 do_sigtimedwait.isra.0   timeout
+      9       7       00:10 00:00:10  108 182432 -                       MainThread
+1793923506328 end aud1.test.mjs AUD-1 rejects missing, quarantined and nonfinite comparison points
+1793923506328 begin aud1.test.mjs AUD-1 custom comparison with quarantined zero degree is withheld
+Fri Nov  6 00:05:16 UTC 2026
+      7       2       00:20 00:00:00  0.0  7584 do_sigtimedwait.isra.0   timeout
+      9       7       00:20 00:00:21  107 395908 -                       MainThread
+1793923512100 end rem3b-cap-boundary.test.mjs dense solve refuses 2049 panels before solving
+1793923512101 begin rem3b-cap-boundary.test.mjs dense solver accepts the 2048-panel operational boundary
+Fri Nov  6 00:05:26 UTC 2026
+      7       2       00:30 00:00:00  0.0  7584 do_sigtimedwait.isra.0   timeout
+      9       7       00:30 00:00:31  106 411708 -                       MainThread
+1793923523347 end solFindings.test.mjs SOL-02: prescribed R1/R2 check runs the exact plotted flow and records its identity
+1793923523348 begin solFindings.test.mjs SOL-02: zero-yaw prescribed check is green with the measured deltas
+Fri Nov  6 00:05:36 UTC 2026
+      7       2       00:40 00:00:00  0.0  7584 do_sigtimedwait.isra.0   timeout
+      9       7       00:40 00:00:42  105 411524 -                       MainThread
+1793923535043 end solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793923535043 begin solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+Fri Nov  6 00:05:46 UTC 2026
+      7       2       00:50 00:00:00  0.0  7556 do_sigtimedwait.isra.0   timeout
+      9       7       00:50 00:00:52  104 378436 -                       MainThread
+1793923535043 end solFindings.test.mjs SOL-03: validated elliptic lattice 4x32 keeps its approved values and stays usable
+1793923535043 begin solFindings.test.mjs SOL-03: elliptic 8x64 is scale invariant and inside the validated envelope (OBS-REM-1-1 re-made on M0-4 evidence)
+Fri Nov  6 00:05:56 UTC 2026
+      7       2       01:00 00:00:00  0.0  7556 do_sigtimedwait.isra.0   timeout
+      9       7       01:00 00:01:02  103 378508 -                       MainThread
+1793923553585 end solFindings.test.mjs SOL-03: near-field/Trefftz inconsistency beyond the VLM-V2b gate quarantines the planar case (OBS-M0-2-2)
+1793923553586 begin solFindings.test.mjs SOL-03: quarantine propagates from the point to the sweep
+Fri Nov  6 00:06:06 UTC 2026
+      7       2       01:10 00:00:00  0.0  7556 do_sigtimedwait.isra.0   timeout
+      9       7       01:10 00:01:12  103 383472 -                       MainThread
+1793923565940 end solFindings.test.mjs SOL-09: trim is the root of the FITTED C_m line — round-trip identity inside the sweep with positive lift
+1793923565940 begin solFindings.test.mjs SOL-09: trim outside the sampled sweep is explicitly 'not determined' (frozen -42.7/-64.3 class)
+Fri Nov  6 00:06:16 UTC 2026
+      7       2       01:20 00:00:00  0.0  7556 do_sigtimedwait.isra.0   timeout
+      9       7       01:20 00:01:22  102 383476 -                       MainThread
+1793923570407 end solFindings.test.mjs SOL-09: the in-sweep trim gate is inclusive at the sampled boundary and exclusive beyond it
+1793923570407 begin solFindings.test.mjs SOL-09: quarantined points are excluded from fits (converged-point rule, DEC-M0-5-1)
+Fri Nov  6 00:06:26 UTC 2026
+      7       2       01:30 00:00:00  0.0  7556 do_sigtimedwait.isra.0   timeout
+      9       7       01:30 00:01:32  102 383564 -                       MainThread
+1793923583934 end solFindings.test.mjs SOL-09: the adjacent-pair band is scale-free end-to-end (no amplitude fade)
+1793923583935 begin solFindings.test.mjs SOL-09: the VLM-V3 badge inputs are cd0/cm0-invariant (custom lattice path)
+Fri Nov  6 00:06:36 UTC 2026
+      7       2       01:40 00:00:00  0.0  7376 do_sigtimedwait.isra.0   timeout
+      9       7       01:40 00:01:42  102 559048 -                       MainThread
+1793923591225 end vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793923591225 begin vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+Fri Nov  6 00:06:46 UTC 2026
+      7       2       01:50 00:00:00  0.0  3912 do_sigtimedwait.isra.0   timeout
+      9       7       01:50 00:01:53  102 574408 -                       MainThread
+1793923602325 end vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793923602325 begin vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+Fri Nov  6 00:06:56 UTC 2026
+      7       2       02:00 00:00:00  0.0  3912 do_sigtimedwait.isra.0   timeout
+      9       7       02:00 00:02:03  102 586336 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:06 UTC 2026
+      7       2       02:10 00:00:00  0.0  3912 do_sigtimedwait.isra.0   timeout
+      9       7       02:10 00:02:13  102 592252 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:16 UTC 2026
+      7       2       02:20 00:00:00  0.0  3912 do_sigtimedwait.isra.0   timeout
+      9       7       02:20 00:02:23  102 458444 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:26 UTC 2026
+      7       2       02:30 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       02:30 00:02:33  101 454736 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:36 UTC 2026
+      7       2       02:40 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       02:40 00:02:43  101 452984 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:46 UTC 2026
+      7       2       02:50 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       02:50 00:02:53  101 453132 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:07:56 UTC 2026
+      7       2       03:00 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       03:00 00:03:03  101 453528 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:08:06 UTC 2026
+      7       2       03:10 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       03:10 00:03:13  101 453532 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:08:16 UTC 2026
+      7       2       03:20 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       03:20 00:03:23  101 453732 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:08:26 UTC 2026
+      7       2       03:30 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       03:30 00:03:33  101 453736 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:08:36 UTC 2026
+      7       2       03:40 00:00:00  0.0  3896 do_sigtimedwait.isra.0   timeout
+      9       7       03:40 00:03:43  101 453736 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+Fri Nov  6 00:08:46 UTC 2026
+      7       2       03:50 00:00:00  0.0  4592 do_sigtimedwait.isra.0   timeout
+      9       7       03:50 00:03:53  101 453736 -                       MainThread
+1793923609055 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923609062 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)

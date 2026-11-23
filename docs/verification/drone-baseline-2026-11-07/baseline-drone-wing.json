@@ -1,0 +1,91 @@
+{
+  "case": "drone-wing",
+  "fixture": "drone",
+  "rule": "300 <= |raw z centroid| < 990 mm (excludes centre pod and winglets)",
+  "node": "v24.21.0",
+  "loadavgStart": 0.8,
+  "stages": {
+    "parse": {
+      "ms": 112.1,
+      "rssMB": 334.9,
+      "heapUsedMB": 5.3
+    },
+    "map": {
+      "ms": 271.1,
+      "rssMB": 365.5,
+      "heapUsedMB": 5.7
+    },
+    "recognition": {
+      "ms": 164.8,
+      "rssMB": 518.2,
+      "heapUsedMB": 186.9
+    },
+    "topology": {
+      "ms": 4183,
+      "rssMB": 1126.3,
+      "heapUsedMB": 705.1
+    }
+  },
+  "region": {
+    "triangleCount": 448142,
+    "regionIndexSha256": "ee5fecd6a658ad695bd8a98ccca8b1d2ebf5d81cdd4d84712833008b60d0c935"
+  },
+  "recognition": {
+    "valid": true,
+    "triangleCount": 448142,
+    "triangleAreaM2": 0.9091068270877128,
+    "projectedAreaSumM2": 0.858875999478397,
+    "bounds": {
+      "min": [
+        -0.4755291748046875,
+        -0.99194580078125,
+        0.010080183982849121
+      ],
+      "max": [
+        0.08595191955566406,
+        0.99194580078125,
+        0.05286020278930664
+      ],
+      "size": [
+        0.5614810943603515,
+        1.9838916015625,
+        0.04278001880645752
+      ]
+    },
+    "spanM": 1.9838916015625,
+    "areaM2": 0.6402977143226684,
+    "macM": 0.33629938791468644,
+    "rootChordM": 0.3950041198730469,
+    "tipChordM": 0.20296776962280272,
+    "aspectRatio": 6.146868556158584,
+    "sweepDeg": 19.577613324206034,
+    "dihedralDeg": 0.0009110267071037781,
+    "xLeadingRootM": -0.4755291748046875,
+    "zRootM": 0.0337989764213562,
+    "aeroCenterXM": -0.2902213282322873,
+    "warnings": [],
+    "stationCount": 120,
+    "reportJsonBytes": 22390
+  },
+  "topology": {
+    "uniqueVertices": 701333,
+    "uniqueEdges": 2104251,
+    "manifoldEdges": 2104245,
+    "boundaryEdges": 6,
+    "nonManifoldEdges": 0,
+    "duplicateTriangles": 0,
+    "degenerateTriangles": 0,
+    "componentCount": 10,
+    "largestComponents": [
+      345186,
+      271968,
+      271968,
+      214040,
+      116304,
+      63390,
+      63390,
+      28214
+    ]
+  },
+  "loadavgEnd": 0.81
+}

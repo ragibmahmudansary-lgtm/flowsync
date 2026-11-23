@@ -1,0 +1,40 @@
+1793923960573 begin vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793923960578 end vlmOracles.test.mjs oracle self-check: Glauert lifting-line reproduces the documented C_Lalpha values
+1793923960579 begin vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793923962100 end vlmOracles.test.mjs review record §4 reproduction: multi-row C_Lalpha and panel ratios match the coordinator measurements
+1793923962101 begin vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793923962136 end vlmOracles.test.mjs review record §4 reproduction: single-row table from an independently built lattice
+1793923962136 begin vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923963165 end vlmOracles.test.mjs VLM-V1: C_Lalpha matches Glauert lifting-line within 5% at R2 (AR >= 5)
+1793923963165 begin vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+1793923995147 end vlmOracles.test.mjs VLM-V2: Trefftz C_Di matches lifting-line C_Di at matched C_L (AR 6, 8, 12 at R2)
+1793923995155 begin vlmOracles.test.mjs VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+1793923995687 end vlmOracles.test.mjs VLM-V2b: near-field drag equals general Trefftz drag for an unswept planar wing (wake >= 10 b)
+1793923995687 begin vlmOracles.test.mjs VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+1793923997586 end vlmOracles.test.mjs VLM-V2c: multi-surface Trefftz (wing + H-tail) agrees within 1%; the y-only form must fail
+1793923997587 begin vlmOracles.test.mjs VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+1793923998085 end vlmOracles.test.mjs VLM-V2d: exact elliptic case gives e in [0.99, 1.07] and D > 0 (AR 6, 8 at N >= 32)
+1793923998086 begin vlmOracles.test.mjs VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+1793923999148 end vlmOracles.test.mjs VLM-V3: R1 -> R2 resolution consistency and the panel aspect guard
+1793923999149 begin vlmOracles.test.mjs VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+1793924000456 end vlmOracles.test.mjs VLM-V1b: swept and tapered wings match Helmbold-DATCOM within 5%
+1793924000457 begin vlmOracles.test.mjs zero lift gives exactly zero drag without raising
+1793924000469 end vlmOracles.test.mjs zero lift gives exactly zero drag without raising
+1793924000469 begin vlmOracles.test.mjs negative angle of attack: drag is even in alpha and strictly positive
+1793924000499 end vlmOracles.test.mjs negative angle of attack: drag is even in alpha and strictly positive
+1793924000499 begin vlmOracles.test.mjs degenerate zero-width panels contribute nothing and stay finite
+1793924000520 end vlmOracles.test.mjs degenerate zero-width panels contribute nothing and stay finite
+1793924000521 begin vlmOracles.test.mjs Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+1793924000565 end vlmOracles.test.mjs Trefftz drag stays non-negative on 200 sampled circulation vectors (regression, not a PSD proof)
+1793924000565 begin vlmOracles.test.mjs wake-length convergence: near-field approaches Trefftz monotonically
+1793924000634 end vlmOracles.test.mjs wake-length convergence: near-field approaches Trefftz monotonically
+1793924000634 begin vlmOracles.test.mjs VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+1793924000665 end vlmOracles.test.mjs VLM-V5: scale invariance 1e-3..1e3 on C_L, C_Di, C_m and local circulation (M0-4)
+1793924000665 begin vlmOracles.test.mjs VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+1793924000776 end vlmOracles.test.mjs VLM-V5: the auto-N prescription lattice is scale invariant (M0-4, second root cause)
+1793924000777 begin vlmOracles.test.mjs M0-4: analytic kernel references hold across scales (independent reference behavior)
+1793924000777 end vlmOracles.test.mjs M0-4: analytic kernel references hold across scales (independent reference behavior)
+1793924000777 begin vlmOracles.test.mjs near-field/Trefftz agreement is robust across spanwise resolution
+1793924000921 end vlmOracles.test.mjs near-field/Trefftz agreement is robust across spanwise resolution
+1793924000922 begin vlmOracles.test.mjs swept wing: near-field/Trefftz difference is reported, not gated (RB-07)
+1793924000929 end vlmOracles.test.mjs swept wing: near-field/Trefftz difference is reported, not gated (RB-07)

@@ -1,0 +1,14 @@
+## impl/m0...origin/impl/m0
+ M CALCULATION_PIPELINE.md
+ M MVP_METHODOLOGY.md
+ M docs/implementation/CURRENT_HANDOFF.md
+ M docs/implementation/IMPLEMENTATION_CHANGELOG.md
+ M docs/implementation/IMPLEMENTATION_STATUS.md
+ M docs/implementation/ISSUE_AND_DECISION_LOG.md
+ M docs/implementation/NEXT_CONVERSATION_PROMPT.md
+ M docs/implementation/SOL_FINDING_DISPOSITIONS.md
+ M docs/implementation/milestones/M0.md
+ M src/vlmSolver.js
+ M tests/aud1.test.mjs
+?? docs/implementation/continuation-prompts/m0-reverify-3-entry-2026-11-06.md
+?? docs/verification/m0-reverify-3-2026-11-06/

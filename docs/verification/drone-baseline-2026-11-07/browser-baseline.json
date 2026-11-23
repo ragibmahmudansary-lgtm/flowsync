@@ -1,0 +1,31 @@
+{
+  "environment": "Claude in Chrome (user's Brave), http://localhost:4173/ served by `npm start`; production code at HEAD 07bd2c7 (no code change in P2-0). Files loaded through the app's own #stlFileInput (fetch in page -> File -> DataTransfer -> change event); unit select set to millimeters (0.001); axis mapping default (X, Z, Y).",
+  "wing": {
+    "file": "B737 aerofoil attempt.stl",
+    "geometryBadge": "2,890 triangles",
+    "importTimeMs": "not timed (the first timing script timed out because the status line moved on to 'VLM solved...'); import finished within the 45 s tool window and the page was responsive",
+    "defaultMass": "42,600 kg at the mesh centroid, with the caution 'The 42,600 kg demo airframe mass is an editable assumption' shown (see finding F-1 in README)",
+    "beforeAssignment": { "referenceBadge": "Bounds seed - verify", "S_m2": 0.026, "b_m": 0.300, "MAC_m": 0.100, "meshQuality": "Watertight mesh", "solver": "VLM R1 current (17 cases, 64 panels)" },
+    "assignment": "Face selection, region grow, normal limit 90 deg, one click on the upper surface: 1,326 of 2,890 triangles (upper skin region). Assigned as wing.",
+    "currentRecognition": { "referenceBadge": "Recognized wing", "S_m2": 0.025, "b_m": 0.300, "MAC_m": 0.084, "rootChord_m": 0.082, "tipChord_m": 0.083, "sweep_deg": 6.43, "dihedral_deg": -1.91, "summaryRow": "1,326 faces, 0.3 m span, 0.02 m2" },
+    "note": "Root chord 0.082 m is the mid-span chord (the code takes the root at mid-range for a one-sided span); the oracle root chord is 0.1031 m. No half-wing warning is shown. Stability: static margin 'not determined' (wing-alone run, assumed mass).",
+    "screenshot": "screenshots/browser-wing-upper-skin-assigned.jpg"
+  },
+  "drone": {
+    "file": "Dron w100.stl",
+    "fetchMs": 110,
+    "importToGeometryBadgeMs": 11083,
+    "importToVlmSolvedStatusMs": "about 12000 (status read at 11,981 ms after dispatch showed 'VLM solved 17 cases with 384 panels (R1)')",
+    "geometryBadge": "1,402,832 triangles",
+    "pageResponsiveAfterLoad": "requestAnimationFrame callback ran after 29 ms",
+    "jsHeapAfterLoadMB": { "used": 553, "total": 595 },
+    "meshWarnings": ["6 boundary edges detected; volume properties may be approximate.", "10 disconnected components detected.", "42,600 kg demo caution (before the mass edit)"],
+    "massEdit": "Mass row edited from 42,600 kg to 1 kg (placeholder). Inertia then shows 0, 0, 0 (rounded display).",
+    "beforeAssignment": { "referenceBadge": "Bounds seed - verify", "S_m2": 0.197, "b_m": 2.151, "MAC_m": 0.104 },
+    "assignment": "Face selection, region grow, normal limit 90 deg, face cap 600000, one click on the left wing upper surface: 109,637 triangles selected in under 4 s (pick plus growth), assigned as wing.",
+    "currentRecognition": { "referenceBadge": "Recognized wing", "S_m2": 0.249, "b_m": 0.836, "MAC_m": 0.315, "rootChord_m": 0.292, "tipChord_m": 0.299, "sweep_deg": 25.19, "dihedral_deg": 0.44, "summaryRow": "109,637 faces, 0.84 m span, 0.25 m2" },
+    "note": "A one-sided partial selection is taken as the reference wing with badge 'Recognized wing' and no warning. There is no oracle for this particular selection (the oracle cases are the two Node region rules).",
+    "jsHeapAfterAssignMB": 584,
+    "screenshots": ["screenshots/browser-drone-loaded-bounds-seed.jpg", "screenshots/browser-drone-one-panel-assigned.jpg"]
+  }
+}

@@ -1,0 +1,202 @@
+TAP version 13
+# Subtest: IA-05 control: identical inputs give an identical identity
+ok 1 - IA-05 control: identical inputs give an identical identity
+  ---
+  duration_ms: 4155.557578
+  type: 'test'
+  ...
+# Subtest: IA-05: changing velocityMS changes the input identity
+ok 2 - IA-05: changing velocityMS changes the input identity
+  ---
+  duration_ms: 3396.650482
+  type: 'test'
+  ...
+# Subtest: IA-05: changing densityKgM3 changes the input identity
+ok 3 - IA-05: changing densityKgM3 changes the input identity
+  ---
+  duration_ms: 3659.375781
+  type: 'test'
+  ...
+# Subtest: IA-05: changing refAreaM2 changes the input identity
+ok 4 - IA-05: changing refAreaM2 changes the input identity
+  ---
+  duration_ms: 3573.076914
+  type: 'test'
+  ...
+# Subtest: IA-05: changing refChordM changes the input identity
+ok 5 - IA-05: changing refChordM changes the input identity
+  ---
+  duration_ms: 3337.451552
+  type: 'test'
+  ...
+# Subtest: IA-05: changing referencePoint changes the input identity
+ok 6 - IA-05: changing referencePoint changes the input identity
+  ---
+  duration_ms: 3563.18025
+  type: 'test'
+  ...
+# Subtest: IA-05: changing betaDeg changes the input identity
+ok 7 - IA-05: changing betaDeg changes the input identity
+  ---
+  duration_ms: 3202.037314
+  type: 'test'
+  ...
+# Subtest: IA-05: changing cd0 changes the input identity
+ok 8 - IA-05: changing cd0 changes the input identity
+  ---
+  duration_ms: 3236.744851
+  type: 'test'
+  ...
+# Subtest: IA-05: changing cm0 changes the input identity
+ok 9 - IA-05: changing cm0 changes the input identity
+  ---
+  duration_ms: 3384.771774
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wakeLengthFactor changes the input identity
+ok 10 - IA-05: changing wakeLengthFactor changes the input identity
+  ---
+  duration_ms: 3199.644036
+  type: 'test'
+  ...
+# Subtest: IA-05: changing seedReferencePlaceholder changes the input identity
+ok 11 - IA-05: changing seedReferencePlaceholder changes the input identity
+  ---
+  duration_ms: 3293.860072
+  type: 'test'
+  ...
+# Subtest: IA-05: changing chordwiseRows changes the input identity
+ok 12 - IA-05: changing chordwiseRows changes the input identity
+  ---
+  duration_ms: 12944.205639
+  type: 'test'
+  ...
+# Subtest: IA-05: changing spanwisePanels changes the input identity
+ok 13 - IA-05: changing spanwisePanels changes the input identity
+  ---
+  duration_ms: 3255.074916
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing name changes the input identity
+ok 14 - IA-05: changing wing name changes the input identity
+  ---
+  duration_ms: 3083.786037
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing spanM changes the input identity
+ok 15 - IA-05: changing wing spanM changes the input identity
+  ---
+  duration_ms: 4099.63233
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing rootChordM changes the input identity
+ok 16 - IA-05: changing wing rootChordM changes the input identity
+  ---
+  duration_ms: 3189.625519
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing tipChordM changes the input identity
+ok 17 - IA-05: changing wing tipChordM changes the input identity
+  ---
+  duration_ms: 4607.098311
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing sweepDeg changes the input identity
+ok 18 - IA-05: changing wing sweepDeg changes the input identity
+  ---
+  duration_ms: 2972.12766
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing dihedralDeg changes the input identity
+ok 19 - IA-05: changing wing dihedralDeg changes the input identity
+  ---
+  duration_ms: 3027.973509
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing zRootM changes the input identity
+ok 20 - IA-05: changing wing zRootM changes the input identity
+  ---
+  duration_ms: 1745.797418
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard name changes the input identity
+ok 21 - IA-05: changing canard name changes the input identity
+  ---
+  duration_ms: 1648.784517
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard spanM changes the input identity
+ok 22 - IA-05: changing canard spanM changes the input identity
+  ---
+  duration_ms: 7520.78298
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard rootChordM changes the input identity
+ok 23 - IA-05: changing canard rootChordM changes the input identity
+  ---
+  duration_ms: 1250.809637
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard tipChordM changes the input identity
+ok 24 - IA-05: changing canard tipChordM changes the input identity
+  ---
+  duration_ms: 1615.17702
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard sweepDeg changes the input identity
+ok 25 - IA-05: changing canard sweepDeg changes the input identity
+  ---
+  duration_ms: 1649.8793
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard dihedralDeg changes the input identity
+ok 26 - IA-05: changing canard dihedralDeg changes the input identity
+  ---
+  duration_ms: 1632.225852
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard zRootM changes the input identity
+ok 27 - IA-05: changing canard zRootM changes the input identity
+  ---
+  duration_ms: 1716.692884
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing incidenceDeg changes the input identity
+ok 28 - IA-05: changing wing incidenceDeg changes the input identity
+  ---
+  duration_ms: 1796.348393
+  type: 'test'
+  ...
+# Subtest: IA-05: changing wing xLeadingRootM changes the input identity
+ok 29 - IA-05: changing wing xLeadingRootM changes the input identity
+  ---
+  duration_ms: 1720.660295
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard xLeadingRootM to -4.1 changes the input identity
+ok 30 - IA-05: changing canard xLeadingRootM to -4.1 changes the input identity
+  ---
+  duration_ms: 1729.807608
+  type: 'test'
+  ...
+# Subtest: IA-05: changing canard incidenceDeg changes the input identity
+ok 31 - IA-05: changing canard incidenceDeg changes the input identity
+  ---
+  duration_ms: 1747.548654
+  type: 'test'
+  ...
+# Subtest: IA-05 known limit: explicit 8-strip canard incidence is refused by the Trefftz guard
+ok 32 - IA-05 known limit: explicit 8-strip canard incidence is refused by the Trefftz guard
+  ---
+  duration_ms: 7447.256967
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111699.788932

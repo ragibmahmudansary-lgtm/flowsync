@@ -1,0 +1,23 @@
+{
+  "sol_rows": 50,
+  "differences_from_independent": [
+    {
+      "row": 23,
+      "id": "badge-baseline",
+      "keys": [
+        "r1",
+        "uncertaintyScope",
+        "comparisonValidity",
+        "r2",
+        "uncertaintyLabel",
+        "inputIdentity"
+      ]
+    }
+  ],
+  "differences_from_rem3a": [],
+  "independent_edge_changed_keys": [
+    "inputIdentityCollision",
+    "inputIdentity",
+    "changedIdentity"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "invalidSolve": {
+    "validity": {
+      "status": "invalid",
+      "messages": [
+        "Near-field/Trefftz inconsistency -1.14 % exceeds the approved VLM-V2b gate 1 %: circulation accuracy is not established (SOL-03, OBS-M0-2-2)."
+      ]
+    },
+    "cl": 0.9448874856350236,
+    "cdi": 0.03626370365757923
+  },
+  "exportsFromInvalid": [
+    {
+      "name": "airflow-vlm-results.json",
+      "content": "{\n  \"schema\": \"airflow.vlm-results\",\n  \"version\": 1,\n  \"method\": null,\n  \"limitations\": null,\n  \"validity\": {\n    \"status\": \"invalid\",\n    \"messages\": [\n      \"Near-field/Trefftz inconsistency -1.14 % exceeds the approved VLM-V2b gate 1 %: circulation accuracy is not established (SOL-03, OBS-M0-2-2).\"\n    ]\n  },\n  \"provenance\": null,\n  \"uncertaintyLabel\": null,\n  \"uncertaintyScope\": null,\n  \"resolution\": null,\n  \"resolutionCheck\": null,\n  \"diagnostics\": null,\n  \"coefficientNotes\": {\n    \"cd\": \"CDi plus assumed constant CD0\",\n    \"cm\": \"includes user-entered constant CM0; reference point in provenance inputs\"\n  },\n  \"series\": [\n    {\n      \"alphaDeg\": 10,\n      \"validity\": {\n        \"status\": \"invalid\",\n        \"messages\": [\n          \"Near-field/Trefftz inconsistency -1.14 % exceeds the approved VLM-V2b gate 1 %: circulation accuracy is not established (SOL-03, OBS-M0-2-2).\"\n        ]\n      },\n      \"availability\": \"withheld\",\n      \"cl\": null,\n      \"cdi\": null,\n      \"cd\": null,\n      \"cm\": null,\n      \"liftN\": null,\n      \"dragN\": null,\n      \"momentNm\": null\n    }\n  ]\n}",
+      "type": "application/json"
+    }
+  ],
+  "drawsFromInvalid": [
+    {
+      "canvas": "polar",
+      "panels": [
+        {
+          "title": "Results unavailable — quarantined solution (see solver diagnostics)",
+          "series": []
+        }
+      ]
+    },
+    {
+      "canvas": "pitch",
+      "panels": [
+        {
+          "title": "Results unavailable — quarantined solution (see solver diagnostics)",
+          "series": []
+        }
+      ]
+    }
+  ],
+  "redrawsAfterInvalidation": [
+    {
+      "canvas": "polar",
+      "panels": [
+        {
+          "title": "Run VLM to update",
+          "series": []
+        }
+      ]
+    },
+    {
+      "canvas": "pitch",
+      "panels": [
+        {
+          "title": "Run VLM to update",
+          "series": []
+        }
+      ]
+    },
+    {
+      "canvas": "polar",
+      "panels": [
+        {
+          "title": "Run VLM to update",
+          "series": []
+        }
+      ]
+    },
+    {
+      "canvas": "pitch",
+      "panels": [
+        {
+          "title": "Run VLM to update",
+          "series": []
+        }
+      ]
+    }
+  ],
+  "canvasesUpdatedWithUndeterminedPitch": [
+    "polar",
+    "pitch"
+  ],
+  "autoHighAR": {
+    "ar": 100000,
+    "N": 400000
+  }
+}

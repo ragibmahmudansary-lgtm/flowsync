@@ -1,0 +1,353 @@
+{
+  "constructed": [
+    {
+      "id": "signed-positive-coarse",
+      "expectedSlopes": [
+        1.7188733853924696e+308,
+        -5.729577951308232e+307
+      ],
+      "differenceOverflows": true,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 1.3333333333333333,
+      "observedLiftDelta": 1.3333333333333333,
+      "observedDragDelta": 0.076923076923077,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "signed-negative-coarse",
+      "expectedSlopes": [
+        -5.729577951308232e+307,
+        1.7188733853924696e+308
+      ],
+      "differenceOverflows": true,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 3.9999999999999996,
+      "observedLiftDelta": 4,
+      "observedDragDelta": 0.0714285714285715,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "ordinary-negative",
+      "expectedSlopes": [
+        -4.297183463481175,
+        -5.156620156177409
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 0.1999999999999999,
+      "observedLiftDelta": 0.19999999999999984,
+      "observedDragDelta": 0.05555555555555561,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "ordinary-negative-swapped",
+      "expectedSlopes": [
+        -5.156620156177409,
+        -4.297183463481175
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 0.1666666666666666,
+      "observedLiftDelta": 0.16666666666666655,
+      "observedDragDelta": 0.05263157894736847,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "floor-active",
+      "expectedSlopes": [
+        5.013380707394703e-301,
+        -1.0026761414789407e-300
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": true,
+      "expectedLiftDelta": 1.504014212218411,
+      "observedLiftDelta": 1.5040142122184108,
+      "observedDragDelta": 0,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "floor-inactive-swapped",
+      "expectedSlopes": [
+        -1.0026761414789407e-300,
+        5.013380707394703e-301
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 1.5,
+      "observedLiftDelta": 1.4999999999999998,
+      "observedDragDelta": 0,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "zero-coarse-finite",
+      "expectedSlopes": [
+        0.0,
+        -1.1459155902616464e-300
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": true,
+      "expectedLiftDelta": 1.1459155902616462,
+      "observedLiftDelta": 1.1459155902616465,
+      "observedDragDelta": 0,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "finite-large-final-delta",
+      "expectedSlopes": [
+        0.0,
+        171887338.53924698
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": true,
+      "expectedLiftDelta": 1.7188733853924696e+308,
+      "observedLiftDelta": 1.7188733853924698e+308,
+      "observedDragDelta": 0.076923076923077,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "nonfinite-final-delta",
+      "expectedSlopes": [
+        0.0,
+        186211283.41751754
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": true,
+      "expectedLiftDelta": null,
+      "observedLiftDelta": null,
+      "observedDragDelta": null,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": [
+        "comparison metrics are nonfinite"
+      ]
+    },
+    {
+      "id": "nonfinite-final-delta-swapped",
+      "expectedSlopes": [
+        186211283.41751754,
+        0.0
+      ],
+      "differenceOverflows": false,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": 1.0,
+      "observedLiftDelta": 1,
+      "observedDragDelta": 0.0714285714285715,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": true,
+        "reasons": []
+      },
+      "reasons": []
+    },
+    {
+      "id": "fine-slope-unrepresentable",
+      "expectedSlopes": [
+        1.7188733853924696e+308,
+        null
+      ],
+      "differenceOverflows": true,
+      "usesCoarseFloor": false,
+      "expectedLiftDelta": null,
+      "observedLiftDelta": null,
+      "observedDragDelta": null,
+      "coarse": {
+        "valid": true,
+        "reasons": []
+      },
+      "fine": {
+        "valid": false,
+        "reasons": [
+          "fine two-point lift slope is nonfinite"
+        ]
+      },
+      "reasons": [
+        "fine two-point lift slope is nonfinite"
+      ]
+    }
+  ],
+  "flow": [
+    {
+      "id": "ordinary",
+      "grids": [
+        {
+          "grid": "R1",
+          "claim": "prescribed R1 vs R2",
+          "badge": "green",
+          "coverage": true,
+          "deltaClAlpha": 0.002604545932077925,
+          "deltaCdi": 0.010512702176665865
+        },
+        {
+          "grid": "custom",
+          "claim": "current lattice vs 2x refined lattice",
+          "badge": "amber",
+          "coverage": true,
+          "deltaClAlpha": 0.01727881816338001,
+          "deltaCdi": 0.006221550604310068
+        }
+      ]
+    },
+    {
+      "id": "yawed-ordinary",
+      "grids": [
+        {
+          "grid": "R1",
+          "claim": "prescribed R1 vs R2",
+          "badge": "amber",
+          "coverage": true,
+          "deltaClAlpha": 0.01752425309329866,
+          "deltaCdi": 0.05170673842746727
+        },
+        {
+          "grid": "custom",
+          "claim": "current lattice vs 2x refined lattice",
+          "badge": "amber",
+          "coverage": true,
+          "deltaClAlpha": 0.024598636069758848,
+          "deltaCdi": 0.00022904167260673846
+        }
+      ]
+    },
+    {
+      "id": "slope-recovery",
+      "grids": [
+        {
+          "grid": "R1",
+          "claim": "prescribed R1 vs R2",
+          "badge": "green",
+          "coverage": true,
+          "deltaClAlpha": 0.0026045459320779354,
+          "deltaCdi": 0.010512702176666073
+        },
+        {
+          "grid": "custom",
+          "claim": "current lattice vs 2x refined lattice",
+          "badge": "amber",
+          "coverage": true,
+          "deltaClAlpha": 0.01727881816338002,
+          "deltaCdi": 0.006221550604309943
+        }
+      ]
+    },
+    {
+      "id": "prescribed-withheld",
+      "grids": [
+        {
+          "grid": "R1",
+          "claim": "withheld",
+          "badge": "amber",
+          "coverage": false,
+          "deltaClAlpha": null,
+          "deltaCdi": null
+        },
+        {
+          "grid": "custom",
+          "claim": "withheld",
+          "badge": "amber",
+          "coverage": false,
+          "deltaClAlpha": null,
+          "deltaCdi": null
+        }
+      ]
+    },
+    {
+      "id": "custom-split",
+      "grids": [
+        {
+          "grid": "R1",
+          "claim": "prescribed R1 vs R2",
+          "badge": "green",
+          "coverage": true,
+          "deltaClAlpha": 0.0026045459320780855,
+          "deltaCdi": 0.010512702176666045
+        },
+        {
+          "grid": "custom",
+          "claim": "withheld",
+          "badge": "amber",
+          "coverage": false,
+          "deltaClAlpha": null,
+          "deltaCdi": null
+        }
+      ]
+    }
+  ],
+  "maxErrors": {
+    "slopeRelative": 6.670487156914575e-17,
+    "deltaAbsoluteBelowTen": 2.4363285028499997e-16,
+    "deltaRelativeAboveTen": 1.1893960245199667e-16
+  }
+}

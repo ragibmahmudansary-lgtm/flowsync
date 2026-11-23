@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: actual Run handler propagates solver validation and discards prior result
+ok 1 - actual Run handler propagates solver validation and discards prior result
+  ---
+  duration_ms: 2.294133
+  type: 'test'
+  ...
+# Subtest: actual Run handler discards a sweep when resolution checking fails
+ok 2 - actual Run handler discards a sweep when resolution checking fails
+  ---
+  duration_ms: 4.266701
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20.415621

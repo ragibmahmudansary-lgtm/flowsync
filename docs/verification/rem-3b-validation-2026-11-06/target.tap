@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: sweep rejects missing, nonnumeric and nonpositive step values
+ok 1 - sweep rejects missing, nonnumeric and nonpositive step values
+  ---
+  duration_ms: 1.222279
+  type: 'test'
+  ...
+# Subtest: explicit invalid case and sweep inputs are not replaced by defaults
+ok 2 - explicit invalid case and sweep inputs are not replaced by defaults
+  ---
+  duration_ms: 0.46548
+  type: 'test'
+  ...
+# Subtest: excessive sweep and automatic lattice are refused before allocation
+ok 3 - excessive sweep and automatic lattice are refused before allocation
+  ---
+  duration_ms: 0.46466
+  type: 'test'
+  ...
+# Subtest: sweep resource boundary and floating point progress
+ok 4 - sweep resource boundary and floating point progress
+  ---
+  duration_ms: 16.178798
+  type: 'test'
+  ...
+# Subtest: single point sweep is one point even for a small step
+ok 5 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.369085
+  type: 'test'
+  ...
+# Subtest: decimal endpoint is included
+ok 6 - decimal endpoint is included
+  ---
+  duration_ms: 0.684569
+  type: 'test'
+  ...
+# Subtest: explicit malformed geometry is refused rather than defaulted
+ok 7 - explicit malformed geometry is refused rather than defaulted
+  ---
+  duration_ms: 0.24021
+  type: 'test'
+  ...
+# Subtest: lattice settings reject invalid or silently clamped counts
+ok 8 - lattice settings reject invalid or silently clamped counts
+  ---
+  duration_ms: 0.125033
+  type: 'test'
+  ...
+# Subtest: resolution check rejects malformed beta rather than silently changing flow
+ok 9 - resolution check rejects malformed beta rather than silently changing flow
+  ---
+  duration_ms: 0.278335
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.019176

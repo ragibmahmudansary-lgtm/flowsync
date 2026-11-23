@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: actual app export retains valid sweep values, provenance and persistence
+ok 1 - actual app export retains valid sweep values, provenance and persistence
+  ---
+  duration_ms: 197.049507
+  type: 'test'
+  ...
+# Subtest: actual app export quarantines invalid sweep including mixed points
+ok 2 - actual app export quarantines invalid sweep including mixed points
+  ---
+  duration_ms: 2.01279
+  type: 'test'
+  ...
+# Subtest: missing point validity and nonfinite values remain unavailable in JSON
+ok 3 - missing point validity and nonfinite values remain unavailable in JSON
+  ---
+  duration_ms: 1.517726
+  type: 'test'
+  ...
+# Subtest: IA-03: fixed claim is withheld for counterexamples and ordinary case
+ok 4 - IA-03: fixed claim is withheld for counterexamples and ordinary case
+  ---
+  duration_ms: 1556.081213
+  type: 'test'
+  ...
+# Subtest: claim withheld at sweep and resolution API boundaries
+ok 5 - claim withheld at sweep and resolution API boundaries
+  ---
+  duration_ms: 2097.358758
+  type: 'test'
+  ...
+# Subtest: actual application stability rendering does not present the fixed claim
+ok 6 - actual application stability rendering does not present the fixed claim
+  ---
+  duration_ms: 115.14264
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4001.831136

@@ -1,0 +1,37 @@
+{
+  "exit": {
+    "analytic": 0,
+    "api": 0,
+    "app": 1,
+    "edges": 0,
+    "hang": 1,
+    "llt": 0,
+    "measure": 0,
+    "oracle": 0,
+    "panel": 1,
+    "prior-counterexamples": 0,
+    "psd": 0,
+    "sol": 1
+  },
+  "sol": {
+    "rows": 50,
+    "prior_rows": 50,
+    "changed_rows": []
+  },
+  "edge_changed_groups": [],
+  "measurement_changed_groups": [],
+  "stdout_byte_equal": {
+    "analytic": true,
+    "api": true,
+    "app": true,
+    "edges": true,
+    "hang": true,
+    "llt": true,
+    "measure": true,
+    "oracle": true,
+    "panel": true,
+    "prior-counterexamples": true,
+    "psd": true,
+    "sol": true
+  }
+}

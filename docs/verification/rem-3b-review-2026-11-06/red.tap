@@ -1,0 +1,33 @@
+TAP version 13
+# Subtest: single point sweep is one point even for a small step
+not ok 1 - single point sweep is one point even for a small step
+  ---
+  duration_ms: 0.702823
+  type: 'test'
+  location: '/tmp/airflow-rem3b-review/tests/endpoint-regression.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: 'Sweep resource limit is 201 points.'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    runVlmSweep (file:///tmp/airflow-rem3b-review/src/vlmSolver.js:887:11)
+    TestContext.<anonymous> (file:///tmp/airflow-rem3b-review/tests/endpoint-regression.test.mjs:5:79)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1402:25)
+    Test.start (node:internal/test_runner/test:1262:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: decimal endpoint is included
+ok 2 - decimal endpoint is included
+  ---
+  duration_ms: 4.267902
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 1
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14.164439

@@ -1,0 +1,7 @@
+# Browser smoke on the entry source, 2026-11-06
+
+`PORT=4175 npm start` first received loopback EPERM and succeeded with the approved retry. The Codex in-app browser loaded the bundled `samolot.stl` demo. The app solved 17 cases with 160 R1 panels and displayed a 0° yaw R1/R2 badge with 0.40% lift-slope and 0.69% induced-drag deltas. The diagnostics and static VLM explanation explicitly withheld the fixed uncertainty claim. The Export results button produced a real version 1 JSON download with 17 available rows, warning validity, bounds reference, `samolot.stl` source, `assumedUniform` mass provenance and the 0°/4° comparison identity.
+
+Set rows to 8, spanwise count to 64 and angles to 0°–49° at 1°. Run showed the named synchronous work refusal, Solver error, R1/R2 not run, an empty neutral point field and the Run VLM to update message. The wired regression separately checks both canvas draw calls, clearing of prior values, and recovery.
+
+Restored rows 4, automatic spanwise sizing and angles −6° to 10°. Changed yaw to 5° and ran again. The app solved 17 cases with 160 R1 panels and reported 1.19%/1.14% at the new yaw. Both the new export and the Save project download retained β=5° and the [matching coverage and provenance](browser-downloads.json). The browser verified the entry state. The two follow-up solver record corrections were verified with tests and post-edit measurements. The quarantined export was exercised through the actual export function in the function-level probe. Stopped the local server.
